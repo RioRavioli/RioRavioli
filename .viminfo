@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/class
+~MSle0~/posx
 
 # Last Substitute Search Pattern:
 ~MSle0&hamlet
@@ -69,6 +69,7 @@ $
 :%s/double/T/gc
 
 # Search String History (newest to oldest):
+?/posx
 ?/class
 ?/mapcanvas
 ?/new reset
@@ -118,7 +119,6 @@ $
 ?/new graph
 ?/true
 ?/create
-?/crate
 
 # Expression History (newest to oldest):
 
@@ -150,7 +150,7 @@ $
 "9	LINE	0
 			int[] a = new int[3];
 			int b = a[9];
-"j	CHAR	0
+"j@	CHAR	0
 	jjjjjj
 "k	CHAR	0
 	kk
@@ -169,18 +169,21 @@ $
 	O
 
 # File marks:
-'0  2  12  ~/programs/tacticrpg/rubyvers/overworld.rb
-'1  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
-'2  5  0  ~/.ssh/known_hosts
-'3  43  4  ~/programs/tacticrpg/rubyvers/main.rb
-'4  1  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
-'5  7  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
-'6  1  0  ~/programs/tacticrpg/rubyvers/main.rb
-'7  1  0  ~/programs/rpg/battle.rb
-'8  24  0  ~/programs/tacticrpg/rubyvers/main.rb
-'9  164  4  ~/programs/firefoxaddons/registration/lib/main.js
+'0  1  0  ~/programs/tacticrpg/rubyvers/unitSprites.rb
+'1  2  12  ~/programs/tacticrpg/rubyvers/overworld.rb
+'2  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
+'3  5  0  ~/.ssh/known_hosts
+'4  43  4  ~/programs/tacticrpg/rubyvers/main.rb
+'5  1  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
+'6  7  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
+'7  1  0  ~/programs/tacticrpg/rubyvers/main.rb
+'8  1  0  ~/programs/rpg/battle.rb
+'9  24  0  ~/programs/tacticrpg/rubyvers/main.rb
 
 # Jumplist (newest first):
+-'  1  0  ~/programs/tacticrpg/rubyvers/unitSprites.rb
+-'  117  16  ~/programs/tacticrpg/rubyvers/unitSprites.rb
+-'  63  0  ~/programs/tacticrpg/rubyvers/unitSprites.rb
 -'  2  12  ~/programs/tacticrpg/rubyvers/overworld.rb
 -'  1  0  ~/programs/tacticrpg/rubyvers/overworld.rb
 -'  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
@@ -276,75 +279,101 @@ $
 -'  1  0  ~/cse331/src/hw8/CampusPathsMain.java
 -'  459  1  ~/cse331/src/hw8/CampusPathsMain.java
 -'  256  29  ~/cse331/src/hw8/CampusPathsMain.java
--'  192  50  ~/cse331/src/hw8/CampusPathsMain.java
--'  180  10  ~/cse331/src/hw8/CampusPathsMain.java
 
 # History of marks within files (newest to oldest):
+
+> ~/programs/tacticrpg/rubyvers/unitSprites.rb
+	"	1	0
+
+> ~/programs/tacticrpg/rubyvers/main.rb
+	"	12	0
+	^	43	5
+	.	43	4
+	+	43	4
+
+> ~/programs/tacticrpg/rubyvers/game_state.rb
+	"	304	3
+	^	303	28
+	.	303	27
+	+	32	0
+	+	46	0
+	+	51	1
+	+	57	0
+	+	80	0
+	+	123	0
+	+	129	0
+	+	139	0
+	+	151	0
+	+	165	0
+	+	191	0
+	+	203	0
+	+	210	0
+	+	223	0
+	+	227	0
+	+	231	0
+	+	248	0
+	+	300	0
+	+	305	0
+	+	323	0
+	+	336	0
+	+	364	0
+	+	379	0
+	+	383	0
+	+	388	0
+	+	416	0
+	+	437	0
+	+	452	0
+	+	456	0
+	+	495	0
+	+	500	0
+	+	521	0
+	+	531	0
+	+	542	0
+	+	554	0
+	+	567	0
+	+	583	0
+	+	590	0
+	+	651	0
+	+	678	0
+	+	704	0
+	+	197	0
+	+	203	0
+	+	416	0
+	+	239	0
+	+	323	0
+	+	320	0
+	+	303	27
+	+	8	29
+	+	13	0
+	+	14	5
+	+	9	10
+	+	10	6
+	+	11	6
+	+	9	8
+	+	13	8
+	+	141	2
+	+	142	2
+	+	141	11
+	+	142	0
+	+	141	9
+	+	142	9
+	+	145	45
+	+	141	15
+	+	141	23
+	+	142	23
+	+	141	12
+	+	142	12
+	+	145	0
+	+	141	12
+	+	142	12
+	+	563	0
+	+	303	27
 
 > ~/programs/tacticrpg/rubyvers/overworld.rb
 	"	2	12
 	^	2	16
 	.	2	0
 	+	2	0
-
-> ~/programs/tacticrpg/rubyvers/main.rb
-	"	3	0
-	^	43	5
-	.	43	4
-	+	43	4
-
-> ~/programs/tacticrpg/rubyvers/game_state.rb
-	"	297	27
-	^	297	28
-	.	297	27
-	+	26	0
-	+	40	0
-	+	45	1
-	+	51	0
-	+	74	0
-	+	117	0
-	+	123	0
-	+	133	0
-	+	145	0
-	+	159	0
-	+	185	0
-	+	197	0
-	+	204	0
-	+	217	0
-	+	221	0
-	+	225	0
-	+	242	0
-	+	294	0
-	+	299	0
-	+	317	0
-	+	330	0
-	+	358	0
-	+	373	0
-	+	377	0
-	+	382	0
-	+	410	0
-	+	431	0
-	+	446	0
-	+	450	0
-	+	489	0
-	+	494	0
-	+	515	0
-	+	525	0
-	+	536	0
-	+	548	0
-	+	562	0
-	+	578	0
-	+	585	0
-	+	646	0
-	+	673	0
-	+	699	0
-	+	191	0
-	+	197	0
-	+	410	0
-	+	233	0
-	+	317	0
-	+	314	0
-	+	297	27
 
 > ~/.ssh/known_hosts
 	"	5	0
@@ -2608,10 +2637,3 @@ $
 	+	18	28
 	+	16	23
 	+	18	28
-
-> ~/cse331/src/testing.test
-	"	1	15
-	^	3	21
-	.	1	15
-	+	3	20
-	+	1	15

@@ -300,7 +300,7 @@ class Map1
 
 	#Resets the number of steps until next enemy appearance.
 	def resetEnemyCounter
-		@enemyCounter = 3 + rand(19)
+		@enemyCounter = 0 + rand(3)
 	end
 
 
@@ -560,7 +560,6 @@ private
 			unitChange = !@battleManager.updateAction
 			if unitChange
 				@phase = @battleManager.checkChanges
-				puts @phase
 			end
 		end
 	end
