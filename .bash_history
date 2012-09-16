@@ -1,5 +1,4 @@
 java org.junit.runner.JUnitCore hw7.test.CampusMapManagerTest
-java org.junit.runner.JUnitCore hw7.test.CampusMapManagerTest
 java org.junit.runner.JUnitCore hw7.test.BuildingTest
 java org.junit.runner.JUnitCore hw7.test.BuildingTest
 java org.junit.runner.JUnitCore hw7.test.BuildingTest
@@ -498,3 +497,4 @@ libreoffice TophSmashNotes.odt
 sudo shutdown -h now
 sudo pacman -S git
 git branch
+ls

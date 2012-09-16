@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/mapcanvas
+~MSle0~/class
 
 # Last Substitute Search Pattern:
 ~MSle0&hamlet
@@ -18,6 +18,8 @@ $
 
 # Command Line History (newest to oldest):
 :w
+:vs game_state.rb
+:q
 :q!
 :e hw5/test/HW5TestDriver.java
 :map <F8> i2<Esc>j
@@ -49,7 +51,6 @@ $
 :e MyTest.java
 :e ListStack.java
 :o MyTest.java
-:q
 :!o MyTest.java
 :$#$%
 :e Man.java
@@ -66,11 +67,10 @@ $
 :o map.rb
 :map.rb
 :%s/double/T/gc
-:e GArrayStack.java
 
 # Search String History (newest to oldest):
-?/mapcanvas
 ?/class
+?/mapcanvas
 ?/new reset
 ?/reset
 ?/reset()
@@ -129,28 +129,27 @@ $
 # Registers:
 "0	LINE	0
 				startList.setSelectedIndex(0);
-"1	LINE	0
-	1.
+""1	LINE	0
+	
 "2	LINE	0
-			} catch (Exception e) {}
+	
 "3	LINE	0
-			try {
+	
 "4	LINE	0
-			int[] a = new int[3];
-			int b = a[9];
+	1.
 "5	LINE	0
-			int[] a = new int[3];
-			int b = a[9];
+			} catch (Exception e) {}
 "6	LINE	0
-			int[] a = new int[3];
-			int b = a[9];
+			try {
 "7	LINE	0
 			int[] a = new int[3];
 			int b = a[9];
 "8	LINE	0
+			int[] a = new int[3];
 			int b = a[9];
 "9	LINE	0
 			int[] a = new int[3];
+			int b = a[9];
 "j	CHAR	0
 	jjjjjj
 "k	CHAR	0
@@ -166,24 +165,33 @@ $
 <wwkkkkkkkkjeeeeeeeeeeei, @screenj€k2jki, @screen€k2w€k4uwjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkodef updateSpritesendkooddjkodef updateKeysendkoddodef updateGameStas€kbteendkoreturn e€kbself€k2kkkjjjjjjjjjjjeeeeeelxxi4€k2w€k4ggwggjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkggGkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkosur€kbper(screen)jjjjjjjkkkkkjdd€k2jwwkjjjeeeeeeehllr2jk€k2hhhhhhhhhr0€k2w€k4wkkkjjjjkkkeeeelxxxi0lllce0lllrece0jkklllllllllllllllllllllr4€k2jjjjjjjjjkkkkkkkkkkkkkkklllllldddd€k2jjjjjjjjjjjjjeeeeehhhhhhhhce300€kb€kb€kb250€k2w€k4
 "z	CHAR	0
 	ZZ
-""-	CHAR	0
+"-	CHAR	0
 	#
 
 # File marks:
-'0  43  4  ~/programs/tacticrpg/rubyvers/main.rb
-'1  1  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
-'2  7  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
-'3  1  0  ~/programs/tacticrpg/rubyvers/main.rb
-'4  1  0  ~/programs/rpg/battle.rb
-'5  24  0  ~/programs/tacticrpg/rubyvers/main.rb
-'6  164  4  ~/programs/firefoxaddons/registration/lib/main.js
-'7  3  101  ~/cse331/src/hw8/answers/model-changes.txt
-'8  3  3  ~/cse331/src/hw8/answers/extra.txt
-'9  2  0  ~/cse331/src/hw8/answers/collaboration.txt
+'0  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
+'1  5  0  ~/.ssh/known_hosts
+'2  43  4  ~/programs/tacticrpg/rubyvers/main.rb
+'3  1  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
+'4  7  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
+'5  1  0  ~/programs/tacticrpg/rubyvers/main.rb
+'6  1  0  ~/programs/rpg/battle.rb
+'7  24  0  ~/programs/tacticrpg/rubyvers/main.rb
+'8  164  4  ~/programs/firefoxaddons/registration/lib/main.js
+'9  3  101  ~/cse331/src/hw8/answers/model-changes.txt
 
 # Jumplist (newest first):
--'  43  4  ~/programs/tacticrpg/rubyvers/main.rb
+-'  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
+-'  315  0  ~/programs/tacticrpg/rubyvers/game_state.rb
+-'  236  0  ~/programs/tacticrpg/rubyvers/game_state.rb
+-'  194  0  ~/programs/tacticrpg/rubyvers/game_state.rb
+-'  207  2  ~/programs/tacticrpg/rubyvers/game_state.rb
+-'  727  0  ~/programs/tacticrpg/rubyvers/game_state.rb
+-'  627  6  ~/programs/tacticrpg/rubyvers/game_state.rb
 -'  1  0  ~/programs/tacticrpg/rubyvers/main.rb
+-'  5  0  ~/.ssh/known_hosts
+-'  1  0  ~/.ssh/known_hosts
+-'  43  4  ~/programs/tacticrpg/rubyvers/main.rb
 -'  1  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
 -'  7  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
 -'  29  4  ~/programs/tacticrpg/rubyvers/main.rb
@@ -269,24 +277,73 @@ $
 -'  192  50  ~/cse331/src/hw8/CampusPathsMain.java
 -'  180  10  ~/cse331/src/hw8/CampusPathsMain.java
 -'  141  103  ~/cse331/src/hw8/CampusPathsMain.java
--'  136  10  ~/cse331/src/hw8/CampusPathsMain.java
--'  109  23  ~/cse331/src/hw8/CampusPathsMain.java
--'  105  20  ~/cse331/src/hw8/CampusPathsMain.java
--'  98  10  ~/cse331/src/hw8/CampusPathsMain.java
--'  62  25  ~/cse331/src/hw8/CampusPathsMain.java
--'  475  0  ~/cse331/src/hw8/CampusPathsMain.java
--'  127  0  ~/cse331/src/hw8/CampusPathsMain.java
--'  16  7  ~/cse331/src/hw8/CampusPathsMain.java
--'  419  9  ~/cse331/src/hw8/CampusPathsMain.java
--'  241  9  ~/cse331/src/hw8/CampusPathsMain.java
 
 # History of marks within files (newest to oldest):
 
 > ~/programs/tacticrpg/rubyvers/main.rb
-	"	43	4
+	"	3	0
 	^	43	5
 	.	43	4
 	+	43	4
+
+> ~/programs/tacticrpg/rubyvers/game_state.rb
+	"	297	27
+	^	297	28
+	.	297	27
+	+	26	0
+	+	40	0
+	+	45	1
+	+	51	0
+	+	74	0
+	+	117	0
+	+	123	0
+	+	133	0
+	+	145	0
+	+	159	0
+	+	185	0
+	+	197	0
+	+	204	0
+	+	217	0
+	+	221	0
+	+	225	0
+	+	242	0
+	+	294	0
+	+	299	0
+	+	317	0
+	+	330	0
+	+	358	0
+	+	373	0
+	+	377	0
+	+	382	0
+	+	410	0
+	+	431	0
+	+	446	0
+	+	450	0
+	+	489	0
+	+	494	0
+	+	515	0
+	+	525	0
+	+	536	0
+	+	548	0
+	+	562	0
+	+	578	0
+	+	585	0
+	+	646	0
+	+	673	0
+	+	699	0
+	+	191	0
+	+	197	0
+	+	410	0
+	+	233	0
+	+	317	0
+	+	314	0
+	+	297	27
+
+> ~/programs/tacticrpg/rubyvers/overworld.rb
+	"	1	0
+
+> ~/.ssh/known_hosts
+	"	5	0
 
 > ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
 	"	1	0
@@ -2554,30 +2611,3 @@ $
 	.	1	15
 	+	3	20
 	+	1	15
-
-> ~/cse331/src/hw5/test/med-test.actual
-	"	19	0
-
-> ~/cse331/src/hw5/test/med-test.expected
-	"	21	0
-	^	22	28
-	.	21	0
-	+	2	68
-	+	5	17
-	+	6	15
-	+	13	20
-	+	15	25
-	+	23	0
-	+	3	23
-	+	1	36
-	+	9	21
-	+	2	41
-	+	19	16
-	+	19	23
-	+	22	27
-	+	17	0
-	+	19	0
-	+	21	0
-
-> ~/cse331/src/hw5/test/HW5TestDriver
-	"	1	0

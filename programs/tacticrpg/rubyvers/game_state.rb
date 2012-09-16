@@ -23,6 +23,7 @@ module GameState
 	attr_reader :bgm
 	attr_reader :sprites
 
+
 	#Sets the screen for the visuals to be drawn on.
 	def initialize(screen, hero)
 		@screen = screen
@@ -36,14 +37,17 @@ module GameState
 		@nextGameState = self
 	end
 
+
 	def addKey(key)
 		@keysPressed.push(key)
 	end
 
+	
 	#Sets whether keys are released to released.
 	def releaseKey(key)
 		@keysPressed.delete(key)
 	end
+
 
 	#Updates various implementation mechanics of a game state.
 	#Returns the next game state that was updated during another update.
@@ -66,6 +70,7 @@ module GameState
 		@nextGameState = self
 		return returnState
 	end
+
 
 	#Take action when a key is pressed.
 	def updateKeys
@@ -109,10 +114,12 @@ module GameState
 		end
 	end
 
+
 	#Updates and redraws the background.
 	def updateBackground
 		drawMap()
 	end
+
 
 	#Update each sprite that is present on the map.
 	def updateSprites
@@ -122,6 +129,7 @@ module GameState
 			sprite.draw(@screen)
 		}
 	end
+
 
 	def redrawSection(initX, initY, dx, dy)
 		#initX += @initPosX + @hero.sprite.posx / SQUARE_SIZE
@@ -133,6 +141,7 @@ module GameState
 			}
 		}
 	end
+
 
 private
 	#Draws the background.
@@ -146,6 +155,7 @@ private
 			}
 		}
 	end
+
 
 	#Manages directional key input.
 	def movement(direction, key, move)
@@ -172,10 +182,12 @@ private
 		end
 	end	
 
+
 	def reset
 		@keysPressed = []
 	end
 end
+
 
 #Game state:
 #Start up
@@ -189,6 +201,7 @@ class StartUp
 		super(screen, @hero)
 	end
 
+
 	#Takes next action for key presses in this game state.
 	def updateKeys
 		if !@keysPressed.empty?
@@ -201,11 +214,14 @@ class StartUp
 		end
 	end
 
+
 	def updateBackground
 	end
 
+
 	def updateSprites
 	end
+
 
 	def updateGameState
 		returnState = @nextGameState
@@ -214,6 +230,7 @@ class StartUp
 	end
 end
 
+
 #Game state:
 #Map1
 class Map1
@@ -221,6 +238,7 @@ class Map1
 
 	attr_reader :initPos_X
 	attr_reader :initPos_Y
+
 
 	def initialize(screen, hero)
 		super(screen, hero)
@@ -273,10 +291,12 @@ class Map1
 		resetEnemyCounter
 	end
 
+
 	#Resets the number of steps until next enemy appearance.
 	def resetEnemyCounter
-		@enemyCounter = 0 + rand(2)
+		@enemyCounter = 3 + rand(19)
 	end
+
 
 	#Keeps track of the steps taken for enemy encounters. If the steps reach 0, a battle sequence
 	#is initiated.
@@ -290,6 +310,7 @@ class Map1
 		return nextGameState
 	end
 end
+
 
 class Menu
 	include GameState
@@ -305,6 +326,7 @@ class Menu
 		@boxPriority.push(@test)
 		@redraw = true
 	end
+
 
 	#Controls menu navigation.
 	def updateKeys
@@ -333,6 +355,7 @@ class Menu
 		end
 	end
 
+
 	#Draws all the menu boxes.
 	def updateBackground
 		if @redraw
@@ -347,12 +370,15 @@ class Menu
 		end
 	end
 
+
 	def updateSprites
 	end
+
 
 	def updateGameState
 		return @nextGameState
 	end
+
 
 private
 	#Controls the action when A is pressed.
@@ -402,6 +428,7 @@ class Battle
 		@menuStack = []
 	end
 
+
 	#Updates the battle, depending on the current phase.
 	def updateBackground
 		case @phase
@@ -416,8 +443,10 @@ class Battle
 		end
 	end
 
+
 	def updateSprites
 	end
+
 
 	#Controls the action taken due to key presses.
 	def updateKeys
@@ -457,9 +486,11 @@ class Battle
 		end
 	end
 
+
 	def updateGameState
 		return @nextGameState
 	end
+
 
 private	
 	#Controls the animation for the battle intro.
@@ -481,6 +512,7 @@ private
 		end
 	end
 
+
 	#Sets up the menu phase.
 	def setMenu
 		@phase = "menu"
@@ -489,6 +521,7 @@ private
 		@enemyUnits = @battleManager.enemyUnits
 		@hero.nextCommand = []
 	end
+
 
 	#Sets up the combat phase.
 	def setCombat
@@ -500,6 +533,7 @@ private
 		@menuStack = []
 	end
 
+
 	#Updates the menu phase.
 	def menu
 		@map.redrawSection(0, 0, 11, 3)
@@ -510,6 +544,7 @@ private
 		BATTLE_BACKGROUND.blit(@screen, [188, 106], nil)
 		@battleStack.draw
 	end
+
 
 	#Updates the combat phase.
 	def combat
@@ -523,6 +558,7 @@ private
 			end
 		end
 	end
+
 
 	#Updates the finish phase.
 	def finish
@@ -539,11 +575,13 @@ private
 		end
 	end
 
+
 	#Draws the stat box.
 	def stats
 		@statsBox.setList([[@hero.name], ["HP", "MP"], [@hero.current_hp.to_s, @hero.current_mp.to_s]])
 		@statsBox.draw
 	end
+
 
 	#Controls the menu flow when A is pressed.
 	def menuAOption
@@ -605,6 +643,7 @@ private
 		end
 	end
 
+
 	#Creats a sublist of items to be displayed.
 	def createNextItemSublist
 		itemPouch = @hero.itemPouch
@@ -631,6 +670,7 @@ private
 		return totalList
 	end
 
+
 	def createNextMagicSublist
 		spells = @hero.spells
 		#Checks for appropriate index.
@@ -655,6 +695,7 @@ private
 		}
 		return totalList
 	end
+
 
 	def createEnemyList
 		enemyList = []
