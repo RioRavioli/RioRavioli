@@ -7,7 +7,7 @@ class Herb
 	MAX_HEAL = 30
 	NAME = "herb"
 
-	def use(unit, target, dialogueBox) 
+	def use(unit, target, validTarget,  dialogueBox) 
 		mag = target.heal(MAX_HEAL)
 		dialogueBox.appendText("#{target.name} heals #{mag} HP!")
 	end
@@ -34,7 +34,7 @@ class FireSeal
 	NAME = "fire seal"
 	attr_accessor :target
 
-	def use(unit, target, dialogueBox)
+	def use(unit, target, validTarget, dialogueBox)
 		mag = target.damage(MAX_DAMAGE)
 		dialogueBox.appendText("It does #{MAX_DAMAGE} damage to #{target.name}!") 
 	end
@@ -66,7 +66,7 @@ class Lotia
 	MAX_HEAL = 30
 	NAME = "lotia"
 
-	def use(unit, target, dialogueBox)
+	def use(unit, target, validTarget, dialogueBox)
 		mag = target.heal(MAX_HEAL)
 		dialogueBox.appendText("#{target.name} heals #{mag} hp!")
 	end
@@ -128,7 +128,7 @@ class Glendol
 		@target = nil
 	end
 
-	def use(unit, target, dialogueBox)
+	def use(unit, target, validTarget, dialogueBox)
 		target.damage(MAX_DAMAGE)
 		dialogueBox.appendText("#{target.name} takes #{MAX_DAMAGE} damage!")
 	end

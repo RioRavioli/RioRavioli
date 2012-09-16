@@ -22,7 +22,7 @@ class BattleManager
 		@inAction = false
 		@actionFrame = 0
 		@actionLength = 0
-		@deadUnit = []
+		@deadUnits = []
 		@ran = false
 		@spellCasted = false
 		@itemUsed = false
@@ -40,6 +40,7 @@ class BattleManager
 
 	#Sets up a turn.
 	def setBattle
+		@actionUnits = []
 		@enemyUnits.each { |enemy|
 			enemy.roundCommand = [["Attack", [@hero]], ["Attack", [@hero]], ["Attack", [@hero]], ["Attack", [@hero]]]
 		}
@@ -63,7 +64,7 @@ class BattleManager
 			unit = @actionUnits.pop
 			@actionUnits.push(unit)
 			command = unit.roundCommand[@currentRound]
-			puts unit.name + "   " + unit.current_hp.to_s 
+			puts unit.name + "   " + unit.current_hp.to_s + "   " + command[0] + "   " + @currentRound.to_s + "   " + @actionUnits.length.to_s
 			case command[0]
 			when "Attack"
 				attack
@@ -74,23 +75,26 @@ class BattleManager
 			when "Magic"
 				magic
 			end
+		end
 			actionLength = @actionLength
 			@actionLength = @actionUnits.length
-		end
 		return actionLength == @actionLength
 	end
 
 
 	#Checks for changes in the present units.
 	def checkChanges
-		if @deadUnit[0] == @hero
+		if @deadUnits.include?(@hero)
 			@dialogueBox.setText(["#{@hero.name} will be revived by through his prayers."])
 			return "finish"
 		elsif @ran
 			@dialogueBox.setText(["#{@hero.name} successfully ran away!"])
 			return "finish"
 		else
-			@deadUnit.each { |unit| @enemyUnits.delete(unit) }
+			@deadUnits.each { |unit|
+				@enemyUnits.delete(unit)
+				@actionUnits.delete(unit)
+		  	}
 			if @enemyUnits.length == 0
 				@dialogueBox.setText(["#{@hero.name} defeated all enemies!", "#{@hero.name} gains 1 exp!"])
 				return "finish"
@@ -118,12 +122,17 @@ private
 		if @actionFrame == 0
 			@actionFrameLength = STANDARD_ANI_LENGTH_2
 			target = unit.roundCommand[@currentRound][1][0]
-			damage = applyDamage(unit, target)
-			@dialogueBox.setText(["#{unit.name} attacked #{target.name}!", "#{target.name} takes #{damage.to_s} damage!"]) 
-			if target.current_hp == 0
-				@deadUnit.push(target)
-				@dialogueBox.appendText("#{target.name} died!") 
-				@actionFrameLength = EXTENDED_ANI_LENGTH
+			validTarget = !@deadUnits.include?(target)
+			if (validTarget)
+				damage = applyDamage(unit, target)
+				@dialogueBox.setText(["#{unit.name} attacked #{target.name}!", "#{target.name} takes #{damage.to_s} damage!"]) 
+				if target.current_hp == 0
+					@deadUnits.push(target)
+					@dialogueBox.appendText("#{target.name} died!") 
+					@actionFrameLength = EXTENDED_ANI_LENGTH
+				end
+			else
+				@dialogueBox.setText(["#{unit.name} attacked #{target.name}!", "But #{target.name} is no longer present!"]) 
 			end
 		end
 
@@ -167,25 +176,37 @@ private
 
 	#Controls the flow of events during an item sequence.
 	def item
-		puts @actionFrame
 		unit = @actionUnits.pop	
 		targets = unit.roundCommand[@currentRound][2]
+		multipleTargets = targets.length > 1
+		validTarget = true
 
 		if @actionFrame == 0 
 			item = unit.roundCommand[@currentRound][1] 
+			if (multipleTargets)
+				targets.each { |unit|
+					if (@deadUnits.include?(unit))
+						targets.delete(unit)
+					end
+				}
+			end
 			target = targets[0]
 			if !@itemUsed
-				@actionFrameLength == STANDARD_ANI_LENGTH_2
+				@actionFrameLength = STANDARD_ANI_LENGTH_2
+				if (!multipleTargets)
+					validTarget = !@deadUnits.include?(target)
+				end
 				@dialogueBox.setText(["", "#{unit.name} used #{item.getName}!"])
 				@itemUsed = true
+				
 			else
 				@actionFrameLength = STANDARD_ANI_LENGTH
 			end
-			item.use(unit, target, @dialogueBox)
+			item.use(unit, target, validTarget, @dialogueBox)
 			unit.itemPouch.delete(item)
 			@dialogueBox.next
 			if target.current_hp == 0
-				@deadUnit.push(target)
+				@deadUnits.push(target)
 				@dialogueBox.appendText("#{target.name} died!") 
 				@actionFrameLength += STANDARD_ANI_LENGTH 
 			end
@@ -215,6 +236,9 @@ private
 	def magic
 		unit = @actionUnits.pop
 		targets = unit.roundCommand[@currentRound][2]
+		multipleTargets = targets.length > 1
+		validTarget = true
+
 		if @actionFrame == 0
 			if !@spellCasted
 				@actionFrameLength = STANDARD_ANI_LENGTH_2
@@ -222,8 +246,14 @@ private
 				@actionFrameLength = STANDARD_ANI_LENGTH
 			end
 			spell = unit.roundCommand[@currentRound][1]
+			if (multipleTargets)
+				targets.each { |unit|
+					if (@deadUnits.include?(unit))
+						targets.delete(unit)
+					end
+				}
+			end
 			target = targets[0]
-
 			if !@spellCasted 
 				if unit.current_mp < spell.class::MP
 					@dialogueBox.setText(["", "#{unit.name} casted #{spell.getName}!"])
@@ -235,12 +265,14 @@ private
 					unit.use_mp(spell.class::MP)
 					@spellCasted = true
 				end
+				if (!multipleTargets)
+					validTarget = !@deadUnits.include?(target)
+				end
 			end
-
 			if @spellCasted
-				spell.use(unit, target, @dialogueBox)
+				spell.use(unit, target, validTarget, @dialogueBox)
 				if target.current_hp == 0
-					@deadUnit.push(target)
+					@deadUnits.push(target)
 					@dialogueBox.appendText("#{target.name} died!") 
 					@actionFrameLength += STANDARD_ANI_LENGTH
 				end
@@ -249,12 +281,15 @@ private
 		elsif @actionFrame == STAT_UPDATE
 			statsUpdate
 		end
+
 		@actionUnits.push(unit)
 		@dialogueBox.draw
 		@actionFrame += 1
+
 		if @actionFrame == STANDARD_ANI_LENGTH || @actionFrame == STANDARD_ANI_LENGTH_2 + 1
 			@dialogueBox.next
 		end
+
 		if @actionFrame == @actionFrameLength
 			@actionFrame = 0
 			targets.delete_at(0)
