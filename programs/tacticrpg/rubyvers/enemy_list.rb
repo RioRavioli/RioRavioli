@@ -8,7 +8,7 @@ class Unit
 	attr_reader :atk
 	attr_reader :dfc
 	attr_reader :spd
-	attr_accessor :nextCommand
+	attr_accessor :roundCommand
 	attr_accessor :target
 	attr_accessor :next_spell
 	attr_reader :itemPouch
@@ -25,7 +25,7 @@ class Unit
 		
 		@current_hp = @max_hp
 		@current_mp = @max_mp
-		@nextCommand = [] 
+		@roundCommand = [] 
 		@target = nil
 		@next_spell = nil
 		@itemPouch = item_pouch
@@ -102,10 +102,10 @@ end
 ###########################
 
 class EvilBird < Unit
-	MAX_HP = 12
+	MAX_HP = 21
 	MAX_MP = 0
-	ATK = 8
-	DFC = 2
+	ATK = 5
+	DFC = 4
 	SPD = 3
 	ITEM_POUCH = nil
 	SPELLS = nil 

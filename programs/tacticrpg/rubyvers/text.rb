@@ -123,7 +123,6 @@ class TextBox
 private
 	#Converts a string into drawable text, including line breaks.
 	def transformWord(text)
-		puts text
 		word = Word.new
 		text.each_char { |c|
 			case c
@@ -441,8 +440,6 @@ class DialogueBox < DescriptionBox
 				@writing = true
 			else
 				drawPosY = @drawPosY + @lineCount * 20
-				puts @lineCount
-				puts @lines.length
 				line = @lines[0]
 				word = line.line[0]
 				repeat = drawChar(word, line, drawPosY)

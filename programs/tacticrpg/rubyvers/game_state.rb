@@ -413,6 +413,9 @@ class Battle
 
 	BATTLE_BACKGROUND = Rubygame::Surface.load("visuals/battle/battle.png")
 
+	#The round count.
+	ROUND_COUNT = 4
+
 	#Sets up all necessary components for a battle.
 	def initialize(map, hero, screen)
 		super(screen, hero)
@@ -432,6 +435,9 @@ class Battle
 		@selectItemBox = nil
 		@selectMagicBox = nil
 		@menuStack = []
+
+		#The current round being set
+		@currentRound = 0
 	end
 
 
@@ -486,7 +492,10 @@ class Battle
 			when "h"
 				if (@menuStack.length > 1) 
 					@menuStack.pop
-					@hero.nextCommand.pop
+					@hero.roundCommand[@currentRound].pop
+				elsif (@currentRound > 0)
+					@currentRound -= 1
+					setMenu
 				end
 			end
 		end
@@ -522,10 +531,20 @@ private
 	#Sets up the menu phase.
 	def setMenu
 		@phase = "menu"
-		@dialogueText.setText(["What will you do?"])
+		if (@currentRound == 0)
+			@dialogueText.setText(["What will your first action be?"])
+		elsif (@currentRound == 1)
+			@dialogueText.setText(["What will your second action be?"])
+		elsif (@currentRound == 2)
+			@dialogueText.setText(["What will your third action be?"])
+		else
+			@dialogueText.setText(["What will your last action be?"])
+		end
+		@menuStack = []
 		@menuStack.push(@battleOptions)
 		@enemyUnits = @battleManager.enemyUnits
-		@hero.nextCommand = []
+		@battleOptions.reset
+		@hero.roundCommand[@currentRound] = []
 	end
 
 
@@ -533,10 +552,10 @@ private
 	def setCombat
 		@phase = "combat"
 		@battleManager.setBattle
-		@battleOptions.reset
 		@map.redrawSection(0, 0, 11, 3)
 		BATTLE_BACKGROUND.blit(@screen, [188, 106], nil)
 		@menuStack = []
+		@currentRound = 0
 	end
 
 
@@ -554,7 +573,7 @@ private
 
 	#Updates the combat phase.
 	def combat
-		if @battleManager.actionUnitsEmpty
+		if @battleManager.isTurnEnded
 			setMenu
 		else
 			unitChange = !@battleManager.updateAction
@@ -595,52 +614,82 @@ private
 		option = menu.getOption
 		case option
 		when "Magic"
-			@hero.nextCommand.push(option)
+			@hero.roundCommand[@currentRound].push(option)
 			@selectMagicBox = OptionBox.new(15, 5, 34, 7, 18, 15, 128, 26, createNextMagicSublist, @screen)
 			@menuStack.push(@selectMagicBox)
 		when "Attack"
-			@hero.nextCommand.push(option) 
+			@hero.roundCommand[@currentRound].push(option) 
 			if @enemyUnits.length > 1
 				@selectEnemyBox = OptionBox.new(242, 5, 15, 7, 18, 15, 128, 26, createEnemyList, @screen)
 				@menuStack.push(@selectEnemyBox)
 			else
-				setCombat
-				@hero.nextCommand.push([@enemyUnits[0]])
+				@hero.roundCommand[@currentRound].push([@enemyUnits[0]])
+				if (@currentRound < ROUND_COUNT - 1)
+					@currentRound += 1
+					setMenu
+				else
+					setCombat
+				end
 			end
 		when "Run"
-			@hero.nextCommand.push(option)
-			setCombat
+			@hero.roundCommand[@currentRound].push(option)
+			if (@currentRound < ROUND_COUNT - 1)
+				@currentRound += 1
+				setMenu
+			else
+				setCombat
+			end
 		when "Item"
-			@hero.nextCommand.push(option)
+			@hero.roundCommand[@currentRound].push(option)
 			@subMenuIndex = 0
 			@selectItemBox = OptionBox.new(15, 5, 34, 7, 18, 15, 128, 26, createNextItemSublist, @screen)
 			@menuStack.push(@selectItemBox)
 		else
 			if (option != "")
 				if (option.class < Unit)
-					@hero.nextCommand.push([option])
-					setCombat
+					@hero.roundCommand[@currentRound].push([option])
+					if (@currentRound < ROUND_COUNT - 1)
+						@currentRound += 1
+						setMenu
+					else
+						setCombat
+					end
 				else
 					targetType = option.getTargetType
 					case targetType
 					when "self"
-						@hero.nextCommand.push(option)
-						@hero.nextCommand.push([@hero])
-						setCombat
+						@hero.roundCommand[@currentRound].push(option)
+						@hero.roundCommand[@currentRound].push([@hero])
+						if (@currentRound < ROUND_COUNT - 1)
+							@currentRound += 1
+							setMenu
+						else
+							setCombat
+						end
 					when "all"
-						@hero.nextCommand.push(option)
+						@hero.roundCommand[@currentRound].push(option)
 						targets = []
 						@enemyUnits.each { |unit| targets.push(unit) }
-						@hero.nextCommand.push(targets)
-						setCombat
+						@hero.roundCommand[@currentRound].push(targets)
+						if (@currentRound < ROUND_COUNT - 1)
+							@currentRound += 1
+							setMenu
+						else
+							setCombat
+						end
 					when "enemy"
-						@hero.nextCommand.push(option)
+						@hero.roundCommand[@currentRound].push(option)
 						if @enemyUnits.length > 1
 							@selectEnemyBox = OptionBox.new(242, 5, 15, 7, 18, 15, 128, 26, createEnemyList, @screen)
 							@menuStack.push(@selectEnemyBox)
 						else
-							setCombat
-							@hero.nextCommand.push([@enemyUnits[0]])
+							@hero.roundCommand[@currentRound].push([@enemyUnits[0]])
+							if (@currentRound < ROUND_COUNT - 1)
+								@currentRound += 1
+								setMenu
+							else
+								setCombat
+							end
 						end
 					end
 				end

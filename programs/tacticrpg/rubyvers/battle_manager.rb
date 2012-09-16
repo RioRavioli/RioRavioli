@@ -3,6 +3,10 @@ class BattleManager
 	STANDARD_ANI_LENGTH_2 = 90
 	EXTENDED_ANI_LENGTH = 135
 	STAT_UPDATE = 70
+
+	#Total rounds per turn.
+	ROUND_COUNT = 4
+
 	attr_reader :enemyUnits
 	attr_reader :enemyNames
 
@@ -22,49 +26,60 @@ class BattleManager
 		@ran = false
 		@spellCasted = false
 		@itemUsed = false
+
+		#Type: int
+		#The current round
+		@currentRound = 0
 	end
+
 
 	def setBox(box)
 		@dialogueBox = box
 	end
 
+
 	#Sets up a turn.
 	def setBattle
 		@enemyUnits.each { |enemy|
-			enemy.nextCommand = ["Attack", [@hero]]
+			enemy.roundCommand = [["Attack", [@hero]], ["Attack", [@hero]], ["Attack", [@hero]], ["Attack", [@hero]]]
 		}
-		@actionUnits.push(@hero)
-		@enemyUnits.each { |unit|
-			@actionUnits.push(unit)
-		}
-		@actionLength = @actionUnits.length
+		setRound
+		@currentRound = 0
 	end
 
+
 	#Checks for end of turn.
-	def actionUnitsEmpty
-		return @actionUnits.empty?
+	#Return: boolean
+	def isTurnEnded
+		return @currentRound == ROUND_COUNT
 	end
+
 
 	#Starts a new action for the next unit.
 	def updateAction
-		unit = @actionUnits.pop
-		@actionUnits.push(unit)
-		command = unit.nextCommand
-		puts command[0]
-		case command[0]
-		when "Attack"
-			attack
-		when "Run"
-			run
-		when "Item"
-			item
-		when "Magic"
-			magic
+		if (isRoundEnded)
+			setRound
+		else
+			unit = @actionUnits.pop
+			@actionUnits.push(unit)
+			command = unit.roundCommand[@currentRound]
+			puts unit.name + "   " + unit.current_hp.to_s 
+			case command[0]
+			when "Attack"
+				attack
+			when "Run"
+				run
+			when "Item"
+				item
+			when "Magic"
+				magic
+			end
+			actionLength = @actionLength
+			@actionLength = @actionUnits.length
 		end
-		actionLength = @actionLength
-		@actionLength = @actionUnits.length
 		return actionLength == @actionLength
 	end
+
 
 	#Checks for changes in the present units.
 	def checkChanges
@@ -84,14 +99,25 @@ class BattleManager
 		end
 	end
 
+
 private
+   #Sets up the next round.
+   def setRound
+		@enemyUnits.each { |unit|
+			@actionUnits.push(unit)
+		}
+		@actionUnits.push(@hero)
+		@actionLength = @actionUnits.length
+		@currentRound += 1
+	end
+
+
 	#Controls the flow of events during the attack sequence.
 	def attack
 		unit = @actionUnits.pop
 		if @actionFrame == 0
 			@actionFrameLength = STANDARD_ANI_LENGTH_2
-			puts unit.nextCommand[1]
-			target = unit.nextCommand[1][0]
+			target = unit.roundCommand[@currentRound][1][0]
 			damage = applyDamage(unit, target)
 			@dialogueBox.setText(["#{unit.name} attacked #{target.name}!", "#{target.name} takes #{damage.to_s} damage!"]) 
 			if target.current_hp == 0
@@ -100,21 +126,25 @@ private
 				@actionFrameLength = EXTENDED_ANI_LENGTH
 			end
 		end
+
 		if @actionFrame == STAT_UPDATE
 			statsUpdate
 		end
+
 		@actionUnits.push(unit)
 		@dialogueBox.draw
 		@actionFrame = @actionFrame + 1
+
 		if @actionFrame == @actionFrameLength
 			@actionUnits.pop
 			@actionFrame = 0
 		end
+
 		if @actionFrame == STANDARD_ANI_LENGTH || @actionFrame == STANDARD_ANI_LENGTH_2 + 1
 			@dialogueBox.next
 		end
-		puts @actionFrame
 	end
+
 
 	#Controls the flow of events during a run sequence.
 	def run
@@ -134,12 +164,15 @@ private
 		end
 	end
 
+
 	#Controls the flow of events during an item sequence.
 	def item
+		puts @actionFrame
 		unit = @actionUnits.pop	
-		targets = unit.nextCommand[2]
+		targets = unit.roundCommand[@currentRound][2]
+
 		if @actionFrame == 0 
-			item = unit.nextCommand[1] 
+			item = unit.roundCommand[@currentRound][1] 
 			target = targets[0]
 			if !@itemUsed
 				@actionFrameLength == STANDARD_ANI_LENGTH_2
@@ -159,12 +192,15 @@ private
 		elsif @actionFrame == STAT_UPDATE
 			statsUpdate
 		end
+
 		@actionUnits.push(unit)
 		@dialogueBox.draw
 		@actionFrame += 1
+
 		if @actionFrame == STANDARD_ANI_LENGTH || @actionFrame == STANDARD_ANI_LENGTH_2 + 1
 			@dialogueBox.next
 		end
+
 		if @actionFrame == @actionFrameLength
 			@actionFrame = 0
 			targets.delete_at(0)
@@ -178,21 +214,21 @@ private
 	#Controls the flow of events during a magic sequence.
 	def magic
 		unit = @actionUnits.pop
-		targets = unit.nextCommand[2]
+		targets = unit.roundCommand[@currentRound][2]
 		if @actionFrame == 0
 			if !@spellCasted
 				@actionFrameLength = STANDARD_ANI_LENGTH_2
 			else
 				@actionFrameLength = STANDARD_ANI_LENGTH
 			end
-			spell = unit.nextCommand[1]
+			spell = unit.roundCommand[@currentRound][1]
 			target = targets[0]
 
 			if !@spellCasted 
 				if unit.current_mp < spell.class::MP
 					@dialogueBox.setText(["", "#{unit.name} casted #{spell.getName}!"])
 					@dialogueBox.appendText("But #{unit.name} did not have enough MP!")
-					unit.nextCommand[2] = []
+					unit.roundCommand[@currentRound][2] = []
 					@spellCasted = false
 				else
 					@dialogueBox.setText(["", "#{unit.name} casted #{spell.getName}!"])
@@ -216,14 +252,12 @@ private
 		@actionUnits.push(unit)
 		@dialogueBox.draw
 		@actionFrame += 1
-		puts '                     ' + @actionFrameLength.to_s
 		if @actionFrame == STANDARD_ANI_LENGTH || @actionFrame == STANDARD_ANI_LENGTH_2 + 1
 			@dialogueBox.next
 		end
 		if @actionFrame == @actionFrameLength
 			@actionFrame = 0
 			targets.delete_at(0)
-			puts '            ' + targets.length.to_s
 			if targets.length <= 0
 				@actionUnits.pop
 				@spellCasted = false
@@ -231,12 +265,21 @@ private
 		end
 	end
 
+	
+	#Checks for end of round.
+	#Returns: boolean
+	def isRoundEnded
+		return @actionUnits.empty?
+	end
+
+
 	#Calculates damage accordingly.
 	def applyDamage(unit, target)
 		damageMag = unit.atk - target.dfc
 		target.damage(damageMag)
 		return damageMag
 	end
+
 
 	#Updates the status box.
 	def statsUpdate
