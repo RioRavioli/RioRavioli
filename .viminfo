@@ -129,7 +129,7 @@ $
 # Registers:
 "0	LINE	0
 				startList.setSelectedIndex(0);
-""1	LINE	0
+"1	LINE	0
 	
 "2	LINE	0
 	
@@ -165,22 +165,24 @@ $
 <wwkkkkkkkkjeeeeeeeeeeei, @screenj€k2jki, @screen€k2w€k4uwjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkodef updateSpritesendkooddjkodef updateKeysendkoddodef updateGameStas€kbteendkoreturn e€kbself€k2kkkjjjjjjjjjjjeeeeeelxxi4€k2w€k4ggwggjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkggGkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkosur€kbper(screen)jjjjjjjkkkkkjdd€k2jwwkjjjeeeeeeehllr2jk€k2hhhhhhhhhr0€k2w€k4wkkkjjjjkkkeeeelxxxi0lllce0lllrece0jkklllllllllllllllllllllr4€k2jjjjjjjjjkkkkkkkkkkkkkkklllllldddd€k2jjjjjjjjjjjjjeeeeehhhhhhhhce300€kb€kb€kb250€k2w€k4
 "z	CHAR	0
 	ZZ
-"-	CHAR	0
-	#
+""-	CHAR	0
+	O
 
 # File marks:
-'0  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
-'1  5  0  ~/.ssh/known_hosts
-'2  43  4  ~/programs/tacticrpg/rubyvers/main.rb
-'3  1  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
-'4  7  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
-'5  1  0  ~/programs/tacticrpg/rubyvers/main.rb
-'6  1  0  ~/programs/rpg/battle.rb
-'7  24  0  ~/programs/tacticrpg/rubyvers/main.rb
-'8  164  4  ~/programs/firefoxaddons/registration/lib/main.js
-'9  3  101  ~/cse331/src/hw8/answers/model-changes.txt
+'0  2  12  ~/programs/tacticrpg/rubyvers/overworld.rb
+'1  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
+'2  5  0  ~/.ssh/known_hosts
+'3  43  4  ~/programs/tacticrpg/rubyvers/main.rb
+'4  1  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
+'5  7  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
+'6  1  0  ~/programs/tacticrpg/rubyvers/main.rb
+'7  1  0  ~/programs/rpg/battle.rb
+'8  24  0  ~/programs/tacticrpg/rubyvers/main.rb
+'9  164  4  ~/programs/firefoxaddons/registration/lib/main.js
 
 # Jumplist (newest first):
+-'  2  12  ~/programs/tacticrpg/rubyvers/overworld.rb
+-'  1  0  ~/programs/tacticrpg/rubyvers/overworld.rb
 -'  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
 -'  315  0  ~/programs/tacticrpg/rubyvers/game_state.rb
 -'  236  0  ~/programs/tacticrpg/rubyvers/game_state.rb
@@ -276,9 +278,14 @@ $
 -'  256  29  ~/cse331/src/hw8/CampusPathsMain.java
 -'  192  50  ~/cse331/src/hw8/CampusPathsMain.java
 -'  180  10  ~/cse331/src/hw8/CampusPathsMain.java
--'  141  103  ~/cse331/src/hw8/CampusPathsMain.java
 
 # History of marks within files (newest to oldest):
+
+> ~/programs/tacticrpg/rubyvers/overworld.rb
+	"	2	12
+	^	2	16
+	.	2	0
+	+	2	0
 
 > ~/programs/tacticrpg/rubyvers/main.rb
 	"	3	0
@@ -338,9 +345,6 @@ $
 	+	317	0
 	+	314	0
 	+	297	27
-
-> ~/programs/tacticrpg/rubyvers/overworld.rb
-	"	1	0
 
 > ~/.ssh/known_hosts
 	"	5	0

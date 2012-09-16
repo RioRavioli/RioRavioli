@@ -5,7 +5,13 @@ require './battle_manager.rb'
 require './text.rb'
 require './enemy_list.rb'
 
-#Gamestate classes must all contain:
+#Current list of game states:
+#  StartUp
+#  Map1
+#  Menu
+#  Battle
+#
+#Game state classes must all contain:
 #	attr_reader :bgm
 #	addKey(key)
 #	update(), return gameState
@@ -132,11 +138,11 @@ module GameState
 
 
 	def redrawSection(initX, initY, dx, dy)
-		#initX += @initPosX + @hero.sprite.posx / SQUARE_SIZE
-		#initY += @initPosY + @hero.sprite.posy / SQUARE_SIZE
+		absoluteX = @initPosX + @hero.sprite.posx / SQUARE_SIZE
+		absoluteY = @initPosY + @hero.sprite.posy / SQUARE_SIZE
 		(initY...dy).each { |y|
 			(initX...dx).each { |x|
-				tile = @background[initY + y][initX + x]
+				tile = @background[absoluteY + y][absoluteX + x]
 				@tiles[tile].blit(@screen, [x * SQUARE_SIZE - @hero.sprite.posx % SQUARE_SIZE, y * SQUARE_SIZE - @hero.sprite.posy % SQUARE_SIZE], nil)
 			}
 		}
