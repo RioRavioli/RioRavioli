@@ -169,18 +169,22 @@ $
 	#
 
 # File marks:
-'0  1  0  ~/checkout.sh
-'1  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
-'2  5  0  ~/.ssh/known_hosts
-'3  43  4  ~/programs/tacticrpg/rubyvers/main.rb
-'4  1  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
-'5  7  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
-'6  1  0  ~/programs/tacticrpg/rubyvers/main.rb
-'7  1  0  ~/programs/rpg/battle.rb
-'8  24  0  ~/programs/tacticrpg/rubyvers/main.rb
-'9  164  4  ~/programs/firefoxaddons/registration/lib/main.js
+'0  92  0  ~/.viminfo
+'1  2732  0  ~/.bashrc
+'2  1  0  ~/checkout.sh
+'3  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
+'4  5  0  ~/.ssh/known_hosts
+'5  43  4  ~/programs/tacticrpg/rubyvers/main.rb
+'6  1  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
+'7  7  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
+'8  1  0  ~/programs/tacticrpg/rubyvers/main.rb
+'9  1  0  ~/programs/rpg/battle.rb
 
 # Jumplist (newest first):
+-'  92  0  ~/.viminfo
+-'  1  0  ~/.viminfo
+-'  2732  0  ~/.bashrc
+-'  1  0  ~/.bashrc
 -'  1  0  ~/checkout.sh
 -'  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
 -'  315  0  ~/programs/tacticrpg/rubyvers/game_state.rb
@@ -276,11 +280,14 @@ $
 -'  459  1  ~/cse331/src/hw8/CampusPathsMain.java
 -'  256  29  ~/cse331/src/hw8/CampusPathsMain.java
 -'  192  50  ~/cse331/src/hw8/CampusPathsMain.java
--'  180  10  ~/cse331/src/hw8/CampusPathsMain.java
--'  141  103  ~/cse331/src/hw8/CampusPathsMain.java
--'  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
 
 # History of marks within files (newest to oldest):
+
+> ~/.viminfo
+	"	92	0
+
+> ~/.bashrc
+	"	2732	0
 
 > ~/checkout.sh
 	"	1	0
@@ -2578,34 +2585,3 @@ $
 
 > ~/cse331/src/hw6/test/exampleFindSinglePath.actual
 	"	1	0
-
-> ~/cse331/src/hw6/test/exampleMarvelBasicSearch.test
-	"	2	0
-
-> ~/cse331/src/hw5/test/med-test.test
-	"	1	0
-	^	16	24
-	.	18	28
-	+	2	67
-	+	19	0
-	+	4	0
-	+	5	28
-	+	6	16
-	+	8	8
-	+	2	26
-	+	8	17
-	+	10	10
-	+	7	0
-	+	9	0
-	+	10	18
-	+	2	41
-	+	3	23
-	+	12	19
-	+	8	11
-	+	10	12
-	+	12	12
-	+	18	31
-	+	16	23
-	+	18	28
-	+	16	23
-	+	18	28
