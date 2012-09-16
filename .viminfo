@@ -169,18 +169,19 @@ $
 	#
 
 # File marks:
-'0  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
-'1  5  0  ~/.ssh/known_hosts
-'2  43  4  ~/programs/tacticrpg/rubyvers/main.rb
-'3  1  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
-'4  7  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
-'5  1  0  ~/programs/tacticrpg/rubyvers/main.rb
-'6  1  0  ~/programs/rpg/battle.rb
-'7  24  0  ~/programs/tacticrpg/rubyvers/main.rb
-'8  164  4  ~/programs/firefoxaddons/registration/lib/main.js
-'9  3  101  ~/cse331/src/hw8/answers/model-changes.txt
+'0  1  0  ~/checkout.sh
+'1  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
+'2  5  0  ~/.ssh/known_hosts
+'3  43  4  ~/programs/tacticrpg/rubyvers/main.rb
+'4  1  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
+'5  7  0  ~/.gem/ruby/1.9.1/gems/ffi-1.0.11/lib/ffi.rb
+'6  1  0  ~/programs/tacticrpg/rubyvers/main.rb
+'7  1  0  ~/programs/rpg/battle.rb
+'8  24  0  ~/programs/tacticrpg/rubyvers/main.rb
+'9  164  4  ~/programs/firefoxaddons/registration/lib/main.js
 
 # Jumplist (newest first):
+-'  1  0  ~/checkout.sh
 -'  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
 -'  315  0  ~/programs/tacticrpg/rubyvers/game_state.rb
 -'  236  0  ~/programs/tacticrpg/rubyvers/game_state.rb
@@ -277,8 +278,12 @@ $
 -'  192  50  ~/cse331/src/hw8/CampusPathsMain.java
 -'  180  10  ~/cse331/src/hw8/CampusPathsMain.java
 -'  141  103  ~/cse331/src/hw8/CampusPathsMain.java
+-'  297  27  ~/programs/tacticrpg/rubyvers/game_state.rb
 
 # History of marks within files (newest to oldest):
+
+> ~/checkout.sh
+	"	1	0
 
 > ~/programs/tacticrpg/rubyvers/main.rb
 	"	3	0
@@ -2604,10 +2609,3 @@ $
 	+	18	28
 	+	16	23
 	+	18	28
-
-> ~/cse331/src/testing.test
-	"	1	15
-	^	3	21
-	.	1	15
-	+	3	20
-	+	1	15
