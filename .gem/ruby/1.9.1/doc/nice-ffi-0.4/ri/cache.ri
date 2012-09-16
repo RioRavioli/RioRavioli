@@ -1,0 +1,9 @@
+{:ancestors{
+I"NiceFFI::PathSet:EF[I"Object;FI"Object;F[I"BasicObject;FI"NiceFFI::Struct;F[I"FFI::Struct;FI"NiceFFI::AutoRelease;FI"NiceFFI::TypedPointer;F[@	I"NiceFFI::OpaqueStruct;F[@@	:attributes{I"NiceFFI::PathSet;F[I"attr_reader files;FI"attr_reader paths;FI"NiceFFI::TypedPointer;F[I"attr_reader type;FI"NiceFFI::OpaqueStruct;F[I"attr_reader pointer;F:class_methods{I"NiceFFI::PathSet;F[I"new;FI"NiceFFI::Struct;F[I"hidden;FI"hidden?;FI"layout;FI"new;FI"read_only;FI"read_only?;FI"typed_pointer;FI"NiceFFI::TypedPointer;F[I"new;FI"NiceFFI::OpaqueStruct;F[I"new;FI"typed_pointer;FI"NiceFFI;F[I"TypedPointer;FI"NiceFFI::AutoRelease;F[I"included;FI"NiceFFI::Library;F[I"extend_object;F:encodingIu:Encoding
+UTF-8;F:instance_methods{
+I"NiceFFI::PathSet;F[I"+;FI"-;FI"append;FI"append!;FI"delete;FI"delete!;FI"dup;FI"
+files;FI"	find;FI"
+paths;FI"prepend;FI"prepend!;FI"remove;FI"remove!;FI"replace;FI"replace!;FI"NiceFFI::Struct;F[
+I"inspect;FI"to_ary;FI"to_bytes;FI"to_hash;FI"	to_s;FI"NiceFFI::TypedPointer;F[
+I"inspect;FI"	to_s;FI"	type;FI"unwrap;FI"	wrap;FI"NiceFFI::OpaqueStruct;F[	I"inspect;FI"pointer;FI"to_ptr;FI"	to_s;FI"NiceFFI::Library;F[
+I"attach_function;FI"load_library;FI"optfunc;FI"optional;FI"optional_function;F:modules[I"NiceFFI;F@I"NiceFFI::Library;FI"NiceFFI::OpaqueStruct;FI"NiceFFI::PathSet;FI"NiceFFI::Struct;FI"NiceFFI::TypedPointer;F@	

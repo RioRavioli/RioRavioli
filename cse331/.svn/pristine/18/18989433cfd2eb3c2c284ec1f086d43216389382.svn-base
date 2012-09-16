@@ -1,0 +1,207 @@
+/**
+ * MarvelPaths uses information given from a file and returns a path between two
+ * characters based on character occurances throught the books.
+ */
+
+package hw5;
+import hw4.*;
+
+import java.util.*;
+
+public class MarvelPaths {
+	/*
+	 * Specification fields
+	 * 	@specfield marvelGraph : graph of characters linked to other characters
+	 * 		by book appearance. 
+	 *
+	 * Abstraction Inavriant
+	 * 	the graph cannot be null
+	 *
+	 * Abstraction Function
+	 * 	AF(r) = marvelPath g, such that
+	 * 		g.marvelGraph = marvelGraph 
+	 *
+	 * Representation Invariant
+	 * 	marvelGraph != null
+	 */
+	private Graph<String, String> marvelGraph;
+
+	/**
+	 * Creates a new MarvelPaths object
+	 * @effects creats an empty graph.
+	 */
+	public MarvelPaths() {
+		marvelGraph = new Graph<String, String>();
+		checkRep();
+	}
+
+	/**
+	 * Adds the given character to the graph.
+	 * @param character a node will be created representing character, if it
+	 * already does not exist. Else nothing happens.
+	 * @modifies this
+	 * @effects a new node may potentially be created.
+	 */
+	public void addCharacter(String character) {
+		checkRep();
+		marvelGraph.createNode(character);
+		checkRep();
+	}
+
+	/**
+	 * Adds a coappearance between two characters to the graph.
+	 * @param character1 one character that appears in book.
+	 * @param character2 the other character that appears in book.
+	 * @param book the book that character1 and character2 appears in.
+	 * @modifes this
+	 * @effects a new relationship between two characters is added, but only
+	 * points from character1 to character2.
+	 */
+	public void addCoappearance(String character1, String character2, String book) {
+		checkRep();
+		marvelGraph.createEdge(character1, character2, book);
+		checkRep();
+	}
+
+	/**
+	 * Get the list of characters in this graph.
+	 * @Return list of characters representing this graph.
+	 */
+	public List<String> getCharacters() {
+		checkRep();
+		return marvelGraph.getNodeNames();
+	}
+
+	/**
+	 * Get the list of books the two given characters appears together in, or
+	 * null if either character is not in the graph.
+	 * @param character1 is not null
+	 * @param character2 is not null
+	 * @throws IllegalArgumentException if character1 or character2 is null.
+	 * @return list of books in which the two characters appear together in, or
+	 * null if either character is not in the graph.
+	 */
+	public List<String> getBooks(String character1, String character2) {
+		checkRep();
+		return marvelGraph.getEdgesLabels(character1, character2);
+	}
+	
+	/**
+	 * Returns all characters that coappear in the books the given character appears in,
+	 * or null if the given character is not in the graph.
+	 * @param character is not null.
+	 * @throws IllegalArgumentException if character is null.
+	 * @return list of all characters that appear in the same books as the given character,
+	 * or null if the given character is not in the graph.
+	 */
+	public List<String> getCoappearances(String character) {
+		checkRep();
+		return marvelGraph.getAllDests(character);
+	}
+
+	/**
+	 * Returns the shortest possible path between two characters. A path is represented by
+	 * a list of characters, where adjacent characters appeared in the same book.
+	 * An empty list suggests that no books were needed to link the two characters. A null
+	 * value indicates that there were no relations between the characters.
+	 * @param startChar the starting character of the path.
+	 * @param destChar the ending character of the path. 
+	 * @throws IllegalArgumentException if startChar or destChar is null.
+	 * @throws IllegalArgumentException if startChar or destChar is not a character in graph.
+	 * @return list of strings representing characters where adjacent characters appear in the
+	 * same book.
+	 * Returns null if no path was found between the two characters.
+	 */
+	public List<String> getPath(String startChar, String destChar) {
+		checkRep();
+		if (startChar == null || destChar == null) {
+			throw new IllegalArgumentException("startChar or destChar is null!");
+		}
+		if (!marvelGraph.containsNode(startChar) || !marvelGraph.containsNode(destChar)) {
+			throw new IllegalArgumentException("startChar or destChar is not a chracater in this graph!");
+		}
+
+		//set up for path finding
+		Queue<String> exploreNodes = new LinkedList<String>();
+		Map<String, List<String>> nodePaths = new HashMap<String, List<String>>(); 
+		exploreNodes.add(startChar);
+		nodePaths.put(startChar, new ArrayList<String>());
+
+		//explore for path
+		while(!exploreNodes.isEmpty()) {
+			String currentChar = exploreNodes.remove();
+			if (currentChar.equals(destChar)) {
+				//found destination
+				checkRep();
+				return nodePaths.get(currentChar);
+			} else {
+				//try other characters
+				List<String> nextChars = marvelGraph.getAllDests(currentChar); 
+				Collections.sort(nextChars);
+				for (String nextChar : nextChars) {
+					//if character hasn't been explored, add them to explore list
+					if (!nodePaths.containsKey(nextChar)) {
+						List<String> currentPath = nodePaths.get(currentChar); 
+						List<String> newPath = new ArrayList<String>(currentPath);
+						newPath.add(nextChar);
+						nodePaths.put(nextChar, newPath);
+						exploreNodes.add(nextChar);
+					}
+				}
+			}
+		}
+		checkRep();
+		return null;
+	}
+
+	/**
+	 * Creates a graph for MarvelPaths, using the given file.
+	 * @requires url to be a valid file, and that the file is in the correct format.
+	 * @param url the file the graph will be built based on.
+	 * @modifies this
+	 * @effects a graph will be created based on the file.
+	 */
+	public void createGraph(String url) {
+		checkRep();
+
+		//get information
+		Map<String, List<String>> charactersBooks = new HashMap<String, List<String>>();
+		Map<String, List<String>> booksCharacters = new HashMap<String, List<String>>();
+		try {
+			MarvelParser.parseData(url, charactersBooks, booksCharacters);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		//create the graph
+		for (String character : charactersBooks.keySet()) {
+			marvelGraph.createNode(character);
+		}
+		for (String character : charactersBooks.keySet()) {
+			List<String> books = charactersBooks.get(character);
+			for (String book : books) {
+				List<String> bookChars = booksCharacters.get(book);
+				for (String bookChar : bookChars) {
+					marvelGraph.createEdge(character, bookChar, book);
+				}
+			}
+		}
+		checkRep();
+	}
+
+	private void checkRep() {
+		if (marvelGraph == null) {
+			throw new RuntimeException("marvelGraphs should not be null!");
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+add secret_reverse.wav
+add music.wav
+view
+library
+man
+help
+p
+play
+add leftright.wav
+q
+s
+a ./music.wav

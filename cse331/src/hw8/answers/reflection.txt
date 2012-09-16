@@ -1,0 +1,6 @@
+Rio Bacon
+
+1. About 20 hours total
+2. I could have started simple, rather than trying something fancy right away.
+3. More detail could have been nice on using swing.
+4. I wish I had more general experience with GUIs.

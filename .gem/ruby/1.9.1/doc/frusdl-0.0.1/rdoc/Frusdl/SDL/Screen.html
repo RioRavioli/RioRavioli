@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Frusdl::SDL::Screen</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/frusdl/sdl/screen_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/frusdl/sdl/screen.rb">lib/frusdl/sdl/screen.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-check_mode">::check_mode</a></li>
+          
+          <li><a href="#method-c-driver_name">::driver_name</a></li>
+          
+          <li><a href="#method-c-get">::get</a></li>
+          
+          <li><a href="#method-c-get_gamma_ramp">::get_gamma_ramp</a></li>
+          
+          <li><a href="#method-c-info">::info</a></li>
+          
+          <li><a href="#method-c-list_modes">::list_modes</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-open">::open</a></li>
+          
+          <li><a href="#method-c-set_gamma">::set_gamma</a></li>
+          
+          <li><a href="#method-c-set_gamma_ramp">::set_gamma_ramp</a></li>
+          
+          <li><a href="#method-c-wrap">::wrap</a></li>
+          
+          <li><a href="#method-i-flip">#flip</a></li>
+          
+          <li><a href="#method-i-update_rect">#update_rect</a></li>
+          
+          <li><a href="#method-i-update_rects">#update_rects</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="../Wrap.html">Frusdl::Wrap</a></li>
+        
+        
+        
+          <li><a class="include" href="../Low/SDL.html">Frusdl::Low::SDL</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Frusdl.html">Frusdl</a></li>
+        
+          <li><a href="../../Frusdl/Low.html">Frusdl::Low</a></li>
+        
+          <li><a href="../../Frusdl/Low/GFX.html">Frusdl::Low::GFX</a></li>
+        
+          <li><a href="../../Frusdl/Low/IMG.html">Frusdl::Low::IMG</a></li>
+        
+          <li><a href="../../Frusdl/Low/MIX.html">Frusdl::Low::MIX</a></li>
+        
+          <li><a href="../../Frusdl/Low/MIX/Mix_Chunk.html">Frusdl::Low::MIX::Mix_Chunk</a></li>
+        
+          <li><a href="../../Frusdl/Low/MIX/Mix_Music.html">Frusdl::Low::MIX::Mix_Music</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL.html">Frusdl::Low::SDL</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_ActiveEvent.html">Frusdl::Low::SDL::SDL_ActiveEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_AudioSpec.html">Frusdl::Low::SDL::SDL_AudioSpec</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Color.html">Frusdl::Low::SDL::SDL_Color</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Cursor.html">Frusdl::Low::SDL::SDL_Cursor</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Event.html">Frusdl::Low::SDL::SDL_Event</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_ExposeEvent.html">Frusdl::Low::SDL::SDL_ExposeEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_JoyAxisEvent.html">Frusdl::Low::SDL::SDL_JoyAxisEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_JoyBallEvent.html">Frusdl::Low::SDL::SDL_JoyBallEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_JoyButtonEvent.html">Frusdl::Low::SDL::SDL_JoyButtonEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_JoyHatEvent.html">Frusdl::Low::SDL::SDL_JoyHatEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Joystick.html">Frusdl::Low::SDL::SDL_Joystick</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_KeyboardEvent.html">Frusdl::Low::SDL::SDL_KeyboardEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_MouseButtonEvent.html">Frusdl::Low::SDL::SDL_MouseButtonEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_MouseMotionEvent.html">Frusdl::Low::SDL::SDL_MouseMotionEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Palette.html">Frusdl::Low::SDL::SDL_Palette</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_PixelFormat.html">Frusdl::Low::SDL::SDL_PixelFormat</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_QuitEvent.html">Frusdl::Low::SDL::SDL_QuitEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_RWops.html">Frusdl::Low::SDL::SDL_RWops</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Rect.html">Frusdl::Low::SDL::SDL_Rect</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_ResizeEvent.html">Frusdl::Low::SDL::SDL_ResizeEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Surface.html">Frusdl::Low::SDL::SDL_Surface</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_UserEvent.html">Frusdl::Low::SDL::SDL_UserEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_VideoInfo.html">Frusdl::Low::SDL::SDL_VideoInfo</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_keysym.html">Frusdl::Low::SDL::SDL_keysym</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_version.html">Frusdl::Low::SDL::SDL_version</a></li>
+        
+          <li><a href="../../Frusdl/Low/SGE.html">Frusdl::Low::SGE</a></li>
+        
+          <li><a href="../../Frusdl/Low/SGE/Sge_cdata.html">Frusdl::Low::SGE::Sge_cdata</a></li>
+        
+          <li><a href="../../Frusdl/Low/TTF.html">Frusdl::Low::TTF</a></li>
+        
+          <li><a href="../../Frusdl/Low/TTF/TTF_Font.html">Frusdl::Low::TTF::TTF_Font</a></li>
+        
+          <li><a href="../../Frusdl/SDL.html">Frusdl::SDL</a></li>
+        
+          <li><a href="../../Frusdl/SDL/Error.html">Frusdl::SDL::Error</a></li>
+        
+          <li><a href="../../Frusdl/SDL/PixelFormat.html">Frusdl::SDL::PixelFormat</a></li>
+        
+          <li><a href="../../Frusdl/SDL/Screen.html">Frusdl::SDL::Screen</a></li>
+        
+          <li><a href="../../Frusdl/SDL/VideoInfo.html">Frusdl::SDL::VideoInfo</a></li>
+        
+          <li><a href="../../Frusdl/Wrap.html">Frusdl::Wrap</a></li>
+        
+          <li><a href="../../Frusdl/Wrap/ClassMethods.html">Frusdl::Wrap::ClassMethods</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Frusdl::SDL::Screen</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="pointer-attribute-method" class="method-detail">
+          <a name="pointer"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">pointer</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="check_mode-method" class="method-detail ">
+          <a name="method-c-check_mode"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_mode</span><span
+              class="method-args">(width, height, depth, flags)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Check to see if a particular video mode is supported. Returns supported
+bbp, or 0 if unsupported</p>
+            
+
+            
+            <div class="method-source-code" id="check_mode-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">check_mode</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">flags</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">SDL_VideoModeOK</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">flags</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_mode-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_mode-method -->
+
+      
+        <div id="driver_name-method" class="method-detail ">
+          <a name="method-c-driver_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">driver_name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Obtain the name of the video driver</p>
+            
+
+            
+            <div class="method-source-code" id="driver_name-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">driver_name</span>
+  <span class="ruby-identifier">size</span> = <span class="ruby-value">256</span>
+  <span class="ruby-identifier">cstr</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">size</span>)
+  <span class="ruby-constant">SDL_VideoDriverName</span>(<span class="ruby-identifier">cstr</span>, <span class="ruby-identifier">size</span>)
+  <span class="ruby-identifier">str</span>   = <span class="ruby-identifier">cstr</span>.<span class="ruby-identifier">read_string</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">str</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- driver_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- driver_name-method -->
+
+      
+        <div id="get-method" class="method-detail ">
+          <a name="method-c-get"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the current display surface</p>
+            
+
+            
+            <div class="method-source-code" id="get-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get</span>
+  <span class="ruby-identifier">ptr</span> = <span class="ruby-constant">SDL_GetVideoSurface</span>()
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ptr</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get-method -->
+
+      
+        <div id="get_gamma_ramp-method" class="method-detail ">
+          <a name="method-c-get_gamma_ramp"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_gamma_ramp</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Gets the color gamma lookup tables for the display XXX: doesn’t work</p>
+            
+
+            
+            <div class="method-source-code" id="get_gamma_ramp-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_gamma_ramp</span>
+  <span class="ruby-identifier">res</span> = <span class="ruby-constant">SDL_SetGammaRamp</span>(<span class="ruby-identifier">rgammas</span>, <span class="ruby-identifier">ggammas</span>, <span class="ruby-identifier">bgammas</span>)
+  <span class="ruby-identifier">raise_error</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">rgammas</span>, <span class="ruby-identifier">ggammas</span>, <span class="ruby-identifier">bgammas</span>     
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_gamma_ramp-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_gamma_ramp-method -->
+
+      
+        <div id="info-method" class="method-detail ">
+          <a name="method-c-info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns information about the video hardware</p>
+            
+
+            
+            <div class="method-source-code" id="info-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">info</span>
+  <span class="ruby-identifier">ptr</span> = <span class="ruby-constant">SDL_GetVideoInfo</span>()
+  <span class="ruby-constant">Frusdl</span><span class="ruby-operator">::</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">VideoInfo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ptr</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- info-method -->
+
+      
+        <div id="list_modes-method" class="method-detail ">
+          <a name="method-c-list_modes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">list_modes</span><span
+              class="method-args">(format, flags)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an array of available screen dimensions for the given format and
+video flags</p>
+            
+
+            
+            <div class="method-source-code" id="list_modes-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">list_modes</span>(<span class="ruby-identifier">format</span>, <span class="ruby-identifier">flags</span>)
+  <span class="ruby-identifier">formptr</span>     = <span class="ruby-identifier">format</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">format</span>.<span class="ruby-identifier">pointer</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>  
+  <span class="ruby-identifier">rectptrptr</span>  = <span class="ruby-constant">SDL_ListModes</span>(<span class="ruby-identifier">formptr</span>, <span class="ruby-identifier">flags</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rectptrptr</span>.<span class="ruby-identifier">null?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">rectptrptr</span>.<span class="ruby-identifier">address</span> <span class="ruby-operator">==</span> <span class="ruby-value">4294967295</span> 
+  <span class="ruby-comment"># This address means &quot;all sizes allowed&quot;. Gotta love C! &gt;_&lt;          </span>
+  <span class="ruby-identifier">aid</span>         = <span class="ruby-identifier">rectptrptr</span>.<span class="ruby-identifier">get_int</span>(<span class="ruby-value">0</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>  <span class="ruby-keyword">if</span> <span class="ruby-identifier">aid</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">aid</span> <span class="ruby-operator">==</span> <span class="ruby-value">-1</span> 
+  <span class="ruby-identifier">index</span>       = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">result</span>      = []
+  <span class="ruby-identifier">ptrsize</span>     = <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">type_size</span>(<span class="ruby-value">:pointer</span>)
+  <span class="ruby-identifier">rectptr</span>     = <span class="ruby-identifier">rectptrptr</span>.<span class="ruby-identifier">get_pointer</span>(<span class="ruby-identifier">index</span> * <span class="ruby-identifier">ptrsize</span>)
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">rectptr</span>.<span class="ruby-identifier">null?</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">rect</span>      = <span class="ruby-constant">Frusdl</span><span class="ruby-operator">::</span><span class="ruby-constant">Low</span><span class="ruby-operator">::</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SDL_Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">rectptr</span>)
+    <span class="ruby-identifier">result</span>  <span class="ruby-operator">&lt;&lt;</span> [ <span class="ruby-identifier">rect</span>[<span class="ruby-value">:w</span>], <span class="ruby-identifier">rect</span>[<span class="ruby-value">:h</span>] ]           
+    <span class="ruby-identifier">index</span>    <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">rectptr</span>   = <span class="ruby-identifier">rectptrptr</span>.<span class="ruby-identifier">get_pointer</span>(<span class="ruby-identifier">index</span> * <span class="ruby-identifier">ptrsize</span>) 
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>   
+  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- list_modes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- list_modes-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(ptr)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">ptr</span>)
+  <span class="ruby-identifier">initialize_pointer</span>(<span class="ruby-identifier">ptr</span>, <span class="ruby-constant">Frusdl</span><span class="ruby-operator">::</span><span class="ruby-constant">Low</span><span class="ruby-operator">::</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SDL_Surface</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="open-method" class="method-detail ">
+          <a name="method-c-open"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">open</span><span
+              class="method-args">(width, height, bbp, flags)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set up a video mode with the specified width, height and bits-per-pixel.</p>
+            
+
+            
+            <div class="method-source-code" id="open-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">bbp</span>, <span class="ruby-identifier">flags</span>)
+  <span class="ruby-identifier">ptr</span> = <span class="ruby-constant">SDL_SetVideoMode</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">bbp</span>, <span class="ruby-identifier">flags</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ptr</span>)  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- open-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- open-method -->
+
+      
+        <div id="set_gamma-method" class="method-detail ">
+          <a name="method-c-set_gamma"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_gamma</span><span
+              class="method-args">(rgamma, ggamma, bgammma)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the color gamma function for the display</p>
+            
+
+            
+            <div class="method-source-code" id="set_gamma-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_gamma</span>(<span class="ruby-identifier">rgamma</span>, <span class="ruby-identifier">ggamma</span>, <span class="ruby-identifier">bgammma</span>)
+  <span class="ruby-identifier">res</span> = <span class="ruby-constant">SDL_SetGamma</span>(<span class="ruby-identifier">rgamma</span>, <span class="ruby-identifier">ggamma</span>, <span class="ruby-identifier">bgamma</span>)
+  <span class="ruby-identifier">raise_error</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_gamma-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_gamma-method -->
+
+      
+        <div id="set_gamma_ramp-method" class="method-detail ">
+          <a name="method-c-set_gamma_ramp"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_gamma_ramp</span><span
+              class="method-args">(rgammas, ggammas, bgammas)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the color gamma lookup tables for the display XXX: doesn’t work like
+this</p>
+            
+
+            
+            <div class="method-source-code" id="set_gamma_ramp-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_gamma_ramp</span>(<span class="ruby-identifier">rgammas</span>, <span class="ruby-identifier">ggammas</span>, <span class="ruby-identifier">bgammas</span>) 
+  <span class="ruby-identifier">res</span> = <span class="ruby-constant">SDL_SetGammaRamp</span>(<span class="ruby-identifier">rgammas</span>, <span class="ruby-identifier">ggammas</span>, <span class="ruby-identifier">bgammas</span>)
+  <span class="ruby-identifier">raise_error</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_gamma_ramp-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_gamma_ramp-method -->
+
+      
+        <div id="wrap-method" class="method-detail ">
+          <a name="method-c-wrap"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wrap</span><span
+              class="method-args">(ptr)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Wraps a low level ponter in a higher level struct</p>
+            
+
+            
+            <div class="method-source-code" id="wrap-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">wrap</span>(<span class="ruby-identifier">ptr</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Frusdl</span><span class="ruby-operator">::</span><span class="ruby-constant">Low</span><span class="ruby-operator">::</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SDL_Surface</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ptr</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wrap-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wrap-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="flip-method" class="method-detail ">
+          <a name="method-i-flip"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">flip</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Swaps screen buffers</p>
+            
+
+            
+            <div class="method-source-code" id="flip-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">flip</span>
+  <span class="ruby-constant">SDL_Flip</span>(<span class="ruby-ivar">@pointer</span>)      
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- flip-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- flip-method -->
+
+      
+        <div id="update_rect-method" class="method-detail ">
+          <a name="method-i-update_rect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">update_rect</span><span
+              class="method-args">(x, y, w, h)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Makes sure the given area is updated on the given screen.</p>
+            
+
+            
+            <div class="method-source-code" id="update_rect-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_rect</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>)
+  <span class="ruby-constant">SDL_UpdateRect</span>(<span class="ruby-ivar">@pointer</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- update_rect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- update_rect-method -->
+
+      
+        <div id="update_rects-method" class="method-detail ">
+          <a name="method-i-update_rects"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">update_rects</span><span
+              class="method-args">(*rects)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Makes sure the given list of rectangles is updated on the given screen</p>
+            
+
+            
+            <div class="method-source-code" id="update_rects-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl/screen.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_rects</span>(*<span class="ruby-identifier">rects</span>)
+  <span class="ruby-identifier">count</span>       = <span class="ruby-identifier">rects</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-identifier">rectptr</span>     = <span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:pointer</span>, <span class="ruby-identifier">count</span>)
+  <span class="ruby-identifier">index</span>       = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">rect</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">rects</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">rectptr</span>.<span class="ruby-identifier">set_pointer</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">pointer</span>)
+    <span class="ruby-identifier">index</span>    <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>  
+  <span class="ruby-keyword">end</span>            
+  <span class="ruby-constant">SDL_UpdateRects</span>(<span class="ruby-ivar">@pointer</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">rectptr</span>) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- update_rects-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- update_rects-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

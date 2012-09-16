@@ -1,0 +1,108 @@
+/**
+ * Graph represents a mutable directed labeled multigraph.
+ * It contains nodes and the nodes contain edges to other nodes that this
+ * contains.
+ *
+ * Specification fields
+ * 	@specfield nodes : list of nodes with edges //nodes that create the graph
+ *
+ * Abstraction Invariant
+ * 	List of nodes must not be null
+ * 	All node names must be unique
+ */
+
+public class Graph {
+
+	/**
+	 * Constructs a new Graph with an empty list of nodes.
+	 */
+	public Graph() {
+	}
+
+	/**
+	 * Creates a node with the given name, and adds it to the graph.
+	 * @param name has length larger than 0, and is not null.
+	 * @throws IllegalArgumentException if name's length is 0.
+	 * @throws IllegalArgumentException if name is null.
+	 * @modifies this
+	 * @effects adds a new node to this graph.
+	 */
+	public void createNode(String name) {
+	}
+
+	/**
+	 * Adds a new edge with destName as the destination and the given label
+	 * to the node with name.
+	 * @param name has length larger than 0, and is not null.
+	 * @param destName has length larger than 0, and is not null.
+	 * @param label is not null.
+	 * @throws IllegalArgumentException if name, destName, or label is null.
+	 * @throws IllegalArgumentException if name or destName has length 0.
+	 * @modifies this
+	 * @effects adds a new edge to the node with name.
+	 */
+	public void addEdgeToNode(String name, String destName, String label) {
+	}
+
+	/**
+	 * Removes edges with destName from the node with name.
+	 * @param name has length larger than 0, and is not null.
+	 * @param destName has length larger than 0, and is not null.
+	 * @throws IllegalArgumentException if name or destName is null.
+	 * @throws IllegalArgumentException if name or destName has length 0.
+	 * @modifies this
+	 * @effects removes all edges with the given destination from the specified node.
+	 */
+	public void removeEdgesFromNode(String name, String destName) {
+	}
+
+	/**
+	 * Removes edges with destName and label from the node with name.
+	 * @param name has length larger than 0, and is not null.
+	 * @param destName has length larger than 0, and is not null.
+	 * @param label is not null.
+	 * @throws IllegalArgumentException if name, destName, or label is null.
+	 * @throws IllegalArgumentException if name or destName has length 0.
+	 * @modifies this
+	 * @effects removes all edges with the given destination from the specified node. 
+	 */
+	public void addEdgeToNode(String name, String destName, String label) {
+	}
+
+	/**
+	 * Removes the node with name.
+	 * @param name has length larger than 0, and is not null.
+	 * @throws IllegalArguemntException if name is null or has length 0.
+	 * @modifies this
+	 * @effects removes the specified node from graph.
+	 */
+	public void removeNode(String name) {
+	}
+
+	/**
+	 * Returns all labels on the edge from name to destName.
+	 * @param name has length larger than 0, and is not null.
+	 * @param destName has length larger than 0, and is not null.
+	 * @throws IllegalArgumentException if name or destName is null.
+	 * @throws IllegalArgumentException if name or destName has length 0.
+	 * @return list of labels from the edges that connect name and destName.
+	 */
+	public List<String> getEdgesLabels(String name, String destName) {
+	}
+
+	/**
+	 * Returns all destinations of the edges of the node with name.
+	 * @param name has length larger than 0, and is not null.
+	 * @throws IllegalArguemntException if name is null or has length 0.
+	 * @return list of all names of destinations of the edges of the node with name.
+	 */
+	public List<String> getAllDest(String name) {
+	}
+
+	/**
+	 * Returns the number of nodes this graph contains.
+	 * @Return the numeber of nodes this graph contains.
+	 */
+	public int getNodeCount() {
+	}
+}

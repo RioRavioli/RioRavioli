@@ -1,0 +1,18 @@
+package hw2;
+
+import java.util.Random;
+
+public class RandomHello {
+	public static final String[] GREETINGS = { "Hello World", "Hola Mundo", "Bonjour Monde", "Hallo Welt", "Cian Mondo" };
+
+	public static void main(String[] args) {
+		Random rng = new Random();
+		int choice = rng.nextInt(5);
+		String greeting = getGreeting(choice);
+		System.out.println(greeting);
+	}
+
+	public static String getGreeting(int choice) {
+		return GREETINGS[choice];
+	}
+}

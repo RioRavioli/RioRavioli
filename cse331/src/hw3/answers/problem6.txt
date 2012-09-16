@@ -1,0 +1,10 @@
+Rio Bacon
+
+a. Both check for the denominator to be greater than or equal to 0. But one difference is that daikon
+	does not require the invariants to represent the reduced form.
+
+b. The small test requires this.denominator to be at least one, while the normal test has no requirement.
+	The normal test requires arg to have a numerator of at least -1. The small test has no requirement.
+	The small test requires arg's denominator to be at least one, while the normal test requires at least 0.
+	These differences show that the reduced test does not test the cases where the denominator is 0. In
+	otherwords, it does not test for NaN values.

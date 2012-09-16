@@ -1,0 +1,46 @@
+a.
+	IntQueue1:
+	Abstraction Function:
+	AF(r) = a queue, q, such that
+		q.entries = r.entries
+		q.frontElement = r.entries.get(0)  
+		q.finalElement = r.entries.get(q.size())
+	Representation Invariant:
+		entries != null
+
+	IntQueue2:
+	Abstraction Function:
+	AF(r) = a queue, q, such that
+		q.entries = all elements from r.entries[front] to r.entries[(front+size)%entries.length],
+			if second index is smaller, all entries at and after first index and at and before
+			second index
+		q.frontElement = q.entries[front]
+		q.finalElement = q.entries[(front+size)%entries.length]
+	Representation Invariant
+		entries != null
+		size <= entries.length
+
+b. 
+	a, d, g are equivalent
+	b, h are equivalent
+	c, f are equivalent
+	e is on its own
+
+c.
+	1. Values to plug into equations are given, and it returns an int. Because an int is returned,
+		it is sure to be a copy of any possible representation, and is not exposed.
+
+	2. decode could possibly change an internal String[] to a decoded String[], and just return that.
+		This would mean the array that was returned is the same as the representation, and is exposed. 
+
+	3. Because the method is private, a client cannot call this, and thus no representation could
+		possibly be exposed.
+
+	4. The returned String could be a representation, and therefore returning it would expose it.
+
+	5. Assuming that the elements in the class were not represented by an iterator, returning an
+		iterator could still expose the representation. This is because the iterator could be
+		improperly implemented, such as by returning the representation itself with the iterator method
+		next().
+
+	6. The representation could be exposed if Deck uses the given list as its representation.

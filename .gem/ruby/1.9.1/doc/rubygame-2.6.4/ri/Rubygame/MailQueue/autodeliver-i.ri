@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"autodeliver:EFI"$Rubygame::MailQueue#autodeliver;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"BWhether to automatically deliver events as they are received.;TI"Enabled by default.;T:
+@file0FI"lib/rubygame/queue.rb;T

@@ -1,0 +1,55 @@
+package hw6.test;
+
+import java.io.*;
+import java.net.URISyntaxException;
+import java.util.*;
+
+import hw4.*;
+import hw5.*;
+import hw6.*;
+
+
+/**
+ * This class implements a testing driver which reads test scripts
+ * from files for your graph ADT and improved MarvelPaths application
+ * using Dijkstra's algorithm.
+ * algorithm.
+ **/
+public class HW6TestDriver {
+
+
+    public static void main(String args[]) {
+    }
+
+    public HW6TestDriver(Reader r, Writer w) {
+    }
+
+    public void runTests() {
+    }
+
+    /**
+     * Get the absolute path to a file in the bin/hw6/test directory of the
+     * project. (Files placed in src/hw6/test are automatically copied to this
+     * location when the project is compiled.)
+     * 
+     * For example, getAbsoluteFilename("foo.tsv") would return something like
+     * (on attu):
+     * "homes/iws/YourCSENetID/cse331/bin/hw5/test/foo.tsv"
+     * 
+     * Call this method in your LoadGraph command.
+     * 
+     * @param filename
+     *              The simple filename for which to return the full path
+     * @return The absolute path to filename
+     */
+    private String getAbsoluteFilename(String filename) {
+        try {
+            File testDir = new File(HW6TestDriver.class.getResource(
+                    "HW6TestDriver.class").toURI()).getParentFile();
+            File dataFile = new File(testDir, filename);
+            return dataFile.getAbsolutePath();
+        } catch (URISyntaxException e) {
+            return null;
+        }
+    }
+}

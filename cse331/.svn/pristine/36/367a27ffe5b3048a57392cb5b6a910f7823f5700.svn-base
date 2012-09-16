@@ -1,0 +1,307 @@
+package hw8;
+import hw7.*;
+
+import java.util.*;
+import java.io.*;
+import javax.swing.*;
+import javax.imageio.*;
+import java.awt.*;
+import java.awt.image.*;
+import java.awt.event.*;
+
+public class CampusPathsMain {
+	private JFrame frame;
+	private CampusMapManager manager;
+
+	public static void main(String[] args) {
+		CampusPathsMain main = new CampusPathsMain();
+	}
+
+	public CampusPathsMain() {
+		frame = new JFrame("Campus Paths");
+		manager = new CampusMapManager();
+
+		frame.setFocusable(true);
+		frame.setSize(1024, 768);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLayout(new FlowLayout());
+		setComponents(frame);
+		frame.setVisible(true);
+	}
+
+	private void setComponents(JFrame frame) {
+		//create an array of building names
+		java.util.List<Building> buildings = manager.getBuildings();
+		String[] buildingList = new String[buildings.size()];
+		for (int i = 0; i < buildings.size(); i++) {
+			String longName = buildings.get(i).getLongName(); 
+			buildingList[i] = longName;
+		}
+
+		//create components
+		JButton resetButton = new JButton("Reset");
+		Component startLabel = new JLabel("Start:");
+		JComboBox startList = new JComboBox(buildingList);
+		Component endLabel = new JLabel("Destination:");
+		JComboBox endList = new JComboBox(buildingList);
+		JLabel buttonDirections = new JLabel("Map Scrolling:: [K: up] [J: down] [H: left] [L: right]");
+		
+		//create components and add action listeners
+		MapCanvas campus = new MapCanvas();
+		JButton searchButton = new JButton("Search");	
+		searchButton.addActionListener(new SearchListener(startList, endList, buildings, campus));
+//		campus.addKeyListener(new ImageListener(campus));
+		
+		/*
+		//create directional buttons
+		Container directions = new Container();
+		directions.setPreferredSize(new Dimension(1000, 1000));
+		directions.setVisible(true);
+		directions.add(new JButton("up"));
+		directions.add(new JButton("left"));
+		directions.add(new JButton("down"));
+		directions.add(new JButton("right"));
+		*/
+
+		//add components to frame
+		frame.add(buttonDirections);
+		frame.add(resetButton);
+		frame.add(startLabel);
+		frame.add(startList);
+		frame.add(endLabel);
+		frame.add(endList);
+		frame.add(searchButton);
+		//frame.add(directions);
+		frame.add(campus);
+		KeyListener imageListener = new ImageListener(campus);
+		resetButton.addKeyListener(imageListener);
+		startList.addKeyListener(imageListener);
+		endList.addKeyListener(imageListener);
+		searchButton.addKeyListener(imageListener);
+		frame.addKeyListener(imageListener);
+
+		campus.updateImage();
+
+	}
+
+
+	private class SearchListener implements ActionListener {
+		JComboBox startList;
+		JComboBox endList;
+		java.util.List<Building> buildings;
+		MapCanvas map;
+
+		public SearchListener(JComboBox startList, JComboBox endList,
+			  					  	 java.util.List<Building> buildings, MapCanvas map) {
+			this.startList = startList;
+			this.endList = endList;
+			this.buildings = buildings;
+			this.map = map;
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String start = (String) startList.getSelectedItem();
+			String end = (String) endList.getSelectedItem();
+
+			//get start and end buildings
+			Building startBuilding = null;
+			Building endBuilding = null;
+			for (Building building : buildings) {
+				if (start.equals(building.getLongName())) {
+					startBuilding = building;
+				}
+				if (end.equals(building.getLongName())) {
+					endBuilding = building;
+				}
+			}
+
+			//neither building should ever be null, because user selection comes from the same list
+			java.util.List<Path> route = manager.getShortestPath(startBuilding, endBuilding);
+
+			//sets the map to show the beginning of the route
+			if (route.size() > 0) {
+				hw7.Point startPoint = route.get(0).getStart();
+				map.centerMap(startPoint);
+			}
+			map.setRoute(route);
+			for (Path path : route) {
+				System.out.println("Go from " + path.getStart().getX() + " to " + path.getEnd().getX());
+			}
+			map.updateImage();
+		}
+	}
+
+	/**
+	 * MapCanvas draws the campus map and any requested routes according to its current position.
+	 */
+	private class MapCanvas extends JComponent {
+		private BufferedImage campusMap;
+		private java.util.List<Path> route;
+		private int xShift;
+		private int yShift;
+
+		private final int CANVAS_SIZE_X = 1000;
+		private final int CANVAS_SIZE_Y = 600;
+		private final int MAX_X = 1170;
+		private final int MIN_X = 0;
+		private final int MAX_Y = 880;
+		private final int MIN_Y = 0;
+		private final double ZOOM_VALUE = .5;
+
+		/**
+		 * Creates a new MapCanvas object.
+		 */
+		public MapCanvas() {
+			try {
+				campusMap = ImageIO.read(new File("hw7/data/campus_map.jpg"));
+			} catch (IOException e) {
+				//
+				//
+				//
+				//
+				//
+				//
+				//Fllllllllllllerr
+				//
+				//
+				//
+				//
+				//
+				e.printStackTrace();
+			}
+
+			xShift = 0;
+			yShift = 0;
+			route = null;
+			this.setPreferredSize(new Dimension(CANVAS_SIZE_X, CANVAS_SIZE_Y));
+		}
+
+		/**
+		 * Modifies the coordinates of the images drawn on the campus by dx and dy.
+		 * @param dx changes xShift by dx.
+		 * @param dy changes yShift by dy.
+		 * @modifies this
+		 * @effects dx and dy are increased or decreased by the given values.
+		 */
+		public void moveImage(int dx, int dy) {
+			xShift += dx;
+			yShift += dy;
+			checkPos();
+		}
+
+		/**
+		 * Realigns map so that the given point is in the center.
+		 * @param point the point that the map centers to.
+		 * @modifies this
+		 * @effects xShift and yShift are repositioned so point is in the center.
+		 */
+		public void centerMap(hw7.Point point) {
+			//reposition map
+			int pointPixelX = (int) (point.getX() * ZOOM_VALUE);
+			int pointPixelY = (int) (point.getY() * ZOOM_VALUE);
+			int mapPosX = -1 * (pointPixelX - CANVAS_SIZE_X / 2);
+			int mapPosY = -1 * (pointPixelY - CANVAS_SIZE_Y / 2);
+			System.out.println(mapPosX + " " + mapPosY);
+			xShift = mapPosX;
+			yShift = mapPosY;
+			checkPos();
+		}
+
+		//Ensures image of map does not move beyond its borders.
+		private void checkPos() {
+			if (xShift > MIN_X)
+				xShift = MIN_X;
+			else if (xShift < -MAX_X)
+				xShift = -MAX_X;
+
+			if (yShift > MIN_Y)
+				yShift = MIN_Y;
+			else if (yShift < -MAX_Y)
+				yShift = -MAX_Y;
+		}
+
+		/**
+		 * Sets the route.
+		 * @param route sets this.route to route.
+		 * @modifies this
+		 * @effects this.route is set to route.
+		 */
+		public void setRoute(java.util.List<Path> route) {
+			this.route = route;
+		}
+
+		//Draws the path according to route.
+		private void drawRoute(Graphics g) {
+			for (Path path : route) {
+				double startX = path.getStart().getX();
+				double startY = path.getStart().getY();
+				double endX = path.getEnd().getX();
+				double endY = path.getEnd().getY();
+
+				//convert path points to pixel positions
+				int startPixelX = (int) (startX * ZOOM_VALUE + xShift);
+				int startPixelY = (int) (startY * ZOOM_VALUE + yShift);
+				int endPixelX = (int) (endX * ZOOM_VALUE + xShift);
+				int endPixelY = (int) (endY * ZOOM_VALUE + yShift);
+
+				g.drawLine(startPixelX, startPixelY, endPixelX, endPixelY);
+			}
+		}
+
+		/**
+		 * Redraws g.
+		 */
+		public void updateImage() {
+			this.repaint();
+		}
+
+		@Override
+		/**
+		 * Draws the campus map at the current position, and any paths over it if route is set.
+		 * @param g the graphics that the map and route gets drawn on.
+		 */
+		public void paintComponent(Graphics g) {
+			g.setColor(Color.RED);
+			super.paintComponent(g);
+			int xZoom = (int) (campusMap.getWidth() * ZOOM_VALUE + xShift);
+			int yZoom = (int) (campusMap.getHeight() * ZOOM_VALUE + yShift);
+			g.drawImage(campusMap, xShift, yShift, xZoom, yZoom, 0, 0, campusMap.getWidth(), campusMap.getHeight(), null);
+			if (route != null) {
+				drawRoute(g);
+			}
+		}
+	}
+
+	private class ImageListener implements KeyListener {
+		private MapCanvas map;
+		private final int MOVE_SPEED = 40;
+
+		public ImageListener(MapCanvas map) {
+			this.map = map;
+		}
+
+		public void keyPressed(KeyEvent event) {
+			char key = event.getKeyChar();
+			switch (key) {
+				case 'j':
+					map.moveImage(0, -1 * MOVE_SPEED);
+					break;
+				case 'k':
+					map.moveImage(0, MOVE_SPEED);
+					break;
+				case 'h':
+					map.moveImage(MOVE_SPEED, 0);
+					break;
+				case 'l':
+					map.moveImage(-1 * MOVE_SPEED, 0);
+					break;
+			}
+			map.updateImage();
+		}
+
+		public void keyReleased(KeyEvent event) {}
+
+		public void keyTyped(KeyEvent event) {}
+	}
+}

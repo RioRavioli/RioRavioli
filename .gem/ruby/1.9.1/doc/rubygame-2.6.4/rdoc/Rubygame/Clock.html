@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Rubygame::Clock</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/rubygame/clock_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/clock.rb">lib/rubygame/clock.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-delay">::delay</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-runtime">::runtime</a></li>
+          
+          <li><a href="#method-c-wait">::wait</a></li>
+          
+          <li><a href="#method-i-calibrate">#calibrate</a></li>
+          
+          <li><a href="#method-i-enable_tick_events">#enable_tick_events</a></li>
+          
+          <li><a href="#method-i-framerate">#framerate</a></li>
+          
+          <li><a href="#method-i-frametime">#frametime</a></li>
+          
+          <li><a href="#method-i-lifetime">#lifetime</a></li>
+          
+          <li><a href="#method-i-target_framerate">#target_framerate</a></li>
+          
+          <li><a href="#method-i-target_framerate-3D">#target_framerate=</a></li>
+          
+          <li><a href="#method-i-target_frametime">#target_frametime</a></li>
+          
+          <li><a href="#method-i-target_frametime-3D">#target_frametime=</a></li>
+          
+          <li><a href="#method-i-tick">#tick</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../CREDITS.html">CREDITS</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../ROADMAP.html">ROADMAP</a></li>
+        
+          <li class="file"><a href="../doc/custom_sdl_load_paths_rdoc.html">custom_sdl_load_paths.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/getting_started_rdoc.html">getting_started.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/keyboard_symbols_rdoc.html">keyboard_symbols.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/macosx_install_rdoc.html">macosx_install.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/managing_framerate_rdoc.html">managing_framerate.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/surface_palettes_rdoc.html">surface_palettes.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/windows_install_rdoc.html">windows_install.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Rubygame.html">Rubygame</a></li>
+        
+          <li><a href="../Rubygame/ActiveEvent.html">Rubygame::ActiveEvent</a></li>
+        
+          <li><a href="../Rubygame/Clock.html">Rubygame::Clock</a></li>
+        
+          <li><a href="../Rubygame/Color.html">Rubygame::Color</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorBase.html">Rubygame::Color::ColorBase</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSL.html">Rubygame::Color::ColorHSL</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSV.html">Rubygame::Color::ColorHSV</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorRGB.html">Rubygame::Color::ColorRGB</a></li>
+        
+          <li><a href="../Rubygame/Color/Palette.html">Rubygame::Color::Palette</a></li>
+        
+          <li><a href="../Rubygame/Event.html">Rubygame::Event</a></li>
+        
+          <li><a href="../Rubygame/EventActions.html">Rubygame::EventActions</a></li>
+        
+          <li><a href="../Rubygame/EventActions/BlockAction.html">Rubygame::EventActions::BlockAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MethodAction.html">Rubygame::EventActions::MethodAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MultiAction.html">Rubygame::EventActions::MultiAction</a></li>
+        
+          <li><a href="../Rubygame/EventHandler.html">Rubygame::EventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHandler/HasEventHandler.html">Rubygame::EventHandler::HasEventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHook.html">Rubygame::EventHook</a></li>
+        
+          <li><a href="../Rubygame/EventQueue.html">Rubygame::EventQueue</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers.html">Rubygame::EventTriggers</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AndTrigger.html">Rubygame::EventTriggers::AndTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AttrTrigger.html">Rubygame::EventTriggers::AttrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/BlockTrigger.html">Rubygame::EventTriggers::BlockTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/InstanceOfTrigger.html">Rubygame::EventTriggers::InstanceOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyPressTrigger.html">Rubygame::EventTriggers::KeyPressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyReleaseTrigger.html">Rubygame::EventTriggers::KeyReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KindOfTrigger.html">Rubygame::EventTriggers::KindOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseMoveTrigger.html">Rubygame::EventTriggers::MouseMoveTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MousePressTrigger.html">Rubygame::EventTriggers::MousePressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseReleaseTrigger.html">Rubygame::EventTriggers::MouseReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/OrTrigger.html">Rubygame::EventTriggers::OrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/TickTrigger.html">Rubygame::EventTriggers::TickTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/YesTrigger.html">Rubygame::EventTriggers::YesTrigger</a></li>
+        
+          <li><a href="../Rubygame/Events.html">Rubygame::Events</a></li>
+        
+          <li><a href="../Rubygame/Events/ClockTicked.html">Rubygame::Events::ClockTicked</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusGained.html">Rubygame::Events::InputFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusLost.html">Rubygame::Events::InputFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickAxisMoved.html">Rubygame::Events::JoystickAxisMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickBallMoved.html">Rubygame::Events::JoystickBallMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonEvent.html">Rubygame::Events::JoystickButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonPressed.html">Rubygame::Events::JoystickButtonPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonReleased.html">Rubygame::Events::JoystickButtonReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickHatMoved.html">Rubygame::Events::JoystickHatMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyPressed.html">Rubygame::Events::KeyPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyReleased.html">Rubygame::Events::KeyReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyboardEvent.html">Rubygame::Events::KeyboardEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseButtonEvent.html">Rubygame::Events::MouseButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusGained.html">Rubygame::Events::MouseFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusLost.html">Rubygame::Events::MouseFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseMoved.html">Rubygame::Events::MouseMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/MousePressed.html">Rubygame::Events::MousePressed</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseReleased.html">Rubygame::Events::MouseReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/QuitRequested.html">Rubygame::Events::QuitRequested</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowExposed.html">Rubygame::Events::WindowExposed</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowMinimized.html">Rubygame::Events::WindowMinimized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowResized.html">Rubygame::Events::WindowResized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowUnminimized.html">Rubygame::Events::WindowUnminimized</a></li>
+        
+          <li><a href="../Rubygame/ExposeEvent.html">Rubygame::ExposeEvent</a></li>
+        
+          <li><a href="../Rubygame/Ftor.html">Rubygame::Ftor</a></li>
+        
+          <li><a href="../Rubygame/GL.html">Rubygame::GL</a></li>
+        
+          <li><a href="../Rubygame/Hotspot.html">Rubygame::Hotspot</a></li>
+        
+          <li><a href="../Rubygame/JoyAxisEvent.html">Rubygame::JoyAxisEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyBallEvent.html">Rubygame::JoyBallEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyDownEvent.html">Rubygame::JoyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyHatEvent.html">Rubygame::JoyHatEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyUpEvent.html">Rubygame::JoyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Joystick.html">Rubygame::Joystick</a></li>
+        
+          <li><a href="../Rubygame/Key.html">Rubygame::Key</a></li>
+        
+          <li><a href="../Rubygame/KeyDownEvent.html">Rubygame::KeyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/KeyUpEvent.html">Rubygame::KeyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/MailQueue.html">Rubygame::MailQueue</a></li>
+        
+          <li><a href="../Rubygame/MediaBag.html">Rubygame::MediaBag</a></li>
+        
+          <li><a href="../Rubygame/Mixer.html">Rubygame::Mixer</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Music.html">Rubygame::Mixer::Music</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Sample.html">Rubygame::Mixer::Sample</a></li>
+        
+          <li><a href="../Rubygame/Mouse.html">Rubygame::Mouse</a></li>
+        
+          <li><a href="../Rubygame/MouseDownEvent.html">Rubygame::MouseDownEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseMotionEvent.html">Rubygame::MouseMotionEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseUpEvent.html">Rubygame::MouseUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Music.html">Rubygame::Music</a></li>
+        
+          <li><a href="../Rubygame/NamedResource.html">Rubygame::NamedResource</a></li>
+        
+          <li><a href="../Rubygame/NamedResource/NamedResourceClassMethods.html">Rubygame::NamedResource::NamedResourceClassMethods</a></li>
+        
+          <li><a href="../Rubygame/QuitEvent.html">Rubygame::QuitEvent</a></li>
+        
+          <li><a href="../Rubygame/Rect.html">Rubygame::Rect</a></li>
+        
+          <li><a href="../Rubygame/ResizeEvent.html">Rubygame::ResizeEvent</a></li>
+        
+          <li><a href="../Rubygame/SDLError.html">Rubygame::SDLError</a></li>
+        
+          <li><a href="../Rubygame/SFont.html">Rubygame::SFont</a></li>
+        
+          <li><a href="../Rubygame/Screen.html">Rubygame::Screen</a></li>
+        
+          <li><a href="../Rubygame/Sound.html">Rubygame::Sound</a></li>
+        
+          <li><a href="../Rubygame/Sprites.html">Rubygame::Sprites</a></li>
+        
+          <li><a href="../Rubygame/Sprites/DepthSortGroup.html">Rubygame::Sprites::DepthSortGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Group.html">Rubygame::Sprites::Group</a></li>
+        
+          <li><a href="../Rubygame/Sprites/LimitGroup.html">Rubygame::Sprites::LimitGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Sprite.html">Rubygame::Sprites::Sprite</a></li>
+        
+          <li><a href="../Rubygame/Sprites/UpdateGroup.html">Rubygame::Sprites::UpdateGroup</a></li>
+        
+          <li><a href="../Rubygame/Surface.html">Rubygame::Surface</a></li>
+        
+          <li><a href="../Rubygame/TTF.html">Rubygame::TTF</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Rubygame::Clock</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="Clock.html">Clock</a> provides class methods for tracking running
+time and delaying execution of the program for specified time periods. This
+is used to provide a consistent framerate, prevent the program from using
+all the processor time, etc.</p>
+
+<p><a href="Clock.html">Clock</a> also provides instance methods to make it
+convenient to monitor and limit application framerate. See <a
+href="Clock.html#method-i-tick">tick</a>.</p>
+
+<p>An in-depth tutorial on using <a href="Clock.html">Clock</a> is available.
+See <a
+href="../files/doc/managing_framerate_rdoc.html">doc/managing_framerate.rdoc</a>
+in the <a href="../Rubygame.html">Rubygame</a> source distribution or in
+the online documentation.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="granularity-attribute-method" class="method-detail">
+          <a name="granularity"></a>
+          
+          <a name="granularity="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">granularity</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Granularity used for framerate limiting delays in <a
+href="Clock.html#method-i-tick">tick</a>. You can calibrate this easily
+with <a href="Clock.html#method-i-calibrate">calibrate</a>. See also <a
+href="Clock.html#method-i-tick">tick</a> and <a
+href="Clock.html#method-c-delay">Clock.delay</a>. (Non-negative integer.
+Default: 12.)</p>
+          
+          </div>
+        </div>
+        
+        <div id="nice-attribute-method" class="method-detail">
+          <a name="nice"></a>
+          
+          <a name="nice="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">nice</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Whether to try to let other ruby threads run during framerate limiting
+delays in <a href="Clock.html#method-i-tick">tick</a>. See <a
+href="Clock.html#method-i-tick">tick</a> and <a
+href="Clock.html#method-c-delay">Clock.delay</a>. (true or false. Default:
+false.)</p>
+          
+          </div>
+        </div>
+        
+        <div id="start-attribute-method" class="method-detail">
+          <a name="start"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">start</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The runtime when the <a href="Clock.html">Clock</a> was initialized.</p>
+          
+          </div>
+        </div>
+        
+        <div id="ticks-attribute-method" class="method-detail">
+          <a name="ticks"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">ticks</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The number of times <a href="Clock.html#method-i-tick">tick</a> has been
+called.</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="delay-method" class="method-detail ">
+          <a name="method-c-delay"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">delay</span><span
+              class="method-args">( time, gran=12, nice=false )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <table class="rdoc-list"><tr><td class="rdoc-term"><p>time</p></td>
+<td>
+<p>The target delay time, in milliseconds. (Non-negative integer. Required.)</p>
+</td></tr><tr><td class="rdoc-term"><p>gran</p></td>
+<td>
+<p>The assumed granularity (in ms) of the system clock. (Non-negative integer.
+Optional. Default: 12.)</p>
+</td></tr><tr><td class="rdoc-term"><p>nice</p></td>
+<td>
+<p>If true, try to let other ruby threads run during the delay. (true or
+false. Optional. Default: false.)</p>
+</td></tr><tr><td class="rdoc-term"><p>Returns</p></td>
+<td>
+<p>The actual delay time, in milliseconds.</p>
+</td></tr></table>
+
+<p>Pause the program for <tt>time</tt> milliseconds. This function is more
+accurate than <a href="Clock.html#method-c-wait">Clock.wait</a>, but uses
+slightly more CPU time. Both this function and <a
+href="Clock.html#method-c-wait">Clock.wait</a> can be used to slow down the
+framerate so that the application doesn’t use too much CPU time. See also
+<a href="Clock.html#method-i-tick">Clock#tick</a> for a good and easy way
+to limit the framerate.</p>
+
+<p>This function uses “busy waiting” during the last part of the delay, for
+increased accuracy. The value of <tt>gran</tt> affects how many
+milliseconds of the delay are spent in busy waiting, and thus how much CPU
+it uses. A smaller <tt>gran</tt> value uses less CPU, but if it’s smaller
+than the true system granularity, this function may delay a few
+milliseconds too long. The default value (12ms) is very safe, but a value
+of approximately 5ms would give a better balance between accuracy and CPU
+usage on most modern computers. A granularity of 0ms makes this method act
+the same as <a href="Clock.html#method-c-wait">Clock.wait</a> (i.e. no busy
+waiting at all, very low CPU usage).</p>
+
+<p>If <tt>nice</tt> is true, this function will try to allow other ruby
+threads to run during this function. Otherwise, other ruby threads will
+probably also be paused. Setting <tt>nice</tt> to true is only useful if
+your application is multithreaded. It’s safe (but pointless) to use this
+feature for single threaded applications.</p>
+
+<p>The <a href="../Rubygame.html">Rubygame</a> timer system will be
+initialized when you call this function, if it has not been already. See <a
+href="Clock.html#method-c-runtime">Clock.runtime</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="delay-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delay</span>( <span class="ruby-identifier">time</span>, <span class="ruby-identifier">gran</span>=<span class="ruby-value">12</span>, <span class="ruby-identifier">nice</span>=<span class="ruby-keyword">false</span> )
+  <span class="ruby-identifier">_init_sdl_timer</span>
+  <span class="ruby-identifier">time</span> = <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">time</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">gran</span> = <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">gran</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">_accurate_delay</span>( <span class="ruby-identifier">time</span>, <span class="ruby-identifier">gran</span>, <span class="ruby-identifier">nice</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- delay-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- delay-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="Clock.html">Clock</a> instance.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>()
+  <span class="ruby-ivar">@start</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">runtime</span>()
+  <span class="ruby-ivar">@last_tick</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@ticks</span> = <span class="ruby-value">0</span>
+
+  <span class="ruby-ivar">@target_frametime</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-comment"># Frametime samples for framerate calculation</span>
+  <span class="ruby-ivar">@samples</span> = []
+  <span class="ruby-ivar">@max_samples</span> = <span class="ruby-value">20</span>
+
+  <span class="ruby-ivar">@granularity</span> = <span class="ruby-value">12</span>
+  <span class="ruby-ivar">@nice</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-comment"># Should #tick return a ClockTicked event?</span>
+  <span class="ruby-ivar">@tick_events</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-comment"># Cache for past tick events with specific ms values</span>
+  <span class="ruby-ivar">@tick_cache</span> = {}
+
+  <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="runtime-method" class="method-detail ">
+          <a name="method-c-runtime"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">runtime</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the number of milliseconds since the <a
+href="../Rubygame.html">Rubygame</a> timer system was initialized.</p>
+
+<p>The <a href="../Rubygame.html">Rubygame</a> timer system will be
+initialized when you call this function, if it has not been already.</p>
+            
+
+            
+            <div class="method-source-code" id="runtime-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">runtime</span>
+  <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetTicks</span>().<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- runtime-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- runtime-method -->
+
+      
+        <div id="wait-method" class="method-detail ">
+          <a name="method-c-wait"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">wait</span><span
+              class="method-args">( time, nice=false )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <table class="rdoc-list"><tr><td class="rdoc-term"><p>time</p></td>
+<td>
+<p>The target wait time, in milliseconds. (Non-negative Integer. Required.)</p>
+</td></tr><tr><td class="rdoc-term"><p>nice</p></td>
+<td>
+<p>If true, try to let other ruby threads run during the delay. (true or
+false. Optional.)</p>
+</td></tr><tr><td class="rdoc-term"><p>Returns</p></td>
+<td>
+<p>The actual wait time, in milliseconds.</p>
+</td></tr></table>
+
+<p>Pause the program for approximately <tt>time</tt> milliseconds. Both this
+function and <a href="Clock.html#method-c-delay">Clock.delay</a> can be
+used to slow down the framerate so that the application doesn’t use too
+much CPU time. See also <a href="Clock.html#method-i-tick">Clock#tick</a>
+for a good and easy way to limit the framerate.</p>
+
+<p>The accuracy of this function depends on processor scheduling, which varies
+with operating system and hardware. The actual delay time may be up to 10ms
+longer than <tt>time</tt>. If you need more accuracy use <a
+href="Clock.html#method-c-delay">Clock.delay</a>, which is more accurate
+but uses slightly more CPU time.</p>
+
+<p>If <tt>nice</tt> is true, this function will try to allow other ruby
+threads to run during this function. Otherwise, other ruby threads will
+probably also be paused. Setting <tt>nice</tt> to true is only useful if
+your application is multithreaded. It’s safe (but pointless) to use this
+feature for single threaded applications.</p>
+
+<p>The <a href="../Rubygame.html">Rubygame</a> timer system will be
+initialized when you call this function, if it has not been already. See <a
+href="Clock.html#method-c-runtime">Clock.runtime</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="wait-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wait</span>( <span class="ruby-identifier">time</span>, <span class="ruby-identifier">nice</span>=<span class="ruby-keyword">false</span> )
+  <span class="ruby-identifier">_init_sdl_timer</span>
+  <span class="ruby-identifier">time</span> = <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">time</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">_threaded_delay</span>( <span class="ruby-identifier">time</span>, <span class="ruby-identifier">nice</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- wait-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- wait-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="calibrate-method" class="method-detail ">
+          <a name="method-i-calibrate"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">calibrate</span><span
+              class="method-args">( max_time = 0.5 )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Calibrate some <a href="Clock.html">Clock</a> settings to match the current
+computer. This improves efficiency and minimizes CPU usage without reducing
+accuracy.</p>
+
+<p>As of <a href="../Rubygame.html">Rubygame</a> 2.5, this method calibrates
+@granularity. See <a href="Clock.html#method-i-tick">tick</a> and <a
+href="Clock.html#method-c-delay">Clock.delay</a> for more information about
+the effect of setting granularity. In future versions of <a
+href="../Rubygame.html">Rubygame</a>, this method may also calibrate
+additional <a href="Clock.html">Clock</a> attributes.</p>
+
+<p>By default, the calibration takes a maximum of 0.5 seconds to complete. You
+can specify a different maximum length by passing a different value for
+<tt>max_time</tt>. In future versions of <a
+href="../Rubygame.html">Rubygame</a>, calibration may take less than
+max_time, but will not take more. Also, the default max_time may be lowered
+in future versions, but will not be raised.</p>
+
+<p>You usually only need to call this once, after you create the <a
+href="Clock.html">Clock</a> instance at the start of your application. You
+should not run any other ruby threads at the same time, as doing so will
+skew the calibration.</p>
+            
+
+            
+            <div class="method-source-code" id="calibrate-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">calibrate</span>( <span class="ruby-identifier">max_time</span> = <span class="ruby-value">0.5</span> )
+  <span class="ruby-identifier">samples</span> = []
+
+  <span class="ruby-identifier">end_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">max_time</span>
+
+  <span class="ruby-keyword">while</span>( <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">end_time</span> )
+    <span class="ruby-identifier">t</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+    <span class="ruby-identifier">sleep</span> <span class="ruby-value">0.01</span>
+    <span class="ruby-identifier">samples</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">-</span> <span class="ruby-value">0.01</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">average</span> = <span class="ruby-identifier">samples</span>.<span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>,<span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>} <span class="ruby-operator">/</span> <span class="ruby-identifier">samples</span>.<span class="ruby-identifier">length</span>
+
+  <span class="ruby-comment"># convert to ms, add some padding</span>
+  <span class="ruby-identifier">gran</span> = (<span class="ruby-identifier">average</span> * <span class="ruby-value">1000</span>).<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+
+  <span class="ruby-ivar">@granularity</span> = <span class="ruby-identifier">gran</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- calibrate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- calibrate-method -->
+
+      
+        <div id="enable_tick_events-method" class="method-detail ">
+          <a name="method-i-enable_tick_events"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">enable_tick_events</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Enable tick events, so that <a href="Clock.html#method-i-tick">tick</a>
+will return a ClockTicked instance instead of a number of milliseconds.</p>
+
+<p>This option is available starting in <a
+href="../Rubygame.html">Rubygame</a> 2.5, and will become the default in <a
+href="../Rubygame.html">Rubygame</a> 3.0.</p>
+            
+
+            
+            <div class="method-source-code" id="enable_tick_events-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">enable_tick_events</span>
+  <span class="ruby-ivar">@tick_events</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- enable_tick_events-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- enable_tick_events-method -->
+
+      
+        <div id="framerate-method" class="method-detail ">
+          <a name="method-i-framerate"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">framerate  &rarr;  Float</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Return the actual framerate (frames per second) recorded by the <a
+href="Clock.html">Clock</a>. See <a
+href="Clock.html#method-i-tick">tick</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="framerate-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 387</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">framerate</span>
+  <span class="ruby-identifier">sum</span> = <span class="ruby-ivar">@samples</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>, <span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>}
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-value">0.0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-value">1000.0</span> * <span class="ruby-ivar">@samples</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">sum</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- framerate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- framerate-method -->
+
+      
+        <div id="frametime-method" class="method-detail ">
+          <a name="method-i-frametime"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">frametime  &rarr;  Float</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Return the actual frametime (milliseconds per frame) recorded by the <a
+href="Clock.html">Clock</a>. See <a
+href="Clock.html#method-i-tick">tick</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="frametime-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 403</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">frametime</span>
+  <span class="ruby-ivar">@samples</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>, <span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>} <span class="ruby-operator">/</span> (<span class="ruby-ivar">@samples</span>.<span class="ruby-identifier">length</span>)
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">ZeroDivisionError</span>
+  <span class="ruby-value">0.0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- frametime-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- frametime-method -->
+
+      
+        <div id="lifetime-method" class="method-detail ">
+          <a name="method-i-lifetime"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">lifetime  &rarr;  Integer</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Returns time in milliseconds since this <a href="Clock.html">Clock</a>
+instance was created.</p>
+            
+
+            
+            <div class="method-source-code" id="lifetime-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 376</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lifetime</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">runtime</span>() <span class="ruby-operator">-</span> <span class="ruby-ivar">@start</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- lifetime-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- lifetime-method -->
+
+      
+        <div id="target_framerate-method" class="method-detail ">
+          <a name="method-i-target_framerate"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">target_framerate</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the current target framerate (frames/second), or nil if there is no
+target.</p>
+
+<p>This is another to access <a
+href="Clock.html#method-i-target_frametime">target_frametime</a>. Same as:
+1000.0 / <a
+href="Clock.html#method-i-target_frametime">target_frametime</a></p>
+            
+
+            
+            <div class="method-source-code" id="target_framerate-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 342</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">target_framerate</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@target_frametime</span>
+    <span class="ruby-value">1000.0</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@target_frametime</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">ZeroDivisionError</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- target_framerate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- target_framerate-method -->
+
+      
+        <div id="target_framerate-3D-method" class="method-detail ">
+          <a name="method-i-target_framerate-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">target_framerate=</span><span
+              class="method-args">( framerate )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the target number of frames per second to <tt>framerate</tt>. If
+<tt>framerate</tt> is nil, the target is unset, and <a
+href="Clock.html#method-i-tick">tick</a> will no longer apply any delay.</p>
+
+<p>This is another way to access <a
+href="Clock.html#method-i-target_frametime">target_frametime</a>. Same as:
+<a href="Clock.html#method-i-target_frametime">target_frametime</a> =
+1000.0 / framerate</p>
+            
+
+            
+            <div class="method-source-code" id="target_framerate-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 360</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">target_framerate=</span>( <span class="ruby-identifier">framerate</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">framerate</span>
+    <span class="ruby-ivar">@target_frametime</span> = <span class="ruby-value">1000.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">framerate</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@target_frametime</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">ZeroDivisionError</span>
+  <span class="ruby-ivar">@target_frametime</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- target_framerate-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- target_framerate-3D-method -->
+
+      
+        <div id="target_frametime-method" class="method-detail ">
+          <a name="method-i-target_frametime"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">target_frametime</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the current target frametime (milliseconds/frame), or nil if there
+is no target.</p>
+
+<p>This is another way to access <a
+href="Clock.html#method-i-target_framerate">target_framerate</a>. Same as:
+1000.0 / <a
+href="Clock.html#method-i-target_framerate">target_framerate</a></p>
+            
+
+            
+            <div class="method-source-code" id="target_frametime-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 319</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">target_frametime</span>
+  <span class="ruby-ivar">@target_frametime</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- target_frametime-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- target_frametime-method -->
+
+      
+        <div id="target_frametime-3D-method" class="method-detail ">
+          <a name="method-i-target_frametime-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">target_frametime=</span><span
+              class="method-args">( frametime )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the target milliseconds per frame to <tt>frametime</tt>. If
+<tt>frametime</tt> is nil, the target is unset, and <a
+href="Clock.html#method-i-tick">tick</a> will no longer apply any delay.</p>
+
+<p>This is another way to access <a
+href="Clock.html#method-i-target_framerate">target_framerate</a>. Same as:
+<a href="Clock.html#method-i-target_framerate">target_framerate</a> =
+1000.0 / frametime</p>
+            
+
+            
+            <div class="method-source-code" id="target_frametime-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 331</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">target_frametime=</span>( <span class="ruby-identifier">frametime</span> )
+  <span class="ruby-ivar">@target_frametime</span> = <span class="ruby-identifier">frametime</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- target_frametime-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- target_frametime-3D-method -->
+
+      
+        <div id="tick-method" class="method-detail ">
+          <a name="method-i-tick"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">tick</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the number of milliseconds since you last called this method. Or,
+if you have called <a
+href="Clock.html#method-i-enable_tick_events">enable_tick_events</a>, this
+returns a ClockTicked event representing the time since you last called
+this method. (ClockTicked was added in <a
+href="../Rubygame.html">Rubygame</a> 2.5, and will become the default and
+only option in <a href="../Rubygame.html">Rubygame</a> 3.0.)</p>
+
+<p>You must call this method once per frame (i.e. per iteration of your main
+loop) if you want to use the framerate monitoring and/or framerate limiting
+features.</p>
+
+<p>Framerate monitoring allows you to check the <a
+href="Clock.html#method-i-framerate">framerate</a> (frames per second) or
+<a href="Clock.html#method-i-frametime">frametime</a> (milliseconds per
+frame) of your game.</p>
+
+<p>Framerate limiting allows you to prevent the application from running too
+fast (and using 100% of processor time) by pausing the program very briefly
+each frame. The pause duration is calculated each frame to maintain a
+stable framerate.</p>
+
+<p>Framerate limiting is only enabled if you have set the <a
+href="Clock.html#method-i-target_framerate-3D">target_framerate=</a> or <a
+href="Clock.html#method-i-target_frametime-3D">target_frametime=</a>. If
+you have done that, this method will automatically perform the delay each
+time you call it.</p>
+
+<p>There are two other attributes which affect framerate limiting, <a
+href="Clock.html#attribute-i-granularity">granularity</a> and <a
+href="Clock.html#attribute-i-nice">nice</a>. These are passed as parameters
+to <a href="Clock.html#method-c-delay">Clock.delay</a> for the brief pause
+each frame. See <a href="Clock.html#method-c-delay">Clock.delay</a> for the
+effects of those parameters on CPU usage and threading.</p>
+
+<p>(Please note that no effort is made to correct a framerate which is
+<b>slower</b> than the target framerate. <a href="Clock.html">Clock</a>
+can’t make your code run faster, only slow it down if it is running too
+fast.)</p>
+            
+
+            
+            <div class="method-source-code" id="tick-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/clock.rb, line 442</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tick</span>()
+
+  <span class="ruby-comment"># how long since the last tick?</span>
+  <span class="ruby-identifier">passed</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@last_tick</span>
+    <span class="ruby-identifier">passed</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">runtime</span>() <span class="ruby-operator">-</span> <span class="ruby-ivar">@last_tick</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@target_frametime</span>
+    <span class="ruby-identifier">extra</span> = <span class="ruby-ivar">@target_frametime</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">passed</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-identifier">extra</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> )
+      <span class="ruby-identifier">passed</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">delay</span>( <span class="ruby-identifier">extra</span>, <span class="ruby-ivar">@granularity</span>, <span class="ruby-ivar">@nice</span> )
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tick_events</span>
+    <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@tick_cache</span>[<span class="ruby-identifier">passed</span>] <span class="ruby-keyword">or</span> 
+             (<span class="ruby-ivar">@tick_cache</span>[<span class="ruby-identifier">passed</span>] =
+              <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">Events</span><span class="ruby-operator">::</span><span class="ruby-constant">ClockTicked</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">passed</span> ) ))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">passed</span>
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-ivar">@last_tick</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">runtime</span>()
+  <span class="ruby-ivar">@ticks</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+
+  <span class="ruby-comment"># Save the frametime for framerate calculation</span>
+  <span class="ruby-ivar">@samples</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">passed</span>)
+  <span class="ruby-ivar">@samples</span>.<span class="ruby-identifier">shift</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@samples</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@max_samples</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- tick-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- tick-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

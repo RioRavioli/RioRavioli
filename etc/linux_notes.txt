@@ -1,0 +1,9 @@
+SDL_Stuff
+	libraries installed in: /usr/local/lib
+
+Pixel Art
+	mtpaint
+
+AUR:
+	packer
+

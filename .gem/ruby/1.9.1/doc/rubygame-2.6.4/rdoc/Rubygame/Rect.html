@@ -1,0 +1,4042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Rubygame::Rect</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/rubygame/rect_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/rect.rb">lib/rubygame/rect.rb</a></li>
+          
+            <li><a href="../lib/rubygame/old_rect_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/old_rect.rb">lib/rubygame/old_rect.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Array</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-new_from_object">::new_from_object</a></li>
+          
+          <li><a href="#method-i-b">#b</a></li>
+          
+          <li><a href="#method-i-b-3D">#b=</a></li>
+          
+          <li><a href="#method-i-bl">#bl</a></li>
+          
+          <li><a href="#method-i-bl-3D">#bl=</a></li>
+          
+          <li><a href="#method-i-bottom">#bottom</a></li>
+          
+          <li><a href="#method-i-bottom-3D">#bottom=</a></li>
+          
+          <li><a href="#method-i-bottomleft">#bottomleft</a></li>
+          
+          <li><a href="#method-i-bottomleft-3D">#bottomleft=</a></li>
+          
+          <li><a href="#method-i-bottomright">#bottomright</a></li>
+          
+          <li><a href="#method-i-bottomright-3D">#bottomright=</a></li>
+          
+          <li><a href="#method-i-br">#br</a></li>
+          
+          <li><a href="#method-i-br-3D">#br=</a></li>
+          
+          <li><a href="#method-i-c">#c</a></li>
+          
+          <li><a href="#method-i-c-3D">#c=</a></li>
+          
+          <li><a href="#method-i-center">#center</a></li>
+          
+          <li><a href="#method-i-center-3D">#center=</a></li>
+          
+          <li><a href="#method-i-centerx">#centerx</a></li>
+          
+          <li><a href="#method-i-centerx-3D">#centerx=</a></li>
+          
+          <li><a href="#method-i-centery">#centery</a></li>
+          
+          <li><a href="#method-i-centery-3D">#centery=</a></li>
+          
+          <li><a href="#method-i-clamp">#clamp</a></li>
+          
+          <li><a href="#method-i-clamp-21">#clamp!</a></li>
+          
+          <li><a href="#method-i-clip">#clip</a></li>
+          
+          <li><a href="#method-i-clip-21">#clip!</a></li>
+          
+          <li><a href="#method-i-collide_array">#collide_array</a></li>
+          
+          <li><a href="#method-i-collide_array_all">#collide_array_all</a></li>
+          
+          <li><a href="#method-i-collide_hash">#collide_hash</a></li>
+          
+          <li><a href="#method-i-collide_hash_all">#collide_hash_all</a></li>
+          
+          <li><a href="#method-i-collide_point-3F">#collide_point?</a></li>
+          
+          <li><a href="#method-i-collide_rect-3F">#collide_rect?</a></li>
+          
+          <li><a href="#method-i-contain-3F">#contain?</a></li>
+          
+          <li><a href="#method-i-cx">#cx</a></li>
+          
+          <li><a href="#method-i-cx-3D">#cx=</a></li>
+          
+          <li><a href="#method-i-cy">#cy</a></li>
+          
+          <li><a href="#method-i-cy-3D">#cy=</a></li>
+          
+          <li><a href="#method-i-h">#h</a></li>
+          
+          <li><a href="#method-i-h-3D">#h=</a></li>
+          
+          <li><a href="#method-i-height">#height</a></li>
+          
+          <li><a href="#method-i-height-3D">#height=</a></li>
+          
+          <li><a href="#method-i-inflate">#inflate</a></li>
+          
+          <li><a href="#method-i-inflate-21">#inflate!</a></li>
+          
+          <li><a href="#method-i-inspect">#inspect</a></li>
+          
+          <li><a href="#method-i-l">#l</a></li>
+          
+          <li><a href="#method-i-l-3D">#l=</a></li>
+          
+          <li><a href="#method-i-left">#left</a></li>
+          
+          <li><a href="#method-i-left-3D">#left=</a></li>
+          
+          <li><a href="#method-i-mb">#mb</a></li>
+          
+          <li><a href="#method-i-mb-3D">#mb=</a></li>
+          
+          <li><a href="#method-i-midbottom">#midbottom</a></li>
+          
+          <li><a href="#method-i-midbottom-3D">#midbottom=</a></li>
+          
+          <li><a href="#method-i-midleft">#midleft</a></li>
+          
+          <li><a href="#method-i-midleft-3D">#midleft=</a></li>
+          
+          <li><a href="#method-i-midright">#midright</a></li>
+          
+          <li><a href="#method-i-midright-3D">#midright=</a></li>
+          
+          <li><a href="#method-i-midtop">#midtop</a></li>
+          
+          <li><a href="#method-i-midtop-3D">#midtop=</a></li>
+          
+          <li><a href="#method-i-ml">#ml</a></li>
+          
+          <li><a href="#method-i-ml-3D">#ml=</a></li>
+          
+          <li><a href="#method-i-move">#move</a></li>
+          
+          <li><a href="#method-i-move-21">#move!</a></li>
+          
+          <li><a href="#method-i-mr">#mr</a></li>
+          
+          <li><a href="#method-i-mr-3D">#mr=</a></li>
+          
+          <li><a href="#method-i-mt">#mt</a></li>
+          
+          <li><a href="#method-i-mt-3D">#mt=</a></li>
+          
+          <li><a href="#method-i-normalize">#normalize</a></li>
+          
+          <li><a href="#method-i-normalize-21">#normalize!</a></li>
+          
+          <li><a href="#method-i-r">#r</a></li>
+          
+          <li><a href="#method-i-r-3D">#r=</a></li>
+          
+          <li><a href="#method-i-right">#right</a></li>
+          
+          <li><a href="#method-i-right-3D">#right=</a></li>
+          
+          <li><a href="#method-i-size">#size</a></li>
+          
+          <li><a href="#method-i-size-3D">#size=</a></li>
+          
+          <li><a href="#method-i-t">#t</a></li>
+          
+          <li><a href="#method-i-t-3D">#t=</a></li>
+          
+          <li><a href="#method-i-tl">#tl</a></li>
+          
+          <li><a href="#method-i-tl-3D">#tl=</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+          <li><a href="#method-i-top">#top</a></li>
+          
+          <li><a href="#method-i-top-3D">#top=</a></li>
+          
+          <li><a href="#method-i-topleft">#topleft</a></li>
+          
+          <li><a href="#method-i-topleft-3D">#topleft=</a></li>
+          
+          <li><a href="#method-i-topright">#topright</a></li>
+          
+          <li><a href="#method-i-topright-3D">#topright=</a></li>
+          
+          <li><a href="#method-i-tr">#tr</a></li>
+          
+          <li><a href="#method-i-tr-3D">#tr=</a></li>
+          
+          <li><a href="#method-i-union">#union</a></li>
+          
+          <li><a href="#method-i-union-21">#union!</a></li>
+          
+          <li><a href="#method-i-union_all">#union_all</a></li>
+          
+          <li><a href="#method-i-union_all-21">#union_all!</a></li>
+          
+          <li><a href="#method-i-w">#w</a></li>
+          
+          <li><a href="#method-i-w-3D">#w=</a></li>
+          
+          <li><a href="#method-i-width">#width</a></li>
+          
+          <li><a href="#method-i-width-3D">#width=</a></li>
+          
+          <li><a href="#method-i-x">#x</a></li>
+          
+          <li><a href="#method-i-x-3D">#x=</a></li>
+          
+          <li><a href="#method-i-y">#y</a></li>
+          
+          <li><a href="#method-i-y-3D">#y=</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../CREDITS.html">CREDITS</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../ROADMAP.html">ROADMAP</a></li>
+        
+          <li class="file"><a href="../doc/custom_sdl_load_paths_rdoc.html">custom_sdl_load_paths.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/getting_started_rdoc.html">getting_started.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/keyboard_symbols_rdoc.html">keyboard_symbols.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/macosx_install_rdoc.html">macosx_install.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/managing_framerate_rdoc.html">managing_framerate.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/surface_palettes_rdoc.html">surface_palettes.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/windows_install_rdoc.html">windows_install.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Rubygame.html">Rubygame</a></li>
+        
+          <li><a href="../Rubygame/ActiveEvent.html">Rubygame::ActiveEvent</a></li>
+        
+          <li><a href="../Rubygame/Clock.html">Rubygame::Clock</a></li>
+        
+          <li><a href="../Rubygame/Color.html">Rubygame::Color</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorBase.html">Rubygame::Color::ColorBase</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSL.html">Rubygame::Color::ColorHSL</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSV.html">Rubygame::Color::ColorHSV</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorRGB.html">Rubygame::Color::ColorRGB</a></li>
+        
+          <li><a href="../Rubygame/Color/Palette.html">Rubygame::Color::Palette</a></li>
+        
+          <li><a href="../Rubygame/Event.html">Rubygame::Event</a></li>
+        
+          <li><a href="../Rubygame/EventActions.html">Rubygame::EventActions</a></li>
+        
+          <li><a href="../Rubygame/EventActions/BlockAction.html">Rubygame::EventActions::BlockAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MethodAction.html">Rubygame::EventActions::MethodAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MultiAction.html">Rubygame::EventActions::MultiAction</a></li>
+        
+          <li><a href="../Rubygame/EventHandler.html">Rubygame::EventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHandler/HasEventHandler.html">Rubygame::EventHandler::HasEventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHook.html">Rubygame::EventHook</a></li>
+        
+          <li><a href="../Rubygame/EventQueue.html">Rubygame::EventQueue</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers.html">Rubygame::EventTriggers</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AndTrigger.html">Rubygame::EventTriggers::AndTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AttrTrigger.html">Rubygame::EventTriggers::AttrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/BlockTrigger.html">Rubygame::EventTriggers::BlockTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/InstanceOfTrigger.html">Rubygame::EventTriggers::InstanceOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyPressTrigger.html">Rubygame::EventTriggers::KeyPressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyReleaseTrigger.html">Rubygame::EventTriggers::KeyReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KindOfTrigger.html">Rubygame::EventTriggers::KindOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseMoveTrigger.html">Rubygame::EventTriggers::MouseMoveTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MousePressTrigger.html">Rubygame::EventTriggers::MousePressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseReleaseTrigger.html">Rubygame::EventTriggers::MouseReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/OrTrigger.html">Rubygame::EventTriggers::OrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/TickTrigger.html">Rubygame::EventTriggers::TickTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/YesTrigger.html">Rubygame::EventTriggers::YesTrigger</a></li>
+        
+          <li><a href="../Rubygame/Events.html">Rubygame::Events</a></li>
+        
+          <li><a href="../Rubygame/Events/ClockTicked.html">Rubygame::Events::ClockTicked</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusGained.html">Rubygame::Events::InputFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusLost.html">Rubygame::Events::InputFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickAxisMoved.html">Rubygame::Events::JoystickAxisMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickBallMoved.html">Rubygame::Events::JoystickBallMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonEvent.html">Rubygame::Events::JoystickButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonPressed.html">Rubygame::Events::JoystickButtonPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonReleased.html">Rubygame::Events::JoystickButtonReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickHatMoved.html">Rubygame::Events::JoystickHatMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyPressed.html">Rubygame::Events::KeyPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyReleased.html">Rubygame::Events::KeyReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyboardEvent.html">Rubygame::Events::KeyboardEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseButtonEvent.html">Rubygame::Events::MouseButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusGained.html">Rubygame::Events::MouseFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusLost.html">Rubygame::Events::MouseFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseMoved.html">Rubygame::Events::MouseMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/MousePressed.html">Rubygame::Events::MousePressed</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseReleased.html">Rubygame::Events::MouseReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/QuitRequested.html">Rubygame::Events::QuitRequested</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowExposed.html">Rubygame::Events::WindowExposed</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowMinimized.html">Rubygame::Events::WindowMinimized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowResized.html">Rubygame::Events::WindowResized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowUnminimized.html">Rubygame::Events::WindowUnminimized</a></li>
+        
+          <li><a href="../Rubygame/ExposeEvent.html">Rubygame::ExposeEvent</a></li>
+        
+          <li><a href="../Rubygame/Ftor.html">Rubygame::Ftor</a></li>
+        
+          <li><a href="../Rubygame/GL.html">Rubygame::GL</a></li>
+        
+          <li><a href="../Rubygame/Hotspot.html">Rubygame::Hotspot</a></li>
+        
+          <li><a href="../Rubygame/JoyAxisEvent.html">Rubygame::JoyAxisEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyBallEvent.html">Rubygame::JoyBallEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyDownEvent.html">Rubygame::JoyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyHatEvent.html">Rubygame::JoyHatEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyUpEvent.html">Rubygame::JoyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Joystick.html">Rubygame::Joystick</a></li>
+        
+          <li><a href="../Rubygame/Key.html">Rubygame::Key</a></li>
+        
+          <li><a href="../Rubygame/KeyDownEvent.html">Rubygame::KeyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/KeyUpEvent.html">Rubygame::KeyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/MailQueue.html">Rubygame::MailQueue</a></li>
+        
+          <li><a href="../Rubygame/MediaBag.html">Rubygame::MediaBag</a></li>
+        
+          <li><a href="../Rubygame/Mixer.html">Rubygame::Mixer</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Music.html">Rubygame::Mixer::Music</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Sample.html">Rubygame::Mixer::Sample</a></li>
+        
+          <li><a href="../Rubygame/Mouse.html">Rubygame::Mouse</a></li>
+        
+          <li><a href="../Rubygame/MouseDownEvent.html">Rubygame::MouseDownEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseMotionEvent.html">Rubygame::MouseMotionEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseUpEvent.html">Rubygame::MouseUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Music.html">Rubygame::Music</a></li>
+        
+          <li><a href="../Rubygame/NamedResource.html">Rubygame::NamedResource</a></li>
+        
+          <li><a href="../Rubygame/NamedResource/NamedResourceClassMethods.html">Rubygame::NamedResource::NamedResourceClassMethods</a></li>
+        
+          <li><a href="../Rubygame/QuitEvent.html">Rubygame::QuitEvent</a></li>
+        
+          <li><a href="../Rubygame/Rect.html">Rubygame::Rect</a></li>
+        
+          <li><a href="../Rubygame/ResizeEvent.html">Rubygame::ResizeEvent</a></li>
+        
+          <li><a href="../Rubygame/SDLError.html">Rubygame::SDLError</a></li>
+        
+          <li><a href="../Rubygame/SFont.html">Rubygame::SFont</a></li>
+        
+          <li><a href="../Rubygame/Screen.html">Rubygame::Screen</a></li>
+        
+          <li><a href="../Rubygame/Sound.html">Rubygame::Sound</a></li>
+        
+          <li><a href="../Rubygame/Sprites.html">Rubygame::Sprites</a></li>
+        
+          <li><a href="../Rubygame/Sprites/DepthSortGroup.html">Rubygame::Sprites::DepthSortGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Group.html">Rubygame::Sprites::Group</a></li>
+        
+          <li><a href="../Rubygame/Sprites/LimitGroup.html">Rubygame::Sprites::LimitGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Sprite.html">Rubygame::Sprites::Sprite</a></li>
+        
+          <li><a href="../Rubygame/Sprites/UpdateGroup.html">Rubygame::Sprites::UpdateGroup</a></li>
+        
+          <li><a href="../Rubygame/Surface.html">Rubygame::Surface</a></li>
+        
+          <li><a href="../Rubygame/TTF.html">Rubygame::TTF</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Rubygame::Rect</h1>
+
+    <div id="description" class="description">
+      
+<p>A <a href="Rect.html">Rect</a> is a representation of a rectangle, with
+four core attributes (x offset, y offset, width, and height) and a variety
+of functions for manipulating and accessing these attributes.</p>
+
+<p>Like all coordinates in <a href="../Rubygame.html">Rubygame</a> (and its
+base library, SDL), x and y offsets are measured from the top-left corner
+of the screen, with greater y offsets being lower. Thus, specifying the x
+and y offsets of the <a href="Rect.html">Rect</a> is equivalent to setting
+the location of its top-left corner.</p>
+
+<p>In <a href="../Rubygame.html">Rubygame</a>, Rects are used for collision
+detection and describing  the area of a <a href="Surface.html">Surface</a>
+to operate on.</p>
+<hr style="height: 1px">
+
+<p>A <a href="Rect.html">Rect</a> is a representation of a rectangle, with
+four core attributes (x offset, y offset, width, and height) and a variety
+of functions for manipulating and accessing these attributes.</p>
+
+<p>Like all coordinates in <a href="../Rubygame.html">Rubygame</a> (and its
+base library, SDL), x and y offsets are measured from the top-left corner
+of the screen, with greater y offsets being lower. Thus, specifying the x
+and y offsets of the <a href="Rect.html">Rect</a> is equivalent to setting
+the location of its top-left corner.</p>
+
+<p>In <a href="../Rubygame.html">Rubygame</a>, Rects are used for collision
+detection and describing  the area of a <a href="Surface.html">Surface</a>
+to operate on.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(*argv)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="Rect.html">Rect</a>, attempting to extract its own
+information from  the given arguments. The arguments must fall into one of
+these cases:</p>
+
+<pre>- 4 integers +(x, y, w, h)+.
+- 1 Rect or Array containing 4 integers +([x, y, w, h])+.
+- 2 Arrays containing 2 integers each +([x,y], [w,h])+.
+- 1 object with a +rect+ attribute which is a valid Rect object.</pre>
+
+<p>All rect core attributes (x,y,w,h) must be integers.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(*<span class="ruby-identifier">argv</span>)
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">argv</span>.<span class="ruby-identifier">length</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">argv</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Array</span>; <span class="ruby-keyword">super</span>(<span class="ruby-identifier">argv</span>[<span class="ruby-value">0</span>])
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">argv</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:rect</span>; <span class="ruby-keyword">super</span>(<span class="ruby-identifier">argv</span>[<span class="ruby-value">0</span>])
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+                <span class="ruby-keyword">super</span>(<span class="ruby-identifier">argv</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">argv</span>[<span class="ruby-value">1</span>]))
+        <span class="ruby-keyword">when</span> <span class="ruby-value">4</span>
+                <span class="ruby-keyword">super</span>(<span class="ruby-identifier">argv</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="new_from_object-method" class="method-detail ">
+          <a name="method-c-new_from_object"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new_from_object</span><span
+              class="method-args">(object)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Extract or generate a <a href="Rect.html">Rect</a> from the given object,
+if possible, using the following process:</p>
+
+<pre>1. If it's a Rect already, return a duplicate Rect.
+2. Elsif it's an Array with at least 4 values, make a Rect from it.
+3. Elsif it has a +rect+ attribute., perform (1) and (2) on that.
+4. Otherwise, raise TypeError.</pre>
+
+<p>See also <a href="Surface.html#method-i-make_rect">Surface#make_rect()</a></p>
+            
+
+            
+            <div class="method-source-code" id="new_from_object-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new_from_object</span>(<span class="ruby-identifier">object</span>)
+        <span class="ruby-keyword">case</span>(<span class="ruby-identifier">object</span>)
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">Rect</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">object</span>.<span class="ruby-identifier">dup</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span> 
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">object</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">4</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">object</span>)
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">raise</span>(<span class="ruby-constant">ArgumentError</span>,<span class="ruby-string">&quot;Array does not have enough indices to be made into a Rect (%d for 4).&quot;</span><span class="ruby-operator">%</span><span class="ruby-identifier">object</span>.<span class="ruby-identifier">length</span> )
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">begin</span>
+                        <span class="ruby-keyword">case</span>(<span class="ruby-identifier">object</span>.<span class="ruby-identifier">rect</span>)
+                        <span class="ruby-keyword">when</span> <span class="ruby-constant">Rect</span>
+                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">object</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">dup</span>
+                        <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">object</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">4</span>
+                                        <span class="ruby-keyword">return</span> <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">object</span>.<span class="ruby-identifier">rect</span>)
+                                <span class="ruby-keyword">else</span>
+                                        <span class="ruby-identifier">raise</span>(<span class="ruby-constant">ArgumentError</span>,<span class="ruby-string">&quot;Array does not have enough indices to be made into a Rect (%d for 4).&quot;</span><span class="ruby-operator">%</span><span class="ruby-identifier">object</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">length</span> )
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>                         <span class="ruby-comment"># case object.rect</span>
+                <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span> <span class="ruby-comment"># if no rect.rect</span>
+                        <span class="ruby-identifier">raise</span>(<span class="ruby-constant">TypeError</span>,<span class="ruby-string">&quot;Object must be a Rect or Array [x,y,w,h], or have an attribute called 'rect'. (Got %s instance.)&quot;</span><span class="ruby-operator">%</span><span class="ruby-identifier">object</span>.<span class="ruby-identifier">class</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span> <span class="ruby-comment"># case object</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new_from_object-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new_from_object-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="b-method" class="method-detail method-alias">
+          <a name="method-i-b"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">b</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-bottom">bottom</a>
+          </div>
+          
+        </div><!-- b-method -->
+
+      
+        <div id="b-3D-method" class="method-detail method-alias">
+          <a name="method-i-b-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">b=</span><span
+              class="method-args">(b)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-bottom-3D">bottom=</a>
+          </div>
+          
+        </div><!-- b-3D-method -->
+
+      
+        <div id="bl-method" class="method-detail method-alias">
+          <a name="method-i-bl"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bl</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-bottomleft">bottomleft</a>
+          </div>
+          
+        </div><!-- bl-method -->
+
+      
+        <div id="bl-3D-method" class="method-detail method-alias">
+          <a name="method-i-bl-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bl=</span><span
+              class="method-args">(bottomleft)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-bottomleft-3D">bottomleft=</a>
+          </div>
+          
+        </div><!-- bl-3D-method -->
+
+      
+        <div id="bottom-method" class="method-detail ">
+          <a name="method-i-bottom"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bottom</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the y coordinate of the bottom side of the <a
+href="Rect.html">Rect</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="bottom-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bottom</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>)<span class="ruby-operator">+</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- bottom-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-b">b</a>, b
+          </div>
+          
+
+          
+        </div><!-- bottom-method -->
+
+      
+        <div id="bottom-3D-method" class="method-detail ">
+          <a name="method-i-bottom-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bottom=</span><span
+              class="method-args">(b)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the y coordinate of the bottom side of the <a href="Rect.html">Rect</a>
+by translating the <a href="Rect.html">Rect</a> (adjusting the y offset).</p>
+            
+
+            
+            <div class="method-source-code" id="bottom-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bottom=</span>(<span class="ruby-identifier">b</span>); <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">b</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>); <span class="ruby-keyword">return</span> <span class="ruby-identifier">b</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- bottom-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-b-3D">b=</a>, b=
+          </div>
+          
+
+          
+        </div><!-- bottom-3D-method -->
+
+      
+        <div id="bottomleft-method" class="method-detail ">
+          <a name="method-i-bottomleft"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bottomleft</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the x and y coordinates of the bottom-left corner of the <a
+href="Rect.html">Rect</a></p>
+            
+
+            
+            <div class="method-source-code" id="bottomleft-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bottomleft</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>), <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bottom</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- bottomleft-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-bl">bl</a>, bl
+          </div>
+          
+
+          
+        </div><!-- bottomleft-method -->
+
+      
+        <div id="bottomleft-3D-method" class="method-detail ">
+          <a name="method-i-bottomleft-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bottomleft=</span><span
+              class="method-args">(bottomleft)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x and y coordinates of the bottom-left corner of the <a
+href="Rect.html">Rect</a> by  translating the <a href="Rect.html">Rect</a>
+(adjusting the x and y offsets).</p>
+            
+
+            
+            <div class="method-source-code" id="bottomleft-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 289</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bottomleft=</span>(<span class="ruby-identifier">bottomleft</span>)
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Rect#bottomleft= takes an Array of form [x, y].&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">bottomleft</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span>
+        <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>], <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bottom</span> = <span class="ruby-identifier">bottomleft</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">bottomleft</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- bottomleft-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-bl-3D">bl=</a>, bl=
+          </div>
+          
+
+          
+        </div><!-- bottomleft-3D-method -->
+
+      
+        <div id="bottomright-method" class="method-detail ">
+          <a name="method-i-bottomright"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bottomright</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the x and y coordinates of the bottom-right corner of the <a
+href="Rect.html">Rect</a></p>
+            
+
+            
+            <div class="method-source-code" id="bottomright-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 299</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bottomright</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">right</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bottom</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- bottomright-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-br">br</a>, br
+          </div>
+          
+
+          
+        </div><!-- bottomright-method -->
+
+      
+        <div id="bottomright-3D-method" class="method-detail ">
+          <a name="method-i-bottomright-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bottomright=</span><span
+              class="method-args">(bottomright)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x and y coordinates of the bottom-right corner of the <a
+href="Rect.html">Rect</a> by  translating the <a href="Rect.html">Rect</a>
+(adjusting the x and y offsets).</p>
+            
+
+            
+            <div class="method-source-code" id="bottomright-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 303</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bottomright=</span>(<span class="ruby-identifier">bottomright</span>)
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Rect#bottomright= takes an Array of form [x, y].&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">bottomright</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">right</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bottom</span> = <span class="ruby-identifier">bottomright</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">bottomright</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- bottomright-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-br-3D">br=</a>, br=
+          </div>
+          
+
+          
+        </div><!-- bottomright-3D-method -->
+
+      
+        <div id="br-method" class="method-detail method-alias">
+          <a name="method-i-br"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">br</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-bottomright">bottomright</a>
+          </div>
+          
+        </div><!-- br-method -->
+
+      
+        <div id="br-3D-method" class="method-detail method-alias">
+          <a name="method-i-br-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">br=</span><span
+              class="method-args">(bottomright)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-bottomright-3D">bottomright=</a>
+          </div>
+          
+        </div><!-- br-3D-method -->
+
+      
+        <div id="c-method" class="method-detail method-alias">
+          <a name="method-i-c"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">c</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-center">center</a>
+          </div>
+          
+        </div><!-- c-method -->
+
+      
+        <div id="c-3D-method" class="method-detail method-alias">
+          <a name="method-i-c-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">c=</span><span
+              class="method-args">(center)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-center-3D">center=</a>
+          </div>
+          
+        </div><!-- c-3D-method -->
+
+      
+        <div id="center-method" class="method-detail ">
+          <a name="method-i-center"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">center</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the x and y coordinates of the center of the <a
+href="Rect.html">Rect</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="center-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">center</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centerx</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centery</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- center-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-c">c</a>, c
+          </div>
+          
+
+          
+        </div><!-- center-method -->
+
+      
+        <div id="center-3D-method" class="method-detail ">
+          <a name="method-i-center-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">center=</span><span
+              class="method-args">(center)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x and y coordinates of the center of the <a
+href="Rect.html">Rect</a> by translating the <a href="Rect.html">Rect</a>
+(adjusting the x and y offsets).</p>
+            
+
+            
+            <div class="method-source-code" id="center-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">center=</span>(<span class="ruby-identifier">center</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Rect#center= takes an Array of the form [x,y].&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">center</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centerx</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centery</span> = <span class="ruby-identifier">center</span>
+        <span class="ruby-identifier">center</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- center-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-c-3D">c=</a>, c=
+          </div>
+          
+
+          
+        </div><!-- center-3D-method -->
+
+      
+        <div id="centerx-method" class="method-detail ">
+          <a name="method-i-centerx"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">centerx</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the x coordinate of the center of the <a href="Rect.html">Rect</a></p>
+            
+
+            
+            <div class="method-source-code" id="centerx-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 237</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">centerx</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>)<span class="ruby-operator">+</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">div</span>(<span class="ruby-value">2</span>)); <span class="ruby-keyword">end</span></pre>
+            </div><!-- centerx-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-cx">cx</a>, cx
+          </div>
+          
+
+          
+        </div><!-- centerx-method -->
+
+      
+        <div id="centerx-3D-method" class="method-detail ">
+          <a name="method-i-centerx-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">centerx=</span><span
+              class="method-args">(x)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x coordinate of the center of the <a href="Rect.html">Rect</a> by
+translating the <a href="Rect.html">Rect</a> (adjusting the x offset).</p>
+            
+
+            
+            <div class="method-source-code" id="centerx-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">centerx=</span>(<span class="ruby-identifier">x</span>); <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>] = <span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">div</span>(<span class="ruby-value">2</span>)); <span class="ruby-keyword">return</span> <span class="ruby-identifier">x</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- centerx-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-cx-3D">cx=</a>, cx=
+          </div>
+          
+
+          
+        </div><!-- centerx-3D-method -->
+
+      
+        <div id="centery-method" class="method-detail ">
+          <a name="method-i-centery"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">centery</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the y coordinate of the center of the <a href="Rect.html">Rect</a></p>
+            
+
+            
+            <div class="method-source-code" id="centery-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">centery</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>)<span class="ruby-operator">+</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>).<span class="ruby-identifier">div</span>(<span class="ruby-value">2</span>)); <span class="ruby-keyword">end</span></pre>
+            </div><!-- centery-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-cy">cy</a>, cy
+          </div>
+          
+
+          
+        </div><!-- centery-method -->
+
+      
+        <div id="centery-3D-method" class="method-detail ">
+          <a name="method-i-centery-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">centery=</span><span
+              class="method-args">(y)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the y coordinate of the center of the <a href="Rect.html">Rect</a> by
+translating the <a href="Rect.html">Rect</a> (adjusting the y offset).</p>
+            
+
+            
+            <div class="method-source-code" id="centery-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">centery=</span>(<span class="ruby-identifier">y</span>); <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">y</span><span class="ruby-operator">-</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>).<span class="ruby-identifier">div</span>(<span class="ruby-value">2</span>)); <span class="ruby-keyword">return</span> <span class="ruby-identifier">y</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- centery-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-cy-3D">cy=</a>, cy=
+          </div>
+          
+
+          
+        </div><!-- centery-3D-method -->
+
+      
+        <div id="clamp-method" class="method-detail ">
+          <a name="method-i-clamp"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clamp</span><span
+              class="method-args">(rect)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>As <a href="Rect.html#method-i-clamp-21">clamp!</a>, but the original
+caller is not changed.</p>
+            
+
+            
+            <div class="method-source-code" id="clamp-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 378</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clamp</span>(<span class="ruby-identifier">rect</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">clamp!</span>(<span class="ruby-identifier">rect</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clamp-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clamp-method -->
+
+      
+        <div id="clamp-21-method" class="method-detail ">
+          <a name="method-i-clamp-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clamp!</span><span
+              class="method-args">(rect)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Translate the calling <a href="Rect.html">Rect</a> to be entirely inside
+the given <a href="Rect.html">Rect</a>. If  the caller is too large along
+either axis to fit in the given rect, it is centered with respect to the
+given rect, along that axis.</p>
+            
+
+            
+            <div class="method-source-code" id="clamp-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 385</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clamp!</span>(<span class="ruby-identifier">rect</span>)
+        <span class="ruby-identifier">nself</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">normalize</span>
+        <span class="ruby-identifier">rect</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new_from_object</span>(<span class="ruby-identifier">rect</span>)
+        <span class="ruby-comment">#If self is inside given, there is no need to move self</span>
+        <span class="ruby-keyword">unless</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">contain?</span>(<span class="ruby-identifier">nself</span>)
+
+                <span class="ruby-comment">#If self is too wide:</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>)
+                        <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>] = <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">centerx</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">div</span>(<span class="ruby-value">2</span>)
+                        <span class="ruby-comment">#Else self is not too wide</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-comment">#If self is to the left of arg</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>)
+                                <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>] = <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>)
+                        <span class="ruby-comment">#If self is to the right of arg</span>
+                        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">right</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">right</span>
+                                <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>] = <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">right</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>)
+                        <span class="ruby-comment">#Otherwise, leave x alone</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-comment">#If self is too tall:</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>)
+                        <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">centery</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>).<span class="ruby-identifier">div</span>(<span class="ruby-value">2</span>)
+                        <span class="ruby-comment">#Else self is not too tall</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-comment">#If self is above arg</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>)
+                                <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>)
+                        <span class="ruby-comment">#If self below arg</span>
+                        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">bottom</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">bottom</span>
+                                <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">bottom</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>)
+                        <span class="ruby-comment">#Otherwise, leave y alone</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clamp-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clamp-21-method -->
+
+      
+        <div id="clip-method" class="method-detail ">
+          <a name="method-i-clip"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clip</span><span
+              class="method-args">(rect)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>As <a href="Rect.html#method-i-clip-21">clip!</a>, but the original caller
+is not changed.</p>
+            
+
+            
+            <div class="method-source-code" id="clip-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 425</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clip</span>(<span class="ruby-identifier">rect</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">clip!</span>(<span class="ruby-identifier">rect</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clip-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clip-method -->
+
+      
+        <div id="clip-21-method" class="method-detail ">
+          <a name="method-i-clip-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clip!</span><span
+              class="method-args">(rect)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Crop the calling <a href="Rect.html">Rect</a> to be entirely inside the
+given <a href="Rect.html">Rect</a>. If the caller does not intersect the
+given <a href="Rect.html">Rect</a> at all, its width and height are set to
+zero, but its x and y offsets are not changed.</p>
+
+<p>As a side effect, the <a href="Rect.html">Rect</a> is normalized.</p>
+            
+
+            
+            <div class="method-source-code" id="clip-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 434</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clip!</span>(<span class="ruby-identifier">rect</span>)
+        <span class="ruby-identifier">nself</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">normalize</span>
+        <span class="ruby-identifier">other</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new_from_object</span>(<span class="ruby-identifier">rect</span>).<span class="ruby-identifier">normalize!</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">collide_rect?</span>(<span class="ruby-identifier">other</span>)
+                <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>] = [<span class="ruby-identifier">nself</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>), <span class="ruby-identifier">other</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>)].<span class="ruby-identifier">max</span>
+                <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>] = [<span class="ruby-identifier">nself</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>), <span class="ruby-identifier">other</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>)].<span class="ruby-identifier">max</span>
+                <span class="ruby-keyword">self</span>[<span class="ruby-value">2</span>] = [<span class="ruby-identifier">nself</span>.<span class="ruby-identifier">right</span>, <span class="ruby-identifier">other</span>.<span class="ruby-identifier">right</span>].<span class="ruby-identifier">min</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>)
+                <span class="ruby-keyword">self</span>[<span class="ruby-value">3</span>] = [<span class="ruby-identifier">nself</span>.<span class="ruby-identifier">bottom</span>, <span class="ruby-identifier">other</span>.<span class="ruby-identifier">bottom</span>].<span class="ruby-identifier">min</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>)
+        <span class="ruby-keyword">else</span> <span class="ruby-comment">#if they do not intersect at all:</span>
+                <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>], <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">topleft</span>
+                <span class="ruby-keyword">self</span>[<span class="ruby-value">2</span>], <span class="ruby-keyword">self</span>[<span class="ruby-value">3</span>] = <span class="ruby-value">0</span>, <span class="ruby-value">0</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clip-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clip-21-method -->
+
+      
+        <div id="collide_array-method" class="method-detail ">
+          <a name="method-i-collide_array"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">collide_array</span><span
+              class="method-args">(array_rects)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Iterate through all elements in the given Array, and return the
+<b>index</b> of the first element which is a <a href="Rect.html">Rect</a>
+that collides with the caller.</p>
+            
+
+            
+            <div class="method-source-code" id="collide_array-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 477</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">collide_array</span>(<span class="ruby-identifier">array_rects</span>)
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span>(<span class="ruby-identifier">array_rects</span>.<span class="ruby-identifier">length</span>))
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">array_rects</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">collide_rect?</span>(<span class="ruby-keyword">self</span>)
+                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">i</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- collide_array-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- collide_array-method -->
+
+      
+        <div id="collide_array_all-method" class="method-detail ">
+          <a name="method-i-collide_array_all"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">collide_array_all</span><span
+              class="method-args">(array_rects)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Iterate through all elements in the given Array, and return an Array
+containing the <b>indices</b> of every element that is a <a
+href="Rect.html">Rect</a> that collides with the caller.</p>
+            
+
+            
+            <div class="method-source-code" id="collide_array_all-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 489</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">collide_array_all</span>(<span class="ruby-identifier">array_rects</span>)
+        <span class="ruby-identifier">indexes</span> = []
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span>(<span class="ruby-identifier">array_rects</span>.<span class="ruby-identifier">length</span>))
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">array_rects</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">collide_rect?</span>(<span class="ruby-keyword">self</span>)
+                        <span class="ruby-identifier">indexes</span> <span class="ruby-operator">+=</span> [<span class="ruby-identifier">i</span>]
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">indexes</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- collide_array_all-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- collide_array_all-method -->
+
+      
+        <div id="collide_hash-method" class="method-detail ">
+          <a name="method-i-collide_hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">collide_hash</span><span
+              class="method-args">(hash_rects)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Iterate through all key/value pairs in the given hash table, and return the
+first pair whose value is a <a href="Rect.html">Rect</a> that collides with
+the caller.</p>
+
+<p>Because a hash table is unordered, you should not expect any  particular <a
+href="Rect.html">Rect</a> to be returned first.</p>
+            
+
+            
+            <div class="method-source-code" id="collide_hash-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 455</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">collide_hash</span>(<span class="ruby-identifier">hash_rects</span>)
+        <span class="ruby-identifier">hash_rects</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">collide_rect?</span><span class="ruby-operator">+</span>(<span class="ruby-keyword">self</span>); <span class="ruby-keyword">return</span> [<span class="ruby-identifier">key</span>,<span class="ruby-identifier">value</span>]; <span class="ruby-keyword">end</span>
+        }
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- collide_hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- collide_hash-method -->
+
+      
+        <div id="collide_hash_all-method" class="method-detail ">
+          <a name="method-i-collide_hash_all"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">collide_hash_all</span><span
+              class="method-args">(hash_rects)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Iterate through all key/value pairs in the given hash table, and return an
+Array of every pair whose value is a <a href="Rect.html">Rect</a> that
+collides the caller.</p>
+
+<p>Because a hash table is unordered, you should not expect the returned pairs
+to be in any particular order.</p>
+            
+
+            
+            <div class="method-source-code" id="collide_hash_all-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 468</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">collide_hash_all</span>(<span class="ruby-identifier">hash_rects</span>)
+        <span class="ruby-identifier">hash_rects</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">value</span>.<span class="ruby-identifier">collide_rect?</span><span class="ruby-operator">+</span>(<span class="ruby-keyword">self</span>)
+        }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- collide_hash_all-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- collide_hash_all-method -->
+
+      
+        <div id="collide_point-3F-method" class="method-detail ">
+          <a name="method-i-collide_point-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">collide_point?</span><span
+              class="method-args">(x,y)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if the point is inside (including on the border) of the caller. If you
+have Array of coordinates, you can use collide_point?(*coords).</p>
+            
+
+            
+            <div class="method-source-code" id="collide_point-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 501</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">collide_point?</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+        <span class="ruby-identifier">nself</span> = <span class="ruby-identifier">normalize</span>()
+        <span class="ruby-identifier">x</span>.<span class="ruby-identifier">between?</span>(<span class="ruby-identifier">nself</span>.<span class="ruby-identifier">left</span>,<span class="ruby-identifier">nself</span>.<span class="ruby-identifier">right</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">between?</span>(<span class="ruby-identifier">nself</span>.<span class="ruby-identifier">top</span>,<span class="ruby-identifier">nself</span>.<span class="ruby-identifier">bottom</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- collide_point-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- collide_point-3F-method -->
+
+      
+        <div id="collide_rect-3F-method" class="method-detail ">
+          <a name="method-i-collide_rect-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">collide_rect?</span><span
+              class="method-args">(rect)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if the caller and the given <a href="Rect.html">Rect</a> overlap (or
+touch) at all.</p>
+            
+
+            
+            <div class="method-source-code" id="collide_rect-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 507</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">collide_rect?</span>(<span class="ruby-identifier">rect</span>)
+        <span class="ruby-identifier">nself</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">normalize</span>
+        <span class="ruby-identifier">rect</span>  = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new_from_object</span>(<span class="ruby-identifier">rect</span>).<span class="ruby-identifier">normalize!</span>
+        <span class="ruby-keyword">return</span> ((<span class="ruby-identifier">nself</span>.<span class="ruby-identifier">l</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">l</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">l</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">r</span>) <span class="ruby-keyword">or</span> (<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">l</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">l</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">l</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">r</span>)) <span class="ruby-operator">&amp;&amp;</span>
+               ((<span class="ruby-identifier">nself</span>.<span class="ruby-identifier">t</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">t</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">t</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">b</span>) <span class="ruby-keyword">or</span> (<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">t</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">t</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">t</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">b</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- collide_rect-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- collide_rect-3F-method -->
+
+      
+        <div id="contain-3F-method" class="method-detail ">
+          <a name="method-i-contain-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">contain?</span><span
+              class="method-args">(rect)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if the given <a href="Rect.html">Rect</a> is totally within the
+caller. Borders may overlap.</p>
+            
+
+            
+            <div class="method-source-code" id="contain-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 516</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">contain?</span>(<span class="ruby-identifier">rect</span>)
+        <span class="ruby-identifier">nself</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">normalize</span>
+        <span class="ruby-identifier">rect</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new_from_object</span>(<span class="ruby-identifier">rect</span>).<span class="ruby-identifier">normalize!</span>
+        <span class="ruby-keyword">return</span> (<span class="ruby-identifier">nself</span>.<span class="ruby-identifier">left</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">left</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">right</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">right</span> <span class="ruby-keyword">and</span>
+                                <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">top</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">top</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">bottom</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">nself</span>.<span class="ruby-identifier">bottom</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- contain-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- contain-3F-method -->
+
+      
+        <div id="cx-method" class="method-detail method-alias">
+          <a name="method-i-cx"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cx</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-centerx">centerx</a>
+          </div>
+          
+        </div><!-- cx-method -->
+
+      
+        <div id="cx-3D-method" class="method-detail method-alias">
+          <a name="method-i-cx-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cx=</span><span
+              class="method-args">(x)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-centerx-3D">centerx=</a>
+          </div>
+          
+        </div><!-- cx-3D-method -->
+
+      
+        <div id="cy-method" class="method-detail method-alias">
+          <a name="method-i-cy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cy</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-centery">centery</a>
+          </div>
+          
+        </div><!-- cy-method -->
+
+      
+        <div id="cy-3D-method" class="method-detail method-alias">
+          <a name="method-i-cy-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cy=</span><span
+              class="method-args">(y)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-centery-3D">centery=</a>
+          </div>
+          
+        </div><!-- cy-3D-method -->
+
+      
+        <div id="h-method" class="method-detail ">
+          <a name="method-i-h"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">h</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns self.at(3)</p>
+            
+
+            
+            <div class="method-source-code" id="h-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">h</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- h-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-height">height</a>, height
+          </div>
+          
+
+          
+        </div><!-- h-method -->
+
+      
+        <div id="h-3D-method" class="method-detail ">
+          <a name="method-i-h-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">h=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets <a href="http://3">self</a> to <tt>val</tt></p>
+            
+
+            
+            <div class="method-source-code" id="h-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">h=</span>(<span class="ruby-identifier">val</span>); <span class="ruby-keyword">self</span>[<span class="ruby-value">3</span>] = <span class="ruby-identifier">val</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- h-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-height-3D">height=</a>, height=
+          </div>
+          
+
+          
+        </div><!-- h-3D-method -->
+
+      
+        <div id="height-method" class="method-detail method-alias">
+          <a name="method-i-height"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">height</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-h">h</a>
+          </div>
+          
+        </div><!-- height-method -->
+
+      
+        <div id="height-3D-method" class="method-detail method-alias">
+          <a name="method-i-height-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">height=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-h-3D">h=</a>
+          </div>
+          
+        </div><!-- height-3D-method -->
+
+      
+        <div id="inflate-method" class="method-detail ">
+          <a name="method-i-inflate"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inflate</span><span
+              class="method-args">(x,y)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>As <a href="Rect.html#method-i-inflate-21">inflate!</a>, but the original
+caller is not changed.</p>
+            
+
+            
+            <div class="method-source-code" id="inflate-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 524</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inflate</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">div</span>(<span class="ruby-value">2</span>),
+                                                                                                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">div</span>(<span class="ruby-value">2</span>),
+                                                                                                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>,
+                                                                                                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inflate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inflate-method -->
+
+      
+        <div id="inflate-21-method" class="method-detail ">
+          <a name="method-i-inflate-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inflate!</span><span
+              class="method-args">(x,y)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Increase the Rect’s size is the x and y directions, while keeping the same
+center point. For best results, expand by an even number. X and y inflation
+can be given as an Array or as separate values.</p>
+            
+
+            
+            <div class="method-source-code" id="inflate-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 534</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inflate!</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+        <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">-=</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">div</span>(<span class="ruby-value">2</span>)
+        <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">-=</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">div</span>(<span class="ruby-value">2</span>)
+        <span class="ruby-keyword">self</span>[<span class="ruby-value">2</span>] <span class="ruby-operator">+=</span> <span class="ruby-identifier">x</span>
+        <span class="ruby-keyword">self</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">+=</span> <span class="ruby-identifier">y</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inflate-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inflate-21-method -->
+
+      
+        <div id="inspect-method" class="method-detail ">
+          <a name="method-i-inspect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inspect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Print the <a href="Rect.html">Rect</a> in the form “+#&lt;Rect:id
+[x,y,w,h]&gt;+”</p>
+            
+
+            
+            <div class="method-source-code" id="inspect-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inspect</span>; <span class="ruby-node">&quot;#&lt;Rect:#{self.object_id} [%s,%s,%s,%s]&gt;&quot;</span><span class="ruby-operator">%</span><span class="ruby-keyword">self</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- inspect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inspect-method -->
+
+      
+        <div id="l-method" class="method-detail method-alias">
+          <a name="method-i-l"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">l</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-x">x</a>
+          </div>
+          
+        </div><!-- l-method -->
+
+      
+        <div id="l-3D-method" class="method-detail method-alias">
+          <a name="method-i-l-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">l=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-x-3D">x=</a>
+          </div>
+          
+        </div><!-- l-3D-method -->
+
+      
+        <div id="left-method" class="method-detail method-alias">
+          <a name="method-i-left"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">left</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-x">x</a>
+          </div>
+          
+        </div><!-- left-method -->
+
+      
+        <div id="left-3D-method" class="method-detail method-alias">
+          <a name="method-i-left-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">left=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-x-3D">x=</a>
+          </div>
+          
+        </div><!-- left-3D-method -->
+
+      
+        <div id="mb-method" class="method-detail method-alias">
+          <a name="method-i-mb"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mb</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-midbottom">midbottom</a>
+          </div>
+          
+        </div><!-- mb-method -->
+
+      
+        <div id="mb-3D-method" class="method-detail method-alias">
+          <a name="method-i-mb-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mb=</span><span
+              class="method-args">(midbottom)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-midbottom-3D">midbottom=</a>
+          </div>
+          
+        </div><!-- mb-3D-method -->
+
+      
+        <div id="midbottom-method" class="method-detail ">
+          <a name="method-i-midbottom"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">midbottom</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the x and y coordinates of the midpoint on the left side of the <a
+href="Rect.html">Rect</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="midbottom-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 359</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">midbottom</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centerx</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bottom</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- midbottom-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-mb">mb</a>, mb
+          </div>
+          
+
+          
+        </div><!-- midbottom-method -->
+
+      
+        <div id="midbottom-3D-method" class="method-detail ">
+          <a name="method-i-midbottom-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">midbottom=</span><span
+              class="method-args">(midbottom)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x and y coordinates of the midpoint on the bottom side of the <a
+href="Rect.html">Rect</a> by translating the <a href="Rect.html">Rect</a>
+(adjusting the x and y offsets).</p>
+            
+
+            
+            <div class="method-source-code" id="midbottom-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">midbottom=</span>(<span class="ruby-identifier">midbottom</span>)
+<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Rect#midbottom= takes an Array of form [x, y].&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">midbottom</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centerx</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bottom</span> = <span class="ruby-identifier">midbottom</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">midbottom</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- midbottom-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-mb-3D">mb=</a>, mb=
+          </div>
+          
+
+          
+        </div><!-- midbottom-3D-method -->
+
+      
+        <div id="midleft-method" class="method-detail ">
+          <a name="method-i-midleft"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">midleft</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the x and y coordinates of the midpoint on the left side of the <a
+href="Rect.html">Rect</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="midleft-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 314</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">midleft</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>), <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centery</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- midleft-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-ml">ml</a>, ml
+          </div>
+          
+
+          
+        </div><!-- midleft-method -->
+
+      
+        <div id="midleft-3D-method" class="method-detail ">
+          <a name="method-i-midleft-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">midleft=</span><span
+              class="method-args">(midleft)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x and y coordinates of the midpoint on the left side of the <a
+href="Rect.html">Rect</a> by translating the <a href="Rect.html">Rect</a>
+(adjusting the x and y offsets).</p>
+            
+
+            
+            <div class="method-source-code" id="midleft-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">midleft=</span>(<span class="ruby-identifier">midleft</span>)
+<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Rect#midleft= takes an Array of form [x, y].&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">midleft</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span>
+        <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>], <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centery</span> = <span class="ruby-identifier">midleft</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">midleft</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- midleft-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-ml-3D">ml=</a>, ml=
+          </div>
+          
+
+          
+        </div><!-- midleft-3D-method -->
+
+      
+        <div id="midright-method" class="method-detail ">
+          <a name="method-i-midright"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">midright</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the x and y coordinates of the midpoint on the left side of the <a
+href="Rect.html">Rect</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="midright-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 344</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">midright</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">right</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centery</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- midright-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-mr">mr</a>, mr
+          </div>
+          
+
+          
+        </div><!-- midright-method -->
+
+      
+        <div id="midright-3D-method" class="method-detail ">
+          <a name="method-i-midright-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">midright=</span><span
+              class="method-args">(midright)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x and y coordinates of the midpoint on the right side of the <a
+href="Rect.html">Rect</a> by translating the <a href="Rect.html">Rect</a>
+(adjusting the x and y offsets).</p>
+            
+
+            
+            <div class="method-source-code" id="midright-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 348</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">midright=</span>(<span class="ruby-identifier">midright</span>)
+<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Rect#midright= takes an Array of form [x, y].&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">midright</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">right</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centery</span> = <span class="ruby-identifier">midright</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">midright</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- midright-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-mr-3D">mr=</a>, mr=
+          </div>
+          
+
+          
+        </div><!-- midright-3D-method -->
+
+      
+        <div id="midtop-method" class="method-detail ">
+          <a name="method-i-midtop"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">midtop</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the x and y coordinates of the midpoint on the left side of the <a
+href="Rect.html">Rect</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="midtop-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 329</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">midtop</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centerx</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- midtop-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-mt">mt</a>, mt
+          </div>
+          
+
+          
+        </div><!-- midtop-method -->
+
+      
+        <div id="midtop-3D-method" class="method-detail ">
+          <a name="method-i-midtop-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">midtop=</span><span
+              class="method-args">(midtop)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x and y coordinates of the midpoint on the top side of the <a
+href="Rect.html">Rect</a> by translating the <a href="Rect.html">Rect</a>
+(adjusting the x and y offsets).</p>
+            
+
+            
+            <div class="method-source-code" id="midtop-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">midtop=</span>(<span class="ruby-identifier">midtop</span>)
+<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Rect#midtop= takes an Array of form [x, y].&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">midtop</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">centerx</span>, <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">midtop</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">midtop</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- midtop-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-mt-3D">mt=</a>, mt=
+          </div>
+          
+
+          
+        </div><!-- midtop-3D-method -->
+
+      
+        <div id="ml-method" class="method-detail method-alias">
+          <a name="method-i-ml"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ml</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-midleft">midleft</a>
+          </div>
+          
+        </div><!-- ml-method -->
+
+      
+        <div id="ml-3D-method" class="method-detail method-alias">
+          <a name="method-i-ml-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ml=</span><span
+              class="method-args">(midleft)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-midleft-3D">midleft=</a>
+          </div>
+          
+        </div><!-- ml-3D-method -->
+
+      
+        <div id="move-method" class="method-detail ">
+          <a name="method-i-move"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">move</span><span
+              class="method-args">(x,y)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>As <a href="Rect.html#method-i-move-21">move!</a>, but the original caller
+is not changed.</p>
+            
+
+            
+            <div class="method-source-code" id="move-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 543</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">move</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">move!</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- move-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- move-method -->
+
+      
+        <div id="move-21-method" class="method-detail ">
+          <a name="method-i-move-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">move!</span><span
+              class="method-args">(x,y)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Translate the <a href="Rect.html">Rect</a> by the given amounts in the x
+and y directions. Positive values are rightward for x and downward for y. X
+and y movement can be given as an Array or as separate values.</p>
+            
+
+            
+            <div class="method-source-code" id="move-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 550</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">move!</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+        <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>]<span class="ruby-operator">+=</span><span class="ruby-identifier">x</span>; <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">+=</span><span class="ruby-identifier">y</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- move-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- move-21-method -->
+
+      
+        <div id="mr-method" class="method-detail method-alias">
+          <a name="method-i-mr"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mr</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-midright">midright</a>
+          </div>
+          
+        </div><!-- mr-method -->
+
+      
+        <div id="mr-3D-method" class="method-detail method-alias">
+          <a name="method-i-mr-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mr=</span><span
+              class="method-args">(midright)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-midright-3D">midright=</a>
+          </div>
+          
+        </div><!-- mr-3D-method -->
+
+      
+        <div id="mt-method" class="method-detail method-alias">
+          <a name="method-i-mt"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mt</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-midtop">midtop</a>
+          </div>
+          
+        </div><!-- mt-method -->
+
+      
+        <div id="mt-3D-method" class="method-detail method-alias">
+          <a name="method-i-mt-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mt=</span><span
+              class="method-args">(midtop)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-midtop-3D">midtop=</a>
+          </div>
+          
+        </div><!-- mt-3D-method -->
+
+      
+        <div id="normalize-method" class="method-detail ">
+          <a name="method-i-normalize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">normalize</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>As <a href="Rect.html#method-i-normalize-21">normalize!</a>, but the
+original caller is not changed.</p>
+            
+
+            
+            <div class="method-source-code" id="normalize-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 556</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">normalize</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">normalize!</span>()
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- normalize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- normalize-method -->
+
+      
+        <div id="normalize-21-method" class="method-detail ">
+          <a name="method-i-normalize-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">normalize!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Fix Rects that have negative width or height, without changing the area it
+represents. Has no effect on Rects with non-negative width and height. Some
+<a href="Rect.html">Rect</a> methods will automatically normalize the <a
+href="Rect.html">Rect</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="normalize-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 563</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">normalize!</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>], <span class="ruby-keyword">self</span>[<span class="ruby-value">2</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>)<span class="ruby-operator">+</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>), <span class="ruby-operator">-</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>], <span class="ruby-keyword">self</span>[<span class="ruby-value">3</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>)<span class="ruby-operator">+</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>), <span class="ruby-operator">-</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">3</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- normalize-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- normalize-21-method -->
+
+      
+        <div id="r-method" class="method-detail method-alias">
+          <a name="method-i-r"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">r</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-right">right</a>
+          </div>
+          
+        </div><!-- r-method -->
+
+      
+        <div id="r-3D-method" class="method-detail method-alias">
+          <a name="method-i-r-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">r=</span><span
+              class="method-args">(r)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-right-3D">right=</a>
+          </div>
+          
+        </div><!-- r-3D-method -->
+
+      
+        <div id="right-method" class="method-detail ">
+          <a name="method-i-right"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">right</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the x coordinate of the right side of the <a
+href="Rect.html">Rect</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="right-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">right</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>)<span class="ruby-operator">+</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- right-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-r">r</a>, r
+          </div>
+          
+
+          
+        </div><!-- right-method -->
+
+      
+        <div id="right-3D-method" class="method-detail ">
+          <a name="method-i-right-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">right=</span><span
+              class="method-args">(r)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x coordinate of the right side of the <a href="Rect.html">Rect</a>
+by translating the <a href="Rect.html">Rect</a> (adjusting the x offset).</p>
+            
+
+            
+            <div class="method-source-code" id="right-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">right=</span>(<span class="ruby-identifier">r</span>); <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>] = <span class="ruby-identifier">r</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>); <span class="ruby-keyword">return</span> <span class="ruby-identifier">r</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- right-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-r-3D">r=</a>, r=
+          </div>
+          
+
+          
+        </div><!-- right-3D-method -->
+
+      
+        <div id="size-method" class="method-detail ">
+          <a name="method-i-size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the width and height of the <a href="Rect.html">Rect</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="size-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">size</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>[<span class="ruby-value">2</span>,<span class="ruby-value">2</span>]; <span class="ruby-keyword">end</span></pre>
+            </div><!-- size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size-method -->
+
+      
+        <div id="size-3D-method" class="method-detail ">
+          <a name="method-i-size-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">size=</span><span
+              class="method-args">(size)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the width and height of the <a href="Rect.html">Rect</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="size-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">size=</span>(<span class="ruby-identifier">size</span>)
+ <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Rect#size= takes an Array of form [width, height].&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">size</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span>
+ <span class="ruby-keyword">self</span>[<span class="ruby-value">2</span>,<span class="ruby-value">2</span>] = <span class="ruby-identifier">size</span>
+ <span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- size-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size-3D-method -->
+
+      
+        <div id="t-method" class="method-detail method-alias">
+          <a name="method-i-t"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">t</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-y">y</a>
+          </div>
+          
+        </div><!-- t-method -->
+
+      
+        <div id="t-3D-method" class="method-detail method-alias">
+          <a name="method-i-t-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">t=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-y-3D">y=</a>
+          </div>
+          
+        </div><!-- t-3D-method -->
+
+      
+        <div id="tl-method" class="method-detail method-alias">
+          <a name="method-i-tl"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">tl</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-topleft">topleft</a>
+          </div>
+          
+        </div><!-- tl-method -->
+
+      
+        <div id="tl-3D-method" class="method-detail method-alias">
+          <a name="method-i-tl-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">tl=</span><span
+              class="method-args">(topleft)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-topleft-3D">topleft=</a>
+          </div>
+          
+        </div><!-- tl-3D-method -->
+
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Print the <a href="Rect.html">Rect</a> in the form “+#&lt;<a
+href="Rect.html">Rect</a> [x,y,w,h]&gt;+”</p>
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>; <span class="ruby-node">&quot;#&lt;Rect [%s,%s,%s,%s]&gt;&quot;</span><span class="ruby-operator">%</span><span class="ruby-keyword">self</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s-method -->
+
+      
+        <div id="top-method" class="method-detail method-alias">
+          <a name="method-i-top"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">top</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-y">y</a>
+          </div>
+          
+        </div><!-- top-method -->
+
+      
+        <div id="top-3D-method" class="method-detail method-alias">
+          <a name="method-i-top-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">top=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-y-3D">y=</a>
+          </div>
+          
+        </div><!-- top-3D-method -->
+
+      
+        <div id="topleft-method" class="method-detail ">
+          <a name="method-i-topleft"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">topleft</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the x and y coordinates of the top-left corner of the <a
+href="Rect.html">Rect</a></p>
+            
+
+            
+            <div class="method-source-code" id="topleft-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">topleft</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>,<span class="ruby-value">2</span>].<span class="ruby-identifier">to_a</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- topleft-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-tl">tl</a>, tl
+          </div>
+          
+
+          
+        </div><!-- topleft-method -->
+
+      
+        <div id="topleft-3D-method" class="method-detail ">
+          <a name="method-i-topleft-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">topleft=</span><span
+              class="method-args">(topleft)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x and y coordinates of the top-left corner of the <a
+href="Rect.html">Rect</a> by  translating the <a href="Rect.html">Rect</a>
+(adjusting the x and y offsets).</p>
+            
+
+            
+            <div class="method-source-code" id="topleft-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 261</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">topleft=</span>(<span class="ruby-identifier">topleft</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Rect#topright= takes an Array of form [x, y].&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">topleft</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span>
+        <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>,<span class="ruby-value">2</span>] = <span class="ruby-identifier">topleft</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">topleft</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- topleft-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-tl-3D">tl=</a>, tl=
+          </div>
+          
+
+          
+        </div><!-- topleft-3D-method -->
+
+      
+        <div id="topright-method" class="method-detail ">
+          <a name="method-i-topright"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">topright</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the x and y coordinates of the top-right corner of the <a
+href="Rect.html">Rect</a></p>
+            
+
+            
+            <div class="method-source-code" id="topright-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 271</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">topright</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">right</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- topright-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-tr">tr</a>, tr
+          </div>
+          
+
+          
+        </div><!-- topright-method -->
+
+      
+        <div id="topright-3D-method" class="method-detail ">
+          <a name="method-i-topright-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">topright=</span><span
+              class="method-args">(topright)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x and y coordinates of the top-right corner of the <a
+href="Rect.html">Rect</a> by  translating the <a href="Rect.html">Rect</a>
+(adjusting the x and y offsets).</p>
+            
+
+            
+            <div class="method-source-code" id="topright-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 275</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">topright=</span>(<span class="ruby-identifier">topright</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Rect#topright= takes an Array of form [x, y].&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">topright</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">right</span>, <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">topright</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">topright</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- topright-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-tr-3D">tr=</a>, tr=
+          </div>
+          
+
+          
+        </div><!-- topright-3D-method -->
+
+      
+        <div id="tr-method" class="method-detail method-alias">
+          <a name="method-i-tr"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">tr</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-topright">topright</a>
+          </div>
+          
+        </div><!-- tr-method -->
+
+      
+        <div id="tr-3D-method" class="method-detail method-alias">
+          <a name="method-i-tr-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">tr=</span><span
+              class="method-args">(topright)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-topright-3D">topright=</a>
+          </div>
+          
+        </div><!-- tr-3D-method -->
+
+      
+        <div id="union-method" class="method-detail ">
+          <a name="method-i-union"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">union</span><span
+              class="method-args">(rect)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>As <a href="Rect.html#method-i-union-21">union!</a>, but the original
+caller is not changed.</p>
+            
+
+            
+            <div class="method-source-code" id="union-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 574</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">union</span>(<span class="ruby-identifier">rect</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">union!</span>(<span class="ruby-identifier">rect</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- union-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- union-method -->
+
+      
+        <div id="union-21-method" class="method-detail ">
+          <a name="method-i-union-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">union!</span><span
+              class="method-args">(rect)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Expand the caller to also cover the given <a href="Rect.html">Rect</a>. The
+<a href="Rect.html">Rect</a> is still a  rectangle, so it may also cover
+areas that neither of the original Rects did, for example areas between the
+two Rects.</p>
+            
+
+            
+            <div class="method-source-code" id="union-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 581</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">union!</span>(<span class="ruby-identifier">rect</span>)
+            <span class="ruby-keyword">self</span>.<span class="ruby-identifier">normalize!</span>
+<span class="ruby-identifier">rleft</span>, <span class="ruby-identifier">rtop</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">topleft</span>
+<span class="ruby-identifier">rright</span>, <span class="ruby-identifier">rbottom</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bottomright</span>
+            <span class="ruby-identifier">r2</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new_from_object</span>(<span class="ruby-identifier">rect</span>).<span class="ruby-identifier">normalize!</span>
+
+            <span class="ruby-identifier">rleft</span> = [<span class="ruby-identifier">rleft</span>, <span class="ruby-identifier">r2</span>.<span class="ruby-identifier">left</span>].<span class="ruby-identifier">min</span>
+            <span class="ruby-identifier">rtop</span> = [<span class="ruby-identifier">rtop</span>, <span class="ruby-identifier">r2</span>.<span class="ruby-identifier">top</span>].<span class="ruby-identifier">min</span>
+            <span class="ruby-identifier">rright</span> = [<span class="ruby-identifier">rright</span>, <span class="ruby-identifier">r2</span>.<span class="ruby-identifier">right</span>].<span class="ruby-identifier">max</span>
+            <span class="ruby-identifier">rbottom</span> = [<span class="ruby-identifier">rbottom</span>, <span class="ruby-identifier">r2</span>.<span class="ruby-identifier">bottom</span>].<span class="ruby-identifier">max</span>
+
+            <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>,<span class="ruby-value">4</span>] = <span class="ruby-identifier">rleft</span>, <span class="ruby-identifier">rtop</span>, <span class="ruby-identifier">rright</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">rleft</span>, <span class="ruby-identifier">rbottom</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">rtop</span>
+            <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+    <span class="ruby-keyword">end</span></pre>
+            </div><!-- union-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- union-21-method -->
+
+      
+        <div id="union_all-method" class="method-detail ">
+          <a name="method-i-union_all"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">union_all</span><span
+              class="method-args">(array_rects)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>As <a href="Rect.html#method-i-union_all-21">union_all!</a>, but the
+original caller is not changed.</p>
+            
+
+            
+            <div class="method-source-code" id="union_all-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 597</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">union_all</span>(<span class="ruby-identifier">array_rects</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">union_all!</span>(<span class="ruby-identifier">array_rects</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- union_all-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- union_all-method -->
+
+      
+        <div id="union_all-21-method" class="method-detail ">
+          <a name="method-i-union_all-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">union_all!</span><span
+              class="method-args">(array_rects)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Expand the caller to cover all of the given Rects. See also <a
+href="Rect.html#method-i-union-21">union!</a></p>
+            
+
+            
+            <div class="method-source-code" id="union_all-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 602</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">union_all!</span>(<span class="ruby-identifier">array_rects</span>)
+          <span class="ruby-identifier">array_rects</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span>
+<span class="ruby-keyword">self</span>.<span class="ruby-identifier">union!</span>(<span class="ruby-identifier">r</span>)
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span></pre>
+            </div><!-- union_all-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- union_all-21-method -->
+
+      
+        <div id="w-method" class="method-detail ">
+          <a name="method-i-w"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">w</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns self.at(2)</p>
+            
+
+            
+            <div class="method-source-code" id="w-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">w</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">2</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- w-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-width">width</a>, width
+          </div>
+          
+
+          
+        </div><!-- w-method -->
+
+      
+        <div id="w-3D-method" class="method-detail ">
+          <a name="method-i-w-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">w=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets <a href="http://2">self</a> to <tt>val</tt></p>
+            
+
+            
+            <div class="method-source-code" id="w-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">w=</span>(<span class="ruby-identifier">val</span>); <span class="ruby-keyword">self</span>[<span class="ruby-value">2</span>] = <span class="ruby-identifier">val</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- w-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-width-3D">width=</a>, width=
+          </div>
+          
+
+          
+        </div><!-- w-3D-method -->
+
+      
+        <div id="width-method" class="method-detail method-alias">
+          <a name="method-i-width"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">width</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-w">w</a>
+          </div>
+          
+        </div><!-- width-method -->
+
+      
+        <div id="width-3D-method" class="method-detail method-alias">
+          <a name="method-i-width-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">width=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Rect.html#method-i-w-3D">w=</a>
+          </div>
+          
+        </div><!-- width-3D-method -->
+
+      
+        <div id="x-method" class="method-detail ">
+          <a name="method-i-x"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">x</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns self.at(0)</p>
+            
+
+            
+            <div class="method-source-code" id="x-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">x</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- x-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-left">left</a>, <a href="Rect.html#method-i-l">l</a>, left, l
+          </div>
+          
+
+          
+        </div><!-- x-method -->
+
+      
+        <div id="x-3D-method" class="method-detail ">
+          <a name="method-i-x-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">x=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets <a href="http://0">self</a> to <tt>val</tt></p>
+            
+
+            
+            <div class="method-source-code" id="x-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">x=</span>(<span class="ruby-identifier">val</span>); <span class="ruby-keyword">self</span>[<span class="ruby-value">0</span>] = <span class="ruby-identifier">val</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- x-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-left-3D">left=</a>, <a href="Rect.html#method-i-l-3D">l=</a>, left=, l=
+          </div>
+          
+
+          
+        </div><!-- x-3D-method -->
+
+      
+        <div id="y-method" class="method-detail ">
+          <a name="method-i-y"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">y</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns self.at(1)</p>
+            
+
+            
+            <div class="method-source-code" id="y-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">y</span>; <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- y-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-top">top</a>, <a href="Rect.html#method-i-t">t</a>, top, t
+          </div>
+          
+
+          
+        </div><!-- y-method -->
+
+      
+        <div id="y-3D-method" class="method-detail ">
+          <a name="method-i-y-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">y=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets <a href="http://1">self</a> to <tt>val</tt></p>
+            
+
+            
+            <div class="method-source-code" id="y-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/rect.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">y=</span>(<span class="ruby-identifier">val</span>); <span class="ruby-keyword">self</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">val</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- y-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Rect.html#method-i-top-3D">top=</a>, <a href="Rect.html#method-i-t-3D">t=</a>, top=, t=
+          </div>
+          
+
+          
+        </div><!-- y-3D-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

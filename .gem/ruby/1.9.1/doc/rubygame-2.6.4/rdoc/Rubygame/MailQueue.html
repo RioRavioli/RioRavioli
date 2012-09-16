@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Rubygame::MailQueue</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/rubygame/queue_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/queue.rb">lib/rubygame/queue.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-deliver">#deliver</a></li>
+          
+          <li><a href="#method-i-list">#list</a></li>
+          
+          <li><a href="#method-i-push">#push</a></li>
+          
+          <li><a href="#method-i-setup">#setup</a></li>
+          
+          <li><a href="#method-i-subscribe">#subscribe</a></li>
+          
+          <li><a href="#method-i-subscribed-3F">#subscribed?</a></li>
+          
+          <li><a href="#method-i-unsubscribe">#unsubscribe</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../CREDITS.html">CREDITS</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../ROADMAP.html">ROADMAP</a></li>
+        
+          <li class="file"><a href="../doc/custom_sdl_load_paths_rdoc.html">custom_sdl_load_paths.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/getting_started_rdoc.html">getting_started.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/keyboard_symbols_rdoc.html">keyboard_symbols.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/macosx_install_rdoc.html">macosx_install.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/managing_framerate_rdoc.html">managing_framerate.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/surface_palettes_rdoc.html">surface_palettes.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/windows_install_rdoc.html">windows_install.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Rubygame.html">Rubygame</a></li>
+        
+          <li><a href="../Rubygame/ActiveEvent.html">Rubygame::ActiveEvent</a></li>
+        
+          <li><a href="../Rubygame/Clock.html">Rubygame::Clock</a></li>
+        
+          <li><a href="../Rubygame/Color.html">Rubygame::Color</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorBase.html">Rubygame::Color::ColorBase</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSL.html">Rubygame::Color::ColorHSL</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSV.html">Rubygame::Color::ColorHSV</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorRGB.html">Rubygame::Color::ColorRGB</a></li>
+        
+          <li><a href="../Rubygame/Color/Palette.html">Rubygame::Color::Palette</a></li>
+        
+          <li><a href="../Rubygame/Event.html">Rubygame::Event</a></li>
+        
+          <li><a href="../Rubygame/EventActions.html">Rubygame::EventActions</a></li>
+        
+          <li><a href="../Rubygame/EventActions/BlockAction.html">Rubygame::EventActions::BlockAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MethodAction.html">Rubygame::EventActions::MethodAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MultiAction.html">Rubygame::EventActions::MultiAction</a></li>
+        
+          <li><a href="../Rubygame/EventHandler.html">Rubygame::EventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHandler/HasEventHandler.html">Rubygame::EventHandler::HasEventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHook.html">Rubygame::EventHook</a></li>
+        
+          <li><a href="../Rubygame/EventQueue.html">Rubygame::EventQueue</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers.html">Rubygame::EventTriggers</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AndTrigger.html">Rubygame::EventTriggers::AndTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AttrTrigger.html">Rubygame::EventTriggers::AttrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/BlockTrigger.html">Rubygame::EventTriggers::BlockTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/InstanceOfTrigger.html">Rubygame::EventTriggers::InstanceOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyPressTrigger.html">Rubygame::EventTriggers::KeyPressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyReleaseTrigger.html">Rubygame::EventTriggers::KeyReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KindOfTrigger.html">Rubygame::EventTriggers::KindOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseMoveTrigger.html">Rubygame::EventTriggers::MouseMoveTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MousePressTrigger.html">Rubygame::EventTriggers::MousePressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseReleaseTrigger.html">Rubygame::EventTriggers::MouseReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/OrTrigger.html">Rubygame::EventTriggers::OrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/TickTrigger.html">Rubygame::EventTriggers::TickTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/YesTrigger.html">Rubygame::EventTriggers::YesTrigger</a></li>
+        
+          <li><a href="../Rubygame/Events.html">Rubygame::Events</a></li>
+        
+          <li><a href="../Rubygame/Events/ClockTicked.html">Rubygame::Events::ClockTicked</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusGained.html">Rubygame::Events::InputFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusLost.html">Rubygame::Events::InputFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickAxisMoved.html">Rubygame::Events::JoystickAxisMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickBallMoved.html">Rubygame::Events::JoystickBallMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonEvent.html">Rubygame::Events::JoystickButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonPressed.html">Rubygame::Events::JoystickButtonPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonReleased.html">Rubygame::Events::JoystickButtonReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickHatMoved.html">Rubygame::Events::JoystickHatMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyPressed.html">Rubygame::Events::KeyPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyReleased.html">Rubygame::Events::KeyReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyboardEvent.html">Rubygame::Events::KeyboardEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseButtonEvent.html">Rubygame::Events::MouseButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusGained.html">Rubygame::Events::MouseFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusLost.html">Rubygame::Events::MouseFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseMoved.html">Rubygame::Events::MouseMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/MousePressed.html">Rubygame::Events::MousePressed</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseReleased.html">Rubygame::Events::MouseReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/QuitRequested.html">Rubygame::Events::QuitRequested</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowExposed.html">Rubygame::Events::WindowExposed</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowMinimized.html">Rubygame::Events::WindowMinimized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowResized.html">Rubygame::Events::WindowResized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowUnminimized.html">Rubygame::Events::WindowUnminimized</a></li>
+        
+          <li><a href="../Rubygame/ExposeEvent.html">Rubygame::ExposeEvent</a></li>
+        
+          <li><a href="../Rubygame/Ftor.html">Rubygame::Ftor</a></li>
+        
+          <li><a href="../Rubygame/GL.html">Rubygame::GL</a></li>
+        
+          <li><a href="../Rubygame/Hotspot.html">Rubygame::Hotspot</a></li>
+        
+          <li><a href="../Rubygame/JoyAxisEvent.html">Rubygame::JoyAxisEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyBallEvent.html">Rubygame::JoyBallEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyDownEvent.html">Rubygame::JoyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyHatEvent.html">Rubygame::JoyHatEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyUpEvent.html">Rubygame::JoyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Joystick.html">Rubygame::Joystick</a></li>
+        
+          <li><a href="../Rubygame/Key.html">Rubygame::Key</a></li>
+        
+          <li><a href="../Rubygame/KeyDownEvent.html">Rubygame::KeyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/KeyUpEvent.html">Rubygame::KeyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/MailQueue.html">Rubygame::MailQueue</a></li>
+        
+          <li><a href="../Rubygame/MediaBag.html">Rubygame::MediaBag</a></li>
+        
+          <li><a href="../Rubygame/Mixer.html">Rubygame::Mixer</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Music.html">Rubygame::Mixer::Music</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Sample.html">Rubygame::Mixer::Sample</a></li>
+        
+          <li><a href="../Rubygame/Mouse.html">Rubygame::Mouse</a></li>
+        
+          <li><a href="../Rubygame/MouseDownEvent.html">Rubygame::MouseDownEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseMotionEvent.html">Rubygame::MouseMotionEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseUpEvent.html">Rubygame::MouseUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Music.html">Rubygame::Music</a></li>
+        
+          <li><a href="../Rubygame/NamedResource.html">Rubygame::NamedResource</a></li>
+        
+          <li><a href="../Rubygame/NamedResource/NamedResourceClassMethods.html">Rubygame::NamedResource::NamedResourceClassMethods</a></li>
+        
+          <li><a href="../Rubygame/QuitEvent.html">Rubygame::QuitEvent</a></li>
+        
+          <li><a href="../Rubygame/Rect.html">Rubygame::Rect</a></li>
+        
+          <li><a href="../Rubygame/ResizeEvent.html">Rubygame::ResizeEvent</a></li>
+        
+          <li><a href="../Rubygame/SDLError.html">Rubygame::SDLError</a></li>
+        
+          <li><a href="../Rubygame/SFont.html">Rubygame::SFont</a></li>
+        
+          <li><a href="../Rubygame/Screen.html">Rubygame::Screen</a></li>
+        
+          <li><a href="../Rubygame/Sound.html">Rubygame::Sound</a></li>
+        
+          <li><a href="../Rubygame/Sprites.html">Rubygame::Sprites</a></li>
+        
+          <li><a href="../Rubygame/Sprites/DepthSortGroup.html">Rubygame::Sprites::DepthSortGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Group.html">Rubygame::Sprites::Group</a></li>
+        
+          <li><a href="../Rubygame/Sprites/LimitGroup.html">Rubygame::Sprites::LimitGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Sprite.html">Rubygame::Sprites::Sprite</a></li>
+        
+          <li><a href="../Rubygame/Sprites/UpdateGroup.html">Rubygame::Sprites::UpdateGroup</a></li>
+        
+          <li><a href="../Rubygame/Surface.html">Rubygame::Surface</a></li>
+        
+          <li><a href="../Rubygame/TTF.html">Rubygame::TTF</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Rubygame::MailQueue</h1>
+
+    <div id="description" class="description">
+      
+<p>A mixin module to extend <a href="EventQueue.html">EventQueue</a> with the
+ability to ‘deliver’ specific types of events to subscribed objects, a la a
+mailing list. Each object must subscribe for the classes of events it
+wishes to receive; when the <a href="MailQueue.html">MailQueue</a> receives
+an event of that type, it will deliver it to the subscribers. See <a
+href="MailQueue.html#method-i-subscribe">subscribe</a> for more
+information.</p>
+
+<p>Please note that if you extend an already-existing <a
+href="EventQueue.html">EventQueue</a> object with this mixin module (rather
+than including it in a class), you must call <a
+href="MailQueue.html#method-i-setup">setup</a> before using the object.
+This will create the necessary internal variables for the <a
+href="MailQueue.html">MailQueue</a> to work.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="autodeliver-attribute-method" class="method-detail">
+          <a name="autodeliver"></a>
+          
+          <a name="autodeliver="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">autodeliver</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Whether to automatically deliver events as they are received. Enabled by
+default.</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="MailQueue.html">MailQueue</a> object. Like <a
+href="EventQueue.html#method-c-new">EventQueue.new</a>, this method will
+yield self if a block is given.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/queue.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>()
+  <span class="ruby-identifier">setup</span>()
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="deliver-method" class="method-detail ">
+          <a name="method-i-deliver"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">deliver</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Deliver each pending event to all objects which are subscribed to that
+event class. Every client object MUST have a <a
+href="MailQueue.html#method-i-push">push</a> method, or events can’t be
+delivered to it, and it will become very lonely!</p>
+
+<p>The queue will be cleared of all events after all deliveries are done.</p>
+            
+
+            
+            <div class="method-source-code" id="deliver-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/queue.rb, line 290</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">deliver</span>()
+  <span class="ruby-identifier">each</span>() { <span class="ruby-operator">|</span><span class="ruby-identifier">event</span><span class="ruby-operator">|</span>  <span class="ruby-identifier">deliver_event</span>(<span class="ruby-identifier">event</span>) }
+  <span class="ruby-identifier">clear</span>()
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- deliver-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- deliver-method -->
+
+      
+        <div id="list-method" class="method-detail ">
+          <a name="method-i-list"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">list</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an Array of all event classes which have at least one subscriber.</p>
+            
+
+            
+            <div class="method-source-code" id="list-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/queue.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">list</span>
+  <span class="ruby-ivar">@subscribe</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>  
+    (<span class="ruby-identifier">v</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span> <span class="ruby-keyword">nil</span>
+  }.<span class="ruby-identifier">compact</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- list-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- list-method -->
+
+      
+        <div id="push-method" class="method-detail ">
+          <a name="method-i-push"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">push</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Append events to the queue. If @autodeliver is enabled, all events on the
+queue will be delivered to subscribed client objects immediately.</p>
+            
+
+            
+            <div class="method-source-code" id="push-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/queue.rb, line 297</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">push</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-comment"># Temporarily disable autofetch to avoid infinite loop</span>
+  <span class="ruby-identifier">a</span>, <span class="ruby-ivar">@autofetch</span> = <span class="ruby-ivar">@autofetch</span>, <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># Fetch once to emulate autofetch, if it was enabled before</span>
+  <span class="ruby-identifier">fetch_sdl_events</span>() <span class="ruby-keyword">if</span> <span class="ruby-identifier">a</span>
+
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">deliver</span>() <span class="ruby-keyword">if</span> <span class="ruby-ivar">@autodeliver</span>
+
+  <span class="ruby-ivar">@autofetch</span> = <span class="ruby-identifier">a</span>
+  <span class="ruby-keyword">return</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- push-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- push-method -->
+
+      
+        <div id="setup-method" class="method-detail ">
+          <a name="method-i-setup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setup</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create the necessary internal variables for the <a
+href="MailQueue.html">MailQueue</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="setup-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/queue.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+  <span class="ruby-ivar">@subscribe</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@autodeliver</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setup-method -->
+
+      
+        <div id="subscribe-method" class="method-detail ">
+          <a name="method-i-subscribe"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">subscribe</span><span
+              class="method-args">(client,klass)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Subscribe <tt>client</tt> to receive events that match <tt>klass</tt>.</p>
+
+<p>After the client object has been subscribed, the <a
+href="MailQueue.html">MailQueue</a> will push along any event for which
+“klass === event” is true. This usually means that the event is an instance
+of klass or one of klass’s child classes; however, note that klass may have
+changed its own #=== operator to have different behavior, so this is not
+always the case.</p>
+
+<p>Important: the <a href="MailQueue.html">MailQueue</a> uses the client’s <a
+href="MailQueue.html#method-i-push">push</a> method to deliver events! If
+the client does not have such a method, <a
+href="MailQueue.html">MailQueue</a> will silently catch the error and move
+on to the next client.</p>
+
+<p>A client object may be subscribed for many different types of events
+simultaneously, and more than one client object may be subscribed to any
+type of event (in which case each object will receive the event). A client
+may also be subscribed multiple times for the same type (in which case it
+will receive duplicate events). Likewise, the client will receive
+duplicates if it is subscribed to multiple classes which share ancestry,
+for example Numeric and Float.</p>
+
+<p>If a client wishes to receive ALL types of events, it can subscribe to
+Object, which is a parent class of all objects.</p>
+
+<p>If the queue’s @autodeliver is true, it will deliver events to subscribers
+immediately after they are posted, rather than waiting for <a
+href="MailQueue.html#method-i-deliver">deliver</a> to be called.</p>
+            
+
+            
+            <div class="method-source-code" id="subscribe-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/queue.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">subscribe</span>(<span class="ruby-identifier">client</span>,<span class="ruby-identifier">klass</span>)
+  <span class="ruby-ivar">@subscribe</span>[<span class="ruby-identifier">klass</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">client</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span>
+  <span class="ruby-ivar">@subscribe</span>[<span class="ruby-identifier">klass</span>] = [<span class="ruby-identifier">client</span>] <span class="ruby-keyword">if</span> <span class="ruby-ivar">@subscribe</span>[<span class="ruby-identifier">klass</span>].<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- subscribe-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- subscribe-method -->
+
+      
+        <div id="subscribed-3F-method" class="method-detail ">
+          <a name="method-i-subscribed-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">subscribed?</span><span
+              class="method-args">(client,klass)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns true if <tt>client</tt> is currently subscribed to receive events
+of type <tt>klass</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="subscribed-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/queue.rb, line 256</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">subscribed?</span>(<span class="ruby-identifier">client</span>,<span class="ruby-identifier">klass</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@subscribe</span>[<span class="ruby-identifier">klass</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">client</span>)  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- subscribed-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- subscribed-3F-method -->
+
+      
+        <div id="unsubscribe-method" class="method-detail ">
+          <a name="method-i-unsubscribe"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unsubscribe</span><span
+              class="method-args">(client,klass)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Unsubscribes the client to stop receiving events of type <tt>klass</tt>. It
+is safe (has no effect) to unsubscribe for an event type you are not
+subscribed to receive.</p>
+            
+
+            
+            <div class="method-source-code" id="unsubscribe-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/queue.rb, line 264</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unsubscribe</span>(<span class="ruby-identifier">client</span>,<span class="ruby-identifier">klass</span>)
+  <span class="ruby-ivar">@subscribe</span>[<span class="ruby-identifier">klass</span>] <span class="ruby-operator">-=</span> [<span class="ruby-identifier">client</span>]  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-keyword">return</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unsubscribe-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unsubscribe-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

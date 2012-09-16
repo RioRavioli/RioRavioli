@@ -1,0 +1,46 @@
+package hw5;
+import hw4.*;
+
+import java.util.*;
+
+public class MarvelPaths {
+	private Graph marvelGraph;
+	private String url;
+
+	public static void main(String[] args) {
+		MarvelPaths paths = new MarvelPaths(args[0]);
+		paths.createGraph();
+	}
+
+	public MarvelPaths(String url) {
+		this.url = url;
+	}
+
+	public void createGraph() {
+		//get information
+		Set<String> charList = new HashSet<String>();
+		Map<String, List<String>> books = new HashMap<String, List<String>>();
+		try {
+			MarvelParser.parseData(url, charList, books);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		//create the graph
+		for (String character : charList) {
+			marvelGraph.createNode(character);
+		}
+		for (String book : books.keySet()) {
+			List<String> bookCharacters = books.get(book);
+			for (String character : bookCharacters) {
+				for (String otherChar : bookCharacters) {
+					marvelGraph.createEdge(character, otherChar, book);
+				}
+			}
+		}
+	}
+
+	public List<String> getCharacters() {
+		return marvelGraph.getNodeNames();
+	}
+}

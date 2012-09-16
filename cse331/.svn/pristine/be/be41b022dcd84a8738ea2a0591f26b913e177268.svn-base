@@ -1,0 +1,21 @@
+package hw5.test;
+import hw5.*;
+
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class MarvelPathsTest {
+	MarvelPaths paths;
+
+	@Before
+	public void setUp() {
+		paths = new MarvelPaths("smallTest.tsv");
+		paths.createGraph();
+	}
+
+	@Test
+	public void checkNodeCount() {
+		assertEquals(3, paths.getCharacters().size());
+	}
+}

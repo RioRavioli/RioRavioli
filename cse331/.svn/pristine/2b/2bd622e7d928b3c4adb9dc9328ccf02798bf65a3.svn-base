@@ -1,0 +1,33 @@
+package hw8;
+import hw7.*;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class CampusPathsMain {
+	JFrame frame;
+	CampusMapManager manager;
+	public static void main(String[] args) {
+		CampusPathsMain main = new CampusPathsMain();
+	}
+
+	public CampusPathsMain() {
+		frame = new JFrame("Campus Paths");
+		manager = new CampusMapManager();
+
+		frame.setSize(1024, 768);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLayout(new FlowLayout());
+		setComponents(frame);
+		frame.setVisible(true);
+	}
+
+	public void setComponents(JFrame frame) {
+		String[] buildings = (String[]) manager.getBuildings().toArray();
+		Component resetButton = new JButton("Reset");
+		Component startList = new JComboBox(buildings);
+		Component searchButton = new JButton("Search");	
+		frame.add(resetButton);
+		frame.add(searchButton);
+	}
+}

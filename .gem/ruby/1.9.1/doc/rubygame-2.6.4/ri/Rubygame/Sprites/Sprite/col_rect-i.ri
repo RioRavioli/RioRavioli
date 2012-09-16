@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"col_rect:EFI"'Rubygame::Sprites::Sprite#col_rect;FI"W;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LSet an alternative Rect to use for collision detection. If undefined or;TI"4set to nil, the Sprite's #rect is used instead.;T:
+@file0FI"lib/rubygame/sprite.rb;T

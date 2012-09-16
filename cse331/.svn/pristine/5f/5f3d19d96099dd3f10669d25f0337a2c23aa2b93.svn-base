@@ -1,0 +1,165 @@
+package hw7;
+
+import java.util.*;
+
+public class CampusDirections {
+	private CampusMapManager manager;
+	private Scanner input;
+
+	public static void main(String[] args) {
+		CampusDirections directions = new CampusDirections();
+		directions.menu();
+	}
+
+	/**
+	 * Constructs new CampusDirections.
+	 */
+	public CampusDirections() {
+		manager = new CampusMapManager(
+				"hw7/data/campus_buildings.dat", "hw7/data/campus_paths.dat");
+		input = new Scanner(System.in);
+	}
+
+	/**
+	 * Starts and manages user interaction for CampusDirections.
+	 */
+	public void menu() {
+		System.out.println("Menu:");
+		System.out.println("\tr to find a route");
+		System.out.println("\tb to see a list of all buildings");
+		System.out.println("\tq to quit");
+		System.out.println();
+		processSelection();
+	}
+
+	private void processSelection() {
+		System.out.print("Enter an option ('m' to see the menu): ");
+		String action = listenInput();
+		//echo comments
+		while (action.startsWith("#") || action.equals("")) {
+			if (action.startsWith("#")) {
+				System.out.println(action);
+			} else {
+				System.out.println();
+			}
+			action = listenInput();
+		}
+
+		//select action based on user input
+		if (action.equals("r")) {
+			listRoute();
+		} else if (action.equals("b")) {
+			listBuildings();
+		} else if (action.equals("m")) {
+			menu();
+		} else if (!action.equals("q")) {
+			System.out.println("Unknown option");
+			System.out.println();
+			processSelection();
+		}
+	}
+
+	//Find and print the shartest route between requested buildings.
+	private void listRoute() {
+		System.out.print("Abbreviated name of starting building: ");
+		String start = listenInput();
+		System.out.print("Abbreviated name of ending building: ");
+		String end = listenInput();
+		Building startPoint = getBuilding(start);
+		Building endPoint = getBuilding(end);
+
+		if (startPoint == null || endPoint == null) {
+			//if either building is not a valid building
+			if (startPoint == null) {
+				System.out.println("Unknown building: " + start);
+			}
+			if (endPoint == null) {
+				System.out.println("Unknown building: " + end);
+			}
+		} else {
+			//find and print route
+			System.out.println("Path from " + startPoint.getLongName() + 
+					" to " + endPoint.getLongName() + ":");
+			double totalDistance = 0;
+			List<Path> route = manager.getShortestPath(startPoint, endPoint);
+			for (Path path : route) {
+				//get then print individual path info
+				double distance = path.getDistance();
+				double x = path.getEnd().getX();
+				double y = path.getEnd().getY();
+				String direction = getDirection(path);
+				System.out.printf(
+						"\tWalk %.0f feet " + direction + " to (%.0f, %.0f)\n", distance, x, y);  
+				totalDistance += distance;
+			}
+			System.out.printf("Total distance: %.0f feet\n", totalDistance);
+		}
+
+		System.out.println();
+		processSelection();
+	}
+
+	//List the buildings in alphabetical order.
+	private void listBuildings() {
+		List<Building> buildings = manager.getBuildings();
+		Collections.sort(buildings);
+		System.out.println("Buildings:");
+		for (Building building : buildings) {
+			System.out.println("\t" + building.getShortName() + ": " + building.getLongName());
+		}
+		System.out.println();
+		processSelection();
+	}
+
+	//Waits for and recieves user input.
+	private String listenInput() {
+		return input.nextLine();
+	}
+
+	//Finds the a building with a short name equivalent to the given string.
+	//Returns null if not found.
+	private Building getBuilding(String input) {
+		List<Building> buildingList = manager.getBuildings();
+		Building found = null;
+		for (Building building : buildingList) {
+			if (building.getShortName().equals(input)) {
+				found = building;
+				break;
+			}
+		}
+		return found;
+	}
+
+	//Returns the corresponding cardinal direction of moving x and y.
+	private String getDirection(Path path) {
+		//calculate theta
+		Point start = path.getStart();
+		Point end = path.getEnd();
+		double dx = end.getX() - start.getX();
+		double dy = end.getY() - start.getY();
+		double theta = Math.atan2(dy, dx);
+
+		//match theta with direction
+		String direction;
+		double unit = Math.PI / 8;
+		if (theta < -7 * unit)
+			direction = "W";
+		else if (theta < -5 * unit)
+			direction = "NW";
+		else if (theta < -3 * unit)
+			direction = "N";
+		else if (theta < -1 * unit)
+			direction = "NE";
+		else if (theta < unit)
+			direction = "E";
+		else if (theta < 3 * unit)
+			direction = "SE";
+		else if (theta < 5 * unit)
+			direction = "S";
+		else if (theta < 7 * unit)
+			direction = "SW";
+		else
+			direction = "W";
+		return direction;
+	}
+}

@@ -1,0 +1,107 @@
+package hw4.test;
+import hw4.*;
+
+import org.junit.Test;
+import org.junit.Before;
+import static org.junit.Assert.*;
+
+import java.util.*;
+
+public class TestNode {
+	Node node;
+
+	@Before
+	public void setUp() throws Exception {
+		node = new Node("test");
+	}
+
+	@Test
+	public void testGetName() {
+		assertTrue(node.getName().equals("test"));
+	}
+
+	@Test
+	public void testAddingEdge() {
+		node.addEdge("other", "edge");
+		assertEquals(node.getAllDests().size(), 1);
+	}
+
+	@Test
+	public void testAdding3Edges() {
+		node.addEdge("other", "edge");
+		node.addEdge("other2", "edge");
+		node.addEdge("other3", "edge");
+		assertEquals(node.getAllDests().size(), 3);
+	}
+
+	@Test
+	public void testAddingDupEdges() {
+		node.addEdge("other", "edge");
+		node.addEdge("other2", "edge");
+		node.addEdge("other", "edge");
+		node.addEdge("other", "edge");
+		List<String> labels = node.getEdgesLabels("other");
+		assertEquals(labels.size(), 3);
+	}
+
+	@Test
+	public void testRemovingEdges() {
+		node.addEdge("other1", "edge");
+		node.addEdge("other2", "edge");
+		node.addEdge("other3", "edge");
+		node.removeEdges("other1");
+		node.removeEdges("other2");
+		assertEquals(node.getAllDests().size(), 1);
+	}
+
+	@Test
+	public void testRemovingEdgesWithOneDestination() {
+		node.addEdge("other", "edge");
+		node.addEdge("other", "edge2");
+		node.addEdge("other", "edge3");
+		node.removeEdges("other");
+		assertEquals(node.getAllDests().size(), 0);
+	}
+
+	@Test
+	public void testRemovingEdge() {
+		node.addEdge("other", "edge");
+		List<String> labels = node.getEdgesLabels("other"); 
+		assertTrue(labels.get(0).equals("edge"));
+	}
+
+	@Test
+	public void testRemoving3Edges() {
+		node.addEdge("other", "edge");
+		node.addEdge("other", "edge2");
+		node.addEdge("other", "edge3");
+		List<String> labels = node.getEdgesLabels("other");
+		assertEquals(labels.size(), 3);
+	}
+
+	@Test
+	public void testRemoving2Edges() {
+		node.addEdge("other", "edge");
+		node.addEdge("other", "edge2");
+		node.addEdge("other2", "edge3");
+		List<String> labels = node.getEdgesLabels("other");
+		assertEquals(labels.size(), 2);
+	}
+
+	@Test
+	public void testContainsEdge() {
+		node.addEdge("other", "edge");
+		node.addEdge("other", "edge2");
+		node.addEdge("other2", "edge3");
+		assertTrue(node.containsEdge("other2"));
+	}
+
+	@Test
+	public void testGetAllDests() {
+		node.addEdge("other", "edge");
+		node.addEdge("other", "edge2");
+		node.addEdge("other2", "edge3");
+		Set<String> dests = node.getAllDests();
+		assertEquals(dests.size(), 2);
+	}
+}

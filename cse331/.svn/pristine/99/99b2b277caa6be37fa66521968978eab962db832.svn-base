@@ -1,0 +1,4 @@
+# Load a graph from a file in the data subdirectory.
+
+LoadGraph heroes staffSuperheroes.tsv
+ListChildren heroes Ernst-the-Bicycling-Wizard

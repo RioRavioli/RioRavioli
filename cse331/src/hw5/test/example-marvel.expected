@@ -1,0 +1,8 @@
+# Load the Marvel dataset and search for a path.
+# To run this test, you will need to have downloaded the marvel dataset and
+# place it in hw5/test/marvel.tsv.
+
+loaded graph marvel
+
+path from BEAST/HENRY &HANK& P to WISDOM, PETER:
+BEAST/HENRY &HANK& P to WISDOM, PETER via X:PRIME

@@ -1,0 +1,13 @@
+Rio Bacon
+
+a.
+	problem 1: 2 hours
+	problem 2: 5 hours
+	problem 3: 3 hours
+	problem 4: 5 hours
+	problem 5: 2 hours
+
+b. I could have had a better understand of javadocs to help speed things along.
+c. Maybe explaide that the driver was going to allow the specification tests to work, as
+		I spent time trying to understand how it works.
+d. I wish I understood javadocs better.

@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Rubygame::SFont</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/rubygame/sfont_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/sfont.rb">lib/rubygame/sfont.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-default_glyphs">::default_glyphs</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-blit_glyph">#blit_glyph</a></li>
+          
+          <li><a href="#method-i-load_glyph">#load_glyph</a></li>
+          
+          <li><a href="#method-i-render">#render</a></li>
+          
+          <li><a href="#method-i-string_width">#string_width</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../CREDITS.html">CREDITS</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../ROADMAP.html">ROADMAP</a></li>
+        
+          <li class="file"><a href="../doc/custom_sdl_load_paths_rdoc.html">custom_sdl_load_paths.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/getting_started_rdoc.html">getting_started.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/keyboard_symbols_rdoc.html">keyboard_symbols.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/macosx_install_rdoc.html">macosx_install.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/managing_framerate_rdoc.html">managing_framerate.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/surface_palettes_rdoc.html">surface_palettes.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/windows_install_rdoc.html">windows_install.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Rubygame.html">Rubygame</a></li>
+        
+          <li><a href="../Rubygame/ActiveEvent.html">Rubygame::ActiveEvent</a></li>
+        
+          <li><a href="../Rubygame/Clock.html">Rubygame::Clock</a></li>
+        
+          <li><a href="../Rubygame/Color.html">Rubygame::Color</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorBase.html">Rubygame::Color::ColorBase</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSL.html">Rubygame::Color::ColorHSL</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSV.html">Rubygame::Color::ColorHSV</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorRGB.html">Rubygame::Color::ColorRGB</a></li>
+        
+          <li><a href="../Rubygame/Color/Palette.html">Rubygame::Color::Palette</a></li>
+        
+          <li><a href="../Rubygame/Event.html">Rubygame::Event</a></li>
+        
+          <li><a href="../Rubygame/EventActions.html">Rubygame::EventActions</a></li>
+        
+          <li><a href="../Rubygame/EventActions/BlockAction.html">Rubygame::EventActions::BlockAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MethodAction.html">Rubygame::EventActions::MethodAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MultiAction.html">Rubygame::EventActions::MultiAction</a></li>
+        
+          <li><a href="../Rubygame/EventHandler.html">Rubygame::EventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHandler/HasEventHandler.html">Rubygame::EventHandler::HasEventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHook.html">Rubygame::EventHook</a></li>
+        
+          <li><a href="../Rubygame/EventQueue.html">Rubygame::EventQueue</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers.html">Rubygame::EventTriggers</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AndTrigger.html">Rubygame::EventTriggers::AndTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AttrTrigger.html">Rubygame::EventTriggers::AttrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/BlockTrigger.html">Rubygame::EventTriggers::BlockTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/InstanceOfTrigger.html">Rubygame::EventTriggers::InstanceOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyPressTrigger.html">Rubygame::EventTriggers::KeyPressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyReleaseTrigger.html">Rubygame::EventTriggers::KeyReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KindOfTrigger.html">Rubygame::EventTriggers::KindOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseMoveTrigger.html">Rubygame::EventTriggers::MouseMoveTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MousePressTrigger.html">Rubygame::EventTriggers::MousePressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseReleaseTrigger.html">Rubygame::EventTriggers::MouseReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/OrTrigger.html">Rubygame::EventTriggers::OrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/TickTrigger.html">Rubygame::EventTriggers::TickTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/YesTrigger.html">Rubygame::EventTriggers::YesTrigger</a></li>
+        
+          <li><a href="../Rubygame/Events.html">Rubygame::Events</a></li>
+        
+          <li><a href="../Rubygame/Events/ClockTicked.html">Rubygame::Events::ClockTicked</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusGained.html">Rubygame::Events::InputFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusLost.html">Rubygame::Events::InputFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickAxisMoved.html">Rubygame::Events::JoystickAxisMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickBallMoved.html">Rubygame::Events::JoystickBallMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonEvent.html">Rubygame::Events::JoystickButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonPressed.html">Rubygame::Events::JoystickButtonPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonReleased.html">Rubygame::Events::JoystickButtonReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickHatMoved.html">Rubygame::Events::JoystickHatMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyPressed.html">Rubygame::Events::KeyPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyReleased.html">Rubygame::Events::KeyReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyboardEvent.html">Rubygame::Events::KeyboardEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseButtonEvent.html">Rubygame::Events::MouseButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusGained.html">Rubygame::Events::MouseFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusLost.html">Rubygame::Events::MouseFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseMoved.html">Rubygame::Events::MouseMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/MousePressed.html">Rubygame::Events::MousePressed</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseReleased.html">Rubygame::Events::MouseReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/QuitRequested.html">Rubygame::Events::QuitRequested</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowExposed.html">Rubygame::Events::WindowExposed</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowMinimized.html">Rubygame::Events::WindowMinimized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowResized.html">Rubygame::Events::WindowResized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowUnminimized.html">Rubygame::Events::WindowUnminimized</a></li>
+        
+          <li><a href="../Rubygame/ExposeEvent.html">Rubygame::ExposeEvent</a></li>
+        
+          <li><a href="../Rubygame/Ftor.html">Rubygame::Ftor</a></li>
+        
+          <li><a href="../Rubygame/GL.html">Rubygame::GL</a></li>
+        
+          <li><a href="../Rubygame/Hotspot.html">Rubygame::Hotspot</a></li>
+        
+          <li><a href="../Rubygame/JoyAxisEvent.html">Rubygame::JoyAxisEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyBallEvent.html">Rubygame::JoyBallEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyDownEvent.html">Rubygame::JoyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyHatEvent.html">Rubygame::JoyHatEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyUpEvent.html">Rubygame::JoyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Joystick.html">Rubygame::Joystick</a></li>
+        
+          <li><a href="../Rubygame/Key.html">Rubygame::Key</a></li>
+        
+          <li><a href="../Rubygame/KeyDownEvent.html">Rubygame::KeyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/KeyUpEvent.html">Rubygame::KeyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/MailQueue.html">Rubygame::MailQueue</a></li>
+        
+          <li><a href="../Rubygame/MediaBag.html">Rubygame::MediaBag</a></li>
+        
+          <li><a href="../Rubygame/Mixer.html">Rubygame::Mixer</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Music.html">Rubygame::Mixer::Music</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Sample.html">Rubygame::Mixer::Sample</a></li>
+        
+          <li><a href="../Rubygame/Mouse.html">Rubygame::Mouse</a></li>
+        
+          <li><a href="../Rubygame/MouseDownEvent.html">Rubygame::MouseDownEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseMotionEvent.html">Rubygame::MouseMotionEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseUpEvent.html">Rubygame::MouseUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Music.html">Rubygame::Music</a></li>
+        
+          <li><a href="../Rubygame/NamedResource.html">Rubygame::NamedResource</a></li>
+        
+          <li><a href="../Rubygame/NamedResource/NamedResourceClassMethods.html">Rubygame::NamedResource::NamedResourceClassMethods</a></li>
+        
+          <li><a href="../Rubygame/QuitEvent.html">Rubygame::QuitEvent</a></li>
+        
+          <li><a href="../Rubygame/Rect.html">Rubygame::Rect</a></li>
+        
+          <li><a href="../Rubygame/ResizeEvent.html">Rubygame::ResizeEvent</a></li>
+        
+          <li><a href="../Rubygame/SDLError.html">Rubygame::SDLError</a></li>
+        
+          <li><a href="../Rubygame/SFont.html">Rubygame::SFont</a></li>
+        
+          <li><a href="../Rubygame/Screen.html">Rubygame::Screen</a></li>
+        
+          <li><a href="../Rubygame/Sound.html">Rubygame::Sound</a></li>
+        
+          <li><a href="../Rubygame/Sprites.html">Rubygame::Sprites</a></li>
+        
+          <li><a href="../Rubygame/Sprites/DepthSortGroup.html">Rubygame::Sprites::DepthSortGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Group.html">Rubygame::Sprites::Group</a></li>
+        
+          <li><a href="../Rubygame/Sprites/LimitGroup.html">Rubygame::Sprites::LimitGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Sprite.html">Rubygame::Sprites::Sprite</a></li>
+        
+          <li><a href="../Rubygame/Sprites/UpdateGroup.html">Rubygame::Sprites::UpdateGroup</a></li>
+        
+          <li><a href="../Rubygame/Surface.html">Rubygame::Surface</a></li>
+        
+          <li><a href="../Rubygame/TTF.html">Rubygame::TTF</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Rubygame::SFont</h1>
+
+    <div id="description" class="description">
+      
+<p><b>NOTE</b>: you must require 'rubygame/sfont' manually to gain access to
+<a href="SFont.html">Rubygame::SFont</a>. It is not imported with <a
+href="../Rubygame.html">Rubygame</a> by default!</p>
+
+<p><a href="SFont.html">SFont</a> is a type of bitmapped font, which is loaded
+from an image file with a meaningful top row of pixels, and the font itself
+below that. The top row provides information about what parts of of the
+lower area contains font data, and which parts are empty.</p>
+
+<p>The image file should contain all of the glyphs on one row, with the
+colorkey color at the bottom-left pixel and the “skip” color at the 
+top-left pixel.</p>
+
+<p>The colorkey color is applied to the image file when it is loaded, so that
+all pixels of that color appear transparent. Alternatively, if the alpha
+value of pixel [0,0] is 0 (that is, if it is fully transparent), the image
+file is assumed to have a proper alpha channel, and no colorkey is applied.
+The skip color is used in the top row of pixels to indicate that all the 
+pixels below it contain empty space, and that the next  pixel that is not
+the skip color marks the beginning of the next glyph.</p>
+
+<p>The official <a href="SFont.html">SFont</a> homepage, with information on
+<a href="SFont.html">SFont</a> and sample font  files, can be found at <a
+href="http://www.linux-games.com/sfont/.">www.linux-games.com/sfont/.</a>
+More  information on <a href="SFont.html">SFont</a>, and a useful utility
+for automatically generating  the top row for a font, can be found at: <a
+href="http://www.nostatic.org/sfont/">www.nostatic.org/sfont/</a></p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="height-attribute-method" class="method-detail">
+          <a name="height"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">height</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Return the height of the font, in pixels. This is the same as the height of
+the image file (all glyphs are the same height).</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="default_glyphs-method" class="method-detail ">
+          <a name="method-c-default_glyphs"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_glyphs</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an array of strings, each string a single ASCII character from !
+(33) to ~ (126). This is the default set of characters in a <a
+href="SFont.html">SFont</a>. The full set is as follows:</p>
+
+<pre>! &quot; # $ % &amp; ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ? @
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ `
+a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~</pre>
+            
+
+            
+            <div class="method-source-code" id="default_glyphs-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sfont.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">SFont</span>.<span class="ruby-identifier">default_glyphs</span>
+  <span class="ruby-identifier">@@default_glyphs</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_glyphs-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_glyphs-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(filename,glyphs=nil,spacew=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a now <a href="SFont.html">SFont</a> instance.</p>
+
+<p>This function takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>filename</p></td>
+<td>
+<p>the name of the image file from which the font should be loaded. Or, a <a
+href="Surface.html">Surface</a> with a font image on it. The <a
+href="Surface.html">Surface</a> will be copied onto separate Surfaces for
+each glyph, so the original <a href="Surface.html">Surface</a> can be
+recycled.</p>
+</td></tr><tr><td class="rdoc-term"><p>glyphs</p></td>
+<td>
+<p>array of strings, one for each glyph, in the order they are found in the
+image file. If glyphs is not provided, or is nil, it is assumed to be the
+normal <a href="SFont.html">SFont</a> order; that is, ASCII characters !
+(33) to ~ (126). See  <a
+href="SFont.html#method-c-default_glyphs">SFont.default_glyphs</a> for a
+full list.</p>
+</td></tr><tr><td class="rdoc-term"><p>spacew</p></td>
+<td>
+<p>represents the width of a space character ( ). You can either specify the
+width in pixels, or specify a  character whose width, as found in the
+image, should be used. Alternatively, you could add a space character to
+the list of glyphs, and to the image file. If <tt>spacew</tt> is not given
+or is nil, and the space character is not  in the list of glyphs, it will
+have the same width as the double-quote character (“).</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sfont.rb, line 87</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">filename</span>,<span class="ruby-identifier">glyphs</span>=<span class="ruby-keyword">nil</span>,<span class="ruby-identifier">spacew</span>=<span class="ruby-keyword">nil</span>)
+      <span class="ruby-comment"># load the surface containing all the glyphs</span>
+      <span class="ruby-identifier">surface</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">filename</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">String</span>
+        <span class="ruby-identifier">surface</span> = <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">load_image</span>(<span class="ruby-identifier">filename</span>)
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">filename</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Surface</span>
+        <span class="ruby-identifier">surface</span> = <span class="ruby-identifier">filename</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@height</span> = <span class="ruby-identifier">surface</span>.<span class="ruby-identifier">height</span>
+      <span class="ruby-identifier">colorkey</span> = <span class="ruby-identifier">surface</span>.<span class="ruby-identifier">get_at</span>(<span class="ruby-value">0</span>,<span class="ruby-ivar">@height</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)
+
+      <span class="ruby-comment"># set colorkey if &quot;transparent&quot; color is not actually transparent</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">colorkey</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+        <span class="ruby-identifier">surface</span>.<span class="ruby-identifier">set_colorkey</span>(<span class="ruby-identifier">colorkey</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>])
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-ivar">@glyphs</span> = {}
+      <span class="ruby-ivar">@skip</span> = <span class="ruby-identifier">surface</span>.<span class="ruby-identifier">get_at</span>(<span class="ruby-value">0</span>,<span class="ruby-value">0</span>)[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>]
+
+      <span class="ruby-comment"># split the glyphs into separate surfaces</span>
+      <span class="ruby-identifier">glyphs</span> = (<span class="ruby-identifier">glyphs</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">@@default_glyphs</span>)
+      <span class="ruby-identifier">start_x</span> = <span class="ruby-value">2</span>
+      <span class="ruby-identifier">glyphs</span>.<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">glyph</span><span class="ruby-operator">|</span> <span class="ruby-identifier">start_x</span> = <span class="ruby-identifier">load_glyph</span>(<span class="ruby-identifier">surface</span>,<span class="ruby-identifier">glyph</span>,<span class="ruby-identifier">start_x</span>) }
+
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">glyphs</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot; &quot;</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">spacew</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+          <span class="ruby-identifier">spacew</span> = <span class="ruby-ivar">@glyphs</span>[<span class="ruby-string">'&quot;'</span>].<span class="ruby-identifier">width</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">spacew</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Numeric</span>
+          <span class="ruby-identifier">spacew</span> = <span class="ruby-identifier">spacew</span>.<span class="ruby-identifier">to_i</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">spacew</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">glyphs</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">spacew</span>
+            <span class="ruby-identifier">spacew</span> = <span class="ruby-ivar">@glyphs</span>[<span class="ruby-identifier">spacew</span>].<span class="ruby-identifier">width</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">spacew</span> = <span class="ruby-ivar">@glyphs</span>[<span class="ruby-string">'&quot;'</span>].<span class="ruby-identifier">width</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">raise</span>(<span class="ruby-constant">ArgumentError</span>,<span class="ruby-string">&quot;spacew must be Numeric, String, \
+or nil (got %s)&quot;</span><span class="ruby-operator">%</span>[<span class="ruby-identifier">spacew</span>.<span class="ruby-identifier">class</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-ivar">@glyphs</span>[<span class="ruby-string">&quot; &quot;</span>] = <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">new</span>([<span class="ruby-identifier">spacew</span>,<span class="ruby-ivar">@height</span>])
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="render-method" class="method-detail ">
+          <a name="method-i-render"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">render</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Renders the given string to a <a href="Surface.html">Surface</a>, and
+returns that surface.</p>
+
+<p>This method takes this argument:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>string</p></td>
+<td>
+<p>the text string to render.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="render-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sfont.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-identifier">size</span> = [<span class="ruby-keyword">self</span>.<span class="ruby-identifier">string_width</span>(<span class="ruby-identifier">string</span>),<span class="ruby-keyword">self</span>.<span class="ruby-identifier">height</span>]
+  <span class="ruby-identifier">render</span> = <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">size</span>)
+  <span class="ruby-identifier">x</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">string</span>.<span class="ruby-identifier">each_byte</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">glyph</span><span class="ruby-operator">|</span> 
+    <span class="ruby-identifier">blit_glyph</span>(<span class="ruby-string">&quot;%c&quot;</span><span class="ruby-operator">%</span>[<span class="ruby-identifier">glyph</span>],<span class="ruby-identifier">render</span>,[<span class="ruby-identifier">x</span>,<span class="ruby-value">0</span>])
+    <span class="ruby-identifier">x</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@glyphs</span>[<span class="ruby-string">&quot;%c&quot;</span><span class="ruby-operator">%</span>[<span class="ruby-identifier">glyph</span>]].<span class="ruby-identifier">width</span>
+  }
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">render</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- render-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- render-method -->
+
+      
+        <div id="string_width-method" class="method-detail ">
+          <a name="method-i-string_width"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">string_width</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Pretends to render the given string, and returns the width in pixels of the
+surface that would be created if it were rendered using  <a
+href="SFont.html#method-i-render">SFont#render</a>. If you want the height
+too, you can get it with  <a
+href="SFont.html#attribute-i-height">SFont#height</a> (the height is
+contant).</p>
+
+<p>This method takes this argument:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>string</p></td>
+<td>
+<p>the string to pretend to render.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="string_width-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sfont.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">string_width</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-identifier">w</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">string</span>.<span class="ruby-identifier">each_byte</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">glyph</span><span class="ruby-operator">|</span> <span class="ruby-identifier">w</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@glyphs</span>[<span class="ruby-string">&quot;%c&quot;</span><span class="ruby-operator">%</span>[<span class="ruby-identifier">glyph</span>]].<span class="ruby-identifier">width</span> }
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">w</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- string_width-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- string_width-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="private-instance-method-details" class="method-section section">
+        <h3 class="section-header">Private Instance Methods</h3>
+
+      
+        <div id="blit_glyph-method" class="method-detail ">
+          <a name="method-i-blit_glyph"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">blit_glyph</span><span
+              class="method-args">(glyph,surface,pos)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This is a private function which is used to render a string.</p>
+
+<p>Blit a single glyph to a <a href="Surface.html">Surface</a> at the given
+position.</p>
+
+<p>This <em>private</em> method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>glyph</p></td>
+<td>
+<p>a string containing the glyph to blit.</p>
+</td></tr><tr><td class="rdoc-term"><p>surface</p></td>
+<td>
+<p>the target surface to blit onto.</p>
+</td></tr><tr><td class="rdoc-term"><p>pos</p></td>
+<td>
+<p>an Array of the x and y values to blit the glyph to.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="blit_glyph-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sfont.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">blit_glyph</span>(<span class="ruby-identifier">glyph</span>,<span class="ruby-identifier">surface</span>,<span class="ruby-identifier">pos</span>) <span class="ruby-comment"># :doc:</span>
+  <span class="ruby-ivar">@glyphs</span>[<span class="ruby-identifier">glyph</span>].<span class="ruby-identifier">blit</span>(<span class="ruby-identifier">surface</span>,<span class="ruby-identifier">pos</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- blit_glyph-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- blit_glyph-method -->
+
+      
+        <div id="load_glyph-method" class="method-detail ">
+          <a name="method-i-load_glyph"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">load_glyph</span><span
+              class="method-args">(surface,glyph,start_x)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This is a private function which is used to parse the font image.</p>
+
+<p>Create a <a href="Surface.html">Surface</a> for a single glyph, and store
+it as a value in the +@glyphs+ hash, indexed by the glyph (string) it
+represents.</p>
+
+<p>Starting at a pixel in the “skip” region to the left of the glyph. Scans to
+the right along the top row until it finds a non-skip pixel (this is where
+the glyph starts) and then scans until it finds a skip pixel (this is where
+the glyph ends.</p>
+
+<p>Returns the x value it stops at, plus 1. This should be fed back in for the
+<tt>start_x</tt> of the next glyph.</p>
+
+<p>This <em>private</em> method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>surface</p></td>
+<td>
+<p>the <a href="Surface.html">Surface</a> containing all glyph image data.</p>
+</td></tr><tr><td class="rdoc-term"><p>glyph</p></td>
+<td>
+<p>a string containing the current glyph</p>
+</td></tr><tr><td class="rdoc-term"><p>start_x</p></td>
+<td>
+<p>the x position to start scanning at.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="load_glyph-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sfont.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_glyph</span>(<span class="ruby-identifier">surface</span>,<span class="ruby-identifier">glyph</span>,<span class="ruby-identifier">start_x</span>) <span class="ruby-comment"># :doc:</span>
+  <span class="ruby-comment"># find where this glyph starts</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">surface</span>.<span class="ruby-identifier">get_at</span>(<span class="ruby-identifier">start_x</span>,<span class="ruby-value">0</span>)[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>] <span class="ruby-operator">==</span> <span class="ruby-ivar">@skip</span>)
+      <span class="ruby-identifier">start_x</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">IndexError</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-value">-1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">end_x</span> = <span class="ruby-identifier">start_x</span>
+
+  <span class="ruby-comment"># find how wide this glyph is</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">surface</span>.<span class="ruby-identifier">get_at</span>(<span class="ruby-identifier">end_x</span>,<span class="ruby-value">0</span>)[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>] <span class="ruby-operator">!=</span> <span class="ruby-ivar">@skip</span>)
+      <span class="ruby-identifier">end_x</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">IndexError</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-value">-1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># make a new surface for the glyph and blit the image onto it</span>
+  <span class="ruby-identifier">rect</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">start_x</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">end_x</span><span class="ruby-operator">-</span><span class="ruby-identifier">start_x</span>, <span class="ruby-identifier">surface</span>.<span class="ruby-identifier">h</span>)
+  <span class="ruby-ivar">@glyphs</span>[<span class="ruby-identifier">glyph</span>] = <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">size</span>)
+  <span class="ruby-identifier">surface</span>.<span class="ruby-identifier">blit</span>(<span class="ruby-ivar">@glyphs</span>[<span class="ruby-identifier">glyph</span>],[<span class="ruby-value">0</span>,<span class="ruby-value">0</span>],<span class="ruby-identifier">rect</span>)
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">end_x</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- load_glyph-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- load_glyph-method -->
+
+      
+      </div><!-- private-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

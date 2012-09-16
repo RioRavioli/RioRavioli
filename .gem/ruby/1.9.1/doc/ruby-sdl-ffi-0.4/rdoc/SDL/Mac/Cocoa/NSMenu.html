@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: SDL::Mac::Cocoa::NSMenu</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/ruby-sdl-ffi/sdl/mac_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ruby-sdl-ffi/sdl/mac.rb">lib/ruby-sdl-ffi/sdl/mac.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../ObjC/NSObject.html">SDL::Mac::ObjC::NSObject</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-addItem">#addItem</a></li>
+          
+          <li><a href="#method-i-addItemWithTitle">#addItemWithTitle</a></li>
+          
+          <li><a href="#method-i-each">#each</a></li>
+          
+          <li><a href="#method-i-initWithTitle">#initWithTitle</a></li>
+          
+          <li><a href="#method-i-length">#length</a></li>
+          
+          <li><a href="#method-i-removeItem">#removeItem</a></li>
+          
+          <li><a href="#method-i-removeItemAtIndex">#removeItemAtIndex</a></li>
+          
+          <li><a href="#method-i-title">#title</a></li>
+          
+          <li><a href="#method-i-title-3D">#title=</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><span class="include">Enumerable</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../SDL.html">SDL</a></li>
+        
+          <li><a href="../../../SDL/ActiveEvent.html">SDL::ActiveEvent</a></li>
+        
+          <li><a href="../../../SDL/AudioSpec.html">SDL::AudioSpec</a></li>
+        
+          <li><a href="../../../SDL/CD.html">SDL::CD</a></li>
+        
+          <li><a href="../../../SDL/CDtrack.html">SDL::CDtrack</a></li>
+        
+          <li><a href="../../../SDL/Color.html">SDL::Color</a></li>
+        
+          <li><a href="../../../SDL/Cursor.html">SDL::Cursor</a></li>
+        
+          <li><a href="../../../SDL/Event.html">SDL::Event</a></li>
+        
+          <li><a href="../../../SDL/ExposeEvent.html">SDL::ExposeEvent</a></li>
+        
+          <li><a href="../../../SDL/Gfx.html">SDL::Gfx</a></li>
+        
+          <li><a href="../../../SDL/Gfx/BlitInfo.html">SDL::Gfx::BlitInfo</a></li>
+        
+          <li><a href="../../../SDL/Gfx/FPSmanager.html">SDL::Gfx::FPSmanager</a></li>
+        
+          <li><a href="../../../SDL/Gfx/TColorRGBA.html">SDL::Gfx::TColorRGBA</a></li>
+        
+          <li><a href="../../../SDL/Gfx/TColorY.html">SDL::Gfx::TColorY</a></li>
+        
+          <li><a href="../../../SDL/Image.html">SDL::Image</a></li>
+        
+          <li><a href="../../../SDL/JoyAxisEvent.html">SDL::JoyAxisEvent</a></li>
+        
+          <li><a href="../../../SDL/JoyBallEvent.html">SDL::JoyBallEvent</a></li>
+        
+          <li><a href="../../../SDL/JoyButtonEvent.html">SDL::JoyButtonEvent</a></li>
+        
+          <li><a href="../../../SDL/JoyHatEvent.html">SDL::JoyHatEvent</a></li>
+        
+          <li><a href="../../../SDL/Joystick.html">SDL::Joystick</a></li>
+        
+          <li><a href="../../../SDL/KeyboardEvent.html">SDL::KeyboardEvent</a></li>
+        
+          <li><a href="../../../SDL/Keysym.html">SDL::Keysym</a></li>
+        
+          <li><a href="../../../SDL/Mac.html">SDL::Mac</a></li>
+        
+          <li><a href="../../../SDL/Mac/Cocoa.html">SDL::Mac::Cocoa</a></li>
+        
+          <li><a href="../../../SDL/Mac/Cocoa/NSMenu.html">SDL::Mac::Cocoa::NSMenu</a></li>
+        
+          <li><a href="../../../SDL/Mac/Cocoa/NSMenuItem.html">SDL::Mac::Cocoa::NSMenuItem</a></li>
+        
+          <li><a href="../../../SDL/Mac/HIServices.html">SDL::Mac::HIServices</a></li>
+        
+          <li><a href="../../../SDL/Mac/HIServices/ProcessSerialNumber.html">SDL::Mac::HIServices::ProcessSerialNumber</a></li>
+        
+          <li><a href="../../../SDL/Mac/ObjC.html">SDL::Mac::ObjC</a></li>
+        
+          <li><a href="../../../SDL/Mac/ObjC/NSClass.html">SDL::Mac::ObjC::NSClass</a></li>
+        
+          <li><a href="../../../SDL/Mac/ObjC/NSObject.html">SDL::Mac::ObjC::NSObject</a></li>
+        
+          <li><a href="../../../SDL/Mac/ObjC/NSString.html">SDL::Mac::ObjC::NSString</a></li>
+        
+          <li><a href="../../../SDL/Mixer.html">SDL::Mixer</a></li>
+        
+          <li><a href="../../../SDL/Mixer/Chunk.html">SDL::Mixer::Chunk</a></li>
+        
+          <li><a href="../../../SDL/Mixer/Music.html">SDL::Mixer::Music</a></li>
+        
+          <li><a href="../../../SDL/MouseButtonEvent.html">SDL::MouseButtonEvent</a></li>
+        
+          <li><a href="../../../SDL/MouseMotionEvent.html">SDL::MouseMotionEvent</a></li>
+        
+          <li><a href="../../../SDL/Overlay.html">SDL::Overlay</a></li>
+        
+          <li><a href="../../../SDL/Palette.html">SDL::Palette</a></li>
+        
+          <li><a href="../../../SDL/PixelFormat.html">SDL::PixelFormat</a></li>
+        
+          <li><a href="../../../SDL/QuitEvent.html">SDL::QuitEvent</a></li>
+        
+          <li><a href="../../../SDL/RWops.html">SDL::RWops</a></li>
+        
+          <li><a href="../../../SDL/RWopsHidden.html">SDL::RWopsHidden</a></li>
+        
+          <li><a href="../../../SDL/RWopsHiddenMem.html">SDL::RWopsHiddenMem</a></li>
+        
+          <li><a href="../../../SDL/RWopsHiddenStdio.html">SDL::RWopsHiddenStdio</a></li>
+        
+          <li><a href="../../../SDL/RWopsHiddenUnknown.html">SDL::RWopsHiddenUnknown</a></li>
+        
+          <li><a href="../../../SDL/Rect.html">SDL::Rect</a></li>
+        
+          <li><a href="../../../SDL/ResizeEvent.html">SDL::ResizeEvent</a></li>
+        
+          <li><a href="../../../SDL/Surface.html">SDL::Surface</a></li>
+        
+          <li><a href="../../../SDL/SysWMEvent.html">SDL::SysWMEvent</a></li>
+        
+          <li><a href="../../../SDL/TTF.html">SDL::TTF</a></li>
+        
+          <li><a href="../../../SDL/TTF/Font.html">SDL::TTF::Font</a></li>
+        
+          <li><a href="../../../SDL/UserEvent.html">SDL::UserEvent</a></li>
+        
+          <li><a href="../../../SDL/Version.html">SDL::Version</a></li>
+        
+          <li><a href="../../../SDL/VideoInfo.html">SDL::VideoInfo</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">SDL::Mac::Cocoa::NSMenu</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">( *args )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/mac.rb, line 287</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( *<span class="ruby-identifier">args</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">super</span>( <span class="ruby-constant">ObjC</span><span class="ruby-operator">::</span><span class="ruby-constant">NSClass</span>(<span class="ruby-string">&quot;NSMenu&quot;</span>).<span class="ruby-identifier">msg_ptr</span>(<span class="ruby-string">&quot;alloc&quot;</span>) )
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>( <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>] )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]</span><span
+              class="method-args">(index)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/mac.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-constant">Cocoa</span><span class="ruby-operator">::</span><span class="ruby-constant">NSMenuItem</span>( <span class="ruby-identifier">msg_ptr</span>(<span class="ruby-string">&quot;itemAtIndex:&quot;</span>, <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-value">:long</span>), <span class="ruby-identifier">index</span>) )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="addItem-method" class="method-detail ">
+          <a name="method-i-addItem"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">addItem</span><span
+              class="method-args">( item )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="addItem-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/mac.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">addItem</span>( <span class="ruby-identifier">item</span> )
+  <span class="ruby-identifier">msg</span>(<span class="ruby-string">&quot;addItem:&quot;</span>, <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-value">:pointer</span>), <span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- addItem-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- addItem-method -->
+
+      
+        <div id="addItemWithTitle-method" class="method-detail ">
+          <a name="method-i-addItemWithTitle"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">addItemWithTitle</span><span
+              class="method-args">( title, action=nil, keyEquivalent="" )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="addItemWithTitle-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/mac.rb, line 313</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">addItemWithTitle</span>( <span class="ruby-identifier">title</span>, <span class="ruby-identifier">action</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">keyEquivalent</span>=<span class="ruby-string">&quot;&quot;</span> )
+  <span class="ruby-identifier">ptr</span> = <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-value">:pointer</span>)
+  <span class="ruby-identifier">action</span> = <span class="ruby-constant">ObjC</span>.<span class="ruby-identifier">sel</span>(<span class="ruby-identifier">action</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">action</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">String</span>
+  <span class="ruby-identifier">item</span> = <span class="ruby-identifier">msg_ptr</span>( <span class="ruby-string">&quot;addItemWithTitle:action:keyEquivalent:&quot;</span>,
+              <span class="ruby-identifier">ptr</span>, <span class="ruby-constant">ObjC</span><span class="ruby-operator">::</span><span class="ruby-constant">NSString</span>(<span class="ruby-identifier">title</span>),
+              <span class="ruby-identifier">ptr</span>, <span class="ruby-identifier">action</span>,
+              <span class="ruby-identifier">ptr</span>, <span class="ruby-constant">ObjC</span><span class="ruby-operator">::</span><span class="ruby-constant">NSString</span>(<span class="ruby-identifier">keyEquivalent</span>))
+  <span class="ruby-constant">NSMenuItem</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">item</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- addItemWithTitle-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- addItemWithTitle-method -->
+
+      
+        <div id="each-method" class="method-detail ">
+          <a name="method-i-each"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="each-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/mac.rb, line 341</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">each</span>
+  <span class="ruby-identifier">length</span>.<span class="ruby-identifier">times</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">i</span>] }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- each-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each-method -->
+
+      
+        <div id="initWithTitle-method" class="method-detail ">
+          <a name="method-i-initWithTitle"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">initWithTitle</span><span
+              class="method-args">( title )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="initWithTitle-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/mac.rb, line 295</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initWithTitle</span>( <span class="ruby-identifier">title</span> )
+  <span class="ruby-identifier">msg</span>( <span class="ruby-string">&quot;initWithTitle:&quot;</span>, <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-value">:pointer</span>), <span class="ruby-constant">ObjC</span><span class="ruby-operator">::</span><span class="ruby-constant">NSString</span>(<span class="ruby-identifier">title</span>) )
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- initWithTitle-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- initWithTitle-method -->
+
+      
+        <div id="length-method" class="method-detail ">
+          <a name="method-i-length"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">length</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="length-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/mac.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">length</span>
+  <span class="ruby-identifier">msg_int</span>( <span class="ruby-string">&quot;numberOfItems&quot;</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- length-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- length-method -->
+
+      
+        <div id="removeItem-method" class="method-detail ">
+          <a name="method-i-removeItem"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">removeItem</span><span
+              class="method-args">( item )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="removeItem-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/mac.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">removeItem</span>( <span class="ruby-identifier">item</span> )
+  <span class="ruby-identifier">msg</span>(<span class="ruby-string">&quot;removeItem:&quot;</span>, <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-value">:pointer</span>), <span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- removeItem-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- removeItem-method -->
+
+      
+        <div id="removeItemAtIndex-method" class="method-detail ">
+          <a name="method-i-removeItemAtIndex"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">removeItemAtIndex</span><span
+              class="method-args">( index )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="removeItemAtIndex-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/mac.rb, line 328</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">removeItemAtIndex</span>( <span class="ruby-identifier">index</span> )
+  <span class="ruby-identifier">msg</span>(<span class="ruby-string">&quot;removeItemAtIndex:&quot;</span>, <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-value">:long</span>), <span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- removeItemAtIndex-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- removeItemAtIndex-method -->
+
+      
+        <div id="title-method" class="method-detail ">
+          <a name="method-i-title"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">title</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="title-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/mac.rb, line 300</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">title</span>
+  <span class="ruby-identifier">msg_str</span>(<span class="ruby-string">&quot;title&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- title-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- title-method -->
+
+      
+        <div id="title-3D-method" class="method-detail ">
+          <a name="method-i-title-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">title=</span><span
+              class="method-args">( t )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="title-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/mac.rb, line 304</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">title=</span>( <span class="ruby-identifier">t</span> )
+  <span class="ruby-identifier">msg</span>(<span class="ruby-string">&quot;setTitle:&quot;</span>, <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">find_type</span>(<span class="ruby-value">:pointer</span>), <span class="ruby-constant">ObjC</span><span class="ruby-operator">::</span><span class="ruby-constant">NSString</span>(<span class="ruby-identifier">t</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- title-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- title-3D-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

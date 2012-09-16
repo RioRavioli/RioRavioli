@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"ignore:EFI" Rubygame::EventQueue#ignore;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"-Array of classes to be ignored by #push.;T:
+@file0FI"lib/rubygame/queue.rb;T

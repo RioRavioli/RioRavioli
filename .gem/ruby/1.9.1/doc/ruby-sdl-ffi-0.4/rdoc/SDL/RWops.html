@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: SDL::RWops</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/ruby-sdl-ffi/sdl/rwops_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ruby-sdl-ffi/sdl/rwops.rb">lib/ruby-sdl-ffi/sdl/rwops.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">NiceFFI::Struct</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-close-3D">#close=</a></li>
+          
+          <li><a href="#method-i-read">#read</a></li>
+          
+          <li><a href="#method-i-read-3D">#read=</a></li>
+          
+          <li><a href="#method-i-seek">#seek</a></li>
+          
+          <li><a href="#method-i-seek-3D">#seek=</a></li>
+          
+          <li><a href="#method-i-write">#write</a></li>
+          
+          <li><a href="#method-i-write-3D">#write=</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../SDL.html">SDL</a></li>
+        
+          <li><a href="../SDL/ActiveEvent.html">SDL::ActiveEvent</a></li>
+        
+          <li><a href="../SDL/AudioSpec.html">SDL::AudioSpec</a></li>
+        
+          <li><a href="../SDL/CD.html">SDL::CD</a></li>
+        
+          <li><a href="../SDL/CDtrack.html">SDL::CDtrack</a></li>
+        
+          <li><a href="../SDL/Color.html">SDL::Color</a></li>
+        
+          <li><a href="../SDL/Cursor.html">SDL::Cursor</a></li>
+        
+          <li><a href="../SDL/Event.html">SDL::Event</a></li>
+        
+          <li><a href="../SDL/ExposeEvent.html">SDL::ExposeEvent</a></li>
+        
+          <li><a href="../SDL/Gfx.html">SDL::Gfx</a></li>
+        
+          <li><a href="../SDL/Gfx/BlitInfo.html">SDL::Gfx::BlitInfo</a></li>
+        
+          <li><a href="../SDL/Gfx/FPSmanager.html">SDL::Gfx::FPSmanager</a></li>
+        
+          <li><a href="../SDL/Gfx/TColorRGBA.html">SDL::Gfx::TColorRGBA</a></li>
+        
+          <li><a href="../SDL/Gfx/TColorY.html">SDL::Gfx::TColorY</a></li>
+        
+          <li><a href="../SDL/Image.html">SDL::Image</a></li>
+        
+          <li><a href="../SDL/JoyAxisEvent.html">SDL::JoyAxisEvent</a></li>
+        
+          <li><a href="../SDL/JoyBallEvent.html">SDL::JoyBallEvent</a></li>
+        
+          <li><a href="../SDL/JoyButtonEvent.html">SDL::JoyButtonEvent</a></li>
+        
+          <li><a href="../SDL/JoyHatEvent.html">SDL::JoyHatEvent</a></li>
+        
+          <li><a href="../SDL/Joystick.html">SDL::Joystick</a></li>
+        
+          <li><a href="../SDL/KeyboardEvent.html">SDL::KeyboardEvent</a></li>
+        
+          <li><a href="../SDL/Keysym.html">SDL::Keysym</a></li>
+        
+          <li><a href="../SDL/Mac.html">SDL::Mac</a></li>
+        
+          <li><a href="../SDL/Mac/Cocoa.html">SDL::Mac::Cocoa</a></li>
+        
+          <li><a href="../SDL/Mac/Cocoa/NSMenu.html">SDL::Mac::Cocoa::NSMenu</a></li>
+        
+          <li><a href="../SDL/Mac/Cocoa/NSMenuItem.html">SDL::Mac::Cocoa::NSMenuItem</a></li>
+        
+          <li><a href="../SDL/Mac/HIServices.html">SDL::Mac::HIServices</a></li>
+        
+          <li><a href="../SDL/Mac/HIServices/ProcessSerialNumber.html">SDL::Mac::HIServices::ProcessSerialNumber</a></li>
+        
+          <li><a href="../SDL/Mac/ObjC.html">SDL::Mac::ObjC</a></li>
+        
+          <li><a href="../SDL/Mac/ObjC/NSClass.html">SDL::Mac::ObjC::NSClass</a></li>
+        
+          <li><a href="../SDL/Mac/ObjC/NSObject.html">SDL::Mac::ObjC::NSObject</a></li>
+        
+          <li><a href="../SDL/Mac/ObjC/NSString.html">SDL::Mac::ObjC::NSString</a></li>
+        
+          <li><a href="../SDL/Mixer.html">SDL::Mixer</a></li>
+        
+          <li><a href="../SDL/Mixer/Chunk.html">SDL::Mixer::Chunk</a></li>
+        
+          <li><a href="../SDL/Mixer/Music.html">SDL::Mixer::Music</a></li>
+        
+          <li><a href="../SDL/MouseButtonEvent.html">SDL::MouseButtonEvent</a></li>
+        
+          <li><a href="../SDL/MouseMotionEvent.html">SDL::MouseMotionEvent</a></li>
+        
+          <li><a href="../SDL/Overlay.html">SDL::Overlay</a></li>
+        
+          <li><a href="../SDL/Palette.html">SDL::Palette</a></li>
+        
+          <li><a href="../SDL/PixelFormat.html">SDL::PixelFormat</a></li>
+        
+          <li><a href="../SDL/QuitEvent.html">SDL::QuitEvent</a></li>
+        
+          <li><a href="../SDL/RWops.html">SDL::RWops</a></li>
+        
+          <li><a href="../SDL/RWopsHidden.html">SDL::RWopsHidden</a></li>
+        
+          <li><a href="../SDL/RWopsHiddenMem.html">SDL::RWopsHiddenMem</a></li>
+        
+          <li><a href="../SDL/RWopsHiddenStdio.html">SDL::RWopsHiddenStdio</a></li>
+        
+          <li><a href="../SDL/RWopsHiddenUnknown.html">SDL::RWopsHiddenUnknown</a></li>
+        
+          <li><a href="../SDL/Rect.html">SDL::Rect</a></li>
+        
+          <li><a href="../SDL/ResizeEvent.html">SDL::ResizeEvent</a></li>
+        
+          <li><a href="../SDL/Surface.html">SDL::Surface</a></li>
+        
+          <li><a href="../SDL/SysWMEvent.html">SDL::SysWMEvent</a></li>
+        
+          <li><a href="../SDL/TTF.html">SDL::TTF</a></li>
+        
+          <li><a href="../SDL/TTF/Font.html">SDL::TTF::Font</a></li>
+        
+          <li><a href="../SDL/UserEvent.html">SDL::UserEvent</a></li>
+        
+          <li><a href="../SDL/Version.html">SDL::Version</a></li>
+        
+          <li><a href="../SDL/VideoInfo.html">SDL::VideoInfo</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">SDL::RWops</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/rwops.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-ivar">@close</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="close-3D-method" class="method-detail ">
+          <a name="method-i-close-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close=</span><span
+              class="method-args">(cb)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/rwops.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close=</span>(<span class="ruby-identifier">cb</span>)
+  <span class="ruby-ivar">@close</span> = <span class="ruby-identifier">cb</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:close</span>] = <span class="ruby-ivar">@close</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-3D-method -->
+
+      
+        <div id="read-method" class="method-detail ">
+          <a name="method-i-read"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="read-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/rwops.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read</span>
+  <span class="ruby-ivar">@read</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read-method -->
+
+      
+        <div id="read-3D-method" class="method-detail ">
+          <a name="method-i-read-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read=</span><span
+              class="method-args">(cb)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="read-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/rwops.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read=</span>(<span class="ruby-identifier">cb</span>)
+  <span class="ruby-ivar">@read</span> = <span class="ruby-identifier">cb</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:read</span>] = <span class="ruby-ivar">@read</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read-3D-method -->
+
+      
+        <div id="seek-method" class="method-detail ">
+          <a name="method-i-seek"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">seek</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="seek-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/rwops.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">seek</span>
+  <span class="ruby-ivar">@seek</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- seek-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- seek-method -->
+
+      
+        <div id="seek-3D-method" class="method-detail ">
+          <a name="method-i-seek-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">seek=</span><span
+              class="method-args">(cb)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="seek-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/rwops.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">seek=</span>(<span class="ruby-identifier">cb</span>)
+  <span class="ruby-ivar">@seek</span> = <span class="ruby-identifier">cb</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:seek</span>] = <span class="ruby-ivar">@seek</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- seek-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- seek-3D-method -->
+
+      
+        <div id="write-method" class="method-detail ">
+          <a name="method-i-write"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="write-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/rwops.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write</span>
+  <span class="ruby-ivar">@write</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write-method -->
+
+      
+        <div id="write-3D-method" class="method-detail ">
+          <a name="method-i-write-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write=</span><span
+              class="method-args">(cb)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="write-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-sdl-ffi/sdl/rwops.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write=</span>(<span class="ruby-identifier">cb</span>)
+  <span class="ruby-ivar">@write</span> = <span class="ruby-identifier">cb</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:write</span>] = <span class="ruby-ivar">@write</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write-3D-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

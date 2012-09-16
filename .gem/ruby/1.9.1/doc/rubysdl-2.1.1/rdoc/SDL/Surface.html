@@ -1,0 +1,1874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: SDL::Surface</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/rubysdl_compatible_ver1_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubysdl_compatible_ver1.rb">lib/rubysdl_compatible_ver1.rb</a></li>
+          
+            <li><a href="../lib/rubysdl_aliases_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubysdl_aliases.rb">lib/rubysdl_aliases.rb</a></li>
+          
+            <li><a href="../lib/sdl_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/sdl.rb">lib/sdl.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-transformBlit">::transformBlit</a></li>
+          
+          <li><a href="#method-c-transform_blit">::transform_blit</a></li>
+          
+          <li><a href="#method-i-copyRect">#copyRect</a></li>
+          
+          <li><a href="#method-i-copy_rect">#copy_rect</a></li>
+          
+          <li><a href="#method-i-drawAABezier">#drawAABezier</a></li>
+          
+          <li><a href="#method-i-drawAABezierAlpha">#drawAABezierAlpha</a></li>
+          
+          <li><a href="#method-i-drawAACircle">#drawAACircle</a></li>
+          
+          <li><a href="#method-i-drawAACircleAlpha">#drawAACircleAlpha</a></li>
+          
+          <li><a href="#method-i-drawAAEllipse">#drawAAEllipse</a></li>
+          
+          <li><a href="#method-i-drawAAEllipseAlpha">#drawAAEllipseAlpha</a></li>
+          
+          <li><a href="#method-i-drawAAFilledCircle">#drawAAFilledCircle</a></li>
+          
+          <li><a href="#method-i-drawAAFilledEllipse">#drawAAFilledEllipse</a></li>
+          
+          <li><a href="#method-i-drawAALine">#drawAALine</a></li>
+          
+          <li><a href="#method-i-drawAALineAlpha">#drawAALineAlpha</a></li>
+          
+          <li><a href="#method-i-drawBezierAlpha">#drawBezierAlpha</a></li>
+          
+          <li><a href="#method-i-drawCircleAlpha">#drawCircleAlpha</a></li>
+          
+          <li><a href="#method-i-drawEllipseAlpha">#drawEllipseAlpha</a></li>
+          
+          <li><a href="#method-i-drawFilledCircle">#drawFilledCircle</a></li>
+          
+          <li><a href="#method-i-drawFilledCircleAlpha">#drawFilledCircleAlpha</a></li>
+          
+          <li><a href="#method-i-drawFilledEllipse">#drawFilledEllipse</a></li>
+          
+          <li><a href="#method-i-drawFilledEllipseAlpha">#drawFilledEllipseAlpha</a></li>
+          
+          <li><a href="#method-i-drawFilledRectAlpha">#drawFilledRectAlpha</a></li>
+          
+          <li><a href="#method-i-drawLineAlpha">#drawLineAlpha</a></li>
+          
+          <li><a href="#method-i-drawRectAlpha">#drawRectAlpha</a></li>
+          
+          <li><a href="#method-i-draw_aa_bezier">#draw_aa_bezier</a></li>
+          
+          <li><a href="#method-i-draw_aa_bezier_alpha">#draw_aa_bezier_alpha</a></li>
+          
+          <li><a href="#method-i-draw_aa_circle">#draw_aa_circle</a></li>
+          
+          <li><a href="#method-i-draw_aa_circle_alpha">#draw_aa_circle_alpha</a></li>
+          
+          <li><a href="#method-i-draw_aa_ellipse">#draw_aa_ellipse</a></li>
+          
+          <li><a href="#method-i-draw_aa_ellipse_alpha">#draw_aa_ellipse_alpha</a></li>
+          
+          <li><a href="#method-i-draw_aa_filled_circle">#draw_aa_filled_circle</a></li>
+          
+          <li><a href="#method-i-draw_aa_line">#draw_aa_line</a></li>
+          
+          <li><a href="#method-i-draw_aa_line_alpha">#draw_aa_line_alpha</a></li>
+          
+          <li><a href="#method-i-draw_bezier_alpha">#draw_bezier_alpha</a></li>
+          
+          <li><a href="#method-i-draw_circle_alpha">#draw_circle_alpha</a></li>
+          
+          <li><a href="#method-i-draw_ellipse_alpha">#draw_ellipse_alpha</a></li>
+          
+          <li><a href="#method-i-draw_filled_circle">#draw_filled_circle</a></li>
+          
+          <li><a href="#method-i-draw_filled_circle_alpha">#draw_filled_circle_alpha</a></li>
+          
+          <li><a href="#method-i-draw_filled_ellipse">#draw_filled_ellipse</a></li>
+          
+          <li><a href="#method-i-draw_filled_ellipse_alpha">#draw_filled_ellipse_alpha</a></li>
+          
+          <li><a href="#method-i-draw_filled_rect_alpha">#draw_filled_rect_alpha</a></li>
+          
+          <li><a href="#method-i-draw_line_alpha">#draw_line_alpha</a></li>
+          
+          <li><a href="#method-i-draw_rect_alpha">#draw_rect_alpha</a></li>
+          
+          <li><a href="#method-i-getPalette">#getPalette</a></li>
+          
+          <li><a href="#method-i-get_palette">#get_palette</a></li>
+          
+          <li><a href="#method-i-put">#put</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../SDL.html">SDL</a></li>
+        
+          <li><a href="../SDL/BMFont.html">SDL::BMFont</a></li>
+        
+          <li><a href="../SDL/CD.html">SDL::CD</a></li>
+        
+          <li><a href="../SDL/CollisionMap.html">SDL::CollisionMap</a></li>
+        
+          <li><a href="../SDL/Event.html">SDL::Event</a></li>
+        
+          <li><a href="../SDL/GL.html">SDL::GL</a></li>
+        
+          <li><a href="../SDL/Joystick.html">SDL::Joystick</a></li>
+        
+          <li><a href="../SDL/Kanji.html">SDL::Kanji</a></li>
+        
+          <li><a href="../SDL/Key.html">SDL::Key</a></li>
+        
+          <li><a href="../SDL/MPEG.html">SDL::MPEG</a></li>
+        
+          <li><a href="../SDL/Mixer.html">SDL::Mixer</a></li>
+        
+          <li><a href="../SDL/Mixer/Music.html">SDL::Mixer::Music</a></li>
+        
+          <li><a href="../SDL/Mixer/Wave.html">SDL::Mixer::Wave</a></li>
+        
+          <li><a href="../SDL/Mouse.html">SDL::Mouse</a></li>
+        
+          <li><a href="../SDL/PixelFormat.html">SDL::PixelFormat</a></li>
+        
+          <li><a href="../SDL/Screen.html">SDL::Screen</a></li>
+        
+          <li><a href="../SDL/Surface.html">SDL::Surface</a></li>
+        
+          <li><a href="../SDL/TTF.html">SDL::TTF</a></li>
+        
+          <li><a href="../SDL/WM.html">SDL::WM</a></li>
+        
+          <li><a href="../GL.html">GL</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">SDL::Surface</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/sdl.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">4</span>
+    <span class="ruby-identifier">create</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">8</span>
+    <span class="ruby-identifier">createWithFormat</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>,<span class="ruby-string">&quot;must be SDL::Surface.new(flags,w,h,surface) or SDL::Surface.new(flags,w,h,depth,Rmask,Gmask,Bmask,Amask)&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="transformBlit-method" class="method-detail ">
+          <a name="method-c-transformBlit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">transformBlit</span><span
+              class="method-args">(src, dst, angle, xscale, yscale, px, py, qx, qy, flags)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="transformBlit-source">
+<pre>
+<span class="ruby-comment"># File lib/sdl.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">transformBlit</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dst</span>, <span class="ruby-identifier">angle</span>, <span class="ruby-identifier">xscale</span>, <span class="ruby-identifier">yscale</span>,
+                          <span class="ruby-identifier">px</span>, <span class="ruby-identifier">py</span>, <span class="ruby-identifier">qx</span>, <span class="ruby-identifier">qy</span>, <span class="ruby-identifier">flags</span>)
+  <span class="ruby-identifier">transformed</span> = <span class="ruby-identifier">src</span>.<span class="ruby-identifier">transformSurface</span>(<span class="ruby-identifier">src</span>.<span class="ruby-identifier">colorkey</span>, <span class="ruby-identifier">angle</span>,
+                                     <span class="ruby-identifier">xscale</span>, <span class="ruby-identifier">yscale</span>, <span class="ruby-identifier">flags</span>)
+  <span class="ruby-identifier">transformed</span>.<span class="ruby-identifier">setColorKey</span>(<span class="ruby-identifier">src</span>.<span class="ruby-identifier">flags</span> &amp; (<span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SRCCOLORKEY</span><span class="ruby-operator">|</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">RLEACCEL</span>),
+                          <span class="ruby-identifier">src</span>.<span class="ruby-identifier">colorkey</span> )
+  <span class="ruby-identifier">transformed</span>.<span class="ruby-identifier">setAlpha</span>(<span class="ruby-identifier">src</span>.<span class="ruby-identifier">flags</span> &amp; (<span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SRCALPHA</span><span class="ruby-operator">|</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">RLEACCEL</span>),
+                       <span class="ruby-identifier">src</span>.<span class="ruby-identifier">alpha</span> )
+  <span class="ruby-identifier">rad</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span>*<span class="ruby-identifier">angle</span> <span class="ruby-operator">/</span> <span class="ruby-value">180.0</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-identifier">px</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">w</span><span class="ruby-operator">/</span><span class="ruby-value">2.0</span> ; <span class="ruby-identifier">y</span> = <span class="ruby-identifier">py</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">h</span><span class="ruby-operator">/</span><span class="ruby-value">2.0</span>
+    <span class="ruby-identifier">x</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">xscale</span> ; <span class="ruby-identifier">y</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">yscale</span>
+  <span class="ruby-identifier">dst_x</span> = <span class="ruby-identifier">x</span>*<span class="ruby-constant">Math</span>.<span class="ruby-identifier">cos</span>(<span class="ruby-identifier">rad</span>)<span class="ruby-operator">-</span><span class="ruby-identifier">y</span>*<span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-identifier">rad</span>) 
+  <span class="ruby-identifier">dst_y</span> = <span class="ruby-identifier">x</span>*<span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-identifier">rad</span>)<span class="ruby-operator">+</span><span class="ruby-identifier">y</span>*<span class="ruby-constant">Math</span>.<span class="ruby-identifier">cos</span>(<span class="ruby-identifier">rad</span>) 
+  <span class="ruby-identifier">dst_x</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">transformed</span>.<span class="ruby-identifier">w</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>
+  <span class="ruby-identifier">dst_y</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">transformed</span>.<span class="ruby-identifier">h</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>
+  <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">blit</span>(<span class="ruby-identifier">transformed</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">dst</span>, <span class="ruby-identifier">qx</span><span class="ruby-operator">-</span><span class="ruby-identifier">dst_x</span>, <span class="ruby-identifier">qy</span><span class="ruby-operator">-</span><span class="ruby-identifier">dst_y</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- transformBlit-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-c-transform_blit">transform_blit</a>
+          </div>
+          
+
+          
+        </div><!-- transformBlit-method -->
+
+      
+        <div id="transform_blit-method" class="method-detail method-alias">
+          <a name="method-c-transform_blit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">transform_blit</span><span
+              class="method-args">(src, dst, angle, xscale, yscale, px, py, qx, qy, flags)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-c-transformBlit">transformBlit</a>
+          </div>
+          
+        </div><!-- transform_blit-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="copyRect-method" class="method-detail ">
+          <a name="method-i-copyRect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">copyRect</span><span
+              class="method-args">(x,y,w,h)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="copyRect-source">
+<pre>
+<span class="ruby-comment"># File lib/sdl.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">copyRect</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>,<span class="ruby-identifier">w</span>,<span class="ruby-identifier">h</span>)
+  <span class="ruby-identifier">format</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">format</span>
+  <span class="ruby-identifier">flagbase</span>=<span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SWSURFACE</span><span class="ruby-operator">|</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">HWSURFACE</span><span class="ruby-operator">|</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SRCCOLORKEY</span><span class="ruby-operator">|</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SRCALPHA</span>
+  <span class="ruby-identifier">alpha_flag</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flags</span> &amp; (<span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SRCCOLORKEY</span><span class="ruby-operator">|</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">RLEACCEL</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">setAlpha</span>(<span class="ruby-value">0</span>,<span class="ruby-identifier">format</span>.<span class="ruby-identifier">alpha</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">new_surface</span>=<span class="ruby-constant">Surface</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">flagbase</span>&amp;<span class="ruby-keyword">self</span>.<span class="ruby-identifier">flags</span>,<span class="ruby-identifier">w</span>,<span class="ruby-identifier">h</span>,<span class="ruby-keyword">self</span>)
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">setAlpha</span>(<span class="ruby-identifier">alpha_flag</span>,<span class="ruby-identifier">format</span>.<span class="ruby-identifier">alpha</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">SDL</span>.<span class="ruby-identifier">blitSurface</span>(<span class="ruby-keyword">self</span>,<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>,<span class="ruby-identifier">w</span>,<span class="ruby-identifier">h</span>,<span class="ruby-identifier">new_surface</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">new_surface</span>.<span class="ruby-identifier">setColorKey</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">flags</span> &amp; (<span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SRCCOLORKEY</span><span class="ruby-operator">|</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">RLEACCEL</span>),
+                          <span class="ruby-identifier">format</span>.<span class="ruby-identifier">colorkey</span> )
+  <span class="ruby-identifier">new_surface</span>.<span class="ruby-identifier">setAlpha</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">flags</span> &amp; (<span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SRCALPHA</span><span class="ruby-operator">|</span><span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">RLEACCEL</span>),
+                       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">alpha</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">new_surface</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- copyRect-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-copy_rect">copy_rect</a>
+          </div>
+          
+
+          
+        </div><!-- copyRect-method -->
+
+      
+        <div id="copy_rect-method" class="method-detail method-alias">
+          <a name="method-i-copy_rect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">copy_rect</span><span
+              class="method-args">(x,y,w,h)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-copyRect">copyRect</a>
+          </div>
+          
+        </div><!-- copy_rect-method -->
+
+      
+        <div id="drawAABezier-method" class="method-detail ">
+          <a name="method-i-drawAABezier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawAABezier</span><span
+              class="method-args">(x1,y1,x2,y2,x3,y3,x4,y4,level,color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawAABezier-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawAABezier</span>(<span class="ruby-identifier">x1</span>,<span class="ruby-identifier">y1</span>,<span class="ruby-identifier">x2</span>,<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">x3</span>,<span class="ruby-identifier">y3</span>,<span class="ruby-identifier">x4</span>,<span class="ruby-identifier">y4</span>,<span class="ruby-identifier">level</span>,<span class="ruby-identifier">color</span>)
+  <span class="ruby-identifier">drawBezier</span>(<span class="ruby-identifier">x1</span>,<span class="ruby-identifier">y1</span>,<span class="ruby-identifier">x2</span>,<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">x3</span>,<span class="ruby-identifier">y3</span>,<span class="ruby-identifier">x4</span>,<span class="ruby-identifier">y4</span>,<span class="ruby-identifier">level</span>,<span class="ruby-identifier">color</span>,<span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawAABezier-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_aa_bezier">draw_aa_bezier</a>
+          </div>
+          
+
+          
+        </div><!-- drawAABezier-method -->
+
+      
+        <div id="drawAABezierAlpha-method" class="method-detail ">
+          <a name="method-i-drawAABezierAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawAABezierAlpha</span><span
+              class="method-args">(x1,y1,x2,y2,x3,y3,x4,y4,level,color,alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawAABezierAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawAABezierAlpha</span>(<span class="ruby-identifier">x1</span>,<span class="ruby-identifier">y1</span>,<span class="ruby-identifier">x2</span>,<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">x3</span>,<span class="ruby-identifier">y3</span>,<span class="ruby-identifier">x4</span>,<span class="ruby-identifier">y4</span>,<span class="ruby-identifier">level</span>,<span class="ruby-identifier">color</span>,<span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawBezier</span>(<span class="ruby-identifier">x1</span>,<span class="ruby-identifier">y1</span>,<span class="ruby-identifier">x2</span>,<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">x3</span>,<span class="ruby-identifier">y3</span>,<span class="ruby-identifier">x4</span>,<span class="ruby-identifier">y4</span>,<span class="ruby-identifier">level</span>,<span class="ruby-identifier">color</span>,<span class="ruby-keyword">true</span>,<span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawAABezierAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_aa_bezier_alpha">draw_aa_bezier_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawAABezierAlpha-method -->
+
+      
+        <div id="drawAACircle-method" class="method-detail ">
+          <a name="method-i-drawAACircle"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawAACircle</span><span
+              class="method-args">(x, y, r, color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawAACircle-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawAACircle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-identifier">drawCircle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawAACircle-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_aa_circle">draw_aa_circle</a>
+          </div>
+          
+
+          
+        </div><!-- drawAACircle-method -->
+
+      
+        <div id="drawAACircleAlpha-method" class="method-detail ">
+          <a name="method-i-drawAACircleAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawAACircleAlpha</span><span
+              class="method-args">(x, y, r, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawAACircleAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawAACircleAlpha</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawCircle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawAACircleAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_aa_circle_alpha">draw_aa_circle_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawAACircleAlpha-method -->
+
+      
+        <div id="drawAAEllipse-method" class="method-detail ">
+          <a name="method-i-drawAAEllipse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawAAEllipse</span><span
+              class="method-args">(x, y, rx, ry, color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawAAEllipse-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawAAEllipse</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-identifier">drawEllipse</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawAAEllipse-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_aa_ellipse">draw_aa_ellipse</a>
+          </div>
+          
+
+          
+        </div><!-- drawAAEllipse-method -->
+
+      
+        <div id="drawAAEllipseAlpha-method" class="method-detail ">
+          <a name="method-i-drawAAEllipseAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawAAEllipseAlpha</span><span
+              class="method-args">(x, y, rx, ry, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawAAEllipseAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawAAEllipseAlpha</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawEllipse</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawAAEllipseAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_aa_ellipse_alpha">draw_aa_ellipse_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawAAEllipseAlpha-method -->
+
+      
+        <div id="drawAAFilledCircle-method" class="method-detail ">
+          <a name="method-i-drawAAFilledCircle"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawAAFilledCircle</span><span
+              class="method-args">(x, y, r, color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawAAFilledCircle-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawAAFilledCircle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-identifier">drawCircle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawAAFilledCircle-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_aa_filled_circle">draw_aa_filled_circle</a>
+          </div>
+          
+
+          
+        </div><!-- drawAAFilledCircle-method -->
+
+      
+        <div id="drawAAFilledEllipse-method" class="method-detail ">
+          <a name="method-i-drawAAFilledEllipse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawAAFilledEllipse</span><span
+              class="method-args">(x, y, rx, ry, color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawAAFilledEllipse-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawAAFilledEllipse</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-identifier">drawEllipse</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawAAFilledEllipse-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- drawAAFilledEllipse-method -->
+
+      
+        <div id="drawAALine-method" class="method-detail ">
+          <a name="method-i-drawAALine"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawAALine</span><span
+              class="method-args">(x1, y1, x2, y2, col)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawAALine-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawAALine</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">col</span>)
+  <span class="ruby-identifier">drawLine</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">col</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawAALine-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_aa_line">draw_aa_line</a>
+          </div>
+          
+
+          
+        </div><!-- drawAALine-method -->
+
+      
+        <div id="drawAALineAlpha-method" class="method-detail ">
+          <a name="method-i-drawAALineAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawAALineAlpha</span><span
+              class="method-args">(x1, y1, x2, y2, col, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawAALineAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawAALineAlpha</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">col</span>, <span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawLine</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">col</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawAALineAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_aa_line_alpha">draw_aa_line_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawAALineAlpha-method -->
+
+      
+        <div id="drawBezierAlpha-method" class="method-detail ">
+          <a name="method-i-drawBezierAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawBezierAlpha</span><span
+              class="method-args">(x1,y1,x2,y2,x3,y3,x4,y4,level,color,alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawBezierAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawBezierAlpha</span>(<span class="ruby-identifier">x1</span>,<span class="ruby-identifier">y1</span>,<span class="ruby-identifier">x2</span>,<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">x3</span>,<span class="ruby-identifier">y3</span>,<span class="ruby-identifier">x4</span>,<span class="ruby-identifier">y4</span>,<span class="ruby-identifier">level</span>,<span class="ruby-identifier">color</span>,<span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawBezier</span>(<span class="ruby-identifier">x1</span>,<span class="ruby-identifier">y1</span>,<span class="ruby-identifier">x2</span>,<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">x3</span>,<span class="ruby-identifier">y3</span>,<span class="ruby-identifier">x4</span>,<span class="ruby-identifier">y4</span>,<span class="ruby-identifier">level</span>,<span class="ruby-identifier">color</span>,<span class="ruby-keyword">false</span>,<span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawBezierAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_bezier_alpha">draw_bezier_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawBezierAlpha-method -->
+
+      
+        <div id="drawCircleAlpha-method" class="method-detail ">
+          <a name="method-i-drawCircleAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawCircleAlpha</span><span
+              class="method-args">(x, y, r, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawCircleAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawCircleAlpha</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawCircle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawCircleAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_circle_alpha">draw_circle_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawCircleAlpha-method -->
+
+      
+        <div id="drawEllipseAlpha-method" class="method-detail ">
+          <a name="method-i-drawEllipseAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawEllipseAlpha</span><span
+              class="method-args">(x, y, rx, ry, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawEllipseAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawEllipseAlpha</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawEllipse</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawEllipseAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_ellipse_alpha">draw_ellipse_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawEllipseAlpha-method -->
+
+      
+        <div id="drawFilledCircle-method" class="method-detail ">
+          <a name="method-i-drawFilledCircle"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawFilledCircle</span><span
+              class="method-args">(x, y, r, color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawFilledCircle-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawFilledCircle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-identifier">drawCircle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawFilledCircle-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_filled_circle">draw_filled_circle</a>
+          </div>
+          
+
+          
+        </div><!-- drawFilledCircle-method -->
+
+      
+        <div id="drawFilledCircleAlpha-method" class="method-detail ">
+          <a name="method-i-drawFilledCircleAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawFilledCircleAlpha</span><span
+              class="method-args">(x, y, r, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawFilledCircleAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawFilledCircleAlpha</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawCircle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawFilledCircleAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_filled_circle_alpha">draw_filled_circle_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawFilledCircleAlpha-method -->
+
+      
+        <div id="drawFilledEllipse-method" class="method-detail ">
+          <a name="method-i-drawFilledEllipse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawFilledEllipse</span><span
+              class="method-args">(x, y, rx, ry, color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawFilledEllipse-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawFilledEllipse</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-identifier">drawEllipse</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawFilledEllipse-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_filled_ellipse">draw_filled_ellipse</a>
+          </div>
+          
+
+          
+        </div><!-- drawFilledEllipse-method -->
+
+      
+        <div id="drawFilledEllipseAlpha-method" class="method-detail ">
+          <a name="method-i-drawFilledEllipseAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawFilledEllipseAlpha</span><span
+              class="method-args">(x, y, rx, ry, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawFilledEllipseAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawFilledEllipseAlpha</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawEllipse</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawFilledEllipseAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_filled_ellipse_alpha">draw_filled_ellipse_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawFilledEllipseAlpha-method -->
+
+      
+        <div id="drawFilledRectAlpha-method" class="method-detail ">
+          <a name="method-i-drawFilledRectAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawFilledRectAlpha</span><span
+              class="method-args">(x1, y1, x2, y2, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawFilledRectAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawFilledRectAlpha</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawRect</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawFilledRectAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_filled_rect_alpha">draw_filled_rect_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawFilledRectAlpha-method -->
+
+      
+        <div id="drawLineAlpha-method" class="method-detail ">
+          <a name="method-i-drawLineAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawLineAlpha</span><span
+              class="method-args">(x1, y1, x2, y2, col, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawLineAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawLineAlpha</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">col</span>, <span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawLine</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">col</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawLineAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_line_alpha">draw_line_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawLineAlpha-method -->
+
+      
+        <div id="drawRectAlpha-method" class="method-detail ">
+          <a name="method-i-drawRectAlpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drawRectAlpha</span><span
+              class="method-args">(x1, y1, x2, y2, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="drawRectAlpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drawRectAlpha</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">alpha</span>)
+  <span class="ruby-identifier">drawRect</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-identifier">alpha</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drawRectAlpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-draw_rect_alpha">draw_rect_alpha</a>
+          </div>
+          
+
+          
+        </div><!-- drawRectAlpha-method -->
+
+      
+        <div id="draw_aa_bezier-method" class="method-detail method-alias">
+          <a name="method-i-draw_aa_bezier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_aa_bezier</span><span
+              class="method-args">(x1,y1,x2,y2,x3,y3,x4,y4,level,color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawAABezier">drawAABezier</a>
+          </div>
+          
+        </div><!-- draw_aa_bezier-method -->
+
+      
+        <div id="draw_aa_bezier_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_aa_bezier_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_aa_bezier_alpha</span><span
+              class="method-args">(x1,y1,x2,y2,x3,y3,x4,y4,level,color,alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawAABezierAlpha">drawAABezierAlpha</a>
+          </div>
+          
+        </div><!-- draw_aa_bezier_alpha-method -->
+
+      
+        <div id="draw_aa_circle-method" class="method-detail method-alias">
+          <a name="method-i-draw_aa_circle"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_aa_circle</span><span
+              class="method-args">(x, y, r, color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawAACircle">drawAACircle</a>
+          </div>
+          
+        </div><!-- draw_aa_circle-method -->
+
+      
+        <div id="draw_aa_circle_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_aa_circle_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_aa_circle_alpha</span><span
+              class="method-args">(x, y, r, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawAACircleAlpha">drawAACircleAlpha</a>
+          </div>
+          
+        </div><!-- draw_aa_circle_alpha-method -->
+
+      
+        <div id="draw_aa_ellipse-method" class="method-detail method-alias">
+          <a name="method-i-draw_aa_ellipse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_aa_ellipse</span><span
+              class="method-args">(x, y, rx, ry, color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawAAEllipse">drawAAEllipse</a>
+          </div>
+          
+        </div><!-- draw_aa_ellipse-method -->
+
+      
+        <div id="draw_aa_ellipse_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_aa_ellipse_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_aa_ellipse_alpha</span><span
+              class="method-args">(x, y, rx, ry, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawAAEllipseAlpha">drawAAEllipseAlpha</a>
+          </div>
+          
+        </div><!-- draw_aa_ellipse_alpha-method -->
+
+      
+        <div id="draw_aa_filled_circle-method" class="method-detail method-alias">
+          <a name="method-i-draw_aa_filled_circle"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_aa_filled_circle</span><span
+              class="method-args">(x, y, r, color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawAAFilledCircle">drawAAFilledCircle</a>
+          </div>
+          
+        </div><!-- draw_aa_filled_circle-method -->
+
+      
+        <div id="draw_aa_line-method" class="method-detail method-alias">
+          <a name="method-i-draw_aa_line"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_aa_line</span><span
+              class="method-args">(x1, y1, x2, y2, col)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawAALine">drawAALine</a>
+          </div>
+          
+        </div><!-- draw_aa_line-method -->
+
+      
+        <div id="draw_aa_line_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_aa_line_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_aa_line_alpha</span><span
+              class="method-args">(x1, y1, x2, y2, col, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawAALineAlpha">drawAALineAlpha</a>
+          </div>
+          
+        </div><!-- draw_aa_line_alpha-method -->
+
+      
+        <div id="draw_bezier_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_bezier_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_bezier_alpha</span><span
+              class="method-args">(x1,y1,x2,y2,x3,y3,x4,y4,level,color,alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawBezierAlpha">drawBezierAlpha</a>
+          </div>
+          
+        </div><!-- draw_bezier_alpha-method -->
+
+      
+        <div id="draw_circle_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_circle_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_circle_alpha</span><span
+              class="method-args">(x, y, r, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawCircleAlpha">drawCircleAlpha</a>
+          </div>
+          
+        </div><!-- draw_circle_alpha-method -->
+
+      
+        <div id="draw_ellipse_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_ellipse_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_ellipse_alpha</span><span
+              class="method-args">(x, y, rx, ry, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawEllipseAlpha">drawEllipseAlpha</a>
+          </div>
+          
+        </div><!-- draw_ellipse_alpha-method -->
+
+      
+        <div id="draw_filled_circle-method" class="method-detail method-alias">
+          <a name="method-i-draw_filled_circle"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_filled_circle</span><span
+              class="method-args">(x, y, r, color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawFilledCircle">drawFilledCircle</a>
+          </div>
+          
+        </div><!-- draw_filled_circle-method -->
+
+      
+        <div id="draw_filled_circle_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_filled_circle_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_filled_circle_alpha</span><span
+              class="method-args">(x, y, r, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawFilledCircleAlpha">drawFilledCircleAlpha</a>
+          </div>
+          
+        </div><!-- draw_filled_circle_alpha-method -->
+
+      
+        <div id="draw_filled_ellipse-method" class="method-detail method-alias">
+          <a name="method-i-draw_filled_ellipse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_filled_ellipse</span><span
+              class="method-args">(x, y, rx, ry, color)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawFilledEllipse">drawFilledEllipse</a>
+          </div>
+          
+        </div><!-- draw_filled_ellipse-method -->
+
+      
+        <div id="draw_filled_ellipse_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_filled_ellipse_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_filled_ellipse_alpha</span><span
+              class="method-args">(x, y, rx, ry, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawFilledEllipseAlpha">drawFilledEllipseAlpha</a>
+          </div>
+          
+        </div><!-- draw_filled_ellipse_alpha-method -->
+
+      
+        <div id="draw_filled_rect_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_filled_rect_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_filled_rect_alpha</span><span
+              class="method-args">(x1, y1, x2, y2, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawFilledRectAlpha">drawFilledRectAlpha</a>
+          </div>
+          
+        </div><!-- draw_filled_rect_alpha-method -->
+
+      
+        <div id="draw_line_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_line_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_line_alpha</span><span
+              class="method-args">(x1, y1, x2, y2, col, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawLineAlpha">drawLineAlpha</a>
+          </div>
+          
+        </div><!-- draw_line_alpha-method -->
+
+      
+        <div id="draw_rect_alpha-method" class="method-detail method-alias">
+          <a name="method-i-draw_rect_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_rect_alpha</span><span
+              class="method-args">(x1, y1, x2, y2, color, alpha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-drawRectAlpha">drawRectAlpha</a>
+          </div>
+          
+        </div><!-- draw_rect_alpha-method -->
+
+      
+        <div id="getPalette-method" class="method-detail ">
+          <a name="method-i-getPalette"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getPalette</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getPalette-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPalette</span>
+  <span class="ruby-identifier">format</span>.<span class="ruby-identifier">palette</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getPalette-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-get_palette">get_palette</a>
+          </div>
+          
+
+          
+        </div><!-- getPalette-method -->
+
+      
+        <div id="get_palette-method" class="method-detail method-alias">
+          <a name="method-i-get_palette"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_palette</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-getPalette">getPalette</a>
+          </div>
+          
+        </div><!-- get_palette-method -->
+
+      
+        <div id="put-method" class="method-detail ">
+          <a name="method-i-put"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">put</span><span
+              class="method-args">(surface,x,y)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="put-source">
+<pre>
+<span class="ruby-comment"># File lib/sdl.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">put</span>(<span class="ruby-identifier">surface</span>,<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Surface</span>.<span class="ruby-identifier">blit</span>(<span class="ruby-identifier">surface</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-identifier">surface</span>.<span class="ruby-identifier">w</span>,<span class="ruby-identifier">surface</span>.<span class="ruby-identifier">h</span>,<span class="ruby-keyword">self</span>,<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- put-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- put-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

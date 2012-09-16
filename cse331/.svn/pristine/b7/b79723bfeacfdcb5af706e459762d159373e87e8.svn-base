@@ -1,0 +1,39 @@
+# Verify behavior of input m
+m
+
+# Verify printing list of buildings
+b
+
+# Verify printing of path
+r
+A
+C
+
+# Verify printing path to self
+r
+B
+B
+
+# Verify handling unknown second building
+r
+A
+D
+
+# Verify handling unknown first building
+r
+D
+A
+
+# Verify handling both unknown buildings
+r
+D
+E
+
+# Verify unknown command
+o
+
+# Verify unknown command starting with known command
+m m
+
+# Quit
+q

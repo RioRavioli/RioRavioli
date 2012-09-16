@@ -1,0 +1,5 @@
+
+URxvt.scrollBar: off
+URxvt.depth: 32
+URxvt.background: rgba:1111/1111/1111/dddd
+URxvt.foreground: AntiqueWhite

@@ -1,0 +1,25 @@
+#This is a slightly larger test, and will test having multiple graphs, test finding path
+#from two close characters and two farther characters with shortest path.
+#Also tests path to self
+
+loaded graph small
+loaded graph med
+
+path from Rio to Ocean:
+Rio to Ocean via Earth
+
+path from Nawgui to Kou:
+Nawgui to Ocean via Stars
+Ocean to Kou via Rain
+
+path from Gucci to Gucci:
+
+path from Thunders to Rio:
+unknown character Thunders
+
+path from Rio to Little Box:
+unknown character Little Box
+
+path from Thunders to Little Box:
+unknown character Thunders
+unknown character Little Box

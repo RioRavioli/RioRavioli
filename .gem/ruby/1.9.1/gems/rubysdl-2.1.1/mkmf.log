@@ -1,0 +1,457 @@
+have_library: checking for SMPEG_new() in -lsmpeg... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lsmpeg  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘SMPEG_new’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))SMPEG_new; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lsmpeg  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/usr/bin/ld: cannot find -lsmpeg
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { SMPEG_new(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for Mix_OpenAudio() in -lSDL_mixer... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lSDL_mixer  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘Mix_OpenAudio’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))Mix_OpenAudio; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lSDL_mixer  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/usr/bin/ld: cannot find -lSDL_mixer
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { Mix_OpenAudio(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for sge_Line() in -lSGE... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lSGE  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘sge_Line’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))sge_Line; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lSGE  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/usr/bin/ld: cannot find -lSGE
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { sge_Line(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for IMG_Load() in -lSDL_image... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lSDL_image  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘IMG_Load’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))IMG_Load; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lSDL_image  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/usr/bin/ld: cannot find -lSDL_image
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { IMG_Load(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for TTF_Init() in -lSDL_ttf... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lSDL_ttf  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘TTF_Init’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))TTF_Init; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lSDL_ttf  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/usr/bin/ld: cannot find -lSDL_ttf
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { TTF_Init(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for TTF_OpenFontIndex()... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘TTF_OpenFontIndex’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))TTF_OpenFontIndex; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/tmp/cc7vD0qN.o: In function `t':
+conftest.c:(.text+0x7): undefined reference to `TTF_OpenFontIndex'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { TTF_OpenFontIndex(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for TTF_FontFaces()... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘TTF_FontFaces’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))TTF_FontFaces; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/tmp/ccesRyiP.o: In function `t':
+conftest.c:(.text+0x7): undefined reference to `TTF_FontFaces'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { TTF_FontFaces(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for TTF_FontFaceIsFixedWidth()... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘TTF_FontFaceIsFixedWidth’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))TTF_FontFaceIsFixedWidth; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/tmp/ccKEFSh0.o: In function `t':
+conftest.c:(.text+0x7): undefined reference to `TTF_FontFaceIsFixedWidth'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { TTF_FontFaceIsFixedWidth(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for TTF_FontFaceFamilyName()... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘TTF_FontFaceFamilyName’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))TTF_FontFaceFamilyName; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/tmp/ccTJ6Iw9.o: In function `t':
+conftest.c:(.text+0x7): undefined reference to `TTF_FontFaceFamilyName'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { TTF_FontFaceFamilyName(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for TTF_FontFaceStyleName()... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘TTF_FontFaceStyleName’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))TTF_FontFaceStyleName; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/tmp/ccacCCYm.o: In function `t':
+conftest.c:(.text+0x7): undefined reference to `TTF_FontFaceStyleName'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { TTF_FontFaceStyleName(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for Mix_LoadMUS_RW()... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘Mix_LoadMUS_RW’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))Mix_LoadMUS_RW; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/tmp/ccHy0rWy.o: In function `t':
+conftest.c:(.text+0x7): undefined reference to `Mix_LoadMUS_RW'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { Mix_LoadMUS_RW(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_blocking_region()... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_enc_str_new()... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘rb_enc_str_new’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_enc_str_new; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { rb_enc_str_new(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_str_export_to_enc()... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘rb_str_export_to_enc’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_str_export_to_enc; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { rb_str_export_to_enc(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for SDLSKK_Context_new() in -lSDLSKK... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -D ENABLE_M17N  conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lSDLSKK  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘SDLSKK_Context_new’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))SDLSKK_Context_new; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -D ENABLE_M17N  conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lSDLSKK  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/usr/bin/ld: cannot find -lSDLSKK
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { SDLSKK_Context_new(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for glVertex3d() in -lGL... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -I/usr/X11R6/include    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -D ENABLE_M17N  -D ENABLE_OPENGL  conftest.c  -L. -L/usr/lib -L/usr/X11R6/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lGL  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5:53: error: ‘glVertex3d’ undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))glVertex3d; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -I/usr/X11R6/include    -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -D ENABLE_M17N  -D ENABLE_OPENGL  conftest.c  -L. -L/usr/lib -L/usr/X11R6/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,--hash-style=gnu -rdynamic -Wl,-export-dynamic    -L/usr/lib -lSDL -lpthread  -lruby -lGL  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { glVertex3d(); return 0; }
+/* end */
+
+--------------------
+

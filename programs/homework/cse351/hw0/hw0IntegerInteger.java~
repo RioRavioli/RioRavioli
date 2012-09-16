@@ -1,0 +1,21 @@
+
+class hw0IntegerInteger {
+
+	public static void main(String[] arg) {
+		Integer src[][] = new Integer[4096][4096];
+		Integer dst[][] = new Integer[4096][4096];
+		
+		Integer rep;
+		Integer i, j;
+
+		for ( rep = 0; rep < 10; rep++ ) {
+				for ( j = 0; j < 4096; j++) {
+			for ( i = 0; i < 4096; i++) {
+					src[i][j] = i * rep;
+					dst[i][j] = src[i][j];
+				}
+			}
+		}
+	}
+
+}

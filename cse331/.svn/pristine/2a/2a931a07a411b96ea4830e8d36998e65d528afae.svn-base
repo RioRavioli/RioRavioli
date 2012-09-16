@@ -1,0 +1,63 @@
+# Test having a graph with one character
+created graph small
+added node Rio to small
+small contains: Rio
+
+# Test finding path for one character
+path from Rio to Rio:
+total cost: 0.000
+
+# Test adding a few more characters
+added node Kou to small
+added node Gucci to small
+small contains: Gucci Kou Rio
+
+# Test adding edges
+added edge 0.100 from Rio to Kou in small
+
+# Test very basic path finding
+path from Rio to Kou:
+Rio to Kou with weight 0.100
+total cost: 0.100
+
+# Test finding correct path, even when not shortest
+added edge 0.800 from Rio to Gucci in small
+added edge 0.300 from Kou to Gucci in small
+path from Rio to Gucci:
+Rio to Kou with weight 0.100
+Kou to Gucci with weight 0.300
+total cost: 0.400
+
+# Test finding nonexisting path
+added node MachDash to small
+path from Gucci to MachDash:
+no path found
+
+# Test finding path to self
+path from Rio to Rio:
+total cost: 0.000
+
+# Test finding path for nonexistant first character
+unknown character Souten
+
+# Test finding path for nonexistant second character
+unknown character Thunders
+
+# Test finding path for both nonexistant characters
+unknown character Thunders
+unknown character Souten
+
+
+######Load graph tests######
+loaded graph big
+
+# Test finding a simple path
+path from Rio to Ocean:
+Rio to Ocean with weight 0.333
+total cost: 0.333
+
+# Test finding a longer path
+path from lolStuff to Souten:
+lolStuff to Rio with weight 0.500
+Rio to Souten with weight 1.000
+total cost: 1.500

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class FFI::TypesGenerator - ffi-1.1.5 Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/ffi/tools/types_generator.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-generate">::generate</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../History_txt.html">History</a>
+  
+    <li class="file"><a href="../README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../FFI.html">FFI</a>
+  
+    <li><a href="../FFI/AutoPointer.html">FFI::AutoPointer</a>
+  
+    <li><a href="../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a>
+  
+    <li><a href="../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a>
+  
+    <li><a href="../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a>
+  
+    <li><a href="../FFI/ConstGenerator.html">FFI::ConstGenerator</a>
+  
+    <li><a href="../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a>
+  
+    <li><a href="../FFI/Enum.html">FFI::Enum</a>
+  
+    <li><a href="../FFI/Enums.html">FFI::Enums</a>
+  
+    <li><a href="../FFI/Generator.html">FFI::Generator</a>
+  
+    <li><a href="../FFI/Generator/Task.html">FFI::Generator::Task</a>
+  
+    <li><a href="../FFI/IO.html">FFI::IO</a>
+  
+    <li><a href="../FFI/Library.html">FFI::Library</a>
+  
+    <li><a href="../FFI/ManagedStruct.html">FFI::ManagedStruct</a>
+  
+    <li><a href="../FFI/NotFoundError.html">FFI::NotFoundError</a>
+  
+    <li><a href="../FFI/Platform.html">FFI::Platform</a>
+  
+    <li><a href="../FFI/PlatformError.html">FFI::PlatformError</a>
+  
+    <li><a href="../FFI/Pointer.html">FFI::Pointer</a>
+  
+    <li><a href="../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a>
+  
+    <li><a href="../FFI/Struct.html">FFI::Struct</a>
+  
+    <li><a href="../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a>
+  
+    <li><a href="../FFI/StructGenerator.html">FFI::StructGenerator</a>
+  
+    <li><a href="../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a>
+  
+    <li><a href="../FFI/StructLayout.html">FFI::StructLayout</a>
+  
+    <li><a href="../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a>
+  
+    <li><a href="../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a>
+  
+    <li><a href="../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a>
+  
+    <li><a href="../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a>
+  
+    <li><a href="../FFI/TypesGenerator.html">FFI::TypesGenerator</a>
+  
+    <li><a href="../FFI/Union.html">FFI::Union</a>
+  
+    <li><a href="../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class FFI::TypesGenerator</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="TYPE_MAP">TYPE_MAP
+        
+        <dd class="description"><p>Maps different C types to the C type representations we use</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-generate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">generate</span><span
+            class="method-args">(options = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="generate-source">
+            <pre><span class="ruby-comment"># File lib/ffi/tools/types_generator.rb, line 44</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">options</span> = {})
+      <span class="ruby-identifier">typedefs</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-constant">Tempfile</span>.<span class="ruby-identifier">open</span> <span class="ruby-string">'ffi_types_generator'</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;#include &lt;sys/types.h&gt;
+#if !(defined(WIN32))
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/resource.h&gt;
+#endif
+&quot;</span>
+
+        <span class="ruby-identifier">io</span>.<span class="ruby-identifier">close</span>
+        <span class="ruby-identifier">cc</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">'CC'</span>] <span class="ruby-operator">||</span> <span class="ruby-string">'gcc'</span>
+        <span class="ruby-identifier">cmd</span> = <span class="ruby-node">&quot;#{cc} -E -x c #{options[:cppflags]} -D_DARWIN_USE_64_BIT_INODE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -c&quot;</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:input</span>]
+          <span class="ruby-identifier">typedefs</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:input</span>])
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:remote</span>]
+          <span class="ruby-identifier">typedefs</span> = <span class="ruby-node">%xssh #{options[:remote]} #{cmd} - &lt; #{io.path}`</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">typedefs</span> = <span class="ruby-node">%x#{cmd} #{io.path}`</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-identifier">code</span> = <span class="ruby-string">&quot;&quot;</span>
+
+      <span class="ruby-identifier">typedefs</span>.<span class="ruby-identifier">each_line</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">type</span><span class="ruby-operator">|</span>
+        <span class="ruby-comment"># We only care about single line typedef</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">%rtypedef/</span>
+        <span class="ruby-comment"># Ignore unions or structs</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">%runion|struct/</span>
+        
+        <span class="ruby-comment"># strip off the starting typedef and ending ;</span>
+        <span class="ruby-identifier">type</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">%r^(.*typedef\s*)/</span>, <span class="ruby-string">&quot;&quot;</span>)
+        <span class="ruby-identifier">type</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">%r\s*;\s*$/</span>, <span class="ruby-string">&quot;&quot;</span>)
+    
+        <span class="ruby-identifier">parts</span> = <span class="ruby-identifier">type</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">%r\s+/</span>)
+        <span class="ruby-identifier">def_type</span>   = <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot; &quot;</span>)
+
+        <span class="ruby-comment"># GCC does mapping with __attribute__ stuf, also see</span>
+        <span class="ruby-comment"># http://hal.cs.berkeley.edu/cil/cil016.html section 16.2.7.  Problem</span>
+        <span class="ruby-comment"># with this is that the __attribute__ stuff can either occur before or</span>
+        <span class="ruby-comment"># after the new type that is defined...</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">%r__attribute__/</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">%r__QI__|__HI__|__SI__|__DI__|__word__/</span>
+
+            <span class="ruby-comment"># In this case, the new type is BEFORE __attribute__ we need to</span>
+            <span class="ruby-comment"># find the final_type as the type before the part that starts with</span>
+            <span class="ruby-comment"># __attribute__</span>
+            <span class="ruby-identifier">final_type</span> = <span class="ruby-string">&quot;&quot;</span>
+            <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+              <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">%r__attribute__/</span>
+              <span class="ruby-identifier">final_type</span> = <span class="ruby-identifier">p</span>
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">final_type</span> = <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">pop</span>
+          <span class="ruby-keyword">end</span>
+          
+          <span class="ruby-identifier">def_type</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">type</span>
+                     <span class="ruby-keyword">when</span> <span class="ruby-regexp">%r__QI__/</span>   <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;char&quot;</span>
+                     <span class="ruby-keyword">when</span> <span class="ruby-regexp">%r__HI__/</span>   <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;short&quot;</span>
+                     <span class="ruby-keyword">when</span> <span class="ruby-regexp">%r__SI__/</span>   <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;int&quot;</span>
+                     <span class="ruby-keyword">when</span> <span class="ruby-regexp">%r__DI__/</span>   <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;long long&quot;</span>
+                     <span class="ruby-keyword">when</span> <span class="ruby-regexp">%r__word__/</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;long&quot;</span>
+                     <span class="ruby-keyword">else</span>                 <span class="ruby-string">&quot;int&quot;</span>
+                     <span class="ruby-keyword">end</span>
+
+          <span class="ruby-identifier">def_type</span> = <span class="ruby-node">&quot;unsigned #{def_type}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">%runsigned/</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">final_type</span> = <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">pop</span>
+          <span class="ruby-identifier">def_type</span>   = <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot; &quot;</span>)
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> = <span class="ruby-constant">TYPE_MAP</span>[<span class="ruby-identifier">def_type</span>]
+          <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;rbx.platform.typedef.#{final_type} = #{type}\n&quot;</span>
+          <span class="ruby-constant">TYPE_MAP</span>[<span class="ruby-identifier">final_type</span>] = <span class="ruby-constant">TYPE_MAP</span>[<span class="ruby-identifier">def_type</span>]
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-comment"># Fallback to an ordinary pointer if we don't know the type</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">def_type</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">%r\*/</span>
+            <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;rbx.platform.typedef.#{final_type} = pointer\n&quot;</span>
+            <span class="ruby-constant">TYPE_MAP</span>[<span class="ruby-identifier">final_type</span>] = <span class="ruby-value">:pointer</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">code</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- generate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- generate-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

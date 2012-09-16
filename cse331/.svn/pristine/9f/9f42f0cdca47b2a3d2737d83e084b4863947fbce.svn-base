@@ -1,0 +1,22 @@
+a.
+	IntQueue1:
+	Abstraction Function:
+	AF(r) = a queue, q, such that
+		q.entries = r.entries
+		q.frontElement = r.entries.get(0)  
+		q.finalElement = r.entries.get(q.size())
+	Representation Invariant:
+		entries != null
+
+b.
+	IntQueue2:
+	Abstraction Function:
+	AF(r) = a queue, q, such that
+		q.entries = all elements from r.entries[front] to r.entries[(front+size)%entries.length],
+			if second index is smaller, all entries at and after first index and at and before
+			second index
+		q.frontElement = q.entries[front]
+		q.finalElement = q.entries[(front+size)%entries.length]
+	Representation Invariant
+		entries != null
+		size <= entries.length

@@ -1,0 +1,5 @@
+a. It failed this case because it was throwing the exception for 0 too, even though 0 is nonnegative. Change the condition for the excption so it's strictly less than 0.
+
+b. It failed this case becasue the base case requires the first value of 0. This originally casued an exception, but was fixed along with the exception check.
+
+c. It failed this case because for index 2, 1 was also returned where it should continue to do recursion. Change so return one when strictly less than 2.

@@ -1,0 +1,53 @@
+Menu:
+	r to find a route
+	b to see a list of all buildings
+	q to quit
+
+Enter an option ('m' to see the menu): # Verify behavior of input m
+Menu:
+	r to find a route
+	b to see a list of all buildings
+	q to quit
+
+Enter an option ('m' to see the menu):
+# Verify printing list of buildings
+Buildings:
+	A: Start
+	B: Next
+	C: End
+
+Enter an option ('m' to see the menu):
+# Verify printing of path
+Abbreviated name of starting building: Abbreviated name of ending building: Path from Start to End:
+	Walk 1 feet SE to (2, 2)
+	Walk 1 feet SE to (3, 3)
+Total distance: 2 feet
+
+Enter an option ('m' to see the menu):
+# Verify printing path to self
+Abbreviated name of starting building: Abbreviated name of ending building: Path from Next to Next:
+Total distance: 0 feet
+
+Enter an option ('m' to see the menu):
+# Verify handling unknown second building
+Abbreviated name of starting building: Abbreviated name of ending building: Unknown building: D
+
+Enter an option ('m' to see the menu):
+# Verify handling unknown first building
+Abbreviated name of starting building: Abbreviated name of ending building: Unknown building: D
+
+Enter an option ('m' to see the menu):
+# Verify handling both unknown buildings
+Abbreviated name of starting building: Abbreviated name of ending building: Unknown building: D
+Unknown building: E
+
+Enter an option ('m' to see the menu):
+# Verify unknown command
+Unknown option
+
+Enter an option ('m' to see the menu):
+# Verify unknown command starting with known command
+Unknown option
+
+Enter an option ('m' to see the menu):
+# Quit

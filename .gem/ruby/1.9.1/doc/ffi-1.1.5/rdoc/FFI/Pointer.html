@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class FFI::Pointer - ffi-1.1.5 Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/ffi/pointer.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-size">::size</a>
+    
+    <li><a href="#method-i-read_array_of_type">#read_array_of_type</a>
+    
+    <li><a href="#method-i-read_string">#read_string</a>
+    
+    <li><a href="#method-i-read_string_length">#read_string_length</a>
+    
+    <li><a href="#method-i-read_string_to_null">#read_string_to_null</a>
+    
+    <li><a href="#method-i-write_array_of_type">#write_array_of_type</a>
+    
+    <li><a href="#method-i-write_string">#write_string</a>
+    
+    <li><a href="#method-i-write_string_length">#write_string_length</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../History_txt.html">History</a>
+  
+    <li class="file"><a href="../README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../FFI.html">FFI</a>
+  
+    <li><a href="../FFI/AutoPointer.html">FFI::AutoPointer</a>
+  
+    <li><a href="../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a>
+  
+    <li><a href="../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a>
+  
+    <li><a href="../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a>
+  
+    <li><a href="../FFI/ConstGenerator.html">FFI::ConstGenerator</a>
+  
+    <li><a href="../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a>
+  
+    <li><a href="../FFI/Enum.html">FFI::Enum</a>
+  
+    <li><a href="../FFI/Enums.html">FFI::Enums</a>
+  
+    <li><a href="../FFI/Generator.html">FFI::Generator</a>
+  
+    <li><a href="../FFI/Generator/Task.html">FFI::Generator::Task</a>
+  
+    <li><a href="../FFI/IO.html">FFI::IO</a>
+  
+    <li><a href="../FFI/Library.html">FFI::Library</a>
+  
+    <li><a href="../FFI/ManagedStruct.html">FFI::ManagedStruct</a>
+  
+    <li><a href="../FFI/NotFoundError.html">FFI::NotFoundError</a>
+  
+    <li><a href="../FFI/Platform.html">FFI::Platform</a>
+  
+    <li><a href="../FFI/PlatformError.html">FFI::PlatformError</a>
+  
+    <li><a href="../FFI/Pointer.html">FFI::Pointer</a>
+  
+    <li><a href="../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a>
+  
+    <li><a href="../FFI/Struct.html">FFI::Struct</a>
+  
+    <li><a href="../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a>
+  
+    <li><a href="../FFI/StructGenerator.html">FFI::StructGenerator</a>
+  
+    <li><a href="../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a>
+  
+    <li><a href="../FFI/StructLayout.html">FFI::StructLayout</a>
+  
+    <li><a href="../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a>
+  
+    <li><a href="../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a>
+  
+    <li><a href="../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a>
+  
+    <li><a href="../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a>
+  
+    <li><a href="../FFI/TypesGenerator.html">FFI::TypesGenerator</a>
+  
+    <li><a href="../FFI/Union.html">FFI::Union</a>
+  
+    <li><a href="../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class FFI::Pointer</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="SIZE">SIZE
+        
+        <dd class="description"><p><a href="Pointer.html">Pointer</a> size</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-size" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">size</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return the size of a pointer on the current platform, in bytes @return
+[Numeric]</p>
+          
+
+          
+          <div class="method-source-code" id="size-source">
+            <pre><span class="ruby-comment"># File lib/ffi/pointer.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-constant">SIZE</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- size-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- size-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-read_array_of_type" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">read_array_of_type</span><span
+            class="method-args">(type, reader, length)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>@param [Type] type type of data to read from pointer’s contents @param
+[Symbol] reader method to send to <code>self</code> to read
+<code>type</code> @param [Numeric] length @return [Array] Read an array of
+<code>type</code> of length <code>length</code>. @example</p>
+
+<pre>ptr.write_array_of_type(TYPE_UINT8, :get_uint8, 4) # -&gt; [1, 2, 3, 4]</pre>
+          
+
+          
+          <div class="method-source-code" id="read_array_of_type-source">
+            <pre><span class="ruby-comment"># File lib/ffi/pointer.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_array_of_type</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">reader</span>, <span class="ruby-identifier">length</span>)
+  <span class="ruby-identifier">ary</span> = []
+  <span class="ruby-identifier">size</span> = <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">type_size</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-identifier">tmp</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-identifier">length</span>.<span class="ruby-identifier">times</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">ary</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">reader</span>)
+    <span class="ruby-identifier">tmp</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">size</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span> <span class="ruby-comment"># avoid OOB</span>
+  }
+  <span class="ruby-identifier">ary</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- read_array_of_type-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- read_array_of_type-method -->
+
+    
+      <div id="method-i-read_string" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">read_string</span><span
+            class="method-args">(len=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>@param [nil,Numeric] len length of string to return @return [String] Read
+pointer’s contents as a string, or the first <code>len</code> bytes of the 
+equivalent string if <code>len</code> is not <code>nil</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="read_string-source">
+            <pre><span class="ruby-comment"># File lib/ffi/pointer.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_string</span>(<span class="ruby-identifier">len</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">len</span>
+    <span class="ruby-identifier">get_bytes</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">len</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">get_string</span>(<span class="ruby-value">0</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- read_string-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- read_string-method -->
+
+    
+      <div id="method-i-read_string_length" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">read_string_length</span><span
+            class="method-args">(len)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>@param [Numeric] len length of string to return @return [String] Read the
+first <code>len</code> bytes of pointer’s contents as a string.</p>
+
+<p>Same as:</p>
+
+<pre>ptr.read_string(len)  # with len not nil</pre>
+          
+
+          
+          <div class="method-source-code" id="read_string_length-source">
+            <pre><span class="ruby-comment"># File lib/ffi/pointer.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_string_length</span>(<span class="ruby-identifier">len</span>)
+  <span class="ruby-identifier">get_bytes</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">len</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- read_string_length-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- read_string_length-method -->
+
+    
+      <div id="method-i-read_string_to_null" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">read_string_to_null</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>@return [String] Read pointer’s contents as a string.</p>
+
+<p>Same as:</p>
+
+<pre>ptr.read_string  # with no len</pre>
+          
+
+          
+          <div class="method-source-code" id="read_string_to_null-source">
+            <pre><span class="ruby-comment"># File lib/ffi/pointer.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_string_to_null</span>
+  <span class="ruby-identifier">get_string</span>(<span class="ruby-value">0</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- read_string_to_null-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- read_string_to_null-method -->
+
+    
+      <div id="method-i-write_array_of_type" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">write_array_of_type</span><span
+            class="method-args">(type, writer, ary)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>@param [Type] type type of data to write to pointer’s contents @param
+[Symbol] writer method to send to <code>self</code> to write
+<code>type</code> @param [Array] ary @return [self] Write <code>ary</code>
+in pointer’s contents as <code>type</code>. @example</p>
+
+<pre>ptr.write_array_of_type(TYPE_UINT8, :put_uint8, [1, 2, 3 ,4])</pre>
+          
+
+          
+          <div class="method-source-code" id="write_array_of_type-source">
+            <pre><span class="ruby-comment"># File lib/ffi/pointer.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write_array_of_type</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">writer</span>, <span class="ruby-identifier">ary</span>)
+  <span class="ruby-identifier">size</span> = <span class="ruby-constant">FFI</span>.<span class="ruby-identifier">type_size</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-identifier">tmp</span> = <span class="ruby-keyword">self</span>
+  <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">each_with_index</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">writer</span>, <span class="ruby-identifier">i</span>)
+    <span class="ruby-identifier">tmp</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">size</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span> <span class="ruby-comment"># avoid OOB</span>
+  }
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- write_array_of_type-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- write_array_of_type-method -->
+
+    
+      <div id="method-i-write_string" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">write_string</span><span
+            class="method-args">(str, len=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>@param [String] str string to write @param [Numeric] len length of string
+to return @return [self] Write <code>str</code> in pointer’s contents, or
+first <code>len</code> bytes if  <code>len</code> is not <code>nil</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="write_string-source">
+            <pre><span class="ruby-comment"># File lib/ffi/pointer.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write_string</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">len</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">len</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">bytesize</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">len</span>
+  <span class="ruby-comment"># Write the string data without NUL termination</span>
+  <span class="ruby-identifier">put_bytes</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">str</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">len</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- write_string-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- write_string-method -->
+
+    
+      <div id="method-i-write_string_length" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">write_string_length</span><span
+            class="method-args">(str, len)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>@param [String] str string to write @param [Numeric] len length of string
+to return @return [self] Write <code>len</code> first bytes of
+<code>str</code> in pointer’s contents.</p>
+
+<p>Same as:</p>
+
+<pre>ptr.write_string(str, len)   # with len not nil</pre>
+          
+
+          
+          <div class="method-source-code" id="write_string_length-source">
+            <pre><span class="ruby-comment"># File lib/ffi/pointer.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write_string_length</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">len</span>)
+  <span class="ruby-identifier">put_bytes</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">str</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">len</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- write_string_length-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- write_string_length-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -1,0 +1,3 @@
+a. Ball needed a this.volume = volume, so that the field would get set properly.
+
+b. It would be better to keep track of the total volume, so then you do not have to iterate through the whole loop just to get this value.

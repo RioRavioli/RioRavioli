@@ -1,0 +1,145 @@
+package hw4.test;
+import hw4.*;
+
+import org.junit.Test;
+import org.junit.Before;
+import static org.junit.Assert.*;
+
+import java.util.*;
+
+public class GraphTest {
+	Graph<String, String> graph;
+
+	@Before
+	public void setUp() throws Exception {
+		graph = new Graph<String, String>();
+	}
+
+	@Test
+	public void testCreateOneNode() {
+		graph.createNode("test");
+		assertEquals(graph.getNodeCount(), 1);
+	}
+
+	@Test
+	public void testCreate3Nodes() {
+		graph.createNode("test");
+		graph.createNode("test2");
+		graph.createNode("test3");
+		assertEquals(graph.getNodeCount(), 3);
+	}
+
+	@Test
+	public void testAddAndGetEdges() {
+		graph.createNode("test");
+		graph.createNode("test2");
+		graph.createEdge("test", "test2", "edge");
+		List<String> labels = graph.getEdgesLabels("test", "test2");
+		assertTrue(labels.get(0).equals("edge"));
+	}
+
+	@Test
+	public void testAdd5AndGetEdges() {
+		graph.createNode("test");
+		graph.createNode("test2");
+		graph.createEdge("test", "test2", "edge");
+		graph.createEdge("test", "test2", "edge");
+		graph.createEdge("test2", "test2", "edge2");
+		graph.createEdge("test2", "test2", "edge");
+		graph.createEdge("test", "test", "edge3");
+		List<String> labels = graph.getEdgesLabels("test2", "test2");
+		assertEquals(labels.size(), 2);
+	}
+
+	@Test
+	public void testAdd5AndGetMoreEdges() {
+		graph.createNode("test");
+		graph.createNode("test2");
+		graph.createEdge("test", "test2", "edge");
+		graph.createEdge("test", "test2", "edge");
+		graph.createEdge("test", "test2", "edge2");
+		graph.createEdge("test2", "test2", "edge");
+		graph.createEdge("test", "test", "edge3");
+		List<String> labels = graph.getEdgesLabels("test", "test2");
+		assertEquals(labels.size(), 3);
+	}
+
+	@Test
+	public void testRemoveEdge() {
+		graph.createNode("test");
+		graph.createNode("test2");
+		graph.createEdge("test", "test2", "edge");
+		graph.createEdge("test", "test2", "edge");
+		graph.createEdge("test", "test2", "edge2");
+		graph.removeEdgesFromNode("test", "test2");
+		List<String> dests = graph.getAllDests("test");
+		assertEquals(dests.size(), 0);
+	}
+
+	@Test
+	public void testRemoveNode() {
+		graph.createNode("test");
+		graph.createNode("test2");
+		graph.removeNode("test");
+		assertEquals(graph.getNodeCount(), 1);
+	}
+
+	@Test
+	public void testAdd5AndRemoveNodeAndGetAllDest() {
+		graph.createNode("test");
+		graph.createNode("test2");
+		graph.createNode("test3");
+		graph.createEdge("test", "test2", "edge");
+		graph.createEdge("test", "test3", "edge");
+		graph.removeNode("test3");
+		graph.createEdge("test", "test2", "edge2");
+		graph.createEdge("test2", "test2", "edge");
+		graph.createEdge("test", "test", "edge3");
+		List<String> labels = graph.getAllDests("test");
+		assertEquals(labels.size(), 2);
+	}
+
+	@Test
+	public void testAdd5AndRemoveNodeAndGetLabels() {
+		graph.createNode("test");
+		graph.createNode("test2");
+		graph.createNode("test3");
+		graph.createEdge("test", "test2", "edge");
+		graph.createEdge("test", "test3", "edge");
+		graph.removeNode("test3");
+		graph.createEdge("test", "test2", "edge2");
+		graph.createEdge("test2", "test2", "edge");
+		graph.createEdge("test", "test", "edge3");
+		List<String> labels = graph.getEdgesLabels("test", "test3");
+		assertEquals(labels, null);
+	}
+
+	@Test
+	public void testGetNodes() {
+		graph.createNode("test");
+		graph.createNode("a");
+		graph.createNode("another");
+		List<String> nodeNames = graph.getNodeNames();
+		Collections.sort(nodeNames);
+		assertArrayEquals(nodeNames.toArray(), new String[]{"a", "another", "test"});
+	}
+
+	@Test
+	public void testIntNodeWithStringEdge() {
+		Graph<Integer, String> mix = new Graph<Integer, String>();
+		mix.createNode(8);
+		mix.createNode(3);
+		mix.createNode(2);
+		mix.createEdge(8, 3, "edge");
+		List<Integer> list = mix.getAllDests(8);
+		assertEquals(list.size(), 1);
+	}
+}
+
+
+
+
+
+
+
+

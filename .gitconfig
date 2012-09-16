@@ -1,0 +1,5 @@
+[user]
+	name = Rio Bacon
+	email = phoenicis910@hotmail.com
+[credential]
+	helper = cache --timeout=72000

@@ -1,0 +1,144 @@
+package hw4;
+
+import java.util.*;
+
+/** 
+ * Node represents a mutable node in a graph.
+ * It contains a name to uniquely identify it, and any edges that
+ * point to other nodes with a description attached.
+ *
+ * Specification fields
+ * 	@specfield name : string                   //identifies this
+ * 	@specfield edges : list of (string, name)  //edges contains destination and label
+ *
+ * Abstract Invariant
+ * 	A name must not be null
+ * 	A name must be a string with at least length of one
+ * 	List of edges must not be null
+ * 	All edges must contain a label
+ *
+ * Abstraction Function
+ * 	AF(r) = node n, such that
+ * 		n.name = r.name
+ * 		n.edges = (edges.keySet(), edges.values()) //list of destinations, list of labels
+ *
+ * Representation Invariant
+ * 	name != null
+ * 	name.length > 0
+ * 	edges != null
+ * 	edges.values().each.size > 0
+ */
+
+public class Node {
+	String name;
+	Map<String, List<String>> edges;
+
+	/**
+	 * Constructs a new Node with the given name.
+	 * @requires name is non-null. and has length larger than 0.
+	 * @param name is non-null and has length larger than 0.
+	 */
+	public Node(String name) {
+		this.name = name;
+		edges = new HashMap<String, List<String>>();
+		checkRep();
+	}
+
+	/**
+	 * Returns the name of this Node.
+	 * @return name
+	 */
+	public String getName() {
+		checkRep();
+		return name;
+	}
+
+	/**
+	 * Returns all edges' labels of the destination Node with the given name. The returned
+	 * list is unmodifiable. 
+	 * @requires destName is an existing destination. 
+	 * @return list of labels of all edges with the destination Node with the given name.
+	 */
+	public List<String> getEdgesLabels(String destName) {
+		checkRep();
+		List<String> labels = edges.get(destName);
+		checkRep();
+		return Collections.unmodifiableList(labels);
+	}
+
+	/**
+	 * Returns true if this Node contains an edge with with a destination node with the
+	 * given name.
+	 * @return true if this Node has edge with given name.
+	 */
+	public boolean containsEdge(String destName) {
+		checkRep();
+		return edges.containsKey(destName); 
+	}
+
+	/**
+	 * Adds an edge with the given destination and label to this Node.
+	 * @requires destName and label are non-null, destName has length larger than 0.
+	 * @param destName is non-null and has length larger than 0.
+	 * @param label is non-null. 
+	 * @modifies this
+	 * @effects adds a new edge to this Node.
+	 */
+	public void addEdge(String destName, String label) {
+		checkRep();
+		if (containsEdge(destName)) {
+			//if new destination node
+			List<String> labels = edges.get(destName);
+			labels.add(label);
+		} else {
+			//if existing destination node
+			List<String> labels = new ArrayList<String>();
+			labels.add(label);
+			edges.put(destName, labels);
+		}
+		checkRep();
+	}
+
+	/**
+	 * Removes all edges with the given destination.
+	 * @requires destName is non-null and has length larger than 0.
+	 * @param destname is non-null and has length larger than 0.
+	 * @modifies this
+	 * @effects removes all edges that contain the given destination.
+	 */
+	public void removeEdges(String destName) {
+		checkRep();
+		if (containsEdge(destName)) {
+			edges.remove(destName);
+		}
+		checkRep();
+	}	
+
+	/**
+	 * Returns the names of all Nodes that edges point to.
+	 * @return set of all names of the Nodes that edges point to. If there are no
+	 * 			edges, an empty list is returned. 
+	 */
+	public Set<String> getAllDests() {
+		checkRep();
+		return edges.keySet();
+	}
+
+	//checks to ensure that representation invariant is held
+	private void checkRep() {
+		if (name == null) {
+			throw new RuntimeException("name should not be null");
+		}
+		if (name.length() == 0) {
+			throw new RuntimeException("name must be have least length of 1");
+		}
+		if (edges == null) {
+			throw new RuntimeException("edges should not be null");
+		}
+		for (List<String> labels : edges.values()) {
+			if (labels.isEmpty()) {
+				throw new RuntimeException("edge labels should not be empty");
+			}
+		}
+	}
+}

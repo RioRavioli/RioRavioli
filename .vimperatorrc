@@ -1,0 +1,35 @@
+"3.2 (created: 2011/06/03 11:51:34)
+
+source! /home/rio/.vimperatorrc.local
+
+:command full aa
+
+":autocmd VimperatorEnter .* :full
+
+" vim: set ft=vimperator:
+set scrollbars=false
+set autocomplete=false
+set complete=b
+
+"back/foward
+map b <C-O>
+map m <C-I>
+
+"tab
+map s <C-N>
+map a <C-P>
+map S :tabm +1<Return>
+map A :tabm -1<Return>
+
+"insert
+map i gi<C-E>
+
+"youtube switch
+map , :so ~/.vimperator/javascript/youtube.js<Return>
+
+"registration
+map <C-6> :so ~/.vimperator/javascript/registeration.js<Return>
+
+"multi-refresh
+map <C-R> :reloadall<Return>
+

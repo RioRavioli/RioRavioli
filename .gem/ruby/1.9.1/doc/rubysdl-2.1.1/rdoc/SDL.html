@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: SDL</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/rubysdl_compatible_ver1_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubysdl_compatible_ver1.rb">lib/rubysdl_compatible_ver1.rb</a></li>
+          
+            <li><a href="./lib/rubysdl_aliases_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubysdl_aliases.rb">lib/rubysdl_aliases.rb</a></li>
+          
+            <li><a href="./lib/sdl_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/sdl.rb">lib/sdl.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="SDL/Event.html">SDL::Event</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="SDL/GL.html">SDL::GL</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="SDL/Key.html">SDL::Key</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="SDL/Mixer.html">SDL::Mixer</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="SDL/Mouse.html">SDL::Mouse</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/BMFont.html">SDL::BMFont</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/CD.html">SDL::CD</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/CollisionMap.html">SDL::CollisionMap</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/Joystick.html">SDL::Joystick</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/Kanji.html">SDL::Kanji</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/MPEG.html">SDL::MPEG</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/PixelFormat.html">SDL::PixelFormat</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/Screen.html">SDL::Screen</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/Surface.html">SDL::Surface</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/TTF.html">SDL::TTF</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-color2int">::color2int</a></li>
+          
+          <li><a href="#method-i-GLSwapBuffers">#GLSwapBuffers</a></li>
+          
+          <li><a href="#method-i-autoLock">#autoLock</a></li>
+          
+          <li><a href="#method-i-autoLock-3D">#autoLock=</a></li>
+          
+          <li><a href="#method-i-autoLock-3F">#autoLock?</a></li>
+          
+          <li><a href="#method-i-autoLockOFF">#autoLockOFF</a></li>
+          
+          <li><a href="#method-i-autoLockON">#autoLockON</a></li>
+          
+          <li><a href="#method-i-blitSurface">#blitSurface</a></li>
+          
+          <li><a href="#method-i-blitSurface2">#blitSurface2</a></li>
+          
+          <li><a href="#method-i-checkVideoMode">#checkVideoMode</a></li>
+          
+          <li><a href="#method-i-convertRect">#convertRect</a></li>
+          
+          <li><a href="#method-i-getGLAttr">#getGLAttr</a></li>
+          
+          <li><a href="#method-i-getGammaRamp">#getGammaRamp</a></li>
+          
+          <li><a href="#method-i-getVideoSurface">#getVideoSurface</a></li>
+          
+          <li><a href="#method-i-listModes">#listModes</a></li>
+          
+          <li><a href="#method-i-setGLAttr">#setGLAttr</a></li>
+          
+          <li><a href="#method-i-setGamma">#setGamma</a></li>
+          
+          <li><a href="#method-i-setGammaRamp">#setGammaRamp</a></li>
+          
+          <li><a href="#method-i-setVideoMode">#setVideoMode</a></li>
+          
+          <li><a href="#method-i-transform">#transform</a></li>
+          
+          <li><a href="#method-i-transformBlit">#transformBlit</a></li>
+          
+          <li><a href="#method-i-videoDriverName">#videoDriverName</a></li>
+          
+          <li><a href="#method-i-videoInfo">#videoInfo</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./SDL.html">SDL</a></li>
+        
+          <li><a href="./SDL/BMFont.html">SDL::BMFont</a></li>
+        
+          <li><a href="./SDL/CD.html">SDL::CD</a></li>
+        
+          <li><a href="./SDL/CollisionMap.html">SDL::CollisionMap</a></li>
+        
+          <li><a href="./SDL/Event.html">SDL::Event</a></li>
+        
+          <li><a href="./SDL/GL.html">SDL::GL</a></li>
+        
+          <li><a href="./SDL/Joystick.html">SDL::Joystick</a></li>
+        
+          <li><a href="./SDL/Kanji.html">SDL::Kanji</a></li>
+        
+          <li><a href="./SDL/Key.html">SDL::Key</a></li>
+        
+          <li><a href="./SDL/MPEG.html">SDL::MPEG</a></li>
+        
+          <li><a href="./SDL/Mixer.html">SDL::Mixer</a></li>
+        
+          <li><a href="./SDL/Mixer/Music.html">SDL::Mixer::Music</a></li>
+        
+          <li><a href="./SDL/Mixer/Wave.html">SDL::Mixer::Wave</a></li>
+        
+          <li><a href="./SDL/Mouse.html">SDL::Mouse</a></li>
+        
+          <li><a href="./SDL/PixelFormat.html">SDL::PixelFormat</a></li>
+        
+          <li><a href="./SDL/Screen.html">SDL::Screen</a></li>
+        
+          <li><a href="./SDL/Surface.html">SDL::Surface</a></li>
+        
+          <li><a href="./SDL/TTF.html">SDL::TTF</a></li>
+        
+          <li><a href="./SDL/WM.html">SDL::WM</a></li>
+        
+          <li><a href="./GL.html">GL</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">SDL</h1>
+
+    <div id="description" class="description">
+      
+<p>rubysdl_video.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_event.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_sge_video.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_time.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_cdrom.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_mouse.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_joystick.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_event_key.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_mixer.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_image.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_ttf.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_smpeg.c</p>
+<hr style="height: 1px">
+
+<p>rubysdl_opengl.c</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="Event2">Event2</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_ACCUM_ALPHA_SIZE">GL_ACCUM_ALPHA_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_ACCUM_BLUE_SIZE">GL_ACCUM_BLUE_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_ACCUM_GREEN_SIZE">GL_ACCUM_GREEN_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_ACCUM_RED_SIZE">GL_ACCUM_RED_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_ALPHA_SIZE">GL_ALPHA_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_BLUE_SIZE">GL_BLUE_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_BUFFER_SIZE">GL_BUFFER_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_DEPTH_SIZE">GL_DEPTH_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_DOUBLEBUFFER">GL_DOUBLEBUFFER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_GREEN_SIZE">GL_GREEN_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_RED_SIZE">GL_RED_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GL_STENCIL_SIZE">GL_STENCIL_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="Rect">Rect</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="TRANSFORM_AA">TRANSFORM_AA</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="TRANSFORM_SAFE">TRANSFORM_SAFE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="TRANSFORM_TMAP">TRANSFORM_TMAP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="VERSION">VERSION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="color2int-method" class="method-detail ">
+          <a name="method-c-color2int"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">color2int</span><span
+              class="method-args">(color,format)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="color2int-source">
+<pre>
+<span class="ruby-comment"># File lib/sdl.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">color2int</span>(<span class="ruby-identifier">color</span>,<span class="ruby-identifier">format</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">color</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Integer</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">color</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">format</span>.<span class="ruby-identifier">mapRGB</span>(*<span class="ruby-identifier">color</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>,<span class="ruby-string">'first argument must be Integer or Array'</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- color2int-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- color2int-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="GLSwapBuffers-method" class="method-detail ">
+          <a name="method-i-GLSwapBuffers"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">GLSwapBuffers</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="GLSwapBuffers-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">GLSwapBuffers</span>
+  <span class="ruby-constant">GL</span>.<span class="ruby-identifier">swap_buffers</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- GLSwapBuffers-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- GLSwapBuffers-method -->
+
+      
+        <div id="autoLock-method" class="method-detail ">
+          <a name="method-i-autoLock"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">autoLock</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="autoLock-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">autoLock</span>; <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">autoLock?</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- autoLock-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autoLock-method -->
+
+      
+        <div id="autoLock-3D-method" class="method-detail ">
+          <a name="method-i-autoLock-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">autoLock=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="autoLock-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">autoLock=</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">autoLockON</span> <span class="ruby-keyword">else</span> <span class="ruby-identifier">autoLockOFF</span> <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- autoLock-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autoLock-3D-method -->
+
+      
+        <div id="autoLock-3F-method" class="method-detail ">
+          <a name="method-i-autoLock-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">autoLock?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="autoLock-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">autoLock?</span>; <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">autoLock?</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- autoLock-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autoLock-3F-method -->
+
+      
+        <div id="autoLockOFF-method" class="method-detail ">
+          <a name="method-i-autoLockOFF"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">autoLockOFF</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="autoLockOFF-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">autoLockOFF</span>; <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">autoLockOFF</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- autoLockOFF-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autoLockOFF-method -->
+
+      
+        <div id="autoLockON-method" class="method-detail ">
+          <a name="method-i-autoLockON"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">autoLockON</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="autoLockON-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">autoLockON</span>; <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">autoLockON</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- autoLockON-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autoLockON-method -->
+
+      
+        <div id="blitSurface-method" class="method-detail ">
+          <a name="method-i-blitSurface"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">blitSurface</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>compatible method definition</p>
+            
+
+            
+            <div class="method-source-code" id="blitSurface-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">blitSurface</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Surface</span>.<span class="ruby-identifier">blit</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- blitSurface-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- blitSurface-method -->
+
+      
+        <div id="blitSurface2-method" class="method-detail ">
+          <a name="method-i-blitSurface2"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">blitSurface2</span><span
+              class="method-args">(src,srcRect,dst,dstRect)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>FIX:</p>
+            
+
+            
+            <div class="method-source-code" id="blitSurface2-source">
+<pre>
+<span class="ruby-comment"># File lib/sdl.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">blitSurface2</span>(<span class="ruby-identifier">src</span>,<span class="ruby-identifier">srcRect</span>,<span class="ruby-identifier">dst</span>,<span class="ruby-identifier">dstRect</span>)
+  <span class="ruby-identifier">srcR</span> = <span class="ruby-identifier">convertRect</span>(<span class="ruby-identifier">srcRect</span>)
+  <span class="ruby-identifier">dstR</span> = <span class="ruby-identifier">convertRect</span>(<span class="ruby-identifier">dstRect</span>)
+  <span class="ruby-identifier">blitSurface</span>( <span class="ruby-identifier">src</span>, <span class="ruby-identifier">srcR</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">srcR</span>.<span class="ruby-identifier">y</span>, <span class="ruby-identifier">srcR</span>.<span class="ruby-identifier">w</span>, <span class="ruby-identifier">srcR</span>.<span class="ruby-identifier">h</span> , <span class="ruby-identifier">dst</span>, <span class="ruby-identifier">dstR</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">dstR</span>.<span class="ruby-identifier">y</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- blitSurface2-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- blitSurface2-method -->
+
+      
+        <div id="checkVideoMode-method" class="method-detail ">
+          <a name="method-i-checkVideoMode"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">checkVideoMode</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="checkVideoMode-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">checkVideoMode</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Screen</span>.<span class="ruby-identifier">checkMode</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- checkVideoMode-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- checkVideoMode-method -->
+
+      
+        <div id="convertRect-method" class="method-detail ">
+          <a name="method-i-convertRect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">convertRect</span><span
+              class="method-args">(rect)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="convertRect-source">
+<pre>
+<span class="ruby-comment"># File lib/sdl.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convertRect</span>(<span class="ruby-identifier">rect</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">rect</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">NilClass</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span> )
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">rect</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">rect</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">rect</span>[<span class="ruby-value">2</span>], <span class="ruby-identifier">rect</span>[<span class="ruby-value">3</span>] )
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">rect</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- convertRect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- convertRect-method -->
+
+      
+        <div id="getGLAttr-method" class="method-detail ">
+          <a name="method-i-getGLAttr"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getGLAttr</span><span
+              class="method-args">(arg)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getGLAttr-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getGLAttr</span>(<span class="ruby-identifier">arg</span>)
+  <span class="ruby-constant">GL</span>.<span class="ruby-identifier">getAttr</span>(<span class="ruby-identifier">arg</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getGLAttr-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getGLAttr-method -->
+
+      
+        <div id="getGammaRamp-method" class="method-detail ">
+          <a name="method-i-getGammaRamp"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getGammaRamp</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getGammaRamp-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getGammaRamp</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Screen</span>.<span class="ruby-identifier">getGammaRamp</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getGammaRamp-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getGammaRamp-method -->
+
+      
+        <div id="getVideoSurface-method" class="method-detail ">
+          <a name="method-i-getVideoSurface"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getVideoSurface</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getVideoSurface-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getVideoSurface</span>
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Screen</span>.<span class="ruby-identifier">get</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getVideoSurface-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getVideoSurface-method -->
+
+      
+        <div id="listModes-method" class="method-detail ">
+          <a name="method-i-listModes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">listModes</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="listModes-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">listModes</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Screen</span>.<span class="ruby-identifier">listModes</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- listModes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- listModes-method -->
+
+      
+        <div id="setGLAttr-method" class="method-detail ">
+          <a name="method-i-setGLAttr"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setGLAttr</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="setGLAttr-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setGLAttr</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-constant">GL</span>.<span class="ruby-identifier">setAttr</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setGLAttr-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setGLAttr-method -->
+
+      
+        <div id="setGamma-method" class="method-detail ">
+          <a name="method-i-setGamma"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setGamma</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="setGamma-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setGamma</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Screen</span>.<span class="ruby-identifier">setGamma</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setGamma-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setGamma-method -->
+
+      
+        <div id="setGammaRamp-method" class="method-detail ">
+          <a name="method-i-setGammaRamp"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setGammaRamp</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="setGammaRamp-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setGammaRamp</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Screen</span>.<span class="ruby-identifier">setGammaRamp</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setGammaRamp-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setGammaRamp-method -->
+
+      
+        <div id="setVideoMode-method" class="method-detail ">
+          <a name="method-i-setVideoMode"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setVideoMode</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="setVideoMode-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setVideoMode</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Screen</span>.<span class="ruby-identifier">open</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setVideoMode-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setVideoMode-method -->
+
+      
+        <div id="transform-method" class="method-detail ">
+          <a name="method-i-transform"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">transform</span><span
+              class="method-args">(src,dst,angle,xscale,yscale,px,py,qx,qy,flags)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="transform-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">transform</span>(<span class="ruby-identifier">src</span>,<span class="ruby-identifier">dst</span>,<span class="ruby-identifier">angle</span>,<span class="ruby-identifier">xscale</span>,<span class="ruby-identifier">yscale</span>,<span class="ruby-identifier">px</span>,<span class="ruby-identifier">py</span>,<span class="ruby-identifier">qx</span>,<span class="ruby-identifier">qy</span>,<span class="ruby-identifier">flags</span>)
+  <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">transformDraw</span>(<span class="ruby-identifier">src</span>,<span class="ruby-identifier">dst</span>,<span class="ruby-identifier">angle</span>,<span class="ruby-identifier">xscale</span>,<span class="ruby-identifier">yscale</span>,<span class="ruby-identifier">px</span>,<span class="ruby-identifier">py</span>,<span class="ruby-identifier">qx</span>,<span class="ruby-identifier">qy</span>,<span class="ruby-identifier">flags</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- transform-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- transform-method -->
+
+      
+        <div id="transformBlit-method" class="method-detail ">
+          <a name="method-i-transformBlit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">transformBlit</span><span
+              class="method-args">(src,dst,angle,xscale,yscale,px,py,qx,qy,flags)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="transformBlit-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">transformBlit</span>(<span class="ruby-identifier">src</span>,<span class="ruby-identifier">dst</span>,<span class="ruby-identifier">angle</span>,<span class="ruby-identifier">xscale</span>,<span class="ruby-identifier">yscale</span>,<span class="ruby-identifier">px</span>,<span class="ruby-identifier">py</span>,<span class="ruby-identifier">qx</span>,<span class="ruby-identifier">qy</span>,<span class="ruby-identifier">flags</span>)
+  <span class="ruby-constant">Surface</span>.<span class="ruby-identifier">transformBlit</span>(<span class="ruby-identifier">src</span>,<span class="ruby-identifier">dst</span>,<span class="ruby-identifier">angle</span>,<span class="ruby-identifier">xscale</span>,<span class="ruby-identifier">yscale</span>,<span class="ruby-identifier">px</span>,<span class="ruby-identifier">py</span>,<span class="ruby-identifier">qx</span>,<span class="ruby-identifier">qy</span>,<span class="ruby-identifier">flags</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- transformBlit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- transformBlit-method -->
+
+      
+        <div id="videoDriverName-method" class="method-detail ">
+          <a name="method-i-videoDriverName"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">videoDriverName</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="videoDriverName-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">videoDriverName</span>
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Screen</span>.<span class="ruby-identifier">driverName</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- videoDriverName-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- videoDriverName-method -->
+
+      
+        <div id="videoInfo-method" class="method-detail ">
+          <a name="method-i-videoInfo"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">videoInfo</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="videoInfo-source">
+<pre>
+<span class="ruby-comment"># File lib/rubysdl_compatible_ver1.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">videoInfo</span>
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Screen</span>.<span class="ruby-identifier">info</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- videoInfo-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- videoInfo-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

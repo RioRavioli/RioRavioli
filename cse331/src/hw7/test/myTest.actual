@@ -1,0 +1,50 @@
+Menu:
+	r to find a route
+	b to see a list of all buildings
+	q to quit
+
+Enter an option ('m' to see the menu): # Verify behavior of input m
+Menu:
+	r to find a route
+	b to see a list of all buildings
+	q to quit
+
+Enter an option ('m' to see the menu): 
+# Verify printing list of buildings
+Buildings:
+
+Enter an option ('m' to see the menu): 
+# Verify printing of path
+Abbreviated name of starting building: Abbreviated name of ending building: Unknown building: A
+Unknown building: C
+
+Enter an option ('m' to see the menu): 
+# Verify printing path to self
+Abbreviated name of starting building: Abbreviated name of ending building: Unknown building: B
+Unknown building: B
+
+Enter an option ('m' to see the menu): 
+# Verify handling unknown second building
+Abbreviated name of starting building: Abbreviated name of ending building: Unknown building: A
+Unknown building: D
+
+Enter an option ('m' to see the menu): 
+# Verify handling unknown first building
+Abbreviated name of starting building: Abbreviated name of ending building: Unknown building: D
+Unknown building: A
+
+Enter an option ('m' to see the menu): 
+# Verify handling both unknown buildings
+Abbreviated name of starting building: Abbreviated name of ending building: Unknown building: D
+Unknown building: E
+
+Enter an option ('m' to see the menu): 
+# Verify unknown command
+Unknown option
+
+Enter an option ('m' to see the menu): 
+# Verify unknown command starting with known command
+Unknown option
+
+Enter an option ('m' to see the menu): 
+# Quit

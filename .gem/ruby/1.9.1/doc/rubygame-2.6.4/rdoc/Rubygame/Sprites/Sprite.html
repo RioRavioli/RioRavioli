@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Rubygame::Sprites::Sprite</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/rubygame/sprite_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/sprite.rb">lib/rubygame/sprite.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-add">#add</a></li>
+          
+          <li><a href="#method-i-alive-3F">#alive?</a></li>
+          
+          <li><a href="#method-i-col_rect">#col_rect</a></li>
+          
+          <li><a href="#method-i-collide">#collide</a></li>
+          
+          <li><a href="#method-i-collide_group">#collide_group</a></li>
+          
+          <li><a href="#method-i-collide_sprite-3F">#collide_sprite?</a></li>
+          
+          <li><a href="#method-i-draw">#draw</a></li>
+          
+          <li><a href="#method-i-kill">#kill</a></li>
+          
+          <li><a href="#method-i-remove">#remove</a></li>
+          
+          <li><a href="#method-i-undraw">#undraw</a></li>
+          
+          <li><a href="#method-i-update">#update</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../CREDITS.html">CREDITS</a></li>
+        
+          <li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../../README.html">README</a></li>
+        
+          <li class="file"><a href="../../ROADMAP.html">ROADMAP</a></li>
+        
+          <li class="file"><a href="../../doc/custom_sdl_load_paths_rdoc.html">custom_sdl_load_paths.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/getting_started_rdoc.html">getting_started.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/keyboard_symbols_rdoc.html">keyboard_symbols.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/macosx_install_rdoc.html">macosx_install.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/managing_framerate_rdoc.html">managing_framerate.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/surface_palettes_rdoc.html">surface_palettes.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/windows_install_rdoc.html">windows_install.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Rubygame.html">Rubygame</a></li>
+        
+          <li><a href="../../Rubygame/ActiveEvent.html">Rubygame::ActiveEvent</a></li>
+        
+          <li><a href="../../Rubygame/Clock.html">Rubygame::Clock</a></li>
+        
+          <li><a href="../../Rubygame/Color.html">Rubygame::Color</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorBase.html">Rubygame::Color::ColorBase</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorHSL.html">Rubygame::Color::ColorHSL</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorHSV.html">Rubygame::Color::ColorHSV</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorRGB.html">Rubygame::Color::ColorRGB</a></li>
+        
+          <li><a href="../../Rubygame/Color/Palette.html">Rubygame::Color::Palette</a></li>
+        
+          <li><a href="../../Rubygame/Event.html">Rubygame::Event</a></li>
+        
+          <li><a href="../../Rubygame/EventActions.html">Rubygame::EventActions</a></li>
+        
+          <li><a href="../../Rubygame/EventActions/BlockAction.html">Rubygame::EventActions::BlockAction</a></li>
+        
+          <li><a href="../../Rubygame/EventActions/MethodAction.html">Rubygame::EventActions::MethodAction</a></li>
+        
+          <li><a href="../../Rubygame/EventActions/MultiAction.html">Rubygame::EventActions::MultiAction</a></li>
+        
+          <li><a href="../../Rubygame/EventHandler.html">Rubygame::EventHandler</a></li>
+        
+          <li><a href="../../Rubygame/EventHandler/HasEventHandler.html">Rubygame::EventHandler::HasEventHandler</a></li>
+        
+          <li><a href="../../Rubygame/EventHook.html">Rubygame::EventHook</a></li>
+        
+          <li><a href="../../Rubygame/EventQueue.html">Rubygame::EventQueue</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers.html">Rubygame::EventTriggers</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/AndTrigger.html">Rubygame::EventTriggers::AndTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/AttrTrigger.html">Rubygame::EventTriggers::AttrTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/BlockTrigger.html">Rubygame::EventTriggers::BlockTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/InstanceOfTrigger.html">Rubygame::EventTriggers::InstanceOfTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/KeyPressTrigger.html">Rubygame::EventTriggers::KeyPressTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/KeyReleaseTrigger.html">Rubygame::EventTriggers::KeyReleaseTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/KindOfTrigger.html">Rubygame::EventTriggers::KindOfTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/MouseMoveTrigger.html">Rubygame::EventTriggers::MouseMoveTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/MousePressTrigger.html">Rubygame::EventTriggers::MousePressTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/MouseReleaseTrigger.html">Rubygame::EventTriggers::MouseReleaseTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/OrTrigger.html">Rubygame::EventTriggers::OrTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/TickTrigger.html">Rubygame::EventTriggers::TickTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/YesTrigger.html">Rubygame::EventTriggers::YesTrigger</a></li>
+        
+          <li><a href="../../Rubygame/Events.html">Rubygame::Events</a></li>
+        
+          <li><a href="../../Rubygame/Events/ClockTicked.html">Rubygame::Events::ClockTicked</a></li>
+        
+          <li><a href="../../Rubygame/Events/InputFocusGained.html">Rubygame::Events::InputFocusGained</a></li>
+        
+          <li><a href="../../Rubygame/Events/InputFocusLost.html">Rubygame::Events::InputFocusLost</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickAxisMoved.html">Rubygame::Events::JoystickAxisMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickBallMoved.html">Rubygame::Events::JoystickBallMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickButtonEvent.html">Rubygame::Events::JoystickButtonEvent</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickButtonPressed.html">Rubygame::Events::JoystickButtonPressed</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickButtonReleased.html">Rubygame::Events::JoystickButtonReleased</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickHatMoved.html">Rubygame::Events::JoystickHatMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/KeyPressed.html">Rubygame::Events::KeyPressed</a></li>
+        
+          <li><a href="../../Rubygame/Events/KeyReleased.html">Rubygame::Events::KeyReleased</a></li>
+        
+          <li><a href="../../Rubygame/Events/KeyboardEvent.html">Rubygame::Events::KeyboardEvent</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseButtonEvent.html">Rubygame::Events::MouseButtonEvent</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseFocusGained.html">Rubygame::Events::MouseFocusGained</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseFocusLost.html">Rubygame::Events::MouseFocusLost</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseMoved.html">Rubygame::Events::MouseMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/MousePressed.html">Rubygame::Events::MousePressed</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseReleased.html">Rubygame::Events::MouseReleased</a></li>
+        
+          <li><a href="../../Rubygame/Events/QuitRequested.html">Rubygame::Events::QuitRequested</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowExposed.html">Rubygame::Events::WindowExposed</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowMinimized.html">Rubygame::Events::WindowMinimized</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowResized.html">Rubygame::Events::WindowResized</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowUnminimized.html">Rubygame::Events::WindowUnminimized</a></li>
+        
+          <li><a href="../../Rubygame/ExposeEvent.html">Rubygame::ExposeEvent</a></li>
+        
+          <li><a href="../../Rubygame/Ftor.html">Rubygame::Ftor</a></li>
+        
+          <li><a href="../../Rubygame/GL.html">Rubygame::GL</a></li>
+        
+          <li><a href="../../Rubygame/Hotspot.html">Rubygame::Hotspot</a></li>
+        
+          <li><a href="../../Rubygame/JoyAxisEvent.html">Rubygame::JoyAxisEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyBallEvent.html">Rubygame::JoyBallEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyDownEvent.html">Rubygame::JoyDownEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyHatEvent.html">Rubygame::JoyHatEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyUpEvent.html">Rubygame::JoyUpEvent</a></li>
+        
+          <li><a href="../../Rubygame/Joystick.html">Rubygame::Joystick</a></li>
+        
+          <li><a href="../../Rubygame/Key.html">Rubygame::Key</a></li>
+        
+          <li><a href="../../Rubygame/KeyDownEvent.html">Rubygame::KeyDownEvent</a></li>
+        
+          <li><a href="../../Rubygame/KeyUpEvent.html">Rubygame::KeyUpEvent</a></li>
+        
+          <li><a href="../../Rubygame/MailQueue.html">Rubygame::MailQueue</a></li>
+        
+          <li><a href="../../Rubygame/MediaBag.html">Rubygame::MediaBag</a></li>
+        
+          <li><a href="../../Rubygame/Mixer.html">Rubygame::Mixer</a></li>
+        
+          <li><a href="../../Rubygame/Mixer/Music.html">Rubygame::Mixer::Music</a></li>
+        
+          <li><a href="../../Rubygame/Mixer/Sample.html">Rubygame::Mixer::Sample</a></li>
+        
+          <li><a href="../../Rubygame/Mouse.html">Rubygame::Mouse</a></li>
+        
+          <li><a href="../../Rubygame/MouseDownEvent.html">Rubygame::MouseDownEvent</a></li>
+        
+          <li><a href="../../Rubygame/MouseMotionEvent.html">Rubygame::MouseMotionEvent</a></li>
+        
+          <li><a href="../../Rubygame/MouseUpEvent.html">Rubygame::MouseUpEvent</a></li>
+        
+          <li><a href="../../Rubygame/Music.html">Rubygame::Music</a></li>
+        
+          <li><a href="../../Rubygame/NamedResource.html">Rubygame::NamedResource</a></li>
+        
+          <li><a href="../../Rubygame/NamedResource/NamedResourceClassMethods.html">Rubygame::NamedResource::NamedResourceClassMethods</a></li>
+        
+          <li><a href="../../Rubygame/QuitEvent.html">Rubygame::QuitEvent</a></li>
+        
+          <li><a href="../../Rubygame/Rect.html">Rubygame::Rect</a></li>
+        
+          <li><a href="../../Rubygame/ResizeEvent.html">Rubygame::ResizeEvent</a></li>
+        
+          <li><a href="../../Rubygame/SDLError.html">Rubygame::SDLError</a></li>
+        
+          <li><a href="../../Rubygame/SFont.html">Rubygame::SFont</a></li>
+        
+          <li><a href="../../Rubygame/Screen.html">Rubygame::Screen</a></li>
+        
+          <li><a href="../../Rubygame/Sound.html">Rubygame::Sound</a></li>
+        
+          <li><a href="../../Rubygame/Sprites.html">Rubygame::Sprites</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/DepthSortGroup.html">Rubygame::Sprites::DepthSortGroup</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/Group.html">Rubygame::Sprites::Group</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/LimitGroup.html">Rubygame::Sprites::LimitGroup</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/Sprite.html">Rubygame::Sprites::Sprite</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/UpdateGroup.html">Rubygame::Sprites::UpdateGroup</a></li>
+        
+          <li><a href="../../Rubygame/Surface.html">Rubygame::Surface</a></li>
+        
+          <li><a href="../../Rubygame/TTF.html">Rubygame::TTF</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Rubygame::Sprites::Sprite</h1>
+
+    <div id="description" class="description">
+      
+<p>The <a href="Sprite.html">Sprite</a> mix-in module (not to be confused with
+its parent module, <a href="../Sprites.html">Sprites</a>) can be used to
+extend a class or object to behave as a sprite. Specifically, a sprite can:</p>
+<ul><li>
+<p><a href="Sprite.html#method-i-draw">draw</a> (blit) itself onto a <a
+href="../Surface.html">Surface</a> in its proper position</p>
+</li><li>
+<p>detect bounding-box collision with Groups (<a
+href="Sprite.html#method-i-collide_group">collide_group</a>) and/or other
+sprites (collide_sprite).</p>
+</li><li>
+<p><a href="Sprite.html#method-i-update">update</a> its own state based on
+arbitrary rules.</p>
+</li></ul>
+
+<p>A <a href="Sprite.html">Sprite</a> is, fundamentally, a <a
+href="../Surface.html">Surface</a> with an associated <a
+href="../Rect.html">Rect</a> which defines the position of that <a
+href="../Surface.html">Surface</a> on the <a
+href="../Screen.html">Screen</a>. Additionally, sprites can have some
+behavior associated with them via the <a
+href="Sprite.html#method-i-update">update</a> method, including movement
+and collision detection; because of this, sprites can be the foundation of
+most on-screen objects, such as characters, items, missiles, and even
+user-interface elements.</p>
+
+<p>In order to work properly as a <a href="Sprite.html">Sprite</a>, the
+extended object or class must have two methods defined (by default, these
+are defined as accessors to attributes of the same names):</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>image</p></td>
+<td>
+<p>return a <a href="../Surface.html">Surface</a> with the sprite’s image.</p>
+</td></tr><tr><td class="rdoc-term"><p>rect</p></td>
+<td>
+<p>returns a <a href="../Rect.html">Rect</a> with the position and dimensions
+of the sprite.</p>
+</td></tr></table>
+
+<p>Normally, the value returned by rect is used to draw the sprite onto a <a
+href="../Surface.html">Surface</a> as well as to detect collision between
+sprites. However, if @<a href="Sprite.html#method-i-col_rect">col_rect</a>
+will be used for collision detection instead, if it is defined. See also <a
+href="Sprite.html#method-i-col_rect">col_rect</a>.</p>
+
+<p>Additionally, if you are extending an already-existing instance (rather
+than a class), that instance must have an attribute @groups, which is an
+Array containing all Groups to which the sprite belongs.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="col_rect-attribute-method" class="method-detail">
+          <a name="col_rect"></a>
+          
+          <a name="col_rect="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">col_rect</span><span
+              class="attribute-access-type">[W]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Set an alternative <a href="../Rect.html">Rect</a> to use for collision
+detection. If undefined or set to nil, the Sprite’s <a
+href="Sprite.html#attribute-i-rect">rect</a> is used instead.</p>
+          
+          </div>
+        </div>
+        
+        <div id="depth-attribute-method" class="method-detail">
+          <a name="depth"></a>
+          
+          <a name="depth="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">depth</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="groups-attribute-method" class="method-detail">
+          <a name="groups"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">groups</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="image-attribute-method" class="method-detail">
+          <a name="image"></a>
+          
+          <a name="image="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">image</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="rect-attribute-method" class="method-detail">
+          <a name="rect"></a>
+          
+          <a name="rect="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">rect</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Initialize the <a href="Sprite.html">Sprite</a>, defining @groups and
+@depth.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+        <span class="ruby-ivar">@groups</span> = []
+        <span class="ruby-ivar">@depth</span> = <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="add-method" class="method-detail ">
+          <a name="method-i-add"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add</span><span
+              class="method-args">(*groups)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Add the <a href="Sprite.html">Sprite</a> to each given <a
+href="Group.html">Group</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="add-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add</span>(*<span class="ruby-identifier">groups</span>)
+        <span class="ruby-identifier">groups</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">group</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@groups</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">group</span>
+                        <span class="ruby-ivar">@groups</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">group</span>)
+                        <span class="ruby-identifier">group</span>.<span class="ruby-identifier">push</span>(<span class="ruby-keyword">self</span>)
+                <span class="ruby-keyword">end</span>
+        }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add-method -->
+
+      
+        <div id="alive-3F-method" class="method-detail ">
+          <a name="method-i-alive-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">alive?  &rarr;  true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>True if the <a href="Sprite.html">Sprite</a> belongs to at least one <a
+href="Group.html">Group</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="alive-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">alive?</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@groups</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- alive-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- alive-3F-method -->
+
+      
+        <div id="col_rect-method" class="method-detail ">
+          <a name="method-i-col_rect"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">col_rect  &rarr;  Rect</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Returns @<a href="Sprite.html#method-i-col_rect">col_rect</a> if it is
+defined, otherwise calls <a href="Sprite.html#attribute-i-rect">rect</a>.
+This method is used by <a href="Sprite.html#method-i-collide">collide</a>,
+<a href="Sprite.html#method-i-collide_group">collide_group</a>, and
+collide_sprite to get the bounding box for collision detection.</p>
+            
+
+            
+            <div class="method-source-code" id="col_rect-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">col_rect</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@col_rect</span> 
+                <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@col_rect</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">rect</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">rect</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- col_rect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- col_rect-method -->
+
+      
+        <div id="collide-method" class="method-detail ">
+          <a name="method-i-collide"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">collide(other)  &rarr;  Array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Check collision between the caller and a <a href="Group.html">Group</a> or
+another <a href="Sprite.html">Sprite</a>. See also <a
+href="Sprite.html#method-i-collide_group">collide_group</a> and
+collide_sprite. This method uses the value of <a
+href="Sprite.html#method-i-col_rect">col_rect</a> as the bounding box when
+detecting collision.</p>
+
+<p>If <tt>other</tt> is a <a href="Group.html">Group</a>, returns an Array of
+every <a href="Sprite.html">Sprite</a> in that <a
+href="Group.html">Group</a> that collides with the caller. If
+<tt>other</tt> is a <a href="Sprite.html">Sprite</a>, returns an Array
+containing <tt>other</tt> if it collides with the caller. Otherwise,
+returns an empty Array.</p>
+            
+
+            
+            <div class="method-source-code" id="collide-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">collide</span>(<span class="ruby-identifier">other</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Group</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">collide_group</span>(<span class="ruby-identifier">other</span>)
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">collide_sprite?</span>(<span class="ruby-identifier">other</span>)
+                <span class="ruby-keyword">return</span> [<span class="ruby-identifier">other</span>]
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> []
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- collide-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- collide-method -->
+
+      
+        <div id="collide_group-method" class="method-detail ">
+          <a name="method-i-collide_group"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">collide_group(group)  &rarr;  Array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Check collision between the caller and all members of a <a
+href="Group.html">Group</a>. This method uses the value of <a
+href="Sprite.html#method-i-col_rect">col_rect</a> as the bounding box when
+detecting collision.</p>
+
+<p>Returns an Array of every <a href="Sprite.html">Sprite</a> in
+<tt>group</tt> that collides with the  caller. If none collide, returns an
+empty Array.</p>
+            
+
+            
+            <div class="method-source-code" id="collide_group-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">collide_group</span>(<span class="ruby-identifier">group</span>)
+        <span class="ruby-identifier">sprites</span> = []
+        <span class="ruby-identifier">group</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">collide_sprite?</span>(<span class="ruby-identifier">sprite</span>) <span class="ruby-keyword">and</span> (<span class="ruby-keyword">not</span> <span class="ruby-identifier">sprites</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">sprite</span>))
+                        <span class="ruby-identifier">sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">sprite</span>)
+                <span class="ruby-keyword">end</span>
+        }
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">sprites</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- collide_group-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- collide_group-method -->
+
+      
+        <div id="collide_sprite-3F-method" class="method-detail ">
+          <a name="method-i-collide_sprite-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">collide_sprite?(sprite)  &rarr;  true or false or nil</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Check collision between the caller and another <a
+href="Sprite.html">Sprite</a>. This method uses the value of <a
+href="Sprite.html#method-i-col_rect">col_rect</a> as the bounding box when
+detecting collision. Returns true if <tt>sprite</tt> collides with the
+caller, false if they do  not, or nil if <tt>sprite</tt> does not respond
+to either :<a href="Sprite.html#method-i-col_rect">col_rect</a> or :rect
+(meaning it was not possible to detect collision).</p>
+            
+
+            
+            <div class="method-source-code" id="collide_sprite-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">collide_sprite?</span>(<span class="ruby-identifier">sprite</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:col_rect</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">col_rect</span>.<span class="ruby-identifier">collide_rect?</span>(<span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">col_rect</span>)
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:rect</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">col_rect</span>.<span class="ruby-identifier">collide_rect?</span>(<span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">rect</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- collide_sprite-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- collide_sprite-3F-method -->
+
+      
+        <div id="draw-method" class="method-detail ">
+          <a name="method-i-draw"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">draw(surface)  &rarr;  Rect</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Blit the <a href="../Surface.html">Surface</a> returned by <a
+href="Sprite.html#attribute-i-image">image</a> onto <tt>surface</tt> at the
+position given by the <a href="../Rect.html">Rect</a> returned by <a
+href="Sprite.html#attribute-i-rect">rect</a>. Returns a <a
+href="../Rect.html">Rect</a> representing the area of <tt>surface</tt>
+which was affected by the draw.</p>
+            
+
+            
+            <div class="method-source-code" id="draw-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw</span>(<span class="ruby-identifier">destination</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">blit</span>(<span class="ruby-identifier">destination</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rect</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw-method -->
+
+      
+        <div id="kill-method" class="method-detail ">
+          <a name="method-i-kill"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">kill</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Remove the caller from every <a href="Group.html">Group</a> that it belongs
+to.</p>
+            
+
+            
+            <div class="method-source-code" id="kill-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">kill</span>
+        <span class="ruby-ivar">@groups</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">group</span><span class="ruby-operator">|</span> <span class="ruby-identifier">group</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-keyword">self</span>) }
+        <span class="ruby-ivar">@groups</span> = []
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- kill-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- kill-method -->
+
+      
+        <div id="remove-method" class="method-detail ">
+          <a name="method-i-remove"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">remove</span><span
+              class="method-args">(*groups)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Remove the caller from each given <a href="Group.html">Group</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="remove-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove</span>(*<span class="ruby-identifier">groups</span>)
+        <span class="ruby-identifier">groups</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">group</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@groups</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">group</span>
+                        <span class="ruby-ivar">@groups</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">group</span>)
+                        <span class="ruby-identifier">group</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-keyword">self</span>)
+                <span class="ruby-keyword">end</span>
+        }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- remove-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- remove-method -->
+
+      
+        <div id="undraw-method" class="method-detail ">
+          <a name="method-i-undraw"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">undraw(surface, background)  &rarr;  Rect</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>‘Erase’ the sprite from <tt>surface</tt> by drawing over it with part of
+<tt>background</tt>. For best results, <tt>background</tt> should be the
+same size as <tt>surface</tt>.</p>
+
+<p>Returns a <a href="../Rect.html">Rect</a> representing the area of
+<tt>surface</tt> which was affected.</p>
+            
+
+            
+            <div class="method-source-code" id="undraw-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">undraw</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">background</span>)
+        <span class="ruby-identifier">background</span>.<span class="ruby-identifier">blit</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-ivar">@rect</span>, <span class="ruby-ivar">@rect</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- undraw-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- undraw-method -->
+
+      
+        <div id="update-method" class="method-detail ">
+          <a name="method-i-update"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">update</span><span
+              class="method-args">( *args )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This method is meant to be overwritten by Sprite-based classes to define
+meaningful behavior. It can take any number of arguments you want, be
+called however often you want, and do whatever you want. It may return
+something, but <a href="Group.html#method-i-update">Group#update</a> will
+not (by default) use, or even collect, return values from this method.</p>
+
+<p>An example definition might take the amount of time that has passed since
+the last update; the <a href="Sprite.html">Sprite</a> could then update its
+position accordingly. Game logic, collision detection, and animation would
+also fit in here, if appropriate to your class.</p>
+            
+
+            
+            <div class="method-source-code" id="update-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/sprite.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>( *<span class="ruby-identifier">args</span> )
+        <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- update-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- update-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,17 @@
+Rio Bacon
+
+a. problem 1: About 2 hour
+	problem 2: About 2 hours
+	problem 3: About 6 hours
+	problem 4: About 1 hour
+	problem 5: Almost 0
+	problem 6: About half an hour
+	
+b. I could have used the junit tests as I write the methods rather than after writing all methods for
+	a class.
+
+c. Some things could have been more clearly explained. Some of the specs for the private methods for
+	RatPoly took a long time to understand, though it turned out to be very simple in the end.
+
+d. I wish I had a better understanding of polynomial division before I started, as I spent quite a while
+	reunderstand it even though it was covered in homework 3 part 0.

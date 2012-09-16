@@ -1,0 +1,2226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Rubygame::Ftor</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/rubygame/ftor_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/ftor.rb">lib/rubygame/ftor.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-new_am">::new_am</a></li>
+          
+          <li><a href="#method-c-new_from_to">::new_from_to</a></li>
+          
+          <li><a href="#method-i-2A">#*</a></li>
+          
+          <li><a href="#method-i-2B">#+</a></li>
+          
+          <li><a href="#method-i-2D">#-</a></li>
+          
+          <li><a href="#method-i-2D-40">#-@</a></li>
+          
+          <li><a href="#method-i-2F">#/</a></li>
+          
+          <li><a href="#method-i-3D-3D">#==</a></li>
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-_clear">#_clear</a></li>
+          
+          <li><a href="#method-i-a">#a</a></li>
+          
+          <li><a href="#method-i-a-3D">#a=</a></li>
+          
+          <li><a href="#method-i-align-21">#align!</a></li>
+          
+          <li><a href="#method-i-angle">#angle</a></li>
+          
+          <li><a href="#method-i-angle-3D">#angle=</a></li>
+          
+          <li><a href="#method-i-angle_with">#angle_with</a></li>
+          
+          <li><a href="#method-i-dot">#dot</a></li>
+          
+          <li><a href="#method-i-inspect">#inspect</a></li>
+          
+          <li><a href="#method-i-inspect_am">#inspect_am</a></li>
+          
+          <li><a href="#method-i-m">#m</a></li>
+          
+          <li><a href="#method-i-m-3D">#m=</a></li>
+          
+          <li><a href="#method-i-magnitude">#magnitude</a></li>
+          
+          <li><a href="#method-i-magnitude-3D">#magnitude=</a></li>
+          
+          <li><a href="#method-i-n">#n</a></li>
+          
+          <li><a href="#method-i-n-3D">#n=</a></li>
+          
+          <li><a href="#method-i-normal">#normal</a></li>
+          
+          <li><a href="#method-i-normal-3D">#normal=</a></li>
+          
+          <li><a href="#method-i-pretty">#pretty</a></li>
+          
+          <li><a href="#method-i-pretty_am">#pretty_am</a></li>
+          
+          <li><a href="#method-i-reverse-21">#reverse!</a></li>
+          
+          <li><a href="#method-i-rotate">#rotate</a></li>
+          
+          <li><a href="#method-i-rotate-21">#rotate!</a></li>
+          
+          <li><a href="#method-i-set-21">#set!</a></li>
+          
+          <li><a href="#method-i-set_am-21">#set_am!</a></li>
+          
+          <li><a href="#method-i-to_a">#to_a</a></li>
+          
+          <li><a href="#method-i-to_ary">#to_ary</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+          <li><a href="#method-i-to_s_am">#to_s_am</a></li>
+          
+          <li><a href="#method-i-u">#u</a></li>
+          
+          <li><a href="#method-i-u-3D">#u=</a></li>
+          
+          <li><a href="#method-i-udot">#udot</a></li>
+          
+          <li><a href="#method-i-unit">#unit</a></li>
+          
+          <li><a href="#method-i-unit-3D">#unit=</a></li>
+          
+          <li><a href="#method-i-x-3D">#x=</a></li>
+          
+          <li><a href="#method-i-y-3D">#y=</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../CREDITS.html">CREDITS</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../ROADMAP.html">ROADMAP</a></li>
+        
+          <li class="file"><a href="../doc/custom_sdl_load_paths_rdoc.html">custom_sdl_load_paths.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/getting_started_rdoc.html">getting_started.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/keyboard_symbols_rdoc.html">keyboard_symbols.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/macosx_install_rdoc.html">macosx_install.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/managing_framerate_rdoc.html">managing_framerate.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/surface_palettes_rdoc.html">surface_palettes.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/windows_install_rdoc.html">windows_install.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Rubygame.html">Rubygame</a></li>
+        
+          <li><a href="../Rubygame/ActiveEvent.html">Rubygame::ActiveEvent</a></li>
+        
+          <li><a href="../Rubygame/Clock.html">Rubygame::Clock</a></li>
+        
+          <li><a href="../Rubygame/Color.html">Rubygame::Color</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorBase.html">Rubygame::Color::ColorBase</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSL.html">Rubygame::Color::ColorHSL</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSV.html">Rubygame::Color::ColorHSV</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorRGB.html">Rubygame::Color::ColorRGB</a></li>
+        
+          <li><a href="../Rubygame/Color/Palette.html">Rubygame::Color::Palette</a></li>
+        
+          <li><a href="../Rubygame/Event.html">Rubygame::Event</a></li>
+        
+          <li><a href="../Rubygame/EventActions.html">Rubygame::EventActions</a></li>
+        
+          <li><a href="../Rubygame/EventActions/BlockAction.html">Rubygame::EventActions::BlockAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MethodAction.html">Rubygame::EventActions::MethodAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MultiAction.html">Rubygame::EventActions::MultiAction</a></li>
+        
+          <li><a href="../Rubygame/EventHandler.html">Rubygame::EventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHandler/HasEventHandler.html">Rubygame::EventHandler::HasEventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHook.html">Rubygame::EventHook</a></li>
+        
+          <li><a href="../Rubygame/EventQueue.html">Rubygame::EventQueue</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers.html">Rubygame::EventTriggers</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AndTrigger.html">Rubygame::EventTriggers::AndTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AttrTrigger.html">Rubygame::EventTriggers::AttrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/BlockTrigger.html">Rubygame::EventTriggers::BlockTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/InstanceOfTrigger.html">Rubygame::EventTriggers::InstanceOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyPressTrigger.html">Rubygame::EventTriggers::KeyPressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyReleaseTrigger.html">Rubygame::EventTriggers::KeyReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KindOfTrigger.html">Rubygame::EventTriggers::KindOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseMoveTrigger.html">Rubygame::EventTriggers::MouseMoveTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MousePressTrigger.html">Rubygame::EventTriggers::MousePressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseReleaseTrigger.html">Rubygame::EventTriggers::MouseReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/OrTrigger.html">Rubygame::EventTriggers::OrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/TickTrigger.html">Rubygame::EventTriggers::TickTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/YesTrigger.html">Rubygame::EventTriggers::YesTrigger</a></li>
+        
+          <li><a href="../Rubygame/Events.html">Rubygame::Events</a></li>
+        
+          <li><a href="../Rubygame/Events/ClockTicked.html">Rubygame::Events::ClockTicked</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusGained.html">Rubygame::Events::InputFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusLost.html">Rubygame::Events::InputFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickAxisMoved.html">Rubygame::Events::JoystickAxisMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickBallMoved.html">Rubygame::Events::JoystickBallMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonEvent.html">Rubygame::Events::JoystickButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonPressed.html">Rubygame::Events::JoystickButtonPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonReleased.html">Rubygame::Events::JoystickButtonReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickHatMoved.html">Rubygame::Events::JoystickHatMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyPressed.html">Rubygame::Events::KeyPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyReleased.html">Rubygame::Events::KeyReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyboardEvent.html">Rubygame::Events::KeyboardEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseButtonEvent.html">Rubygame::Events::MouseButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusGained.html">Rubygame::Events::MouseFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusLost.html">Rubygame::Events::MouseFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseMoved.html">Rubygame::Events::MouseMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/MousePressed.html">Rubygame::Events::MousePressed</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseReleased.html">Rubygame::Events::MouseReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/QuitRequested.html">Rubygame::Events::QuitRequested</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowExposed.html">Rubygame::Events::WindowExposed</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowMinimized.html">Rubygame::Events::WindowMinimized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowResized.html">Rubygame::Events::WindowResized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowUnminimized.html">Rubygame::Events::WindowUnminimized</a></li>
+        
+          <li><a href="../Rubygame/ExposeEvent.html">Rubygame::ExposeEvent</a></li>
+        
+          <li><a href="../Rubygame/Ftor.html">Rubygame::Ftor</a></li>
+        
+          <li><a href="../Rubygame/GL.html">Rubygame::GL</a></li>
+        
+          <li><a href="../Rubygame/Hotspot.html">Rubygame::Hotspot</a></li>
+        
+          <li><a href="../Rubygame/JoyAxisEvent.html">Rubygame::JoyAxisEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyBallEvent.html">Rubygame::JoyBallEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyDownEvent.html">Rubygame::JoyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyHatEvent.html">Rubygame::JoyHatEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyUpEvent.html">Rubygame::JoyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Joystick.html">Rubygame::Joystick</a></li>
+        
+          <li><a href="../Rubygame/Key.html">Rubygame::Key</a></li>
+        
+          <li><a href="../Rubygame/KeyDownEvent.html">Rubygame::KeyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/KeyUpEvent.html">Rubygame::KeyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/MailQueue.html">Rubygame::MailQueue</a></li>
+        
+          <li><a href="../Rubygame/MediaBag.html">Rubygame::MediaBag</a></li>
+        
+          <li><a href="../Rubygame/Mixer.html">Rubygame::Mixer</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Music.html">Rubygame::Mixer::Music</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Sample.html">Rubygame::Mixer::Sample</a></li>
+        
+          <li><a href="../Rubygame/Mouse.html">Rubygame::Mouse</a></li>
+        
+          <li><a href="../Rubygame/MouseDownEvent.html">Rubygame::MouseDownEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseMotionEvent.html">Rubygame::MouseMotionEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseUpEvent.html">Rubygame::MouseUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Music.html">Rubygame::Music</a></li>
+        
+          <li><a href="../Rubygame/NamedResource.html">Rubygame::NamedResource</a></li>
+        
+          <li><a href="../Rubygame/NamedResource/NamedResourceClassMethods.html">Rubygame::NamedResource::NamedResourceClassMethods</a></li>
+        
+          <li><a href="../Rubygame/QuitEvent.html">Rubygame::QuitEvent</a></li>
+        
+          <li><a href="../Rubygame/Rect.html">Rubygame::Rect</a></li>
+        
+          <li><a href="../Rubygame/ResizeEvent.html">Rubygame::ResizeEvent</a></li>
+        
+          <li><a href="../Rubygame/SDLError.html">Rubygame::SDLError</a></li>
+        
+          <li><a href="../Rubygame/SFont.html">Rubygame::SFont</a></li>
+        
+          <li><a href="../Rubygame/Screen.html">Rubygame::Screen</a></li>
+        
+          <li><a href="../Rubygame/Sound.html">Rubygame::Sound</a></li>
+        
+          <li><a href="../Rubygame/Sprites.html">Rubygame::Sprites</a></li>
+        
+          <li><a href="../Rubygame/Sprites/DepthSortGroup.html">Rubygame::Sprites::DepthSortGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Group.html">Rubygame::Sprites::Group</a></li>
+        
+          <li><a href="../Rubygame/Sprites/LimitGroup.html">Rubygame::Sprites::LimitGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Sprite.html">Rubygame::Sprites::Sprite</a></li>
+        
+          <li><a href="../Rubygame/Sprites/UpdateGroup.html">Rubygame::Sprites::UpdateGroup</a></li>
+        
+          <li><a href="../Rubygame/Surface.html">Rubygame::Surface</a></li>
+        
+          <li><a href="../Rubygame/TTF.html">Rubygame::TTF</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Rubygame::Ftor</h1>
+
+    <div id="description" class="description">
+      
+<p><b>NOTE</b>: <a href="Ftor.html">Ftor</a> is DEPRECATED and will be removed
+in <a href="../Rubygame.html">Rubygame</a> 3.0! A mostly-compatible vector
+class will be provided at or before that time.</p>
+
+<p><b>NOTE</b>: you must require 'rubygame/ftor' manually to gain access to <a
+href="Ftor.html">Rubygame::Ftor</a>. It is not imported with <a
+href="../Rubygame.html">Rubygame</a> by default!</p>
+
+<p><a href="Ftor.html">Ftor</a> ("Fake vecTOR"), a vector-like class for 2D
+position/movement.</p>
+
+<p>(NB: See <a href="Ftor.html#method-i-angle">angle</a> for an important note
+about why angles appear to be the opposite of what you may expect.)</p>
+
+<p><a href="Ftor.html">Ftor</a> is useful for storing 2D coordinates (x,y) as
+well as vector quantities such as velocity and acceleration
+(representationally, points and vectors are equivalent.) Although Ftors are
+always represented internally as Cartesian coordinates (x, y), it is
+possible to deal with an <a href="Ftor.html">Ftor</a> as polar coordinates
+(<a href="Ftor.html#method-i-angle">angle</a>, <a
+href="Ftor.html#method-i-magnitude">magnitude</a>) instead. See new_am and
+<a href="Ftor.html#method-i-set_am-21">set_am!</a>, for example.</p>
+
+<p><a href="Ftor.html">Ftor</a> is a "fake" vector because it has certain
+convenient properties which differ from "true" vectors (i.e. vectors in a
+strict mathematical sense).</p>
+
+<p>Unlike vectors, Ftors may be multiplied or divided to another <a
+href="Ftor.html">Ftor</a>. This is equivalent to multiplying or dividing
+each component by the corresponding component in the second <a
+href="Ftor.html">Ftor</a>. If you like, you can think of this feature as
+scaling each component of the <a href="Ftor.html">Ftor</a> by a separate
+factor:</p>
+
+<pre>Ftor(a,b) * Ftor(c,d)  =  Ftor(a*c, b*d)</pre>
+
+<p>Of course, Ftors also have the usual vector behavior for
+addition/subraction between two Ftors, and multiplication/division of an <a
+href="Ftor.html">Ftor</a> by a scalar:</p>
+
+<pre>Ftor(a,b) + Ftor(c,d) = Ftor(a+c, b+d)
+Ftor(a,b) * n = Ftor(a*n, b*n)</pre>
+
+<p>Additionally, <a href="Ftor.html">Ftor</a> contains functions for
+manipulating itself. You can both get and set such properties as <a
+href="Ftor.html#method-i-angle">angle</a>, <a
+href="Ftor.html#method-i-magnitude">magnitude</a>, <a
+href="Ftor.html#method-i-unit">unit</a>, and <a
+href="Ftor.html#method-i-normal">normal</a>, and the <a
+href="Ftor.html">Ftor</a> will change in-place as needed. For example, if
+you set <a href="Ftor.html#method-i-angle-3D">angle=</a>, the vector will
+change to have the new angle, but keeps the same magnitude as before.</p>
+
+<p><a href="Ftor.html">Ftor</a> attempts to save processing time (at the
+expense of memory) by  storing secondary properties (angle, magnitude,
+etc.) whenever they are calculated,so that they need not be calculated
+repeatedly. If the vector changes, the properties will be calculated again
+the next time they are needed. (In future versions, it may be possible to
+disable this feature for certain Ftors, for example if they will change
+very often, to save memory.)</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="HALF_PI">HALF_PI</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="PI">PI</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="THREE_HALF_PI">THREE_HALF_PI</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="TWO_PI">TWO_PI</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="x-attribute-method" class="method-detail">
+          <a name="x"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">x</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="y-attribute-method" class="method-detail">
+          <a name="y"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">y</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(x,y)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="Ftor.html">Ftor</a> by specifying its x and y
+components. See also new_am and new_from_to.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 82</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+<span class="ruby-constant">Rubygame</span>.<span class="ruby-identifier">deprecated</span>(<span class="ruby-string">&quot;Rubygame::Ftor&quot;</span>, <span class="ruby-string">&quot;3.0&quot;</span>)
+<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span> = <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>
+    <span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="new_am-method" class="method-detail ">
+          <a name="method-c-new_am"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new_am</span><span
+              class="method-args">(a,m)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="Ftor.html">Ftor</a> by specifying its <a
+href="Ftor.html#method-i-angle">angle</a> (in radians) and <a
+href="Ftor.html#method-i-magnitude">magnitude</a>. See also new.</p>
+            
+
+            
+            <div class="method-source-code" id="new_am-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 89</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new_am</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">m</span>)
+            <span class="ruby-identifier">v</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>,<span class="ruby-value">0</span>)
+<span class="ruby-identifier">v</span>.<span class="ruby-identifier">a</span>, <span class="ruby-identifier">v</span>.<span class="ruby-identifier">m</span> = <span class="ruby-identifier">a</span>, <span class="ruby-identifier">m</span>
+            <span class="ruby-keyword">return</span> <span class="ruby-identifier">v</span>
+    <span class="ruby-keyword">end</span></pre>
+            </div><!-- new_am-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new_am-method -->
+
+      
+        <div id="new_from_to-method" class="method-detail ">
+          <a name="method-c-new_from_to"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new_from_to</span><span
+              class="method-args">(p1,p2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns a new <a href="Ftor.html">Ftor</a> which represents the difference
+in position of two points <tt>p1</tt> and <tt>p2</tt>. (<tt>p1</tt> and
+<tt>p2</tt> can be Ftors, size-2 Arrays, or anything else which has two
+numerical components and responds to #[].)</p>
+
+<p>In other words, assuming <tt>v</tt> is the <a href="Ftor.html">Ftor</a>
+returned by this function:</p>
+
+<pre>p1 + v = p2</pre>
+            
+
+            
+            <div class="method-source-code" id="new_from_to-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new_from_to</span>(<span class="ruby-identifier">p1</span>,<span class="ruby-identifier">p2</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">p2</span>[<span class="ruby-value">0</span>]<span class="ruby-operator">-</span><span class="ruby-identifier">p1</span>[<span class="ruby-value">0</span>],<span class="ruby-identifier">p2</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">-</span><span class="ruby-identifier">p1</span>[<span class="ruby-value">1</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new_from_to-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new_from_to-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="2A-method" class="method-detail ">
+          <a name="method-i-2A"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">*</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Perform multiplication of this <a href="Ftor.html">Ftor</a> by the scalar
+<tt>other</tt>, like so:</p>
+
+<pre>Ftor(a,b) * n = Ftor(a*n, b*n)</pre>
+
+<p>However, if this causes TypeError, attempt to extract indices 0 and 1 with
+<tt>other</tt>‘s #[] operator, and multiply them into the corresponding
+components of this <a href="Ftor.html">Ftor</a>, like so:</p>
+
+<pre>Ftor(a,b) * Ftor(c,d) = Ftor(a*c, b*d)
+Ftor(a,b) * [c,d]     = Ftor(a*c, b*d)</pre>
+            
+
+            
+            <div class="method-source-code" id="2A-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 215</span>
+      <span class="ruby-keyword">def</span> *(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@x</span>*<span class="ruby-identifier">other</span>,<span class="ruby-ivar">@y</span>*<span class="ruby-identifier">other</span>)
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">TypeError</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@x</span>*<span class="ruby-identifier">other</span>[<span class="ruby-value">0</span>],<span class="ruby-ivar">@y</span>*<span class="ruby-identifier">other</span>[<span class="ruby-value">1</span>])
+      <span class="ruby-keyword">end</span></pre>
+            </div><!-- 2A-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 2A-method -->
+
+      
+        <div id="2B-method" class="method-detail ">
+          <a name="method-i-2B"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">+</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Perform vector addition with this <a href="Ftor.html">Ftor</a> and
+<tt>other</tt>, adding them on a component-by-component basis, like so:</p>
+
+<pre>Ftor(a,b) + Ftor(c,d)  =  Ftor(a+c, b+d)</pre>
+            
+
+            
+            <div class="method-source-code" id="2B-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 198</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>)
+<span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">+</span><span class="ruby-identifier">other</span>[<span class="ruby-value">0</span>],<span class="ruby-ivar">@y</span><span class="ruby-operator">+</span><span class="ruby-identifier">other</span>[<span class="ruby-value">1</span>])
+    <span class="ruby-keyword">end</span></pre>
+            </div><!-- 2B-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 2B-method -->
+
+      
+        <div id="2D-method" class="method-detail ">
+          <a name="method-i-2D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">-</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Like #+, but performs subtraction instead of addition.</p>
+            
+
+            
+            <div class="method-source-code" id="2D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 203</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>)
+<span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">-</span><span class="ruby-identifier">other</span>[<span class="ruby-value">0</span>],<span class="ruby-ivar">@y</span><span class="ruby-operator">-</span><span class="ruby-identifier">other</span>[<span class="ruby-value">1</span>])
+    <span class="ruby-keyword">end</span></pre>
+            </div><!-- 2D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 2D-method -->
+
+      
+        <div id="2D-40-method" class="method-detail ">
+          <a name="method-i-2D-40"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">-@</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The reverse of this <a href="Ftor.html">Ftor</a>. I.e., all components are
+negated. See also <a href="Ftor.html#method-i-reverse-21">reverse!</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="2D-40-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-@</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">-</span><span class="ruby-ivar">@x</span>,<span class="ruby-operator">-</span><span class="ruby-ivar">@y</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 2D-40-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 2D-40-method -->
+
+      
+        <div id="2F-method" class="method-detail ">
+          <a name="method-i-2F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">/</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Like #*, but performs division instead of multiplication.</p>
+            
+
+            
+            <div class="method-source-code" id="2F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 222</span>
+      <span class="ruby-keyword">def</span> <span class="ruby-operator">/</span>(<span class="ruby-identifier">other</span>)
+              <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span> = <span class="ruby-ivar">@x</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-ivar">@y</span>.<span class="ruby-identifier">to_f</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>,<span class="ruby-identifier">y</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>)
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">TypeError</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>[<span class="ruby-value">0</span>],<span class="ruby-identifier">y</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>[<span class="ruby-value">1</span>])
+      <span class="ruby-keyword">end</span></pre>
+            </div><!-- 2F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 2F-method -->
+
+      
+        <div id="3D-3D-method" class="method-detail ">
+          <a name="method-i-3D-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">==</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if this <a href="Ftor.html">Ftor</a> is equal to <tt>other</tt>, when
+both have been converted to Arrays via <a
+href="Ftor.html#method-i-to_a">to_a</a>. In other words, a
+component-by-component equality check.</p>
+            
+
+            
+            <div class="method-source-code" id="3D-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">other</span>)
+        <span class="ruby-identifier">to_a</span>() <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">to_a</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 3D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3D-3D-method -->
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]</span><span
+              class="method-args">(i)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the +i+th component of this <a href="Ftor.html">Ftor</a>, as if it
+were the Array returned by <a href="Ftor.html#method-i-to_a">to_a</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">i</span>)
+        [<span class="ruby-ivar">@x</span>,<span class="ruby-ivar">@y</span>][<span class="ruby-identifier">i</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="_clear-method" class="method-detail ">
+          <a name="method-i-_clear"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">_clear</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Clears stored values for <a href="Ftor.html#method-i-angle">angle</a>, <a
+href="Ftor.html#method-i-magnitude">magnitude</a>, <a
+href="Ftor.html#method-i-normal">normal</a>, and <a
+href="Ftor.html#method-i-unit">unit</a>, so that they will be recalculated
+the next time they are needed. Intended for internal use, but might be
+useful in other situations.</p>
+            
+
+            
+            <div class="method-source-code" id="_clear-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 369</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">_clear</span>
+        <span class="ruby-ivar">@angle</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-ivar">@magnitude</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-ivar">@normal</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-ivar">@unit</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- _clear-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- _clear-method -->
+
+      
+        <div id="a-method" class="method-detail method-alias">
+          <a name="method-i-a"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">a</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Ftor.html#method-i-angle">angle</a>
+          </div>
+          
+        </div><!-- a-method -->
+
+      
+        <div id="a-3D-method" class="method-detail method-alias">
+          <a name="method-i-a-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">a=</span><span
+              class="method-args">(a)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Ftor.html#method-i-angle-3D">angle=</a>
+          </div>
+          
+        </div><!-- a-3D-method -->
+
+      
+        <div id="align-21-method" class="method-detail method-alias">
+          <a name="method-i-align-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">align!</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Ftor.html#method-i-unit-3D">unit=</a>
+          </div>
+          
+        </div><!-- align-21-method -->
+
+      
+        <div id="angle-method" class="method-detail ">
+          <a name="method-i-angle"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">angle</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the angle (radians) this <a href="Ftor.html">Ftor</a> forms with the
+positive X axis. This is the same as the Ftor’s angle in a polar coordinate
+system.</p>
+
+<p><b>IMPORTANT</b>: Because the positive Y axis on the <a
+href="Screen.html">Rubygame::Screen</a> points <b>downwards</b>, an angle
+in the range 0..PI will appear to point <b>downwards</b>, rather than
+upwards! This also means that positive rotation will appear
+<b>clockwise</b>, and negative rotation will appear
+<b>counterclockwise</b>! This is the opposite of what you would expect in
+geometry class!</p>
+            
+
+            
+            <div class="method-source-code" id="angle-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 238</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">angle</span>
+        <span class="ruby-ivar">@angle</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@angle</span> = <span class="ruby-constant">Math</span>.<span class="ruby-identifier">atan2</span>(<span class="ruby-ivar">@y</span>,<span class="ruby-ivar">@x</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- angle-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Ftor.html#method-i-a">a</a>
+          </div>
+          
+
+          
+        </div><!-- angle-method -->
+
+      
+        <div id="angle-3D-method" class="method-detail ">
+          <a name="method-i-angle-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">angle=</span><span
+              class="method-args">(a)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the angle (radians) of this <a href="Ftor.html">Ftor</a> from the
+positive X axis. Magnitude is preserved.</p>
+            
+
+            
+            <div class="method-source-code" id="angle-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 244</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">angle=</span>(<span class="ruby-identifier">a</span>)
+        <span class="ruby-identifier">m</span> = <span class="ruby-identifier">magnitude</span>()
+        <span class="ruby-identifier">set!</span>( <span class="ruby-constant">Math</span>.<span class="ruby-identifier">cos</span>(<span class="ruby-identifier">a</span>)*<span class="ruby-identifier">m</span>, <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-identifier">a</span>)*<span class="ruby-identifier">m</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- angle-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Ftor.html#method-i-a-3D">a=</a>
+          </div>
+          
+
+          
+        </div><!-- angle-3D-method -->
+
+      
+        <div id="angle_with-method" class="method-detail ">
+          <a name="method-i-angle_with"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">angle_with</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the difference in angles (radians) between this <a
+href="Ftor.html">Ftor</a> and <tt>other</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="angle_with-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 322</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">angle_with</span>(<span class="ruby-identifier">other</span>)
+        <span class="ruby-constant">Math</span>.<span class="ruby-identifier">acos</span>( <span class="ruby-keyword">self</span>.<span class="ruby-identifier">udot</span>(<span class="ruby-identifier">other</span>) )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- angle_with-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- angle_with-method -->
+
+      
+        <div id="dot-method" class="method-detail ">
+          <a name="method-i-dot"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dot</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the dot product (aka inner product) of this <a
+href="Ftor.html">Ftor</a> and <tt>other</tt>. The dot product of two
+vectors <tt>v1</tt> and <tt>v2</tt> is:</p>
+
+<pre>v1.x * v2.x + v1.y * v2.y</pre>
+            
+
+            
+            <div class="method-source-code" id="dot-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 312</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dot</span>(<span class="ruby-identifier">other</span>)
+        <span class="ruby-ivar">@x</span>*<span class="ruby-identifier">other</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">+</span> <span class="ruby-ivar">@y</span>*<span class="ruby-identifier">other</span>[<span class="ruby-value">1</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dot-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dot-method -->
+
+      
+        <div id="inspect-method" class="method-detail ">
+          <a name="method-i-inspect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inspect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Same as <a href="Ftor.html#method-i-to_s">to_s</a>, but this Ftor’s
+object_id is also displayed.</p>
+            
+
+            
+            <div class="method-source-code" id="inspect-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inspect</span>
+        <span class="ruby-node">&quot;#&lt;#{self.class}:#{object_id}: %f, %f&gt;&quot;</span><span class="ruby-operator">%</span>[<span class="ruby-ivar">@x</span>,<span class="ruby-ivar">@y</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inspect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inspect-method -->
+
+      
+        <div id="inspect_am-method" class="method-detail ">
+          <a name="method-i-inspect_am"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inspect_am</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Same as <a href="Ftor.html#method-i-to_s_am">to_s_am</a>, but this Ftor’s
+object_id is also displayed.</p>
+            
+
+            
+            <div class="method-source-code" id="inspect_am-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inspect_am</span>
+        <span class="ruby-node">&quot;#&lt;#{self.class}:AM:#{object_id}: %f, %f&gt;&quot;</span><span class="ruby-operator">%</span>[<span class="ruby-identifier">angle</span>(),<span class="ruby-identifier">magnitude</span>()]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inspect_am-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inspect_am-method -->
+
+      
+        <div id="m-method" class="method-detail method-alias">
+          <a name="method-i-m"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">m</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Ftor.html#method-i-magnitude">magnitude</a>
+          </div>
+          
+        </div><!-- m-method -->
+
+      
+        <div id="m-3D-method" class="method-detail method-alias">
+          <a name="method-i-m-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">m=</span><span
+              class="method-args">(m)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Ftor.html#method-i-magnitude-3D">magnitude=</a>
+          </div>
+          
+        </div><!-- m-3D-method -->
+
+      
+        <div id="magnitude-method" class="method-detail ">
+          <a name="method-i-magnitude"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">magnitude</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the magnitude of the <a href="Ftor.html">Ftor</a>, i.e. its length
+from tail to head. This is the same as the Ftor’s magnitude in a polar
+coordinate system.</p>
+            
+
+            
+            <div class="method-source-code" id="magnitude-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 254</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">magnitude</span>
+        <span class="ruby-ivar">@magnitude</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@magnitude</span> = <span class="ruby-constant">Math</span>.<span class="ruby-identifier">hypot</span>(<span class="ruby-ivar">@x</span>,<span class="ruby-ivar">@y</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- magnitude-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Ftor.html#method-i-m">m</a>
+          </div>
+          
+
+          
+        </div><!-- magnitude-method -->
+
+      
+        <div id="magnitude-3D-method" class="method-detail ">
+          <a name="method-i-magnitude-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">magnitude=</span><span
+              class="method-args">(m)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies the <a href="Ftor.html#method-i-magnitude">magnitude</a> of the <a
+href="Ftor.html">Ftor</a>, preserving its <a
+href="Ftor.html#method-i-angle">angle</a>.</p>
+
+<p>In other words, the <a href="Ftor.html">Ftor</a> will point in the same
+direction, but it will be a different length from tail to head.</p>
+            
+
+            
+            <div class="method-source-code" id="magnitude-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 262</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">magnitude=</span>(<span class="ruby-identifier">m</span>)
+        <span class="ruby-identifier">new</span> = <span class="ruby-identifier">unit</span>() * <span class="ruby-identifier">m</span>
+        <span class="ruby-identifier">set!</span>(<span class="ruby-identifier">new</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">new</span>.<span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- magnitude-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Ftor.html#method-i-m-3D">m=</a>
+          </div>
+          
+
+          
+        </div><!-- magnitude-3D-method -->
+
+      
+        <div id="n-method" class="method-detail method-alias">
+          <a name="method-i-n"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">n</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Ftor.html#method-i-normal">normal</a>
+          </div>
+          
+        </div><!-- n-method -->
+
+      
+        <div id="n-3D-method" class="method-detail method-alias">
+          <a name="method-i-n-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">n=</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Ftor.html#method-i-normal-3D">normal=</a>
+          </div>
+          
+        </div><!-- n-3D-method -->
+
+      
+        <div id="normal-method" class="method-detail ">
+          <a name="method-i-normal"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">normal</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a new unit <a href="Ftor.html">Ftor</a> which is perpendicular to
+this <a href="Ftor.html">Ftor</a> (rotated by pi/2 radians, to be
+specific).</p>
+            
+
+            
+            <div class="method-source-code" id="normal-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 272</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">normal</span>
+        <span class="ruby-ivar">@normal</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@normal</span> = <span class="ruby-identifier">unit</span>().<span class="ruby-identifier">rotate</span>(<span class="ruby-constant">HALF_PI</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- normal-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Ftor.html#method-i-n">n</a>
+          </div>
+          
+
+          
+        </div><!-- normal-method -->
+
+      
+        <div id="normal-3D-method" class="method-detail ">
+          <a name="method-i-normal-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">normal=</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Rotate this <a href="Ftor.html">Ftor</a> in-place, so that it is
+perpendicular to <tt>other</tt>. This <a href="Ftor.html">Ftor</a> will be
+at an angle of -pi/2 to <tt>other</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="normal-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 278</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">normal=</span>(<span class="ruby-identifier">other</span>)
+<span class="ruby-identifier">set!</span>( *(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">other</span>).<span class="ruby-identifier">unit</span>().<span class="ruby-identifier">rotate</span>(<span class="ruby-operator">-</span><span class="ruby-constant">HALF_PI</span>) * <span class="ruby-identifier">magnitude</span>()) )
+    <span class="ruby-keyword">end</span></pre>
+            </div><!-- normal-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Ftor.html#method-i-n-3D">n=</a>
+          </div>
+          
+
+          
+        </div><!-- normal-3D-method -->
+
+      
+        <div id="pretty-method" class="method-detail ">
+          <a name="method-i-pretty"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pretty</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>“Pretty print”. Same as <a href="Ftor.html#method-i-to_s">to_s</a>, but
+components are displayed as rounded floats to 3 decimal places, for easy
+viewing.</p>
+            
+
+            
+            <div class="method-source-code" id="pretty-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pretty</span>
+        <span class="ruby-node">&quot;#&lt;#{self.class}: [%0.3f, %0.3f]&gt;&quot;</span><span class="ruby-operator">%</span>[<span class="ruby-ivar">@x</span>,<span class="ruby-ivar">@y</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pretty-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pretty-method -->
+
+      
+        <div id="pretty_am-method" class="method-detail ">
+          <a name="method-i-pretty_am"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pretty_am</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>“Pretty print” with angle and magnitude.  Same as <a
+href="Ftor.html#method-i-to_s_am">to_s_am</a>, but components are displayed
+as rounded floats to 3 decimal places, for easy viewing.</p>
+            
+
+            
+            <div class="method-source-code" id="pretty_am-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pretty_am</span>
+        <span class="ruby-node">&quot;#&lt;#{self.class}:AM: [%0.3f, %0.3f]&gt;&quot;</span><span class="ruby-operator">%</span>[<span class="ruby-identifier">angle</span>(),<span class="ruby-identifier">magnitude</span>()]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pretty_am-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pretty_am-method -->
+
+      
+        <div id="reverse-21-method" class="method-detail ">
+          <a name="method-i-reverse-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reverse!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Like #-@, but reverses this <a href="Ftor.html">Ftor</a> in-place.</p>
+            
+
+            
+            <div class="method-source-code" id="reverse-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reverse!</span>
+  <span class="ruby-identifier">set!</span>(<span class="ruby-operator">-</span><span class="ruby-ivar">@x</span>,<span class="ruby-operator">-</span><span class="ruby-ivar">@y</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reverse-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reverse-21-method -->
+
+      
+        <div id="rotate-method" class="method-detail ">
+          <a name="method-i-rotate"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rotate</span><span
+              class="method-args">(radians)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Like <a href="Ftor.html#method-i-rotate-21">rotate!</a>, but returns a
+duplicate instead of rotating this <a href="Ftor.html">Ftor</a> in-place.</p>
+            
+
+            
+            <div class="method-source-code" id="rotate-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 362</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rotate</span>(<span class="ruby-identifier">radians</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">rotate!</span>(<span class="ruby-identifier">radians</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rotate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rotate-method -->
+
+      
+        <div id="rotate-21-method" class="method-detail ">
+          <a name="method-i-rotate-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rotate!</span><span
+              class="method-args">(angle)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Rotate this <a href="Ftor.html">Ftor</a> in-place by <tt>angle</tt>
+(radians). This is the same as adding <tt>angle</tt> to this Ftor’s <a
+href="Ftor.html#method-i-angle">angle</a>.</p>
+
+<p><b>IMPORTANT</b>: Positive rotation will appear <b>clockwise</b>, and
+negative rotation will appear <b>counterclockwise</b>! See <a
+href="Ftor.html#method-i-angle">angle</a> for the reason.</p>
+            
+
+            
+            <div class="method-source-code" id="rotate-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 344</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">rotate!</span>(<span class="ruby-identifier">angle</span>)
+<span class="ruby-comment">#               case(angle)</span>
+<span class="ruby-comment">#               when HALF_PI, -THREE_HALF_PI</span>
+<span class="ruby-comment">#                       self.set!(@y,-@x)</span>
+<span class="ruby-comment">#               when THREE_HALF_PI, -HALF_PI</span>
+<span class="ruby-comment">#                       self.set!(-@y,@x)</span>
+<span class="ruby-comment">#               when PI, -PI</span>
+<span class="ruby-comment">#                       self.set!(@y,-@x)</span>
+<span class="ruby-comment">#               when 0, TWO_PI, -TWO_PI</span>
+<span class="ruby-comment">#                       self.set!(@y,-@x)</span>
+<span class="ruby-comment">#               else</span>
+                        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">a</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">angle</span>
+<span class="ruby-comment">#               end</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+        <span class="ruby-keyword">end</span></pre>
+            </div><!-- rotate-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rotate-21-method -->
+
+      
+        <div id="set-21-method" class="method-detail ">
+          <a name="method-i-set-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set!</span><span
+              class="method-args">(x,y)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modify the x and y components of the <a href="Ftor.html">Ftor</a> in-place</p>
+            
+
+            
+            <div class="method-source-code" id="set-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 120</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">set!</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span> = <span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>
+            <span class="ruby-identifier">_clear</span>()
+    <span class="ruby-keyword">end</span></pre>
+            </div><!-- set-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set-21-method -->
+
+      
+        <div id="set_am-21-method" class="method-detail ">
+          <a name="method-i-set_am-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_am!</span><span
+              class="method-args">(a,m)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modify the <a href="Ftor.html#method-i-angle">angle</a> (in radians) and <a
+href="Ftor.html#method-i-magnitude">magnitude</a> of the <a
+href="Ftor.html">Ftor</a> in-place</p>
+            
+
+            
+            <div class="method-source-code" id="set_am-21-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 126</span>
+      <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_am!</span>(<span class="ruby-identifier">a</span>,<span class="ruby-identifier">m</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">angle</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">magnitude</span> = <span class="ruby-identifier">a</span>, <span class="ruby-identifier">m</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_am-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_am-21-method -->
+
+      
+        <div id="to_a-method" class="method-detail ">
+          <a name="method-i-to_a"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_a</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an Array of this Ftor’s components, [x,y].</p>
+            
+
+            
+            <div class="method-source-code" id="to_a-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_a</span>
+        [<span class="ruby-ivar">@x</span>,<span class="ruby-ivar">@y</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_a-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Ftor.html#method-i-to_ary">to_ary</a>
+          </div>
+          
+
+          
+        </div><!-- to_a-method -->
+
+      
+        <div id="to_ary-method" class="method-detail method-alias">
+          <a name="method-i-to_ary"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_ary</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Ftor.html#method-i-to_a">to_a</a>
+          </div>
+          
+        </div><!-- to_ary-method -->
+
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Display this <a href="Ftor.html">Ftor</a> in the format: “#&lt;Ftor: [x,
+y]&gt;”. x and y are displayed as floats at full precision. See also pp.</p>
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+        <span class="ruby-node">&quot;#&lt;#{self.class}: [%f, %f]&gt;&quot;</span><span class="ruby-operator">%</span>[<span class="ruby-ivar">@x</span>,<span class="ruby-ivar">@y</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s-method -->
+
+      
+        <div id="to_s_am-method" class="method-detail ">
+          <a name="method-i-to_s_am"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s_am</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Display this <a href="Ftor.html">Ftor</a> in the format: “#&lt;Ftor:AM:
+[angle, magnitude]&gt;”.  angle and magnitude are displayed as floats at
+full precision. See also <a href="Ftor.html#method-i-to_s">to_s</a> and
+pp_am.</p>
+            
+
+            
+            <div class="method-source-code" id="to_s_am-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s_am</span>
+              <span class="ruby-node">&quot;#&lt;#{self.class}:AM: [%f, %f]&gt;&quot;</span><span class="ruby-operator">%</span>[<span class="ruby-identifier">angle</span>(),<span class="ruby-identifier">magnitude</span>()]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_s_am-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s_am-method -->
+
+      
+        <div id="u-method" class="method-detail method-alias">
+          <a name="method-i-u"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">u</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Ftor.html#method-i-unit">unit</a>
+          </div>
+          
+        </div><!-- u-method -->
+
+      
+        <div id="u-3D-method" class="method-detail method-alias">
+          <a name="method-i-u-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">u=</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Ftor.html#method-i-unit-3D">unit=</a>
+          </div>
+          
+        </div><!-- u-3D-method -->
+
+      
+        <div id="udot-method" class="method-detail ">
+          <a name="method-i-udot"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">udot</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the <a href="Ftor.html#method-i-dot">dot</a> product of <a
+href="Ftor.html#method-i-unit">unit</a> vectors of this <a
+href="Ftor.html">Ftor</a> and <tt>other</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="udot-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 317</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">udot</span>(<span class="ruby-identifier">other</span>)
+        <span class="ruby-identifier">unit</span>().<span class="ruby-identifier">dot</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">other</span>).<span class="ruby-identifier">unit</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- udot-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- udot-method -->
+
+      
+        <div id="unit-method" class="method-detail ">
+          <a name="method-i-unit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unit</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the unit vector of the <a href="Ftor.html">Ftor</a>, i.e. an <a
+href="Ftor.html">Ftor</a> with the same direction, but a <a
+href="Ftor.html#method-i-magnitude">magnitude</a> of 1. (This is sometimes
+called a “normalized” vector, not to be confused with a vector’s <a
+href="Ftor.html#method-i-normal">normal</a>.)</p>
+            
+
+            
+            <div class="method-source-code" id="unit-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unit</span>
+        <span class="ruby-identifier">m</span> = <span class="ruby-identifier">magnitude</span>().<span class="ruby-identifier">to_f</span>
+        <span class="ruby-ivar">@unit</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@unit</span> = <span class="ruby-constant">Ftor</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">/</span><span class="ruby-identifier">m</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">/</span><span class="ruby-identifier">m</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unit-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Ftor.html#method-i-u">u</a>
+          </div>
+          
+
+          
+        </div><!-- unit-method -->
+
+      
+        <div id="unit-3D-method" class="method-detail ">
+          <a name="method-i-unit-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unit=</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Rotates this <a href="Ftor.html">Ftor</a> in-place, so that its <a
+href="Ftor.html#method-i-unit">unit</a> vector matches the unit vector of
+the given <a href="Ftor.html">Ftor</a>.</p>
+
+<p>In other words, changes the <a href="Ftor.html#method-i-angle">angle</a> of
+this <a href="Ftor.html">Ftor</a> to be the same as the angle of the given
+<a href="Ftor.html">Ftor</a>, but this Ftor’s <a
+href="Ftor.html#method-i-magnitude">magnitude</a> does not change.</p>
+            
+
+            
+            <div class="method-source-code" id="unit-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 301</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unit=</span>(<span class="ruby-identifier">other</span>)
+        <span class="ruby-identifier">set!</span>( *(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">other</span>).<span class="ruby-identifier">unit</span>() * <span class="ruby-identifier">magnitude</span>()) )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unit-3D-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Ftor.html#method-i-u-3D">u=</a>, <a href="Ftor.html#method-i-align-21">align!</a>
+          </div>
+          
+
+          
+        </div><!-- unit-3D-method -->
+
+      
+        <div id="x-3D-method" class="method-detail ">
+          <a name="method-i-x-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">x=</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the x component of the <a href="Ftor.html">Ftor</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="x-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 107</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">x=</span>(<span class="ruby-identifier">value</span>)
+<span class="ruby-ivar">@x</span> = <span class="ruby-identifier">value</span>
+<span class="ruby-identifier">_clear</span>()
+    <span class="ruby-keyword">end</span></pre>
+            </div><!-- x-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- x-3D-method -->
+
+      
+        <div id="y-3D-method" class="method-detail ">
+          <a name="method-i-y-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">y=</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the y component of the <a href="Ftor.html">Ftor</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="y-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ftor.rb, line 114</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">y=</span>(<span class="ruby-identifier">value</span>)
+<span class="ruby-ivar">@y</span> = <span class="ruby-identifier">value</span>
+<span class="ruby-identifier">_clear</span>()
+    <span class="ruby-keyword">end</span></pre>
+            </div><!-- y-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- y-3D-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

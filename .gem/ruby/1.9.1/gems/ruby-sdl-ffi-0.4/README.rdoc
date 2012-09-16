@@ -1,0 +1,84 @@
+
+= Ruby-SDL-FFI
+
+Version::    0.4
+Date::       2011-03-06
+
+Homepage::   http://github.com/jacius/ruby-sdl-ffi/
+Author::     John Croisant <jacius@gmail.com>
+Copyright::  2009-2011  John Croisant
+
+
+== Description
+
+Ruby-SDL-FFI is a low-level binding to SDL [1] and related
+libraries using Ruby-FFI [2] or compatible FFI APIs, such as
+JRuby's. It provides very basic access to SDL from Ruby [3]
+without the need for a compiled C wrapper. It aims to be
+platform and Ruby implementation independent.
+
+Ruby-SDL-FFI does not attempt to provide any high-level
+functionality, only to mirror the standard SDL interface.
+For higher-level functionality, you should use other
+libraries (Rubygame [4], Gosu [5], etc.).
+
+1. SDL: http://www.libsdl.org/
+2. Ruby-FFI: http://github.com/ffi/ffi
+3. Ruby: http://www.ruby-lang.org/en/
+4. Rubygame: http://rubygame.org/
+5. Gosu: http://www.libgosu.org/
+
+
+== Caveats
+
+Ruby-SDL-FFI is still in EARLY DEVELOPMENT STAGES. That means:
+
+* It may not work correctly (or at all).
+* It may not be complete.
+* It may change drastically with no advanced notice.
+
+As such, this library is currently FOR THE ADVENTUROUS ONLY.
+If you are not willing to continuously update your code to
+match the new API, then you should wait until Ruby-SDL-FFI is
+more mature and stable (i.e. version 1.0+).
+
+
+== Requirements
+
+* SDL       >= 1.2.13
+* Nice-FFI  >= 0.2.0
+
+Optional:
+
+* SDL_image >= 1.2.7
+* SDL_gfx   >= 2.0.13
+* SDL_mixer >= 1.2.8
+* SDL_ttf   >= 2.0.9
+
+Ruby-SDL-FFI may work with older versions, but hasn't been tried on them.
+
+
+== License
+
+Ruby-SDL-FFI is licensed under the following terms (the "MIT License"):
+
+Copyright (c) 2009-2011  John Croisant
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

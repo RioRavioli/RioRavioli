@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Rubygame::Hotspot</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/rubygame/hotspot_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/hotspot.rb">lib/rubygame/hotspot.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-def_hotspot">#def_hotspot</a></li>
+          
+          <li><a href="#method-i-def_smartspot">#def_smartspot</a></li>
+          
+          <li><a href="#method-i-defined_hotspot-3F">#defined_hotspot?</a></li>
+          
+          <li><a href="#method-i-defined_smartspot-3F">#defined_smartspot?</a></li>
+          
+          <li><a href="#method-i-hotspot">#hotspot</a></li>
+          
+          <li><a href="#method-i-method_missing">#method_missing</a></li>
+          
+          <li><a href="#method-i-old_method_missing">#old_method_missing</a></li>
+          
+          <li><a href="#method-i-smartspot">#smartspot</a></li>
+          
+          <li><a href="#method-i-undef_hotspot">#undef_hotspot</a></li>
+          
+          <li><a href="#method-i-undef_smartspot">#undef_smartspot</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../CREDITS.html">CREDITS</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../ROADMAP.html">ROADMAP</a></li>
+        
+          <li class="file"><a href="../doc/custom_sdl_load_paths_rdoc.html">custom_sdl_load_paths.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/getting_started_rdoc.html">getting_started.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/keyboard_symbols_rdoc.html">keyboard_symbols.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/macosx_install_rdoc.html">macosx_install.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/managing_framerate_rdoc.html">managing_framerate.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/surface_palettes_rdoc.html">surface_palettes.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/windows_install_rdoc.html">windows_install.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Rubygame.html">Rubygame</a></li>
+        
+          <li><a href="../Rubygame/ActiveEvent.html">Rubygame::ActiveEvent</a></li>
+        
+          <li><a href="../Rubygame/Clock.html">Rubygame::Clock</a></li>
+        
+          <li><a href="../Rubygame/Color.html">Rubygame::Color</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorBase.html">Rubygame::Color::ColorBase</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSL.html">Rubygame::Color::ColorHSL</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSV.html">Rubygame::Color::ColorHSV</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorRGB.html">Rubygame::Color::ColorRGB</a></li>
+        
+          <li><a href="../Rubygame/Color/Palette.html">Rubygame::Color::Palette</a></li>
+        
+          <li><a href="../Rubygame/Event.html">Rubygame::Event</a></li>
+        
+          <li><a href="../Rubygame/EventActions.html">Rubygame::EventActions</a></li>
+        
+          <li><a href="../Rubygame/EventActions/BlockAction.html">Rubygame::EventActions::BlockAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MethodAction.html">Rubygame::EventActions::MethodAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MultiAction.html">Rubygame::EventActions::MultiAction</a></li>
+        
+          <li><a href="../Rubygame/EventHandler.html">Rubygame::EventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHandler/HasEventHandler.html">Rubygame::EventHandler::HasEventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHook.html">Rubygame::EventHook</a></li>
+        
+          <li><a href="../Rubygame/EventQueue.html">Rubygame::EventQueue</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers.html">Rubygame::EventTriggers</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AndTrigger.html">Rubygame::EventTriggers::AndTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AttrTrigger.html">Rubygame::EventTriggers::AttrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/BlockTrigger.html">Rubygame::EventTriggers::BlockTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/InstanceOfTrigger.html">Rubygame::EventTriggers::InstanceOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyPressTrigger.html">Rubygame::EventTriggers::KeyPressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyReleaseTrigger.html">Rubygame::EventTriggers::KeyReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KindOfTrigger.html">Rubygame::EventTriggers::KindOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseMoveTrigger.html">Rubygame::EventTriggers::MouseMoveTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MousePressTrigger.html">Rubygame::EventTriggers::MousePressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseReleaseTrigger.html">Rubygame::EventTriggers::MouseReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/OrTrigger.html">Rubygame::EventTriggers::OrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/TickTrigger.html">Rubygame::EventTriggers::TickTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/YesTrigger.html">Rubygame::EventTriggers::YesTrigger</a></li>
+        
+          <li><a href="../Rubygame/Events.html">Rubygame::Events</a></li>
+        
+          <li><a href="../Rubygame/Events/ClockTicked.html">Rubygame::Events::ClockTicked</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusGained.html">Rubygame::Events::InputFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusLost.html">Rubygame::Events::InputFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickAxisMoved.html">Rubygame::Events::JoystickAxisMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickBallMoved.html">Rubygame::Events::JoystickBallMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonEvent.html">Rubygame::Events::JoystickButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonPressed.html">Rubygame::Events::JoystickButtonPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonReleased.html">Rubygame::Events::JoystickButtonReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickHatMoved.html">Rubygame::Events::JoystickHatMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyPressed.html">Rubygame::Events::KeyPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyReleased.html">Rubygame::Events::KeyReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyboardEvent.html">Rubygame::Events::KeyboardEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseButtonEvent.html">Rubygame::Events::MouseButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusGained.html">Rubygame::Events::MouseFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusLost.html">Rubygame::Events::MouseFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseMoved.html">Rubygame::Events::MouseMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/MousePressed.html">Rubygame::Events::MousePressed</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseReleased.html">Rubygame::Events::MouseReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/QuitRequested.html">Rubygame::Events::QuitRequested</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowExposed.html">Rubygame::Events::WindowExposed</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowMinimized.html">Rubygame::Events::WindowMinimized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowResized.html">Rubygame::Events::WindowResized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowUnminimized.html">Rubygame::Events::WindowUnminimized</a></li>
+        
+          <li><a href="../Rubygame/ExposeEvent.html">Rubygame::ExposeEvent</a></li>
+        
+          <li><a href="../Rubygame/Ftor.html">Rubygame::Ftor</a></li>
+        
+          <li><a href="../Rubygame/GL.html">Rubygame::GL</a></li>
+        
+          <li><a href="../Rubygame/Hotspot.html">Rubygame::Hotspot</a></li>
+        
+          <li><a href="../Rubygame/JoyAxisEvent.html">Rubygame::JoyAxisEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyBallEvent.html">Rubygame::JoyBallEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyDownEvent.html">Rubygame::JoyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyHatEvent.html">Rubygame::JoyHatEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyUpEvent.html">Rubygame::JoyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Joystick.html">Rubygame::Joystick</a></li>
+        
+          <li><a href="../Rubygame/Key.html">Rubygame::Key</a></li>
+        
+          <li><a href="../Rubygame/KeyDownEvent.html">Rubygame::KeyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/KeyUpEvent.html">Rubygame::KeyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/MailQueue.html">Rubygame::MailQueue</a></li>
+        
+          <li><a href="../Rubygame/MediaBag.html">Rubygame::MediaBag</a></li>
+        
+          <li><a href="../Rubygame/Mixer.html">Rubygame::Mixer</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Music.html">Rubygame::Mixer::Music</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Sample.html">Rubygame::Mixer::Sample</a></li>
+        
+          <li><a href="../Rubygame/Mouse.html">Rubygame::Mouse</a></li>
+        
+          <li><a href="../Rubygame/MouseDownEvent.html">Rubygame::MouseDownEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseMotionEvent.html">Rubygame::MouseMotionEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseUpEvent.html">Rubygame::MouseUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Music.html">Rubygame::Music</a></li>
+        
+          <li><a href="../Rubygame/NamedResource.html">Rubygame::NamedResource</a></li>
+        
+          <li><a href="../Rubygame/NamedResource/NamedResourceClassMethods.html">Rubygame::NamedResource::NamedResourceClassMethods</a></li>
+        
+          <li><a href="../Rubygame/QuitEvent.html">Rubygame::QuitEvent</a></li>
+        
+          <li><a href="../Rubygame/Rect.html">Rubygame::Rect</a></li>
+        
+          <li><a href="../Rubygame/ResizeEvent.html">Rubygame::ResizeEvent</a></li>
+        
+          <li><a href="../Rubygame/SDLError.html">Rubygame::SDLError</a></li>
+        
+          <li><a href="../Rubygame/SFont.html">Rubygame::SFont</a></li>
+        
+          <li><a href="../Rubygame/Screen.html">Rubygame::Screen</a></li>
+        
+          <li><a href="../Rubygame/Sound.html">Rubygame::Sound</a></li>
+        
+          <li><a href="../Rubygame/Sprites.html">Rubygame::Sprites</a></li>
+        
+          <li><a href="../Rubygame/Sprites/DepthSortGroup.html">Rubygame::Sprites::DepthSortGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Group.html">Rubygame::Sprites::Group</a></li>
+        
+          <li><a href="../Rubygame/Sprites/LimitGroup.html">Rubygame::Sprites::LimitGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Sprite.html">Rubygame::Sprites::Sprite</a></li>
+        
+          <li><a href="../Rubygame/Sprites/UpdateGroup.html">Rubygame::Sprites::UpdateGroup</a></li>
+        
+          <li><a href="../Rubygame/Surface.html">Rubygame::Surface</a></li>
+        
+          <li><a href="../Rubygame/TTF.html">Rubygame::TTF</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Rubygame::Hotspot</h1>
+
+    <div id="description" class="description">
+      
+<p><b>NOTE</b>: you must require 'rubygame/hotspot' manually to gain access to
+<a href="Hotspot.html">Rubygame::Hotspot</a>. It is not imported with <a
+href="../Rubygame.html">Rubygame</a> by default!</p>
+
+<p><a href="Hotspot.html">Hotspot</a> is a mixin module to extend an object
+with "hotspots": custom, named, relative position offsets. Hotspots can be
+defined relative to the origin, to another hotspot, or to the results of a
+method (via a  'smart' hotspot).</p>
+
+<p>There are two types of hotspots, simple and ‘smart’.</p>
+
+<p>Simple hotspots are an Array of three values, an x offset, a y offset, and
+the label of another hotspot relative to which this hotspot is defined. If
+the last argument is omitted or nil, the hotspot is defined relative to the
+true origin (i.e. (0,0), the top-left corner of the <a
+href="Screen.html">Screen</a>). See new_hotspot.</p>
+
+<p>Smart hotspots, or ‘smartspots’ for short, act as a proxy to the object’s
+methods. Each time a smartspot is evaluated, it calls the object’s method
+of the same name as the smartspot, and uses the results of the method as x
+and y offsets. Therefore, smartspots only work for methods which:</p>
+
+<pre>1. take no arguments
+2. return an Array with 2 Numeric values (or something else that responds
+   to #[]</pre>
+
+<p>By adding a smartspot to a <a href="Rect.html">Rect</a>, for example, you
+could define simple  hotspots relative to its <a
+href="Rect.html#method-i-center">Rect#center</a>; then, even if the <a
+href="Rect.html">Rect</a> moves or changes size, the smartspot will always
+to evaluate to its true center. See new_smartspot.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="def_hotspot-method" class="method-detail ">
+          <a name="method-i-def_hotspot"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">def_hotspot label => [x,y,parent]</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Define <tt>label</tt> as a simple hotspot, a custom reference coordinate 
+point <tt>x</tt> pixels to the right and <tt>y</tt> pixels below the
+hotspot whose label is <tt>parent</tt>. You may omit <tt>parent</tt>, in
+which case the hotspot will evaluate relative to the origin, i.e. the
+top-left corner of the <a href="Screen.html">Screen</a>.</p>
+
+<p>See also <a href="Hotspot.html#method-i-def_smartspot">def_smartspot</a> to
+create a ‘smart hotspot’.</p>
+
+<p><tt>label</tt> must be usable as a key in a Hash table. Additionally, if
+you want <tt>myobject.{label}</tt> to work like 
+<tt>myobject.hotspot({label})</tt>, <tt>label</tt> must be a :symbol.</p>
+
+<p><b>IMPORTANT</b>: Do NOT create circular hotspot chains (e.g. a -&gt; b
+-&gt; a). Doing so will raise SystemStackError when <a
+href="Hotspot.html#method-i-hotspot">hotspot</a> is asked to evaluate any
+hotspot in that chain. Hotspots are not yet smart enough to detect circular
+chains.</p>
+
+<p>Hotspots can be defined in any order, as long as you define all the
+hotspots in a chain before that chain is evaluated with <a
+href="Hotspot.html#method-i-hotspot">hotspot</a>.</p>
+
+<p>You may define multiple hotspots simultaneously by separating the 
+definitions by commas. For example:</p>
+
+<pre>def_hotspot label =&gt; [x,y,parent], label2 =&gt; [x,y,parent]</pre>
+
+<p>Users of the Rake library will recognize this style of syntax. It is simply
+constructing a Hash object and passing it as the only argument to
+new_hotspot. The above code is equivalent to:</p>
+
+<pre>def_hotspot( { label =&gt; [x,y,parent], label2 =&gt; [x,y,parent] } )</pre>
+            
+
+            
+            <div class="method-source-code" id="def_hotspot-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/hotspot.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">def_hotspot</span>(<span class="ruby-identifier">dfn</span>)
+  <span class="ruby-ivar">@hotspots</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">dfn</span>)
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@hotspots</span>
+    <span class="ruby-ivar">@hotspots</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">retry</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- def_hotspot-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- def_hotspot-method -->
+
+      
+        <div id="def_smartspot-method" class="method-detail ">
+          <a name="method-i-def_smartspot"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">def_smartspot</span><span
+              class="method-args">(*labels)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Define each label in +*labels+ as a smartspot (‘smart hotspot’).</p>
+
+<p>To prevent outside objects from abusing hotspots to call arbitrary 
+methods, a smartspot must be defined for each method before it can be  used
+as a parent to a hotspot.</p>
+
+<p>The label must be a :symbol, and it must be identical to the name of the
+method to be called.</p>
+            
+
+            
+            <div class="method-source-code" id="def_smartspot-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/hotspot.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">def_smartspot</span>(*<span class="ruby-identifier">labels</span>)
+  <span class="ruby-ivar">@smartspots</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">labels</span>.<span class="ruby-identifier">flatten</span>
+  <span class="ruby-ivar">@smartspots</span>.<span class="ruby-identifier">uniq!</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@smartspots</span>
+    <span class="ruby-ivar">@smartspots</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">retry</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- def_smartspot-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- def_smartspot-method -->
+
+      
+        <div id="defined_hotspot-3F-method" class="method-detail ">
+          <a name="method-i-defined_hotspot-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">defined_hotspot?</span><span
+              class="method-args">(label)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if <tt>label</tt> has been defined as a simple hotspot.</p>
+            
+
+            
+            <div class="method-source-code" id="defined_hotspot-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/hotspot.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">defined_hotspot?</span>(<span class="ruby-identifier">label</span>)
+  <span class="ruby-ivar">@hotspots</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">label</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@hotspots</span>
+    <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- defined_hotspot-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- defined_hotspot-3F-method -->
+
+      
+        <div id="defined_smartspot-3F-method" class="method-detail ">
+          <a name="method-i-defined_smartspot-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">defined_smartspot?</span><span
+              class="method-args">(label)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if <tt>label</tt> has been defined as a smartspot.</p>
+            
+
+            
+            <div class="method-source-code" id="defined_smartspot-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/hotspot.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">defined_smartspot?</span>(<span class="ruby-identifier">label</span>)
+  <span class="ruby-ivar">@smartspots</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">label</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@smartspots</span>
+    <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- defined_smartspot-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- defined_smartspot-3F-method -->
+
+      
+        <div id="hotspot-method" class="method-detail ">
+          <a name="method-i-hotspot"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">hotspot(label)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Returns the absolute coordinates represented by the hotspot <tt>label</tt>.
+Will return nil if the hotspot (or one of its ancestors) does not exist.</p>
+
+<p>This method will recursively evaluate the hotspot, it’s parent hotspot (if
+any), and so on, until a parent-less hotspot or a smartspot is found.</p>
+
+<p>(<b>NOTE</b>: this means that a circular chains (e.g. a -&gt; b -&gt; a)
+will keep going around and around until the ruby interpreter raises
+SystemStackError!)</p>
+
+<p>The final value returned by this method will be the vector component sum of
+all the hotspots in the chain. For example, if you have this chain:</p>
+
+<pre>:a =&gt; [1, 2, :b]
+:b =&gt; [4, 8, :c]
+:c =&gt; [16,32]</pre>
+
+<p>the value returned for <tt>:a</tt> would be [21,42], i.e. [1+4+16, 2+8+32]</p>
+            
+
+            
+            <div class="method-source-code" id="hotspot-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/hotspot.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hotspot</span>(<span class="ruby-identifier">label</span>,<span class="ruby-identifier">x</span>=<span class="ruby-value">0</span>,<span class="ruby-identifier">y</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">a</span> = <span class="ruby-ivar">@hotspots</span>[<span class="ruby-identifier">label</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">nil?</span>              <span class="ruby-comment"># has no parent</span>
+    [<span class="ruby-identifier">x</span><span class="ruby-operator">+</span><span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>],<span class="ruby-identifier">y</span><span class="ruby-operator">+</span><span class="ruby-identifier">a</span>[<span class="ruby-value">1</span>]]
+  <span class="ruby-keyword">else</span>                      <span class="ruby-comment"># has a parent</span>
+    <span class="ruby-identifier">hotspot</span>(<span class="ruby-identifier">a</span>[<span class="ruby-value">2</span>],<span class="ruby-identifier">x</span><span class="ruby-operator">+</span><span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>],<span class="ruby-identifier">y</span><span class="ruby-operator">+</span><span class="ruby-identifier">a</span>[<span class="ruby-value">1</span>])
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span>(<span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@hotspots</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">smartspot</span>(<span class="ruby-identifier">label</span>,<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hotspot-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hotspot-method -->
+
+      
+        <div id="method_missing-method" class="method-detail ">
+          <a name="method-i-method_missing"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">method_missing</span><span
+              class="method-args">(symbol,*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="method_missing-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/hotspot.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">symbol</span>,*<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">have_hotspot?</span>(<span class="ruby-identifier">symbol</span>) 
+    <span class="ruby-identifier">hotspot</span>(<span class="ruby-identifier">symbol</span>)
+  <span class="ruby-keyword">else</span> <span class="ruby-identifier">old_method_missing</span>(<span class="ruby-identifier">symbol</span>,*<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- method_missing-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Hotspot.html#method-i-old_method_missing">old_method_missing</a>
+          </div>
+          
+
+          
+        </div><!-- method_missing-method -->
+
+      
+        <div id="old_method_missing-method" class="method-detail method-alias">
+          <a name="method-i-old_method_missing"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">old_method_missing</span><span
+              class="method-args">(symbol,*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Hotspot.html#method-i-method_missing">method_missing</a>
+          </div>
+          
+        </div><!-- old_method_missing-method -->
+
+      
+        <div id="smartspot-method" class="method-detail ">
+          <a name="method-i-smartspot"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">smartspot(label)</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Evaluate the smartspot <tt>label</tt>, calling the method of the same name
+as <tt>label</tt>. Will return nil if no such smartspot has been defined.</p>
+            
+
+            
+            <div class="method-source-code" id="smartspot-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/hotspot.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">smartspot</span>(<span class="ruby-identifier">label</span>,<span class="ruby-identifier">x</span>=<span class="ruby-value">0</span>,<span class="ruby-identifier">y</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@smartspots</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">label</span>
+    <span class="ruby-identifier">a</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">label</span>)
+    [<span class="ruby-identifier">x</span><span class="ruby-operator">+</span><span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>],<span class="ruby-identifier">y</span><span class="ruby-operator">+</span><span class="ruby-identifier">a</span>[<span class="ruby-value">1</span>]]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@smartspots</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- smartspot-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- smartspot-method -->
+
+      
+        <div id="undef_hotspot-method" class="method-detail ">
+          <a name="method-i-undef_hotspot"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">undef_hotspot</span><span
+              class="method-args">(*labels)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Remove all simple hotspots whose label is included in +*labels+.</p>
+            
+
+            
+            <div class="method-source-code" id="undef_hotspot-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/hotspot.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">undef_hotspot</span>(*<span class="ruby-identifier">labels</span>)
+  <span class="ruby-identifier">labels</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@hotspots</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">l</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- undef_hotspot-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- undef_hotspot-method -->
+
+      
+        <div id="undef_smartspot-method" class="method-detail ">
+          <a name="method-i-undef_smartspot"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">undef_smartspot</span><span
+              class="method-args">(*labels)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Remove all smartspots whose label is included in +*labels+.</p>
+            
+
+            
+            <div class="method-source-code" id="undef_smartspot-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/hotspot.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">undef_smartspot</span>(*<span class="ruby-identifier">labels</span>)
+  <span class="ruby-ivar">@smartspots</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">labels</span>.<span class="ruby-identifier">flatten</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- undef_smartspot-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- undef_smartspot-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

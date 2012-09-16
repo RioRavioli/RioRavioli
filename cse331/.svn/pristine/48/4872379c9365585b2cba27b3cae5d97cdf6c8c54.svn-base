@@ -1,0 +1,102 @@
+package hw7.test;
+import hw7.*;
+
+import org.junit.Test;
+import org.junit.Before;
+import static org.junit.Assert.*;
+
+import java.util.*;
+
+public class CampusParserTest {
+//	List<Building> buildings;
+//	Map<Point, List<Path>> paths;
+	@Test
+	public void testSize() {
+		List<Building> buildings = CampusParser.parseBuildings("hw7/data/testBuilding.dat");
+		System.out.println("test");
+		assertEquals(null, buildings.size());
+	}
+
+	/*
+	@Test
+	public void testElements() {
+		List<Building> buildings = CampusParser.parseBuildings("hw7/data/testBuilding.dat");
+		assertTrue(buildings.get(0).getShortName().equals("RB") || 
+					  buildings.get(0).getShortName().equals("KOU (R)") ||
+					  buildings.get(0).getShortName().equals("THUNDERS"));
+	}
+
+	@Test
+	public void testParseLongName() {
+		List<Building> buildings = CampusParser.parseBuildings("hw7/data/testBuilding.dat");
+		Building building = null;
+		for (Building b : buildings) {
+			if (b.getShortName().equals("KOU (R)")) {
+				building = b;
+			}	
+		}
+		assertEquals("Kouno Yosuke", building.getLongName());
+	}
+
+	@Test
+	public void testParsePointX() {
+		List<Building> buildings = CampusParser.parseBuildings("hw7/data/testBuilding.dat");
+		Building building = null;
+		for (Building b : buildings) {
+			if (b.getShortName().equals("KOU (R)")) {
+				building = b;
+			}	
+		}
+		assertEquals(8.0, building.getPoint().getX(), 0.00001);
+	}
+*/
+	@Test
+	public void testParsePointY() {
+		List<Building> buildings = CampusParser.parseBuildings("hw7/data/testBuilding.dat");
+		Building building = null;
+		for (Building b : buildings) {
+			if (b.getShortName().equals("KOU (R)")) {
+				building = b;
+			}	
+		}
+		assertEquals(3.0, building.getPoint().getY(), 0.00001);
+	}
+
+	@Test
+	public void testPathCount() {
+		Map<Point, List<Path>> paths = CampusParser.parsePaths("hw7/data/testPath.dat");
+		assertEquals(2, paths.size());
+	}
+
+	@Test
+	public void testOtherPointX() {
+		Map<Point, List<Path>> paths = CampusParser.parsePaths("hw7/data/testPath.dat");
+		List<List<Path>> otherPoints = new ArrayList<List<Path>>();
+		for (Point p : paths.keySet()) {
+			otherPoints.add(paths.get(p));
+		}
+		List<Path> list;
+		if (otherPoints.get(1).size() == 2) {
+			list = otherPoints.get(1);
+		} else {
+			list = otherPoints.get(0);
+		}
+		assertEquals(5.2, list.get(0).getEnd().getX(), 0.00001);
+	}
+
+	@Test
+	public void testOtherDistance() {
+		Map<Point, List<Path>> paths = CampusParser.parsePaths("hw7/data/testPath.dat");
+		List<List<Path>> otherPoints = new ArrayList<List<Path>>();
+		for (Point p : paths.keySet()) {
+			otherPoints.add(paths.get(p));
+		}
+		List<Path> list;
+		if (otherPoints.get(1).size() == 2) {
+			list = otherPoints.get(1);
+		} else {
+			list = otherPoints.get(0);
+		}
+		assertEquals(3.222, list.get(0).getDistance(), 0.00001);
+	}
+}

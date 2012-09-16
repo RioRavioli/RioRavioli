@@ -1,0 +1,10 @@
+Rio Bacon
+
+First, the important thing is to test every method, so tests for each method were sure to be
+written. For the test cases, I start by writing very simple test cases to make sure the graph
+works with small amounts of data, such as one node. Then I slowly increase the complexity,
+as I also start to include usage of other methods. 
+	I try to think of certain orders the methods could potentially be called when thinking of
+complex test cases. Because some of the more complex tests require multiple methods, it is a
+good chance to check multiple methods, to make sure they are all functioning properly.
+	

@@ -1,0 +1,12 @@
+# Load the Marvel dataset and search for an existing path.
+# To run this test, you will need to have downloaded the marvel dataset and
+# place it in hw6/test/marvel.tsv.
+
+loaded graph marvel
+
+path from BEAST/HENRY &HANK& P to WISDOM, PETER:
+BEAST/HENRY &HANK& P to CYCLOPS/SCOTT SUMMER with weight 0.003
+CYCLOPS/SCOTT SUMMER to WOLVERINE/LOGAN  with weight 0.004
+WOLVERINE/LOGAN  to SHADOWCAT/KATHERINE  with weight 0.006
+SHADOWCAT/KATHERINE  to WISDOM, PETER with weight 0.026
+total cost: 0.039

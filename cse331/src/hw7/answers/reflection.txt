@@ -1,0 +1,10 @@
+Rio Bacon
+
+a. problem 1: 8 hours
+	problem 2: 5 hours
+	problem 3: 5 hours
+	problem 4: 3 hours
+
+b. I could have made the shortest path finding algorithm reusable in the last homework.
+c. Staff could have had more detailed explanations in homework.
+d. I wish I knew better how to work with interfaces, even command line ones.

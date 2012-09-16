@@ -1,0 +1,2170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Frusdl::SDL</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/frusdl/sdl/pixelformat_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/frusdl/sdl/pixelformat.rb">lib/frusdl/sdl/pixelformat.rb</a></li>
+          
+            <li><a href="../lib/frusdl/sdl/screen_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/frusdl/sdl/screen.rb">lib/frusdl/sdl/screen.rb</a></li>
+          
+            <li><a href="../lib/frusdl/sdl/videoinfo_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/frusdl/sdl/videoinfo.rb">lib/frusdl/sdl/videoinfo.rb</a></li>
+          
+            <li><a href="../lib/frusdl/sdl_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/frusdl/sdl.rb">lib/frusdl/sdl.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="SDL/Error.html">Frusdl::SDL::Error</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/PixelFormat.html">Frusdl::SDL::PixelFormat</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/Screen.html">Frusdl::SDL::Screen</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="SDL/VideoInfo.html">Frusdl::SDL::VideoInfo</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-getenv">::getenv</a></li>
+          
+          <li><a href="#method-c-init">::init</a></li>
+          
+          <li><a href="#method-c-inited_system">::inited_system</a></li>
+          
+          <li><a href="#method-c-putenv">::putenv</a></li>
+          
+          <li><a href="#method-c-quit">::quit</a></li>
+          
+          <li><a href="#method-i-raise_error">#raise_error</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="Low/SDL.html">Frusdl::Low::SDL</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Frusdl.html">Frusdl</a></li>
+        
+          <li><a href="../Frusdl/Low.html">Frusdl::Low</a></li>
+        
+          <li><a href="../Frusdl/Low/GFX.html">Frusdl::Low::GFX</a></li>
+        
+          <li><a href="../Frusdl/Low/IMG.html">Frusdl::Low::IMG</a></li>
+        
+          <li><a href="../Frusdl/Low/MIX.html">Frusdl::Low::MIX</a></li>
+        
+          <li><a href="../Frusdl/Low/MIX/Mix_Chunk.html">Frusdl::Low::MIX::Mix_Chunk</a></li>
+        
+          <li><a href="../Frusdl/Low/MIX/Mix_Music.html">Frusdl::Low::MIX::Mix_Music</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL.html">Frusdl::Low::SDL</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_ActiveEvent.html">Frusdl::Low::SDL::SDL_ActiveEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_AudioSpec.html">Frusdl::Low::SDL::SDL_AudioSpec</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_Color.html">Frusdl::Low::SDL::SDL_Color</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_Cursor.html">Frusdl::Low::SDL::SDL_Cursor</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_Event.html">Frusdl::Low::SDL::SDL_Event</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_ExposeEvent.html">Frusdl::Low::SDL::SDL_ExposeEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_JoyAxisEvent.html">Frusdl::Low::SDL::SDL_JoyAxisEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_JoyBallEvent.html">Frusdl::Low::SDL::SDL_JoyBallEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_JoyButtonEvent.html">Frusdl::Low::SDL::SDL_JoyButtonEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_JoyHatEvent.html">Frusdl::Low::SDL::SDL_JoyHatEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_Joystick.html">Frusdl::Low::SDL::SDL_Joystick</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_KeyboardEvent.html">Frusdl::Low::SDL::SDL_KeyboardEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_MouseButtonEvent.html">Frusdl::Low::SDL::SDL_MouseButtonEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_MouseMotionEvent.html">Frusdl::Low::SDL::SDL_MouseMotionEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_Palette.html">Frusdl::Low::SDL::SDL_Palette</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_PixelFormat.html">Frusdl::Low::SDL::SDL_PixelFormat</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_QuitEvent.html">Frusdl::Low::SDL::SDL_QuitEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_RWops.html">Frusdl::Low::SDL::SDL_RWops</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_Rect.html">Frusdl::Low::SDL::SDL_Rect</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_ResizeEvent.html">Frusdl::Low::SDL::SDL_ResizeEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_Surface.html">Frusdl::Low::SDL::SDL_Surface</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_UserEvent.html">Frusdl::Low::SDL::SDL_UserEvent</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_VideoInfo.html">Frusdl::Low::SDL::SDL_VideoInfo</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_keysym.html">Frusdl::Low::SDL::SDL_keysym</a></li>
+        
+          <li><a href="../Frusdl/Low/SDL/SDL_version.html">Frusdl::Low::SDL::SDL_version</a></li>
+        
+          <li><a href="../Frusdl/Low/SGE.html">Frusdl::Low::SGE</a></li>
+        
+          <li><a href="../Frusdl/Low/SGE/Sge_cdata.html">Frusdl::Low::SGE::Sge_cdata</a></li>
+        
+          <li><a href="../Frusdl/Low/TTF.html">Frusdl::Low::TTF</a></li>
+        
+          <li><a href="../Frusdl/Low/TTF/TTF_Font.html">Frusdl::Low::TTF::TTF_Font</a></li>
+        
+          <li><a href="../Frusdl/SDL.html">Frusdl::SDL</a></li>
+        
+          <li><a href="../Frusdl/SDL/Error.html">Frusdl::SDL::Error</a></li>
+        
+          <li><a href="../Frusdl/SDL/PixelFormat.html">Frusdl::SDL::PixelFormat</a></li>
+        
+          <li><a href="../Frusdl/SDL/Screen.html">Frusdl::SDL::Screen</a></li>
+        
+          <li><a href="../Frusdl/SDL/VideoInfo.html">Frusdl::SDL::VideoInfo</a></li>
+        
+          <li><a href="../Frusdl/Wrap.html">Frusdl::Wrap</a></li>
+        
+          <li><a href="../Frusdl/Wrap/ClassMethods.html">Frusdl::Wrap::ClassMethods</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Frusdl::SDL</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="AUDIO_S16">AUDIO_S16</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="AUDIO_S16LSB">AUDIO_S16LSB</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="AUDIO_S16MSB">AUDIO_S16MSB</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="AUDIO_S16SYS">AUDIO_S16SYS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="AUDIO_S8">AUDIO_S8</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="AUDIO_U16">AUDIO_U16</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="AUDIO_U16LSB">AUDIO_U16LSB</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="AUDIO_U16MSB">AUDIO_U16MSB</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="AUDIO_U16SYS">AUDIO_U16SYS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="AUDIO_U8">AUDIO_U8</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="INIT_AUDIO">INIT_AUDIO</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="INIT_CDROM">INIT_CDROM</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="INIT_EVENTTHREAD">INIT_EVENTTHREAD</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="INIT_EVERYTHING">INIT_EVERYTHING</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="INIT_JOYSTICK">INIT_JOYSTICK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="INIT_NOPARACHUTE">INIT_NOPARACHUTE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="INIT_TIMER">INIT_TIMER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="INIT_VIDEO">INIT_VIDEO</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_ALT">KMOD_ALT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_CAPS">KMOD_CAPS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_CTRL">KMOD_CTRL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_LALT">KMOD_LALT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_LCTRL">KMOD_LCTRL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_LMETA">KMOD_LMETA</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_LSHIFT">KMOD_LSHIFT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_META">KMOD_META</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_MODE">KMOD_MODE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_NONE">KMOD_NONE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_NUM">KMOD_NUM</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_RALT">KMOD_RALT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_RCTRL">KMOD_RCTRL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_RESERVED">KMOD_RESERVED</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_RMETA">KMOD_RMETA</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_RSHIFT">KMOD_RSHIFT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="KMOD_SHIFT">KMOD_SHIFT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="RW_SEEK_CUR">RW_SEEK_CUR</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="RW_SEEK_END">RW_SEEK_END</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="RW_SEEK_SET">RW_SEEK_SET</a></dt>
+          
+          <dd class="description"><p>Phew, all done! ^_^</p></dd>
+          
+        
+          <dt><a name="SDLK_0">SDLK_0</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_1">SDLK_1</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_2">SDLK_2</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_3">SDLK_3</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_4">SDLK_4</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_5">SDLK_5</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_6">SDLK_6</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_7">SDLK_7</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_8">SDLK_8</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_9">SDLK_9</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_AMPERSAND">SDLK_AMPERSAND</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_ASTERISK">SDLK_ASTERISK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_AT">SDLK_AT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_BACKQUOTE">SDLK_BACKQUOTE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_BACKSLASH">SDLK_BACKSLASH</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_BACKSPACE">SDLK_BACKSPACE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_BREAK">SDLK_BREAK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_CAPSLOCK">SDLK_CAPSLOCK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_CARET">SDLK_CARET</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_CLEAR">SDLK_CLEAR</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_COLON">SDLK_COLON</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_COMMA">SDLK_COMMA</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_COMPOSE">SDLK_COMPOSE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_DELETE">SDLK_DELETE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_DOLLAR">SDLK_DOLLAR</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_DOWN">SDLK_DOWN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_END">SDLK_END</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_EQUALS">SDLK_EQUALS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_ESCAPE">SDLK_ESCAPE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_EURO">SDLK_EURO</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_EXCLAIM">SDLK_EXCLAIM</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F1">SDLK_F1</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F10">SDLK_F10</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F11">SDLK_F11</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F12">SDLK_F12</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F13">SDLK_F13</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F14">SDLK_F14</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F15">SDLK_F15</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F2">SDLK_F2</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F3">SDLK_F3</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F4">SDLK_F4</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F5">SDLK_F5</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F6">SDLK_F6</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F7">SDLK_F7</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F8">SDLK_F8</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_F9">SDLK_F9</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_FIRST">SDLK_FIRST</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_GREATER">SDLK_GREATER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_HASH">SDLK_HASH</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_HELP">SDLK_HELP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_HOME">SDLK_HOME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_INSERT">SDLK_INSERT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP0">SDLK_KP0</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP1">SDLK_KP1</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP2">SDLK_KP2</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP3">SDLK_KP3</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP4">SDLK_KP4</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP5">SDLK_KP5</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP6">SDLK_KP6</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP7">SDLK_KP7</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP8">SDLK_KP8</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP9">SDLK_KP9</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP_DIVIDE">SDLK_KP_DIVIDE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP_ENTER">SDLK_KP_ENTER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP_EQUALS">SDLK_KP_EQUALS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP_MINUS">SDLK_KP_MINUS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP_MULTIPLY">SDLK_KP_MULTIPLY</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP_PERIOD">SDLK_KP_PERIOD</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_KP_PLUS">SDLK_KP_PLUS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_LALT">SDLK_LALT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_LAST">SDLK_LAST</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_LCTRL">SDLK_LCTRL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_LEFT">SDLK_LEFT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_LEFTBRACKET">SDLK_LEFTBRACKET</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_LEFTPAREN">SDLK_LEFTPAREN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_LESS">SDLK_LESS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_LMETA">SDLK_LMETA</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_LSHIFT">SDLK_LSHIFT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_LSUPER">SDLK_LSUPER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_MENU">SDLK_MENU</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_MINUS">SDLK_MINUS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_MODE">SDLK_MODE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_NUMLOCK">SDLK_NUMLOCK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_PAGEDOWN">SDLK_PAGEDOWN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_PAGEUP">SDLK_PAGEUP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_PAUSE">SDLK_PAUSE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_PERIOD">SDLK_PERIOD</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_PLUS">SDLK_PLUS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_POWER">SDLK_POWER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_PRINT">SDLK_PRINT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_QUESTION">SDLK_QUESTION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_QUOTE">SDLK_QUOTE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_QUOTEDBL">SDLK_QUOTEDBL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_RALT">SDLK_RALT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_RCTRL">SDLK_RCTRL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_RETURN">SDLK_RETURN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_RIGHT">SDLK_RIGHT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_RIGHTBRACKET">SDLK_RIGHTBRACKET</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_RIGHTPAREN">SDLK_RIGHTPAREN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_RMETA">SDLK_RMETA</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_RSHIFT">SDLK_RSHIFT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_RSUPER">SDLK_RSUPER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_SCROLLOCK">SDLK_SCROLLOCK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_SEMICOLON">SDLK_SEMICOLON</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_SLASH">SDLK_SLASH</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_SPACE">SDLK_SPACE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_SYSREQ">SDLK_SYSREQ</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_TAB">SDLK_TAB</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_UNDERSCORE">SDLK_UNDERSCORE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_UNDO">SDLK_UNDO</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_UNKNOWN">SDLK_UNKNOWN</a></dt>
+          
+          <dd class="description"><p>SDL_keysym (lots of boring constants ahead :p )</p></dd>
+          
+        
+          <dt><a name="SDLK_UP">SDLK_UP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_0">SDLK_WORLD_0</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_1">SDLK_WORLD_1</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_10">SDLK_WORLD_10</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_11">SDLK_WORLD_11</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_12">SDLK_WORLD_12</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_13">SDLK_WORLD_13</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_14">SDLK_WORLD_14</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_15">SDLK_WORLD_15</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_16">SDLK_WORLD_16</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_17">SDLK_WORLD_17</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_18">SDLK_WORLD_18</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_19">SDLK_WORLD_19</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_2">SDLK_WORLD_2</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_20">SDLK_WORLD_20</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_21">SDLK_WORLD_21</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_22">SDLK_WORLD_22</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_23">SDLK_WORLD_23</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_24">SDLK_WORLD_24</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_25">SDLK_WORLD_25</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_26">SDLK_WORLD_26</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_27">SDLK_WORLD_27</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_28">SDLK_WORLD_28</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_29">SDLK_WORLD_29</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_3">SDLK_WORLD_3</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_30">SDLK_WORLD_30</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_31">SDLK_WORLD_31</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_32">SDLK_WORLD_32</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_33">SDLK_WORLD_33</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_34">SDLK_WORLD_34</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_35">SDLK_WORLD_35</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_36">SDLK_WORLD_36</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_37">SDLK_WORLD_37</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_38">SDLK_WORLD_38</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_39">SDLK_WORLD_39</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_4">SDLK_WORLD_4</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_40">SDLK_WORLD_40</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_41">SDLK_WORLD_41</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_42">SDLK_WORLD_42</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_43">SDLK_WORLD_43</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_44">SDLK_WORLD_44</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_45">SDLK_WORLD_45</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_46">SDLK_WORLD_46</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_47">SDLK_WORLD_47</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_48">SDLK_WORLD_48</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_49">SDLK_WORLD_49</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_5">SDLK_WORLD_5</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_50">SDLK_WORLD_50</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_51">SDLK_WORLD_51</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_52">SDLK_WORLD_52</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_53">SDLK_WORLD_53</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_54">SDLK_WORLD_54</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_55">SDLK_WORLD_55</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_56">SDLK_WORLD_56</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_57">SDLK_WORLD_57</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_58">SDLK_WORLD_58</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_59">SDLK_WORLD_59</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_6">SDLK_WORLD_6</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_60">SDLK_WORLD_60</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_61">SDLK_WORLD_61</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_62">SDLK_WORLD_62</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_63">SDLK_WORLD_63</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_64">SDLK_WORLD_64</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_65">SDLK_WORLD_65</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_66">SDLK_WORLD_66</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_67">SDLK_WORLD_67</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_68">SDLK_WORLD_68</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_69">SDLK_WORLD_69</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_7">SDLK_WORLD_7</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_70">SDLK_WORLD_70</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_71">SDLK_WORLD_71</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_72">SDLK_WORLD_72</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_73">SDLK_WORLD_73</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_74">SDLK_WORLD_74</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_75">SDLK_WORLD_75</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_76">SDLK_WORLD_76</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_77">SDLK_WORLD_77</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_78">SDLK_WORLD_78</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_79">SDLK_WORLD_79</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_8">SDLK_WORLD_8</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_80">SDLK_WORLD_80</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_81">SDLK_WORLD_81</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_82">SDLK_WORLD_82</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_83">SDLK_WORLD_83</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_84">SDLK_WORLD_84</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_85">SDLK_WORLD_85</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_86">SDLK_WORLD_86</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_87">SDLK_WORLD_87</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_88">SDLK_WORLD_88</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_89">SDLK_WORLD_89</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_9">SDLK_WORLD_9</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_90">SDLK_WORLD_90</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_91">SDLK_WORLD_91</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_92">SDLK_WORLD_92</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_93">SDLK_WORLD_93</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_94">SDLK_WORLD_94</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_WORLD_95">SDLK_WORLD_95</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_a">SDLK_a</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_b">SDLK_b</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_c">SDLK_c</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_d">SDLK_d</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_e">SDLK_e</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_f">SDLK_f</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_g">SDLK_g</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_h">SDLK_h</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_i">SDLK_i</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_j">SDLK_j</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_k">SDLK_k</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_l">SDLK_l</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_m">SDLK_m</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_n">SDLK_n</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_o">SDLK_o</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_p">SDLK_p</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_q">SDLK_q</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_r">SDLK_r</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_s">SDLK_s</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_t">SDLK_t</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_u">SDLK_u</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_v">SDLK_v</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_w">SDLK_w</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_x">SDLK_x</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_y">SDLK_y</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDLK_z">SDLK_z</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_ACTIVEEVENT">SDL_ACTIVEEVENT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_ANYFORMAT">SDL_ANYFORMAT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_ASYNCBLIT">SDL_ASYNCBLIT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_AUDIO_PAUSED">SDL_AUDIO_PAUSED</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_AUDIO_PLAYING">SDL_AUDIO_PLAYING</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_AUDIO_STOPPED">SDL_AUDIO_STOPPED</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_BYTEORDER">SDL_BYTEORDER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_DEFAULT_REPEAT_DELAY">SDL_DEFAULT_REPEAT_DELAY</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_DEFAULT_REPEAT_INTERVAL">SDL_DEFAULT_REPEAT_INTERVAL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_DOUBLEBUF">SDL_DOUBLEBUF</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_EVENT_RESERVED2">SDL_EVENT_RESERVED2</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_EVENT_RESERVED3">SDL_EVENT_RESERVED3</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_EVENT_RESERVED4">SDL_EVENT_RESERVED4</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_EVENT_RESERVED5">SDL_EVENT_RESERVED5</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_EVENT_RESERVED6">SDL_EVENT_RESERVED6</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_EVENT_RESERVED7">SDL_EVENT_RESERVED7</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_EVENT_RESERVEDA">SDL_EVENT_RESERVEDA</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_EVENT_RESERVEDB">SDL_EVENT_RESERVEDB</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_FULLSCREEN">SDL_FULLSCREEN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_GRAB_FULLSCREEN">SDL_GRAB_FULLSCREEN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_GRAB_OFF">SDL_GRAB_OFF</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_GRAB_ON">SDL_GRAB_ON</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_GRAB_QUERY">SDL_GRAB_QUERY</a></dt>
+          
+          <dd class="description"><p>And some more for mouse grabbing</p></dd>
+          
+        
+          <dt><a name="SDL_HAT_CENTERED">SDL_HAT_CENTERED</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_HAT_DOWN">SDL_HAT_DOWN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_HAT_LEFT">SDL_HAT_LEFT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_HAT_LEFTDOWN">SDL_HAT_LEFTDOWN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_HAT_LEFTUP">SDL_HAT_LEFTUP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_HAT_RIGHT">SDL_HAT_RIGHT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_HAT_RIGHTDOWN">SDL_HAT_RIGHTDOWN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_HAT_RIGHTUP">SDL_HAT_RIGHTUP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_HAT_UP">SDL_HAT_UP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_HWPALETTE">SDL_HWPALETTE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_HWSURFACE">SDL_HWSURFACE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_JOYAXISMOTION">SDL_JOYAXISMOTION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_JOYBALLMOTION">SDL_JOYBALLMOTION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_JOYBUTTONDOWN">SDL_JOYBUTTONDOWN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_JOYBUTTONUP">SDL_JOYBUTTONUP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_JOYHATMOTION">SDL_JOYHATMOTION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_KEYDOWN">SDL_KEYDOWN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_KEYUP">SDL_KEYUP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_LIL_ENDIAN">SDL_LIL_ENDIAN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_MIX_MAXVOLUME">SDL_MIX_MAXVOLUME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_MOUSEBUTTONDOWN">SDL_MOUSEBUTTONDOWN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_MOUSEBUTTONUP">SDL_MOUSEBUTTONUP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_MOUSEMOTION">SDL_MOUSEMOTION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_NOEVENT">SDL_NOEVENT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_NOFRAME">SDL_NOFRAME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_NUMEVENTS">SDL_NUMEVENTS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_OPENGL">SDL_OPENGL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_OPENGLBLIT">SDL_OPENGLBLIT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_PRESSED">SDL_PRESSED</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_QUIT">SDL_QUIT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_RELEASED">SDL_RELEASED</a></dt>
+          
+          <dd class="description"><p>SDL_event</p></dd>
+          
+        
+          <dt><a name="SDL_RESIZABLE">SDL_RESIZABLE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_SWSURFACE">SDL_SWSURFACE</a></dt>
+          
+          <dd class="description"><p>And some for video functions</p></dd>
+          
+        
+          <dt><a name="SDL_SYSWMEVENT">SDL_SYSWMEVENT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_USEREVENT">SDL_USEREVENT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_VIDEOEXPOSE">SDL_VIDEOEXPOSE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SDL_VIDEORESIZE">SDL_VIDEORESIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="getenv-method" class="method-detail ">
+          <a name="method-c-getenv"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getenv</span><span
+              class="method-args">(s)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getenv-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">getenv</span>(<span class="ruby-identifier">s</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">SDL_getenv</span>(<span class="ruby-identifier">s</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getenv-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getenv-method -->
+
+      
+        <div id="init-method" class="method-detail ">
+          <a name="method-c-init"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">init</span><span
+              class="method-args">(what= INIT_EVERYTHING)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Initializes <a href="SDL.html">SDL</a>. This should be called before all
+other <a href="../Frusdl.html">Frusdl</a> methods.  The flags parameter
+specifies what part(s) of <a href="SDL.html">SDL</a> to initialize.
+SDL::INIT_AUDIO      : Initialize audio subsystems.  SDL::INIT_VIDEO      :
+Initialize SDL::Video subsystem.  SDL::INIT_CDROM      : Initialize
+SDL::CDROM subsystem.  SDL::INIT_JOYSTICK   : Initialize SDL::Joystick
+subsystem.  SDL::INIT_EVERYTHING : Initialize all of the above.  Raises <a
+href="SDL/Error.html">SDL::Error</a> on failure</p>
+            
+
+            
+            <div class="method-source-code" id="init-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">init</span>(<span class="ruby-identifier">what</span>= <span class="ruby-constant">INIT_EVERYTHING</span>)
+  <span class="ruby-identifier">res</span> = <span class="ruby-constant">SDL_Init</span>(<span class="ruby-identifier">what</span>)
+  <span class="ruby-identifier">raise_error</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">at_exit</span> { <span class="ruby-constant">SDL_Quit</span>() }    
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- init-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- init-method -->
+
+      
+        <div id="inited_system-method" class="method-detail ">
+          <a name="method-c-inited_system"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inited_system</span><span
+              class="method-args">(flags)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This method allows you to see which <a href="SDL.html">SDL</a> subsytems
+have been initialized. flags is a bitwise OR’d combination of the
+subsystems  you wish to check (see <a
+href="SDL.html#method-c-init">SDL.init</a> for a list of subsystem flags).
+Returns a bitwised OR’d combination of the initialized subsystems.</p>
+            
+
+            
+            <div class="method-source-code" id="inited_system-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">inited_system</span>(<span class="ruby-identifier">flags</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">SDL_WasInit</span>(<span class="ruby-identifier">flags</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inited_system-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inited_system-method -->
+
+      
+        <div id="putenv-method" class="method-detail ">
+          <a name="method-c-putenv"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">putenv</span><span
+              class="method-args">(s)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="putenv-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">putenv</span>(<span class="ruby-identifier">s</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">SDL_putenv</span>(<span class="ruby-identifier">s</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- putenv-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- putenv-method -->
+
+      
+        <div id="quit-method" class="method-detail ">
+          <a name="method-c-quit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">quit</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This method shuts down all <a href="SDL.html">SDL</a> subsystems and frees
+the resources  allocated to them. This method is automatically called when
+ruby stops,  so normally you don’t have to call this function.</p>
+            
+
+            
+            <div class="method-source-code" id="quit-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">quit</span>()
+  <span class="ruby-constant">SDL_Quit</span>()
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- quit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- quit-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="raise_error-method" class="method-detail ">
+          <a name="method-i-raise_error"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">raise_error</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Helper function to raise an error message from SDL_GetError .</p>
+            
+
+            
+            <div class="method-source-code" id="raise_error-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/sdl.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">raise_error</span>()
+    <span class="ruby-identifier">message</span> = <span class="ruby-constant">SDL_GetError</span>();
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">message</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- raise_error-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- raise_error-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

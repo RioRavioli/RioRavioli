@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"granularity:EFI" Rubygame::Clock#granularity;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"=Granularity used for framerate limiting delays in #tick.;TI"3You can calibrate this easily with #calibrate.;TI"$See also #tick and Clock.delay.;TI")(Non-negative integer. Default: 12.);T:
+@file0FI"lib/rubygame/clock.rb;T

@@ -1,0 +1,12 @@
+Rio Bacon
+a. I did not add any additional checkReps because the only place that requires it is the constructor,
+	and it is already in there. It is not needed anywhere else becaues RatTerm is immutable. 
+
+b. The constructor can just store the given arguments as is, and therefor would be less complex. For
+	toString, the case where the coefficient is zero, and exponent is larger than one must still print
+	0.
+
+c. The only thing that should change is the constuctor, because once again RatTerm is immuatble. The
+	constuctor would just have to store the fields following the new guide lines. All implementations
+	should still follow the specs, because this is a stricter implementation of the spec. I prefer
+	the original implementation because it gives more freedom in the implementation.

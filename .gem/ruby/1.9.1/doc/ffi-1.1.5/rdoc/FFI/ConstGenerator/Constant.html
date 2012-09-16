@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class FFI::ConstGenerator::Constant - ffi-1.1.5 Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/ffi/tools/const_generator.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-converted_value">#converted_value</a>
+    
+    <li><a href="#method-i-ruby_name">#ruby_name</a>
+    
+    <li><a href="#method-i-to_ruby">#to_ruby</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../History_txt.html">History</a>
+  
+    <li class="file"><a href="../../README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../FFI.html">FFI</a>
+  
+    <li><a href="../../FFI/AutoPointer.html">FFI::AutoPointer</a>
+  
+    <li><a href="../../FFI/AutoPointer/CallableReleaser.html">FFI::AutoPointer::CallableReleaser</a>
+  
+    <li><a href="../../FFI/AutoPointer/DefaultReleaser.html">FFI::AutoPointer::DefaultReleaser</a>
+  
+    <li><a href="../../FFI/AutoPointer/Releaser.html">FFI::AutoPointer::Releaser</a>
+  
+    <li><a href="../../FFI/ConstGenerator.html">FFI::ConstGenerator</a>
+  
+    <li><a href="../../FFI/ConstGenerator/Constant.html">FFI::ConstGenerator::Constant</a>
+  
+    <li><a href="../../FFI/Enum.html">FFI::Enum</a>
+  
+    <li><a href="../../FFI/Enums.html">FFI::Enums</a>
+  
+    <li><a href="../../FFI/Generator.html">FFI::Generator</a>
+  
+    <li><a href="../../FFI/Generator/Task.html">FFI::Generator::Task</a>
+  
+    <li><a href="../../FFI/IO.html">FFI::IO</a>
+  
+    <li><a href="../../FFI/Library.html">FFI::Library</a>
+  
+    <li><a href="../../FFI/ManagedStruct.html">FFI::ManagedStruct</a>
+  
+    <li><a href="../../FFI/NotFoundError.html">FFI::NotFoundError</a>
+  
+    <li><a href="../../FFI/Platform.html">FFI::Platform</a>
+  
+    <li><a href="../../FFI/PlatformError.html">FFI::PlatformError</a>
+  
+    <li><a href="../../FFI/Pointer.html">FFI::Pointer</a>
+  
+    <li><a href="../../FFI/StrPtrConverter.html">FFI::StrPtrConverter</a>
+  
+    <li><a href="../../FFI/Struct.html">FFI::Struct</a>
+  
+    <li><a href="../../FFI/Struct/ManagedStructConverter.html">FFI::Struct::ManagedStructConverter</a>
+  
+    <li><a href="../../FFI/StructGenerator.html">FFI::StructGenerator</a>
+  
+    <li><a href="../../FFI/StructGenerator/Field.html">FFI::StructGenerator::Field</a>
+  
+    <li><a href="../../FFI/StructLayout.html">FFI::StructLayout</a>
+  
+    <li><a href="../../FFI/StructLayout/Enum.html">FFI::StructLayout::Enum</a>
+  
+    <li><a href="../../FFI/StructLayout/InnerStruct.html">FFI::StructLayout::InnerStruct</a>
+  
+    <li><a href="../../FFI/StructLayout/Mapped.html">FFI::StructLayout::Mapped</a>
+  
+    <li><a href="../../FFI/StructLayoutBuilder.html">FFI::StructLayoutBuilder</a>
+  
+    <li><a href="../../FFI/TypesGenerator.html">FFI::TypesGenerator</a>
+  
+    <li><a href="../../FFI/Union.html">FFI::Union</a>
+  
+    <li><a href="../../FFI/VariadicInvoker.html">FFI::VariadicInvoker</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class FFI::ConstGenerator::Constant</h1>
+
+  <div id="description" class="description">
+    
+<p>This class hold constants for {ConstGenerator}</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-cast" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">cast</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-format" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">format</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-name" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">name</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-value" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">value</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(name, format, cast, ruby_name = nil, converter=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>@param [to_s] name @param [String] format a printf format string to print
+the value out @param [String] cast a C cast for the value @param <a
+href="Constant.html#method-i-ruby_name">#ruby_name</a> alternate ruby name
+for {<a href="Constant.html#method-i-to_ruby">to_ruby</a>} @param [call]
+converter convert the value from a string to the appropriate</p>
+
+<pre>type for {#to_ruby}.</pre>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/ffi/tools/const_generator.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">format</span>, <span class="ruby-identifier">cast</span>, <span class="ruby-identifier">ruby_name</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">converter</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@format</span> = <span class="ruby-identifier">format</span>
+  <span class="ruby-ivar">@cast</span> = <span class="ruby-identifier">cast</span>
+  <span class="ruby-ivar">@ruby_name</span> = <span class="ruby-identifier">ruby_name</span>
+  <span class="ruby-ivar">@converter</span> = <span class="ruby-identifier">converter</span>
+  <span class="ruby-ivar">@value</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-converted_value" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">converted_value</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return constant value (converted if a <code>converter</code> was defined).
+@return constant value.</p>
+          
+
+          
+          <div class="method-source-code" id="converted_value-source">
+            <pre><span class="ruby-comment"># File lib/ffi/tools/const_generator.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">converted_value</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@converter</span>
+    <span class="ruby-ivar">@converter</span>.<span class="ruby-identifier">call</span>(<span class="ruby-ivar">@value</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@value</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- converted_value-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- converted_value-method -->
+
+    
+      <div id="method-i-ruby_name" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ruby_name</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>get constant ruby name @return [String]</p>
+          
+
+          
+          <div class="method-source-code" id="ruby_name-source">
+            <pre><span class="ruby-comment"># File lib/ffi/tools/const_generator.rb, line 217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ruby_name</span>
+  <span class="ruby-ivar">@ruby_name</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@name</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- ruby_name-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ruby_name-method -->
+
+    
+      <div id="method-i-to_ruby" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_ruby</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Get an evaluable string from constant. @return [String]</p>
+          
+
+          
+          <div class="method-source-code" id="to_ruby-source">
+            <pre><span class="ruby-comment"># File lib/ffi/tools/const_generator.rb, line 223</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_ruby</span>
+  <span class="ruby-node">&quot;#{ruby_name} = #{converted_value}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_ruby-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_ruby-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

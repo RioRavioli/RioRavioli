@@ -1,0 +1,3 @@
+LoadGraph test medTest.tsv
+
+ListChildren test Rio

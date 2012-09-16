@@ -1,0 +1,4 @@
+# Load a graph from a file in the data subdirectory.
+
+loaded graph heroes
+the children of Ernst-the-Bicycling-Wizard in heroes are: Perkins-the-Magical-Singing-Instructor(CSE331) Notkin-of-the-Superhuman-Beard(CSE331) Notkin-of-the-Superhuman-Beard(CSE403)

@@ -1,0 +1,343 @@
+package hw5.test;
+
+import java.io.*;
+import java.net.URISyntaxException;
+import java.util.*;
+
+import hw4.*;
+import hw5.*;
+
+
+/**
+ * This class implements a testing driver which reads test scripts
+ * from files for testing Graph and PathFinder.
+ **/
+public class HW5TestDriver {
+
+    public static void main(String args[]) {
+        try {
+            if (args.length > 1) {
+                printUsage();
+                return;
+            }
+
+            HW5TestDriver td;
+
+            if (args.length == 0) {
+                td = new HW5TestDriver(new InputStreamReader(System.in),
+                                       new OutputStreamWriter(System.out));
+            } else {
+
+                String fileName = args[0];
+                File tests = new File (fileName);
+
+                if (tests.exists() || tests.canRead()) {
+                    td = new HW5TestDriver(new FileReader(tests),
+                                           new OutputStreamWriter(System.out));
+                } else {
+                    System.err.println("Cannot read from " + tests.toString());
+                    printUsage();
+                    return;
+                }
+            }
+
+            td.runTests();
+
+        } catch (IOException e) {
+            System.err.println(e.toString());
+            e.printStackTrace(System.err);
+        }
+    }
+
+    private static void printUsage() {
+        System.err.println("Usage:");
+        System.err.println("to read from a file: java hw5.test.HW5TestDriver <name of input script>");
+        System.err.println("to read from standard in: java hw5.test.HW5TestDriver");
+    }
+
+
+    /** String -> MarvelPaths: maps the names of graphs to the actual MarvelPath **/
+    private final Map<String, MarvelPaths> graphs = new HashMap<String, MarvelPaths>();
+    private final PrintWriter output;
+    private final BufferedReader input;
+
+    /**
+     * @requires r != null && w != null
+     *
+     * @effects Creates a new HW4TestDriver which reads command from
+     * <tt>r</tt> and writes results to <tt>w</tt>.
+     **/
+    public HW5TestDriver(Reader r, Writer w) {
+        input = new BufferedReader(r);
+        output = new PrintWriter(w);
+    }
+
+    /**
+     * @effects Executes the commands read from the input and writes results to the output
+     * @throws IOException if the input or output sources encounter an IOException
+     **/
+    public void runTests()
+        throws IOException
+    {
+        String inputLine;
+        while ((inputLine = input.readLine()) != null) {
+            if (inputLine.trim().length() == 0 ||
+                inputLine.charAt(0) == '#') {
+                // echo blank and comment lines
+                output.println(inputLine);
+            }
+            else
+            {
+                // separate the input line on white space
+                StringTokenizer st = new StringTokenizer(inputLine);
+                if (st.hasMoreTokens()) {
+                    String command = st.nextToken();
+
+                    List<String> arguments = new ArrayList<String>();
+                    while (st.hasMoreTokens()) {
+                        arguments.add(st.nextToken());
+                    }
+
+                    executeCommand(command, arguments);
+                }
+            }
+            output.flush();
+        }
+    }
+
+    private void executeCommand(String command, List<String> arguments) {
+        try {
+				if (command.equals("CreateGraph")) {
+                createGraph(arguments);
+            } else if (command.equals("AddNode")) {
+                addNode(arguments);
+            } else if (command.equals("AddEdge")) {
+                addEdge(arguments);
+            } else if (command.equals("ListNodes")) {
+                listNodes(arguments);
+            } else if (command.equals("ListChildren")) {
+                listChildren(arguments);
+				} else if (command.equals("LoadGraph")) {
+                loadGraph(arguments);
+            } else if (command.equals("FindPath")) {
+                findPath(arguments);
+            } else {
+                output.println("Unrecognized command: " + command);
+            }
+        } catch (Exception e) {
+            output.println("Exception: " + e.toString());
+        }
+    }
+
+    private void createGraph(List<String> arguments) {
+        if (arguments.size() != 1) {
+            throw new CommandException("Bad arguments to CreateGraph: " + arguments);
+        }
+
+        String graphName = arguments.get(0);
+        createGraph(graphName);
+    }
+
+    private void createGraph(String graphName) {
+        graphs.put(graphName, new MarvelPaths());
+        output.println("created graph " + graphName);
+    }
+
+    private void addNode(List<String> arguments) {
+        if (arguments.size() != 2) {
+            throw new CommandException("Bad arguments to addNode: " + arguments);
+        }
+
+        String graphName = arguments.get(0);
+        String nodeName = arguments.get(1);
+
+        addNode(graphName, nodeName);
+    }
+
+    private void addNode(String graphName, String nodeName) {
+        MarvelPaths graph = graphs.get(graphName);
+		  graph.addCharacter(nodeName);
+        output.println("added node " + nodeName + " to " + graphName);
+    }
+
+    private void addEdge(List<String> arguments) {
+        if (arguments.size() != 4) {
+            throw new CommandException("Bad arguments to addEdge: " + arguments);
+        }
+
+        String graphName = arguments.get(0);
+        String parentName = arguments.get(1);
+        String childName = arguments.get(2);
+        String edgeLabel = arguments.get(3);
+
+        addEdge(graphName, parentName, childName, edgeLabel);
+    }
+
+    private void addEdge(String graphName, String parentName, String childName,
+            String edgeLabel) {
+        MarvelPaths graph = graphs.get(graphName);
+		  graph.addCoappearance(parentName, childName, edgeLabel);
+        output.println("added edge " + edgeLabel + " from " + parentName + 
+				  " to " + childName + " in " + graphName);
+    }
+
+    private void listNodes(List<String> arguments) {
+        if (arguments.size() != 1) {
+            throw new CommandException("Bad arguments to listNodes: " + arguments);
+        }
+
+        String graphName = arguments.get(0);
+        listNodes(graphName);
+    }
+
+    private void listNodes(String graphName) {
+        MarvelPaths graph = graphs.get(graphName);
+		  List<String> charNames = graph.getCharacters();
+		  Collections.sort(charNames);
+        output.print(graphName + " contains:");
+		  for (String name : charNames) {
+			  output.print(" " + name);
+		  }
+		  output.println();
+    }
+
+    private void listChildren(List<String> arguments) {
+        if (arguments.size() != 2) {
+            throw new CommandException("Bad arguments to listChildren: " + arguments);
+        }
+
+        String graphName = arguments.get(0);
+        String parentName = arguments.get(1);
+        listChildren(graphName, parentName);
+    }
+
+    private void listChildren(String graphName, String parentName) {
+        MarvelPaths graph = graphs.get(graphName);
+		  List<String> childNodes = graph.getCoappearances(parentName);
+		  Collections.sort(childNodes);
+		  output.print("the children of " + parentName + " in " + graphName + " are:");
+		  for (String childName : childNodes) {
+			  if (!parentName.equals(childName)) {
+				  List<String> labels = graph.getBooks(parentName, childName);
+				  List<String> toSort = new ArrayList<String>(labels);
+				  Collections.sort(toSort);
+				  for (String label : toSort) {
+					  output.print(" " + childName + "(" + label + ")"); 
+				  }
+			  }
+		  }
+		  output.println();
+    }
+
+    private void loadGraph(List<String> arguments) {
+        if (arguments.size() != 2) {
+            throw new CommandException("Bad arguments to LoadGraph: " + arguments);
+        }
+
+        String graphName = arguments.get(0);
+		  String fileName = arguments.get(1);
+        loadGraph(graphName, fileName);
+    }
+
+    private void loadGraph(String graphName, String fileName) {
+		  MarvelPaths graph = new MarvelPaths();
+		  graph.createGraph(getAbsoluteFilename(fileName));
+        graphs.put(graphName, graph);
+        output.println("loaded graph " + graphName);
+    }
+
+    private void findPath(List<String> arguments) {
+        if (arguments.size() != 3) {
+            throw new CommandException("Bad arguments to findPath: " + arguments);
+        }
+
+        String graphName = arguments.get(0);
+        String node1 = arguments.get(1);
+        String node2 = arguments.get(2);
+
+        findPath(graphName, node1, node2);
+    }
+
+    private void findPath(String graphName, String startNode, String destNode) {
+        MarvelPaths graph = graphs.get(graphName);
+		  String startChar = startNode.replace('_', ' ');
+		  String destChar = destNode.replace('_', ' ');
+
+		  List<String> charList = graph.getCharacters();
+		  boolean startCharContained = false;
+		  boolean destCharContained = false;
+		  for (String character : charList) {
+			  if (character.equals(startChar)) {
+				  startCharContained = true;
+			  } 
+			  if (character.equals(destChar)) {
+				  destCharContained = true;
+			  }
+		  }
+		  if (!startCharContained || !destCharContained) {
+			  if (!startCharContained) {
+				  output.println("unknown character " + startChar);
+			  }
+			  if (!destCharContained) {
+				  output.println("unknown character " + destChar);
+			  }
+		  } else {
+			  output.println("path from " + startChar + " to " + destChar + ":");
+
+			  List<String> path = graph.getPath(startChar, destChar);
+			  String previousChar = startChar;
+			  if (path == null) {
+				  output.println("no path found");
+			  } else {
+				  for (String currentChar : path) {
+					  List<String> books = graph.getBooks(previousChar, currentChar);
+					  List<String> toSort = new ArrayList<String>(books);
+					  Collections.sort(toSort);
+					  String book = toSort.get(0);
+					  output.println(previousChar + " to " + currentChar + " via " + book);
+					  previousChar = currentChar;
+				  }
+			  }
+		  }
+    }
+
+    /**
+     * Get the absolute path to a file in the bin/hw5/test directory of the
+     * project. (Files placed in src/hw5/test are automatically copied to this
+     * location when the project is compiled.)
+     * 
+     * For example, getAbsoluteFilename("foo.tsv") would return something like
+     * (on attu):
+     * "homes/iws/YourCSENetID/cse331/bin/hw5/test/foo.tsv"
+     * 
+     * Call this method in your LoadGraph command.
+     * 
+     * @param filename
+     *              The simple filename for which to return the full path
+     * @return The absolute path to filename
+     */
+    private String getAbsoluteFilename(String filename) {
+        try {
+            File testDir = new File(HW5TestDriver.class.getResource("HW5TestDriver.class").toURI()).getParentFile();
+            File dataFile = new File(testDir, filename);
+            return dataFile.getAbsolutePath();
+        } catch (URISyntaxException e) {
+            return null;
+        }
+    }
+
+    /**
+     * This exception results when the input file cannot be parsed properly
+     **/
+    static class CommandException extends RuntimeException {
+
+        public CommandException() {
+            super();
+        }
+        public CommandException(String s) {
+            super(s);
+        }
+
+        public static final long serialVersionUID = 3495;
+    }
+}

@@ -1,0 +1,11 @@
+Rio Bacon
+
+My representation of the graph is a map which maps the name of a node to a Node object.
+This allows the nodes to be unique, and also for quick access to the Node object. 
+	The adantage of a collection of edges is that it makes it easy to directly manipulate edges,
+without having to deal with nodes in between. An adjacency list is useful for keeping nodes
+and their edges organized well. An adjacency matrix is a good way to quickly access edges or
+to see if they exist. My representation is advantageous for quick access time and good
+organization of nodes.
+
+

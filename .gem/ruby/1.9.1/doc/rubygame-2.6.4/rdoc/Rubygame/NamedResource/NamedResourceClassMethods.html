@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Rubygame::NamedResource::NamedResourceClassMethods</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/rubygame/named_resource_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/named_resource.rb">lib/rubygame/named_resource.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-5B-5D-3D">#[]=</a></li>
+          
+          <li><a href="#method-i-autoload">#autoload</a></li>
+          
+          <li><a href="#method-i-basename">#basename</a></li>
+          
+          <li><a href="#method-i-exist-3F">#exist?</a></li>
+          
+          <li><a href="#method-i-find_file">#find_file</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../CREDITS.html">CREDITS</a></li>
+        
+          <li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../../README.html">README</a></li>
+        
+          <li class="file"><a href="../../ROADMAP.html">ROADMAP</a></li>
+        
+          <li class="file"><a href="../../doc/custom_sdl_load_paths_rdoc.html">custom_sdl_load_paths.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/getting_started_rdoc.html">getting_started.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/keyboard_symbols_rdoc.html">keyboard_symbols.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/macosx_install_rdoc.html">macosx_install.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/managing_framerate_rdoc.html">managing_framerate.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/surface_palettes_rdoc.html">surface_palettes.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/windows_install_rdoc.html">windows_install.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Rubygame.html">Rubygame</a></li>
+        
+          <li><a href="../../Rubygame/ActiveEvent.html">Rubygame::ActiveEvent</a></li>
+        
+          <li><a href="../../Rubygame/Clock.html">Rubygame::Clock</a></li>
+        
+          <li><a href="../../Rubygame/Color.html">Rubygame::Color</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorBase.html">Rubygame::Color::ColorBase</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorHSL.html">Rubygame::Color::ColorHSL</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorHSV.html">Rubygame::Color::ColorHSV</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorRGB.html">Rubygame::Color::ColorRGB</a></li>
+        
+          <li><a href="../../Rubygame/Color/Palette.html">Rubygame::Color::Palette</a></li>
+        
+          <li><a href="../../Rubygame/Event.html">Rubygame::Event</a></li>
+        
+          <li><a href="../../Rubygame/EventActions.html">Rubygame::EventActions</a></li>
+        
+          <li><a href="../../Rubygame/EventActions/BlockAction.html">Rubygame::EventActions::BlockAction</a></li>
+        
+          <li><a href="../../Rubygame/EventActions/MethodAction.html">Rubygame::EventActions::MethodAction</a></li>
+        
+          <li><a href="../../Rubygame/EventActions/MultiAction.html">Rubygame::EventActions::MultiAction</a></li>
+        
+          <li><a href="../../Rubygame/EventHandler.html">Rubygame::EventHandler</a></li>
+        
+          <li><a href="../../Rubygame/EventHandler/HasEventHandler.html">Rubygame::EventHandler::HasEventHandler</a></li>
+        
+          <li><a href="../../Rubygame/EventHook.html">Rubygame::EventHook</a></li>
+        
+          <li><a href="../../Rubygame/EventQueue.html">Rubygame::EventQueue</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers.html">Rubygame::EventTriggers</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/AndTrigger.html">Rubygame::EventTriggers::AndTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/AttrTrigger.html">Rubygame::EventTriggers::AttrTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/BlockTrigger.html">Rubygame::EventTriggers::BlockTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/InstanceOfTrigger.html">Rubygame::EventTriggers::InstanceOfTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/KeyPressTrigger.html">Rubygame::EventTriggers::KeyPressTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/KeyReleaseTrigger.html">Rubygame::EventTriggers::KeyReleaseTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/KindOfTrigger.html">Rubygame::EventTriggers::KindOfTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/MouseMoveTrigger.html">Rubygame::EventTriggers::MouseMoveTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/MousePressTrigger.html">Rubygame::EventTriggers::MousePressTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/MouseReleaseTrigger.html">Rubygame::EventTriggers::MouseReleaseTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/OrTrigger.html">Rubygame::EventTriggers::OrTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/TickTrigger.html">Rubygame::EventTriggers::TickTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/YesTrigger.html">Rubygame::EventTriggers::YesTrigger</a></li>
+        
+          <li><a href="../../Rubygame/Events.html">Rubygame::Events</a></li>
+        
+          <li><a href="../../Rubygame/Events/ClockTicked.html">Rubygame::Events::ClockTicked</a></li>
+        
+          <li><a href="../../Rubygame/Events/InputFocusGained.html">Rubygame::Events::InputFocusGained</a></li>
+        
+          <li><a href="../../Rubygame/Events/InputFocusLost.html">Rubygame::Events::InputFocusLost</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickAxisMoved.html">Rubygame::Events::JoystickAxisMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickBallMoved.html">Rubygame::Events::JoystickBallMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickButtonEvent.html">Rubygame::Events::JoystickButtonEvent</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickButtonPressed.html">Rubygame::Events::JoystickButtonPressed</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickButtonReleased.html">Rubygame::Events::JoystickButtonReleased</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickHatMoved.html">Rubygame::Events::JoystickHatMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/KeyPressed.html">Rubygame::Events::KeyPressed</a></li>
+        
+          <li><a href="../../Rubygame/Events/KeyReleased.html">Rubygame::Events::KeyReleased</a></li>
+        
+          <li><a href="../../Rubygame/Events/KeyboardEvent.html">Rubygame::Events::KeyboardEvent</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseButtonEvent.html">Rubygame::Events::MouseButtonEvent</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseFocusGained.html">Rubygame::Events::MouseFocusGained</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseFocusLost.html">Rubygame::Events::MouseFocusLost</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseMoved.html">Rubygame::Events::MouseMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/MousePressed.html">Rubygame::Events::MousePressed</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseReleased.html">Rubygame::Events::MouseReleased</a></li>
+        
+          <li><a href="../../Rubygame/Events/QuitRequested.html">Rubygame::Events::QuitRequested</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowExposed.html">Rubygame::Events::WindowExposed</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowMinimized.html">Rubygame::Events::WindowMinimized</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowResized.html">Rubygame::Events::WindowResized</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowUnminimized.html">Rubygame::Events::WindowUnminimized</a></li>
+        
+          <li><a href="../../Rubygame/ExposeEvent.html">Rubygame::ExposeEvent</a></li>
+        
+          <li><a href="../../Rubygame/Ftor.html">Rubygame::Ftor</a></li>
+        
+          <li><a href="../../Rubygame/GL.html">Rubygame::GL</a></li>
+        
+          <li><a href="../../Rubygame/Hotspot.html">Rubygame::Hotspot</a></li>
+        
+          <li><a href="../../Rubygame/JoyAxisEvent.html">Rubygame::JoyAxisEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyBallEvent.html">Rubygame::JoyBallEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyDownEvent.html">Rubygame::JoyDownEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyHatEvent.html">Rubygame::JoyHatEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyUpEvent.html">Rubygame::JoyUpEvent</a></li>
+        
+          <li><a href="../../Rubygame/Joystick.html">Rubygame::Joystick</a></li>
+        
+          <li><a href="../../Rubygame/Key.html">Rubygame::Key</a></li>
+        
+          <li><a href="../../Rubygame/KeyDownEvent.html">Rubygame::KeyDownEvent</a></li>
+        
+          <li><a href="../../Rubygame/KeyUpEvent.html">Rubygame::KeyUpEvent</a></li>
+        
+          <li><a href="../../Rubygame/MailQueue.html">Rubygame::MailQueue</a></li>
+        
+          <li><a href="../../Rubygame/MediaBag.html">Rubygame::MediaBag</a></li>
+        
+          <li><a href="../../Rubygame/Mixer.html">Rubygame::Mixer</a></li>
+        
+          <li><a href="../../Rubygame/Mixer/Music.html">Rubygame::Mixer::Music</a></li>
+        
+          <li><a href="../../Rubygame/Mixer/Sample.html">Rubygame::Mixer::Sample</a></li>
+        
+          <li><a href="../../Rubygame/Mouse.html">Rubygame::Mouse</a></li>
+        
+          <li><a href="../../Rubygame/MouseDownEvent.html">Rubygame::MouseDownEvent</a></li>
+        
+          <li><a href="../../Rubygame/MouseMotionEvent.html">Rubygame::MouseMotionEvent</a></li>
+        
+          <li><a href="../../Rubygame/MouseUpEvent.html">Rubygame::MouseUpEvent</a></li>
+        
+          <li><a href="../../Rubygame/Music.html">Rubygame::Music</a></li>
+        
+          <li><a href="../../Rubygame/NamedResource.html">Rubygame::NamedResource</a></li>
+        
+          <li><a href="../../Rubygame/NamedResource/NamedResourceClassMethods.html">Rubygame::NamedResource::NamedResourceClassMethods</a></li>
+        
+          <li><a href="../../Rubygame/QuitEvent.html">Rubygame::QuitEvent</a></li>
+        
+          <li><a href="../../Rubygame/Rect.html">Rubygame::Rect</a></li>
+        
+          <li><a href="../../Rubygame/ResizeEvent.html">Rubygame::ResizeEvent</a></li>
+        
+          <li><a href="../../Rubygame/SDLError.html">Rubygame::SDLError</a></li>
+        
+          <li><a href="../../Rubygame/SFont.html">Rubygame::SFont</a></li>
+        
+          <li><a href="../../Rubygame/Screen.html">Rubygame::Screen</a></li>
+        
+          <li><a href="../../Rubygame/Sound.html">Rubygame::Sound</a></li>
+        
+          <li><a href="../../Rubygame/Sprites.html">Rubygame::Sprites</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/DepthSortGroup.html">Rubygame::Sprites::DepthSortGroup</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/Group.html">Rubygame::Sprites::Group</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/LimitGroup.html">Rubygame::Sprites::LimitGroup</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/Sprite.html">Rubygame::Sprites::Sprite</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/UpdateGroup.html">Rubygame::Sprites::UpdateGroup</a></li>
+        
+          <li><a href="../../Rubygame/Surface.html">Rubygame::Surface</a></li>
+        
+          <li><a href="../../Rubygame/TTF.html">Rubygame::TTF</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Rubygame::NamedResource::NamedResourceClassMethods</h1>
+
+    <div id="description" class="description">
+      
+<p>Adds class methods when the <a
+href="../NamedResource.html">NamedResource</a> module is included in a
+class. (Here, we are assuming that the <a
+href="../NamedResource.html">NamedResource</a> module was included in a
+class called MyClass.)</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="autoload_dirs-attribute-method" class="method-detail">
+          <a name="autoload_dirs"></a>
+          
+          <a name="autoload_dirs="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">autoload_dirs</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>An Array of paths to check for files. See <a
+href="NamedResourceClassMethods.html#method-i-find_file">find_file</a>.</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">MyClass[ name ]  &rarr;  instance or nil</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Retrieves an instance of the class from a per-class resource table (Hash).</p>
+
+<p>If no object has been saved under the given name, invoke <a
+href="NamedResourceClassMethods.html#method-i-autoload">autoload</a> to try
+to load a new instance, store it in the Hash table under this name, and
+sets the instance’s @name to this name.</p>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/named_resource.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>( <span class="ruby-identifier">name</span> )
+  <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@resources</span>[<span class="ruby-identifier">name</span>]
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-identifier">autoload</span>(<span class="ruby-identifier">name</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>
+      <span class="ruby-keyword">self</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">result</span>
+      <span class="ruby-identifier">result</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="5B-5D-3D-method" class="method-detail ">
+          <a name="method-i-5B-5D-3D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">MyClass[ name ] = instance</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Stores an instance of the class in a per-class resource table (Hash) for
+future access. If another object is already stored with this name, the old
+record is lost.</p>
+
+<p>May raise:  TypeError, if you try to store anything</p>
+
+<pre>that is not kind of this class.</pre>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/named_resource.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]=</span>( <span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span> )
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-keyword">self</span> )
+    <span class="ruby-ivar">@resources</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;#{self}#[]= can only store instances of #{self}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-3D-method -->
+
+      
+        <div id="autoload-method" class="method-detail ">
+          <a name="method-i-autoload"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">autoload( name )  &rarr;  instance or nil</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>This method is invoked when a non-existing resource is accessed with #[].
+By default, this method simply returns nil, effectively disabling
+autoloading.</p>
+
+<p>You should override this method in your class to provide class-specific
+loading behavior, or leave it as the default if you don’t need autoloading.
+Your method should return either an instance of the class, or nil.</p>
+
+<p>NOTE: The <a
+href="NamedResourceClassMethods.html#method-i-find_file">find_file</a>
+method is useful for getting the full path to a file which matches the
+name. That’s what it’s there for, so you should use it!</p>
+            
+
+            
+            <div class="method-source-code" id="autoload-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/named_resource.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">autoload</span>( <span class="ruby-identifier">name</span> )
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- autoload-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autoload-method -->
+
+      
+        <div id="basename-method" class="method-detail ">
+          <a name="method-i-basename"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">basename( path )  &rarr;  filename</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Returns the basename for the path (i.e. the filename without the
+directory). Same as File.basename</p>
+            
+
+            
+            <div class="method-source-code" id="basename-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/named_resource.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">basename</span>( <span class="ruby-identifier">path</span> )
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>( <span class="ruby-identifier">path</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- basename-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- basename-method -->
+
+      
+        <div id="exist-3F-method" class="method-detail ">
+          <a name="method-i-exist-3F"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">exist?( path )  &rarr;  true or false</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>True if the given path points to a file that exists, otherwise false. Same
+as File.exist?</p>
+            
+
+            
+            <div class="method-source-code" id="exist-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/named_resource.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exist?</span>( <span class="ruby-identifier">path</span> )
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- exist-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- exist-3F-method -->
+
+      
+        <div id="find_file-method" class="method-detail ">
+          <a name="method-i-find_file"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">find_file( filename )  &rarr;  path or nil</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Checks every directory in @<a
+href="NamedResourceClassMethods.html#attribute-i-autoload_dirs">autoload_dirs</a>
+for a file with the given name, and returns the path (directory and name)
+for the first match.</p>
+
+<p>If no directories have a file with that name, return nil.</p>
+            
+
+            
+            <div class="method-source-code" id="find_file-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/named_resource.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_file</span>( <span class="ruby-identifier">filename</span> )
+  <span class="ruby-identifier">dir</span> = <span class="ruby-ivar">@autoload_dirs</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">exist?</span>( <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dir</span>,<span class="ruby-identifier">filename</span>) )
+  }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">dir</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dir</span>,<span class="ruby-identifier">filename</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find_file-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,5 @@
+#This is a test with a small tsv file, with only one book.
+
+loaded graph small
+path from Rio to Man:
+Rio to Man via FirstBook

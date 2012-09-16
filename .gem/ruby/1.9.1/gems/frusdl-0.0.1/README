@@ -1,0 +1,51 @@
+###########################################
+# FRUSDL - Ffi RUby SDL bindings - README #
+###########################################
+ 
+ 
+What is it?
+===========
+Wafer-thin bindings to SDL, SDL_image, SDL_ttf, SDL_mixer, SDL_gfx, and 
+SGE for MRI, Jruby, Rubinius, ... using FFI. You will be able to easily port 
+your Ruby/SDL games to JRuby.  
+
+For now, only a  few high-level, Ruby/SDL compatible objects are available. 
+But the low level wrappers should work fine for experimenting, or even to program a 
+quick demo game. 
+
+Goal 
+=====
+
+Source code compatibility with Ruby/SDL 2.0.1 or higher, but with lower level 
+functions available. All help for towards this goal is welcome. 
+ 
+Version 
+=======
+
+  0.0.1
+
+Requirements
+============ 
+ * Ruby: MRI 1.9.1 or higher, JRuby 1.1.6 or higher. Rubinius currently untested.
+ * FFI: Version 0.2.0 or higher or MRI. 
+ * The shared libraries for SDL 1.2.x, SDL_image, SDL_ttf, SDL_mixer, SDL_gfx 
+   or SGE should be installed properly on your system.
+   
+Documentation
+=============
+   
+None yet. Check out the documentation of SDL itself, since the 
+low level interface to sdl in Frusdl::Low should be mostly compatible with 
+the C way of doing things, if you include Frusdl::Low. Alternatively, 
+use the source, Ruke. ^_^  
+
+License 
+=======
+
+ZLIB license. Please note that SDL has a LGPL license. However, FRUSDL
+uses dynamic linking, so , I think it should be fine.
+
+Contact
+=======
+
+beoran AT rubyforge POINT org

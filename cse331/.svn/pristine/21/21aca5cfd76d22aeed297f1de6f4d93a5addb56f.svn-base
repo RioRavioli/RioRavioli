@@ -1,0 +1,36 @@
+1.
+
+{pre: size > 0}
+k = 1;
+max = Math.max(items[0], items[k]);
+{loop-inv: max = largest in items[0...k]}
+while (k + 1!= size) {
+		{loop-inv: max = largest in items[0...k]}
+		if (max < items[k + 1]) {
+				{max = largest in items[0...k] ^ max < items[k + 1]}
+				max = items[k + 1]
+				{max = largest in items[0...k+1]}
+		else {
+				{max = largest in items[0...k+1]}
+		}
+		k = k+1;
+		{loop-inv: max = largest in items[0...k]}
+}
+{loop-inv: max = largest in items[0...k]}
+{max = largest in items[0...k] ^ k+1 = size}
+		-> {max = largest in items[0...size-1]}
+
+
+2.
+
+{pre: x==X && y==Y && X>=0 && X>=0}
+int expt(int x, int y) {
+		int z = 1;
+		{z==1 && x==X && y==Y && X>=0 && X>=0}
+		{x^k = y/(2^k)
+		while (y > 0) {
+				if (y % 2 == 0) {
+						y = y/2;
+						x = x*x;
+				} else {	
+	

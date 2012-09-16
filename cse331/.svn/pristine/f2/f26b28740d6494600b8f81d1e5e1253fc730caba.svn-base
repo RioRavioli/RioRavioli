@@ -1,0 +1,28 @@
+a. These one line comments are written in math notation. These comments allow someone looking
+	at the code to easily understand what the code accopmlishes, as representing mathmatical
+	algorithms in code may be hard to understand. For example, in this case fields of the RatNum
+	classs must be pulled out in order to make these computations, and it is much harder to follow
+	than a mathmatical expression.
+
+b. 'this != null' is not a requirement, because if the methods are already being accessed, it means
+	'this' is not null.
+
+c. div must check whether arg is NaN or not because of the properties of NaN. NaN is represented
+	by a denometer of 0, so following the normal operations will result with a NaN with add and mul,
+	but with div, it will result in a numerator of zero and a denometer of 0, which is not NaN,
+	therefore this case must be specifically handled.
+
+d. valueOf is a static method because it does not depend on an instance to invoke. Regardless of how
+	or what instance this method is called on, there is no difference. In this case, a RatNum is
+	created based on the string regardless of what instance of RatNum this was called on, if it
+	was called on an instance.
+
+e. The constuctor with two arguments would be less complex, and would just store the two value as
+	given. equals must now compare after reducing the value of numerator and denominator of both this
+	and obj. This will complicate the code more, as it needs to take an extra step before comparing.
+	toString will also need to reduce the value of its numerator and denomintor, thus complicating the
+	code. All other code may remain the same.
+
+f. All of these functions have specs that states that it returns a RatNum of the result, and does
+	not mention modification of the object. The specification of the class states that it is
+	immutable, which this would clearly violate. 

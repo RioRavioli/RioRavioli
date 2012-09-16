@@ -1,0 +1,49 @@
+Rio Bacon
+
+I have two classes. I decided to do two classes, because it seemed natural to represent
+the nodes of the graph as objects, and of course in that case we would need a class for
+graph itself. I initially thought to have an edge class, but there was no functionality
+only data storage the way I designed it, so I decied to remove it. 
+
+Graph:
+	Constructor- necessary for making a new instance.
+
+	createNode- necessary for adding a new node. Graph creates the node itself to prevent
+representation exposure. 
+
+	addEdgeToNode- necessary for adding a new edge to a node. Graph modifies the node to
+prevent representation exposure.
+
+	removeEdgesFromNode- important aspect of having a mutable graph. Clients may want to
+modify the graph to have less edges.
+
+	removeNode- important aspect of having a mutable graph. Clients may want to modify the
+graph to have less nodes.
+
+	getEdgesLabels- necessary for retrieving the label on an edge.
+
+	getAllDest- gives user the necessary information to retrieve or remove edges. 
+
+	getNodeCount- gives user some information on the state of the graph.
+
+Node:
+	Constructor- necessary for making a new instance.
+
+	getName- necessary for identifying node.
+
+	getEdgesLabels- necessary for viewing the label on the edges.
+
+	containsEdges- gives client ability to avoid undesired operations.
+
+	addEdge- necessary for adding an edge to a node.
+
+	removeEdges- an important aspect of a mutable node. Gives user more power to manipulate
+node.
+
+	getNodeNames- allows the client to know what nodes are in the graph.
+	
+	getAllDest- gives user the necessary information to retrieve or remove edges. 
+
+These operations should be a sufficient interface, because it gives the user the ability to both
+add and remove both nodes and edges. This is enough to manipulate the graph in a basic way.
+	

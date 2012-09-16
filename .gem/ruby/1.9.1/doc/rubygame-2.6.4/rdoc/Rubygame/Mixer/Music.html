@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Rubygame::Mixer::Music</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/rubygame/deprecated_mixer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/deprecated_mixer.rb">lib/rubygame/deprecated_mixer.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-load_audio">::load_audio</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-fade_in">#fade_in</a></li>
+          
+          <li><a href="#method-i-fade_out">#fade_out</a></li>
+          
+          <li><a href="#method-i-fading-3F">#fading?</a></li>
+          
+          <li><a href="#method-i-jump">#jump</a></li>
+          
+          <li><a href="#method-i-pause">#pause</a></li>
+          
+          <li><a href="#method-i-paused-3F">#paused?</a></li>
+          
+          <li><a href="#method-i-play">#play</a></li>
+          
+          <li><a href="#method-i-playing-3F">#playing?</a></li>
+          
+          <li><a href="#method-i-resume">#resume</a></li>
+          
+          <li><a href="#method-i-rewind">#rewind</a></li>
+          
+          <li><a href="#method-i-stop">#stop</a></li>
+          
+          <li><a href="#method-i-volume">#volume</a></li>
+          
+          <li><a href="#method-i-volume-3D">#volume=</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../CREDITS.html">CREDITS</a></li>
+        
+          <li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../../README.html">README</a></li>
+        
+          <li class="file"><a href="../../ROADMAP.html">ROADMAP</a></li>
+        
+          <li class="file"><a href="../../doc/custom_sdl_load_paths_rdoc.html">custom_sdl_load_paths.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/getting_started_rdoc.html">getting_started.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/keyboard_symbols_rdoc.html">keyboard_symbols.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/macosx_install_rdoc.html">macosx_install.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/managing_framerate_rdoc.html">managing_framerate.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/surface_palettes_rdoc.html">surface_palettes.rdoc</a></li>
+        
+          <li class="file"><a href="../../doc/windows_install_rdoc.html">windows_install.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Rubygame.html">Rubygame</a></li>
+        
+          <li><a href="../../Rubygame/ActiveEvent.html">Rubygame::ActiveEvent</a></li>
+        
+          <li><a href="../../Rubygame/Clock.html">Rubygame::Clock</a></li>
+        
+          <li><a href="../../Rubygame/Color.html">Rubygame::Color</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorBase.html">Rubygame::Color::ColorBase</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorHSL.html">Rubygame::Color::ColorHSL</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorHSV.html">Rubygame::Color::ColorHSV</a></li>
+        
+          <li><a href="../../Rubygame/Color/ColorRGB.html">Rubygame::Color::ColorRGB</a></li>
+        
+          <li><a href="../../Rubygame/Color/Palette.html">Rubygame::Color::Palette</a></li>
+        
+          <li><a href="../../Rubygame/Event.html">Rubygame::Event</a></li>
+        
+          <li><a href="../../Rubygame/EventActions.html">Rubygame::EventActions</a></li>
+        
+          <li><a href="../../Rubygame/EventActions/BlockAction.html">Rubygame::EventActions::BlockAction</a></li>
+        
+          <li><a href="../../Rubygame/EventActions/MethodAction.html">Rubygame::EventActions::MethodAction</a></li>
+        
+          <li><a href="../../Rubygame/EventActions/MultiAction.html">Rubygame::EventActions::MultiAction</a></li>
+        
+          <li><a href="../../Rubygame/EventHandler.html">Rubygame::EventHandler</a></li>
+        
+          <li><a href="../../Rubygame/EventHandler/HasEventHandler.html">Rubygame::EventHandler::HasEventHandler</a></li>
+        
+          <li><a href="../../Rubygame/EventHook.html">Rubygame::EventHook</a></li>
+        
+          <li><a href="../../Rubygame/EventQueue.html">Rubygame::EventQueue</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers.html">Rubygame::EventTriggers</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/AndTrigger.html">Rubygame::EventTriggers::AndTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/AttrTrigger.html">Rubygame::EventTriggers::AttrTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/BlockTrigger.html">Rubygame::EventTriggers::BlockTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/InstanceOfTrigger.html">Rubygame::EventTriggers::InstanceOfTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/KeyPressTrigger.html">Rubygame::EventTriggers::KeyPressTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/KeyReleaseTrigger.html">Rubygame::EventTriggers::KeyReleaseTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/KindOfTrigger.html">Rubygame::EventTriggers::KindOfTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/MouseMoveTrigger.html">Rubygame::EventTriggers::MouseMoveTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/MousePressTrigger.html">Rubygame::EventTriggers::MousePressTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/MouseReleaseTrigger.html">Rubygame::EventTriggers::MouseReleaseTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/OrTrigger.html">Rubygame::EventTriggers::OrTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/TickTrigger.html">Rubygame::EventTriggers::TickTrigger</a></li>
+        
+          <li><a href="../../Rubygame/EventTriggers/YesTrigger.html">Rubygame::EventTriggers::YesTrigger</a></li>
+        
+          <li><a href="../../Rubygame/Events.html">Rubygame::Events</a></li>
+        
+          <li><a href="../../Rubygame/Events/ClockTicked.html">Rubygame::Events::ClockTicked</a></li>
+        
+          <li><a href="../../Rubygame/Events/InputFocusGained.html">Rubygame::Events::InputFocusGained</a></li>
+        
+          <li><a href="../../Rubygame/Events/InputFocusLost.html">Rubygame::Events::InputFocusLost</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickAxisMoved.html">Rubygame::Events::JoystickAxisMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickBallMoved.html">Rubygame::Events::JoystickBallMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickButtonEvent.html">Rubygame::Events::JoystickButtonEvent</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickButtonPressed.html">Rubygame::Events::JoystickButtonPressed</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickButtonReleased.html">Rubygame::Events::JoystickButtonReleased</a></li>
+        
+          <li><a href="../../Rubygame/Events/JoystickHatMoved.html">Rubygame::Events::JoystickHatMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/KeyPressed.html">Rubygame::Events::KeyPressed</a></li>
+        
+          <li><a href="../../Rubygame/Events/KeyReleased.html">Rubygame::Events::KeyReleased</a></li>
+        
+          <li><a href="../../Rubygame/Events/KeyboardEvent.html">Rubygame::Events::KeyboardEvent</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseButtonEvent.html">Rubygame::Events::MouseButtonEvent</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseFocusGained.html">Rubygame::Events::MouseFocusGained</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseFocusLost.html">Rubygame::Events::MouseFocusLost</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseMoved.html">Rubygame::Events::MouseMoved</a></li>
+        
+          <li><a href="../../Rubygame/Events/MousePressed.html">Rubygame::Events::MousePressed</a></li>
+        
+          <li><a href="../../Rubygame/Events/MouseReleased.html">Rubygame::Events::MouseReleased</a></li>
+        
+          <li><a href="../../Rubygame/Events/QuitRequested.html">Rubygame::Events::QuitRequested</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowExposed.html">Rubygame::Events::WindowExposed</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowMinimized.html">Rubygame::Events::WindowMinimized</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowResized.html">Rubygame::Events::WindowResized</a></li>
+        
+          <li><a href="../../Rubygame/Events/WindowUnminimized.html">Rubygame::Events::WindowUnminimized</a></li>
+        
+          <li><a href="../../Rubygame/ExposeEvent.html">Rubygame::ExposeEvent</a></li>
+        
+          <li><a href="../../Rubygame/Ftor.html">Rubygame::Ftor</a></li>
+        
+          <li><a href="../../Rubygame/GL.html">Rubygame::GL</a></li>
+        
+          <li><a href="../../Rubygame/Hotspot.html">Rubygame::Hotspot</a></li>
+        
+          <li><a href="../../Rubygame/JoyAxisEvent.html">Rubygame::JoyAxisEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyBallEvent.html">Rubygame::JoyBallEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyDownEvent.html">Rubygame::JoyDownEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyHatEvent.html">Rubygame::JoyHatEvent</a></li>
+        
+          <li><a href="../../Rubygame/JoyUpEvent.html">Rubygame::JoyUpEvent</a></li>
+        
+          <li><a href="../../Rubygame/Joystick.html">Rubygame::Joystick</a></li>
+        
+          <li><a href="../../Rubygame/Key.html">Rubygame::Key</a></li>
+        
+          <li><a href="../../Rubygame/KeyDownEvent.html">Rubygame::KeyDownEvent</a></li>
+        
+          <li><a href="../../Rubygame/KeyUpEvent.html">Rubygame::KeyUpEvent</a></li>
+        
+          <li><a href="../../Rubygame/MailQueue.html">Rubygame::MailQueue</a></li>
+        
+          <li><a href="../../Rubygame/MediaBag.html">Rubygame::MediaBag</a></li>
+        
+          <li><a href="../../Rubygame/Mixer.html">Rubygame::Mixer</a></li>
+        
+          <li><a href="../../Rubygame/Mixer/Music.html">Rubygame::Mixer::Music</a></li>
+        
+          <li><a href="../../Rubygame/Mixer/Sample.html">Rubygame::Mixer::Sample</a></li>
+        
+          <li><a href="../../Rubygame/Mouse.html">Rubygame::Mouse</a></li>
+        
+          <li><a href="../../Rubygame/MouseDownEvent.html">Rubygame::MouseDownEvent</a></li>
+        
+          <li><a href="../../Rubygame/MouseMotionEvent.html">Rubygame::MouseMotionEvent</a></li>
+        
+          <li><a href="../../Rubygame/MouseUpEvent.html">Rubygame::MouseUpEvent</a></li>
+        
+          <li><a href="../../Rubygame/Music.html">Rubygame::Music</a></li>
+        
+          <li><a href="../../Rubygame/NamedResource.html">Rubygame::NamedResource</a></li>
+        
+          <li><a href="../../Rubygame/NamedResource/NamedResourceClassMethods.html">Rubygame::NamedResource::NamedResourceClassMethods</a></li>
+        
+          <li><a href="../../Rubygame/QuitEvent.html">Rubygame::QuitEvent</a></li>
+        
+          <li><a href="../../Rubygame/Rect.html">Rubygame::Rect</a></li>
+        
+          <li><a href="../../Rubygame/ResizeEvent.html">Rubygame::ResizeEvent</a></li>
+        
+          <li><a href="../../Rubygame/SDLError.html">Rubygame::SDLError</a></li>
+        
+          <li><a href="../../Rubygame/SFont.html">Rubygame::SFont</a></li>
+        
+          <li><a href="../../Rubygame/Screen.html">Rubygame::Screen</a></li>
+        
+          <li><a href="../../Rubygame/Sound.html">Rubygame::Sound</a></li>
+        
+          <li><a href="../../Rubygame/Sprites.html">Rubygame::Sprites</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/DepthSortGroup.html">Rubygame::Sprites::DepthSortGroup</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/Group.html">Rubygame::Sprites::Group</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/LimitGroup.html">Rubygame::Sprites::LimitGroup</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/Sprite.html">Rubygame::Sprites::Sprite</a></li>
+        
+          <li><a href="../../Rubygame/Sprites/UpdateGroup.html">Rubygame::Sprites::UpdateGroup</a></li>
+        
+          <li><a href="../../Rubygame/Surface.html">Rubygame::Surface</a></li>
+        
+          <li><a href="../../Rubygame/TTF.html">Rubygame::TTF</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Rubygame::Mixer::Music</h1>
+
+    <div id="description" class="description">
+      
+<p>*<b>NOTE:</b>* This class is DEPRECATED and will be removed in <a
+href="../../Rubygame.html">Rubygame</a> 3.0. Please use the <a
+href="../Music.html">Rubygame::Music</a> class instead.</p>
+
+<p>The <a href="Music.html">Music</a> class is used for playing music from a
+file. It supports WAVE, MOD, MIDI, OGG, and MP3 files. There are two
+important differences between <a href="Music.html">Music</a> and Sample:</p>
+<ol><li>
+<p><a href="Music.html">Music</a> streams the music from disk, which means it
+can start faster and uses less memory than <a
+href="Sample.html">Sample</a>, which loads the entire file into memory.
+This is especially important for music files, which are often several
+minutes long.</p>
+</li><li>
+<p>There can only be one <a href="Music.html">Music</a> instance playing at
+once, while there can be many Samples playing at once. If you play a second
+<a href="Music.html">Music</a> while one is already playing, the first one
+will be stopped. See <a href="Music.html#method-i-play">play</a>.</p>
+</li></ol>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="load_audio-method" class="method-detail ">
+          <a name="method-c-load_audio"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">load_audio</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>*<b>NOTE:</b>* <a href="Music.html">Rubygame::Mixer::Music</a> is
+DEPRECATED and will be removed in <a
+href="../../Rubygame.html">Rubygame</a> 3.0. Please use the <a
+href="../Music.html">Rubygame::Music</a> class instead.</p>
+
+<p>Load music from a file. Supports WAV, MOD, MIDI, OGG, and MP3 formats.</p>
+
+<p>Raises <a href="../SDLError.html">SDLError</a> if the music could not be
+loaded.</p>
+            
+
+            
+            <div class="method-source-code" id="load_audio-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 331</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">load_audio</span>
+  <span class="ruby-constant">Rubygame</span>.<span class="ruby-identifier">deprecated</span>( <span class="ruby-string">&quot;Rubygame::Mixer::Music&quot;</span>, <span class="ruby-string">&quot;3.0&quot;</span> )
+
+  <span class="ruby-identifier">music</span> = <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span>.<span class="ruby-constant">LoadMUS</span>( <span class="ruby-identifier">filename</span> )
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">music</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span> )
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>,
+           <span class="ruby-string">&quot;Error loading audio music from file `%s': %s&quot;</span><span class="ruby-operator">%</span>
+           [<span class="ruby-identifier">filename</span>, <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetError</span>()] )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">new</span>( <span class="ruby-identifier">music</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- load_audio-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- load_audio-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">new</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 351</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">struct</span>=<span class="ruby-keyword">nil</span> )
+  <span class="ruby-ivar">@struct</span> = <span class="ruby-identifier">struct</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="fade_in-method" class="method-detail ">
+          <a name="method-i-fade_in"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fade_in</span><span
+              class="method-args">( fade_time, repeats=0, start=0 )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Play the music, fading in and repeating a certain number of times. See also
+<a href="Music.html#method-i-play">play</a>.</p>
+
+<p>Raises <a href="../SDLError.html">SDLError</a> if something goes wrong.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>fade_time</p></td>
+<td>
+<p>Time in seconds for the fade-in effect to complete.</p>
+</td></tr><tr><td class="rdoc-term"><p>repeats</p></td>
+<td>
+<p>Number of extra times to play through the music. -1 plays the music forever
+until it is stopped. Defaults to 0, play only once (no repeats).</p>
+</td></tr><tr><td class="rdoc-term"><p>start</p></td>
+<td>
+<p>Time to start from, in seconds since the beginning. Defaults to 0, the
+beginning of the song. Non-zero values only work for OGG and MP3; other
+music types will raise <a href="../SDLError.html">SDLError</a>.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="fade_in-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 495</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fade_in</span>( <span class="ruby-identifier">fade_time</span>, <span class="ruby-identifier">repeats</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">start</span>=<span class="ruby-value">0</span> )
+  <span class="ruby-identifier">fade_time</span> <span class="ruby-operator">*=</span> <span class="ruby-value">1000</span> <span class="ruby-comment"># convert to milliseconds</span>
+  <span class="ruby-identifier">repeats</span> = (<span class="ruby-identifier">repeats</span> <span class="ruby-keyword">or</span> <span class="ruby-value">0</span>)
+  <span class="ruby-identifier">start</span>   = (<span class="ruby-identifier">start</span>   <span class="ruby-keyword">or</span> <span class="ruby-value">0</span>)
+
+  <span class="ruby-comment"># Adjust so repeats means the same as it does for Samples</span>
+  <span class="ruby-identifier">repeats</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">repeats</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">-1</span>
+
+  <span class="ruby-identifier">result</span> =
+    <span class="ruby-keyword">if</span>( <span class="ruby-identifier">start</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> )
+      <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span>.<span class="ruby-constant">FadeInMusic</span>( <span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">repeats</span>, <span class="ruby-identifier">fade_time</span> )
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span>.<span class="ruby-constant">FadeInMusicPos</span>( <span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">repeats</span>, <span class="ruby-identifier">fade_time</span>, <span class="ruby-identifier">start</span> )
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> )
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-node">&quot;Error fading in music: #{SDL.GetError()}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fade_in-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fade_in-method -->
+
+      
+        <div id="fade_out-method" class="method-detail ">
+          <a name="method-i-fade_out"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fade_out</span><span
+              class="method-args">( fade_time )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Gradually fade the music to silence over <tt>fade_length</tt> seconds.
+After the fade is complete, the music will be automatically stopped.</p>
+
+<p>Raises <a href="../SDLError.html">SDLError</a> if something goes wrong.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>fade_time</p></td>
+<td>
+<p>Time until the music is totally silent, in seconds.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="fade_out-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 525</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fade_out</span>( <span class="ruby-identifier">fade_time</span> )
+  <span class="ruby-identifier">fade_time</span> <span class="ruby-operator">*=</span> <span class="ruby-value">1000</span> <span class="ruby-comment"># convert to milliseconds</span>
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span>.<span class="ruby-constant">FadeOutMusic</span>( <span class="ruby-identifier">fade_time</span> )
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> )
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-node">&quot;Error fading out music: #{SDL.GetError()}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fade_out-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fade_out-method -->
+
+      
+        <div id="fading-3F-method" class="method-detail ">
+          <a name="method-i-fading-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fading?</span><span
+              class="method-args">( direction=nil )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if the music is fading in or out (or either). You can specify
+<tt>direction</tt> as :in/:out to check only fading in/out; otherwise, it
+will return true if it’s fading either way.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>direction</p></td>
+<td>
+<p>:in, :out, or nil if you don’t care which.</p>
+</td></tr><tr><td class="rdoc-term"><p>Returns</p></td>
+<td>
+<p>true if the music is fading in the given direction.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="fading-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 543</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fading?</span>( <span class="ruby-identifier">direction</span>=<span class="ruby-keyword">nil</span> )
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">direction</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:in</span>
+    <span class="ruby-keyword">return</span> (<span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span>.<span class="ruby-constant">FadingMusic</span>() <span class="ruby-operator">==</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">FADING_IN</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:out</span>
+    <span class="ruby-keyword">return</span> (<span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span>.<span class="ruby-constant">FadingMusic</span>() <span class="ruby-operator">==</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">FADING_OUT</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> (<span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span>.<span class="ruby-constant">FadingMusic</span>() <span class="ruby-operator">!=</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">NO_FADING</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fading-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fading-3F-method -->
+
+      
+        <div id="jump-method" class="method-detail ">
+          <a name="method-i-jump"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">jump</span><span
+              class="method-args">( time )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Jump to a certain time in the music. Only works when music is playing or
+paused (but not stopped). Only works for OGG and MP3 files.</p>
+
+<p>Raises <a href="../SDLError.html">SDLError</a> if something goes wrong, or
+if the music type does not support setting the position.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>time</p></td>
+<td>
+<p>Time to jump to, in seconds from the beginning.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="jump-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 429</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">jump</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-keyword">case</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span>.<span class="ruby-constant">GetMusicType</span>(<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">MUS_OGG</span>, <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">MUS_MP3</span>
+
+    <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">RewindMusic</span>() <span class="ruby-comment"># Needed for MP3, and OK with OGG</span>
+
+    <span class="ruby-identifier">result</span> = <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span>.<span class="ruby-constant">SetmusicPosition</span>( <span class="ruby-identifier">time</span> )
+    
+    <span class="ruby-keyword">if</span>( <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> )
+      <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>,
+             <span class="ruby-node">&quot;Error jumping to time in music: #{SDL.GetError()}&quot;</span> )
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">MUS_NONE</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-string">&quot;Cannot jump when no music is playing.&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-string">&quot;Music type does not support jumping.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- jump-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- jump-method -->
+
+      
+        <div id="pause-method" class="method-detail ">
+          <a name="method-i-pause"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pause</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Pause playback of the playing music. You can later <a
+href="Music.html#method-i-resume">resume</a> playback from the point where
+you paused. Safe to use on already-paused music. See also play_music.</p>
+            
+
+            
+            <div class="method-source-code" id="pause-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 394</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pause</span>
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">PauseMusic</span>()
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pause-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pause-method -->
+
+      
+        <div id="paused-3F-method" class="method-detail ">
+          <a name="method-i-paused-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">paused?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns true if the music is currently paused.</p>
+            
+
+            
+            <div class="method-source-code" id="paused-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 459</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">paused?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">PausedMusic</span>()
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- paused-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- paused-3F-method -->
+
+      
+        <div id="play-method" class="method-detail ">
+          <a name="method-i-play"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">play</span><span
+              class="method-args">( repeats=0 )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Play music, repeating a certain number of extra times. If any music was
+already playing, that music will be stopped first, and this music will
+start.</p>
+
+<p>Raises <a href="../SDLError.html">SDLError</a> if something goes wrong.</p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>repeats</p></td>
+<td>
+<p>how many extra times to play the music. Can be -1 to repeat forever until
+it is stopped.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="play-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 366</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">play</span>( <span class="ruby-identifier">repeats</span>=<span class="ruby-value">0</span> )
+  <span class="ruby-comment"># Adjust so repeats means the same as it does for Samples</span>
+  <span class="ruby-identifier">repeats</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">repeats</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">-1</span>
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span>.<span class="ruby-constant">PlayMusic</span>( <span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">repeats</span> )
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> )
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-node">&quot;Error playing music: #{SDL.GetError()}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- play-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- play-method -->
+
+      
+        <div id="playing-3F-method" class="method-detail ">
+          <a name="method-i-playing-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">playing?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns true if the music is currently playing.</p>
+            
+
+            
+            <div class="method-source-code" id="playing-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 452</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">playing?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">PlayingMusic</span>()
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- playing-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- playing-3F-method -->
+
+      
+        <div id="resume-method" class="method-detail ">
+          <a name="method-i-resume"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">resume</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Resume playback of paused music from the point it was paused. Safe to use
+on already-playing music. See also <a
+href="Music.html#method-i-play">play</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="resume-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 404</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">resume</span>
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">ResumeMusic</span>()
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- resume-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- resume-method -->
+
+      
+        <div id="rewind-method" class="method-detail ">
+          <a name="method-i-rewind"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rewind</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Rewind the music to the start. This is safe to use on stopped, paused, and
+playing music. Only works for MOD, OGG, MP3, and MIDI (but not WAV).</p>
+            
+
+            
+            <div class="method-source-code" id="rewind-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 414</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rewind</span>
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">RewindMusic</span>()
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rewind-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rewind-method -->
+
+      
+        <div id="stop-method" class="method-detail ">
+          <a name="method-i-stop"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stop</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Stop playback of music.  See also <a
+href="Music.html#method-i-play">play</a></p>
+            
+
+            
+            <div class="method-source-code" id="stop-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 383</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stop</span>
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">HaltMusic</span>()
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stop-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stop-method -->
+
+      
+        <div id="volume-method" class="method-detail ">
+          <a name="method-i-volume"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">volume</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the current volume level of the music. 0.0 is total silence, 1.0 is
+maximum volume.</p>
+            
+
+            
+            <div class="method-source-code" id="volume-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 467</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">volume</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">VolumeMusic</span>(<span class="ruby-value">-1</span>).<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">MAX_VOLUME</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- volume-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- volume-method -->
+
+      
+        <div id="volume-3D-method" class="method-detail ">
+          <a name="method-i-volume-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">volume=</span><span
+              class="method-args">( new_volume )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Sets the volume level of the music. 0.0 is total silence, 1.0 is maximum
+volume.</p>
+            
+
+            
+            <div class="method-source-code" id="volume-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/deprecated_mixer.rb, line 475</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">volume=</span>( <span class="ruby-identifier">new_volume</span> )
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span>.<span class="ruby-constant">VolumeMusic</span>( (<span class="ruby-identifier">volume</span> * <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Mixer</span><span class="ruby-operator">::</span><span class="ruby-constant">MAX_VOLUME</span>).<span class="ruby-identifier">to_i</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">new_volume</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- volume-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- volume-3D-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

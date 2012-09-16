@@ -1,0 +1,7 @@
+# Tests for empty graph.
+# Tests adding only one node.
+
+CreateGraph graph
+ListNodes graph
+AddNode graph node
+ListNodes graph

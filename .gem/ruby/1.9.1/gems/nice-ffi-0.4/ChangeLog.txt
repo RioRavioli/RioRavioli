@@ -1,0 +1,1174 @@
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Mar 31 17:57:44 2010 -0500
+
+    Nice-FFI 0.4 released.
+
+M	README.rdoc
+M	nice-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Mar 9 23:08:31 2010 -0600
+
+    Fixed PathSet not expanding globs (like "*").
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jan 30 02:52:27 2010 -0600
+
+    Fixed PathSet failing when a path doesn't end with a separator.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jan 27 16:08:51 2010 -0600
+
+    Fixed DEFAULT_PATHS -> DEFAULT in library.rb.
+
+M	lib/nice-ffi/library.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jan 18 00:14:29 2010 -0600
+
+    Better globs for rdoc rake task.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jan 17 21:04:08 2010 -0600
+
+    Nice-FFI 0.3 released.
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jan 17 20:53:30 2010 -0600
+
+    Updated version and copyright dates.
+
+M	README.rdoc
+M	lib/nice-ffi/pathset.rb
+M	lib/nice-ffi/struct.rb
+M	nice-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jan 17 20:53:05 2010 -0600
+
+    Fixed AutoPointer errors in opaquestruct_spec.rb.
+
+M	spec/opaquestruct_spec.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jan 17 20:14:06 2010 -0600
+
+    Struct creates Buffer instead of MemoryPointer.
+
+M	lib/nice-ffi/struct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jan 11 15:35:01 2010 -0600
+
+    Improved filename globs for Pathset::DEFAULT.
+
+M	docs/usage.rdoc
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Dec 10 13:50:24 2009 -0600
+
+    Updated Struct to play well with Buffers.
+
+M	lib/nice-ffi/struct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Oct 24 15:58:31 2009 -0500
+
+    Nice-FFI 0.2 released.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 21 19:36:02 2009 -0500
+
+    Added Library.optional_func (alias: optfunc).
+
+M	lib/nice-ffi/library.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 21 15:25:16 2009 -0500
+
+    Added Library.optional(), with specs.
+
+M	lib/nice-ffi/library.rb
+A	spec/library_spec.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Oct 20 19:27:53 2009 -0500
+
+    Nice-FFI 0.2 RC1 released.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Oct 20 19:26:30 2009 -0500
+
+    Bumped require ffi version to 0.5.0.
+
+M	nice-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Oct 20 18:40:41 2009 -0500
+
+    Renamed nicelibrary.rb -> library.rb, nicestruct.rb -> struct.rb.
+
+M	lib/nice-ffi.rb
+A	lib/nice-ffi/library.rb
+D	lib/nice-ffi/nicelibrary.rb
+D	lib/nice-ffi/nicestruct.rb
+A	lib/nice-ffi/struct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Oct 20 03:22:49 2009 -0500
+
+    Miscellaneous tweaks to improve JRuby compatibility.
+
+M	lib/nice-ffi/autorelease.rb
+M	lib/nice-ffi/nicestruct.rb
+M	lib/nice-ffi/opaquestruct.rb
+M	spec/autorelease_spec.rb
+M	spec/opaquestruct_spec.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Oct 20 01:57:07 2009 -0500
+
+    Added rubyforge_project to gemspec.
+
+M	nice-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Oct 20 01:34:58 2009 -0500
+
+    mkchangelog.rb requires 'fileutils'.
+
+M	scripts/mkchangelog.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 19 01:44:28 2009 -0500
+
+    TypedPointer can take an option to disable autorelease.
+
+M	lib/nice-ffi/nicestruct.rb
+M	lib/nice-ffi/typedpointer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Oct 18 23:40:13 2009 -0500
+
+    AutoRelease uses a Mutex for extra protection.
+
+M	lib/nice-ffi/autorelease.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Oct 18 14:28:48 2009 -0500
+
+    'need' is no longer required. Oh the irony.
+
+M	README.rdoc
+M	nice-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Oct 18 14:18:23 2009 -0500
+
+    Revamped how files are required.
+
+M	lib/nice-ffi.rb
+M	lib/nice-ffi/autorelease.rb
+M	lib/nice-ffi/nicelibrary.rb
+M	lib/nice-ffi/nicestruct.rb
+M	lib/nice-ffi/opaquestruct.rb
+M	lib/nice-ffi/typedpointer.rb
+M	spec/autorelease_spec.rb
+M	spec/opaquestruct_spec.rb
+M	spec/pathset_spec.rb
+A	spec/spec_helper.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Oct 18 14:11:36 2009 -0500
+
+    Updated README.rdoc and nice-ffi.gemspec.
+
+M	README.rdoc
+M	nice-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Oct 18 14:11:02 2009 -0500
+
+    Updated usage.rdoc.
+
+M	docs/usage.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Oct 18 14:00:03 2009 -0500
+
+    Minor bug in OpaqueStruct#initialize.
+
+M	lib/nice-ffi/opaquestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 14 17:47:04 2009 -0500
+
+    Oops, PathSet regexp should be /windows/, not /win32/.
+
+M	docs/usage.rdoc
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 14 13:47:59 2009 -0500
+
+    Clarified PathSet docs a bit.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 14 13:37:06 2009 -0500
+
+    Nondestructive PathSet methods have the big docs now.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 14 00:38:57 2009 -0500
+
+    Using "entries" not "pathsets" for variable names, to avoid confusion.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 14 00:34:58 2009 -0500
+
+    Reduced redundancy in PathSet's internal methods.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Oct 13 22:39:16 2009 -0500
+
+    Eliminated a bunch of redundant and repetetive PathSet methods.
+    
+    PathSet#append!, etc. can now accept :paths or :files as first
+    arg to behave as #append_paths! and #append_files did.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Oct 13 01:55:38 2009 -0500
+
+    Updated PathSet docs. Examples need updated, though.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 23:27:51 2009 -0500
+
+    Updated usage.rdoc.
+
+M	docs/usage.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 23:27:05 2009 -0500
+
+    Library#load_library loads plain library name as last resort.
+
+M	lib/nice-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 23:03:20 2009 -0500
+
+    Improved PathSet.new. It can take Arrays and stuff now, too.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 22:22:30 2009 -0500
+
+    Moved Library::DEFAULT_PATHS to PathSet::DEFAULT.
+
+M	lib/nice-ffi/nicelibrary.rb
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 17:30:48 2009 -0500
+
+    PathSet shouldn't allow Regexp values, that was dumb of me.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 15:24:52 2009 -0500
+
+    Revamped PathSet#find.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 13:22:40 2009 -0500
+
+    Added PathSet#delete_paths[!] and delete_files[!].
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 13:21:51 2009 -0500
+
+    Added PathSet#remove_paths[!] and remove_files[!].
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 13:20:43 2009 -0500
+
+    Added PathSet#replace_paths[!] and replace_files[!].
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 13:19:58 2009 -0500
+
+    Added PathSet#prepend_paths[!] and prepend_files[!].
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 13:17:59 2009 -0500
+
+    Added PathSet#append_paths[!] and append_files[!].
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 03:14:19 2009 -0500
+
+    Added PathSet#modify_part.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 02:50:45 2009 -0500
+
+    PathSet#_modify_set can handle Regexps and Strings now.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 12 01:11:19 2009 -0500
+
+    Added @files to PathSet.
+
+M	lib/nice-ffi/nicelibrary.rb
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Sep 12 20:32:46 2009 -0500
+
+    PathSet has "paths" instead of "rules" (term/name change).
+
+M	lib/nice-ffi/pathset.rb
+M	spec/pathset_spec.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Sep 11 22:52:42 2009 -0500
+
+    A bit of doc and indentation cleanup in nicelibrary.rb.
+
+M	lib/nice-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Sep 11 21:53:21 2009 -0500
+
+    Commented out PathSet#<< and #>> for now.
+    
+    Need to decide if they should be destructive or not.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Aug 16 04:44:37 2009 -0500
+
+    OpaqueStruct should include AutoRelease module.
+
+M	spec/opaquestruct_spec.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Aug 16 04:42:06 2009 -0500
+
+    Added some specs for AutoRelease.
+
+A	spec/autorelease_spec.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Aug 11 21:47:02 2009 -0500
+
+    Added some specs for OpaqueStruct.
+
+A	spec/opaquestruct_spec.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 20:55:34 2009 -0500
+
+    Updated OpaqueStruct to use AutoRelease.
+
+M	lib/nice-ffi/opaquestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 20:08:08 2009 -0500
+
+    Updated Struct to use AutoRelease.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 20:07:53 2009 -0500
+
+    Added module AutoRelease (autorelease.rb).
+
+A	lib/nice-ffi/autorelease.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 16:03:49 2009 -0500
+
+    Revamped OpaqueStruct.
+    
+    Not subclass of Struct anymore. Supports memory autorelease.
+
+M	lib/nice-ffi/opaquestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 11:12:26 2009 -0500
+
+    Added memory autorelease to NiceFFI::Struct.
+    
+    Define MyClass.release( pointer ) to activate.
+    Can be disabled per-instance with an option to #new.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 19 20:21:54 2009 -0500
+
+    Added class OpaqueStruct.
+
+M	lib/nice-ffi.rb
+A	lib/nice-ffi/opaquestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jul 14 04:06:50 2009 -0500
+
+    New Structs can be created from bytestrings.
+    
+    Other instances are copied this way too now,
+    instead of with init_from_array.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jul 14 04:04:10 2009 -0500
+
+    Added Struct#to_bytes.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 23:27:08 2009 -0500
+
+    Made rake changelog always rebuild ChangeLog.txt.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 23:18:10 2009 -0500
+
+    Added Struct::typed_pointer.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 14:57:26 2009 -0500
+
+    Added aliases :func and :var to NiceFFI::Library.
+    
+      alias :func :attach_function
+      alias :var  :attach_variable
+
+M	lib/nice-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 5 13:16:13 2009 -0500
+
+    Removed redundant references to MemoryPointer.
+    
+    FFI::MemoryPointer is a subclass of FFI::Pointer anyway.
+
+M	lib/nice-ffi/nicestruct.rb
+M	lib/nice-ffi/typedpointer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 5 13:06:38 2009 -0500
+
+    Typo in Struct#to_hash docs (to_ary --> to_hash).
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 5 01:05:26 2009 -0500
+
+    Nice-FFI 0.1 Released.
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 5 01:04:49 2009 -0500
+
+    Bumped date in README.rdoc.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 5 00:56:17 2009 -0500
+
+    Nice-FFI 0.1 Released.
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 5 00:47:38 2009 -0500
+
+    Gemspec and rake rdoc task find docs/*.rdoc too.
+
+M	Rakefile
+M	nice-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 5 00:46:50 2009 -0500
+
+    Added docs/usage.rdoc (Nice-FFI usage guide).
+
+A	docs/usage.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 23:23:22 2009 -0500
+
+    Updated TODO.rdoc.
+
+M	TODO.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 21:30:41 2009 -0500
+
+    Removed obsoleted scripts/getversion.rb.
+
+D	scripts/getversion.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 21:30:14 2009 -0500
+
+    rake version gets info from gemspec. Again.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 21:24:15 2009 -0500
+
+    Added rake task: "bump:VERSION" (e.g. "rake bump:0.1")
+    
+    Updates version (and date) in README.rdoc and gemspec.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 21:22:49 2009 -0500
+
+    nice-ffi.gemspec no longer reads version from README.rdoc.
+
+M	nice-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 20:20:25 2009 -0500
+
+    Jump thru hoops to make sure ChangeLog.txt is included in the gem.
+
+M	Rakefile
+M	nice-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 18:28:21 2009 -0500
+
+    Added documentation for PathSet.
+
+M	TODO.rdoc
+M	lib/nice-ffi/nicelibrary.rb
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 17:50:57 2009 -0500
+
+    Renamed PathSet#clear! and #clear to #delete! and #delete.
+
+M	lib/nice-ffi/pathset.rb
+M	nice-ffi.gemspec
+M	spec/pathset_spec.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 17:49:15 2009 -0500
+
+    Added PathSet#<< (append) and PathSet#>> (prepend) aliases.
+
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 11:18:06 2009 -0500
+
+    Reordered Rakefile a bit.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 10:51:17 2009 -0500
+
+    Rake gem and package tasks autogenerate ChangeLog.txt.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 11:19:26 2009 -0500
+
+    .gitignore: ChangeLog.txt
+
+M	.gitignore
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 10:50:19 2009 -0500
+
+    Added ChangeLog.txt to rake clean list.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 10:45:34 2009 -0500
+
+    Added new rake task: changelog.
+    
+    Generates ChangeLog.txt from git log using mkchangelog.rb.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 11:57:08 2009 -0500
+
+    Added scripts/mkchangelog.rb.
+
+A	scripts/mkchangelog.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 11:59:40 2009 -0500
+
+    Rakefile uses getversion.rb.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 11:49:28 2009 -0500
+
+    Added scripts/getversion.rb.
+
+A	scripts/getversion.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 4 08:02:28 2009 -0500
+
+    Updated version and date in README.rdoc.
+    
+    Also fixed typo:  aide --> aid
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 22:40:15 2009 -0500
+
+    Added new rake task: version.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 22:33:04 2009 -0500
+
+    nice-ffi.gemspec reads version from README.rdoc.
+
+M	nice-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 21:57:58 2009 -0500
+
+    Updated TypedPointer class doc comment.
+
+M	lib/nice-ffi/typedpointer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 21:56:08 2009 -0500
+
+    Added rdoc task to Rakefile.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 21:30:57 2009 -0500
+
+    Fixed comment for Library::DEFAULT_PATHS.
+    
+      [LIB]  -->  [NAME]
+
+M	lib/nice-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 21:15:29 2009 -0500
+
+    Added TODO.rdoc.
+
+A	TODO.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 20:48:06 2009 -0500
+
+    Library.load_library and PathSet.find can take multiple names.
+
+M	lib/nice-ffi/nicelibrary.rb
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 20:19:04 2009 -0500
+
+    PathSet.find replaces [NAME] now, not [LIB].
+
+M	lib/nice-ffi/nicelibrary.rb
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 20:17:43 2009 -0500
+
+    Moved Library.find_library to PathSet.find.
+
+M	lib/nice-ffi/nicelibrary.rb
+M	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 19:33:46 2009 -0500
+
+    Updated Library to use PathSet.
+
+M	lib/nice-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 17:59:47 2009 -0500
+
+    Added specs for PathSet (spec/pathset_spec.rb).
+
+A	spec/pathset_spec.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 16:45:31 2009 -0500
+
+    Added spec tasks to Rakefile.
+
+M	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 16:45:12 2009 -0500
+
+    nicelibrary.rb needs{ pathset }.
+
+M	lib/nice-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 15:17:07 2009 -0500
+
+    Added class NiceFFI::PathSet (pathset.rb).
+
+A	lib/nice-ffi/pathset.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 14:35:19 2009 -0500
+
+    Renamed Library::DEFAULT_PATHS to Library::LIBRARY_PATHS.
+
+M	lib/nice-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 04:53:50 2009 -0500
+
+    Library.load_library and find_library can take search paths.
+
+M	lib/nice-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 04:41:34 2009 -0500
+
+    Library.load_library no longer takes wrapper_module arg.
+
+M	lib/nice-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 04:29:49 2009 -0500
+
+    Added Library.find_library, refactored from load_library.
+
+M	lib/nice-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 14:43:37 2009 -0500
+
+    Yeah... it's not really heuristics. At all.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 03:33:23 2009 -0500
+
+    Updated README.rdoc: Nice-FFI requires the need library.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 03:25:05 2009 -0500
+
+    Added NiceFFI module and moved everything into it.
+    
+      NiceLibrary   -->  NiceFFI::Library
+      NiceStruct    -->  NiceFFI::Struct
+      TypedPointer  -->  NiceFFI::TypedPointer
+
+M	README.rdoc
+M	lib/nice-ffi.rb
+M	lib/nice-ffi/nicelibrary.rb
+M	lib/nice-ffi/nicestruct.rb
+M	lib/nice-ffi/typedpointer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 08:43:57 2009 -0500
+
+    Moved platforms.rb functionality into NiceLibrary.
+
+M	lib/nice-ffi.rb
+M	lib/nice-ffi/nicelibrary.rb
+D	lib/nice-ffi/platforms.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 08:37:53 2009 -0500
+
+    Fixed NiceStruct#to_hash when members is empty.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 08:07:19 2009 -0500
+
+    Improved NiceStruct#to_s when there are no visible members.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 06:17:51 2009 -0500
+
+    TypedPointer is no longer picky about class being FFI::Struct.
+
+M	lib/nice-ffi/typedpointer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 22 07:09:00 2009 -0500
+
+    Added class NiceLibrary (nicelibrary.rb).
+
+M	lib/nice-ffi.rb
+A	lib/nice-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jun 21 14:37:30 2009 -0500
+
+    Added Mac path: "/opt/local/lib/lib[LIB].dylib" (for Darwin Ports)
+
+M	lib/nice-ffi/platforms.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jun 21 03:53:06 2009 -0500
+
+    Updated and expanded doc comments for NiceStruct.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 21:40:03 2009 -0500
+
+    Added my guess at proper LIBRARY_PATHS for win32.
+
+M	lib/nice-ffi/platforms.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 21:38:59 2009 -0500
+
+    Updated LIBRARY_PATHS for Mac.
+    
+    Added:   /sw/lib/lib[LIB].dylib
+    Removed: /usr/local/lib/lib[LIB].so
+
+M	lib/nice-ffi/platforms.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 20:16:08 2009 -0500
+
+    NiceStruct handles NullPointerErrors more gracefully.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 20:04:53 2009 -0500
+
+    NiceStruct struct-typed members are cached now.
+    
+    This prevents a new object from being created every
+    time the member is read.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 20:02:34 2009 -0500
+
+    NiceStruct rescues NameError when removing accessors.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 18:17:27 2009 -0500
+
+    Added support for TypedPointers in NiceStruct.
+    
+    NiceStruct#layout accepts TypedPointers as types and constructs
+    "smart" accessors for those members.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 18:16:27 2009 -0500
+
+    Added class TypedPointer (typedpointer.rb).
+
+A	lib/nice-ffi/typedpointer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:00:03 2009 -0500
+
+    Added NiceStruct.read_only and NiceStruct.read_only?.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 01:41:56 2009 -0500
+
+    Added NiceStruct.hidden and NiceStruct.hidden?.
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:08:10 2009 -0500
+
+    NiceStruct#to_s uses read accessor instead of #[].
+
+M	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jun 19 18:42:18 2009 -0500
+
+    Added class NiceStruct (nicestruct.rb).
+
+M	lib/nice-ffi.rb
+A	lib/nice-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jun 18 02:18:38 2009 -0500
+
+    Added platforms.rb.
+
+M	lib/nice-ffi.rb
+A	lib/nice-ffi/platforms.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 01:04:24 2009 -0500
+
+    Added lib/nice-ffi.rb.
+
+A	lib/nice-ffi.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 00:52:43 2009 -0500
+
+    Added Rakefile with gem task.
+
+A	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 00:26:52 2009 -0500
+
+    Added nice-ffi.gemspec.
+
+A	nice-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 15 23:01:36 2009 -0500
+
+    Added README.rdoc.
+
+A	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 15 14:40:39 2009 -0500
+
+    Added .gitignore.
+    
+    *~
+    .\#*
+    \#*\#
+    pkg
+    html
+
+A	.gitignore
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jun 14 19:30:29 2009 -0500
+
+    Initial commit.

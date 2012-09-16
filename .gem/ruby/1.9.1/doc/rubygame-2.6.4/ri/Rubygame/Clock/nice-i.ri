@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	nice:EFI"Rubygame::Clock#nice;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"BWhether to try to let other ruby threads run during framerate;TI"9limiting delays in #tick. See #tick and Clock.delay.;TI"%(true or false. Default: false.);T:
+@file0FI"lib/rubygame/clock.rb;T

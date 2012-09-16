@@ -1,0 +1,28 @@
+/usr/bin/ruby extconf.rb
+checking for SMPEG_new() in -lsmpeg... no
+checking for Mix_OpenAudio() in -lSDL_mixer... yes
+checking for sge_Line() in -lSGE... no
+checking for IMG_Load() in -lSDL_image... yes
+checking for TTF_Init() in -lSDL_ttf... yes
+checking for TTF_OpenFontIndex()... yes
+checking for TTF_FontFaces()... yes
+checking for TTF_FontFaceIsFixedWidth()... yes
+checking for TTF_FontFaceFamilyName()... yes
+checking for TTF_FontFaceStyleName()... yes
+checking for Mix_LoadMUS_RW()... yes
+checking for rb_thread_blocking_region()... yes
+checking for rb_enc_str_new()... yes
+checking for rb_str_export_to_enc()... yes
+checking for SDLSKK_Context_new() in -lSDLSKK... no
+checking for glVertex3d() in -lGL... yes
+creating Makefile
+
+make
+Makefile:182: warning: overriding recipe for target `/home/rio/.gem/ruby/1.9.1/gems/rubysdl-2.1.2/lib'
+Makefile:180: warning: ignoring old recipe for target `/home/rio/.gem/ruby/1.9.1/gems/rubysdl-2.1.2/lib'
+compiling rubysdl_time.c
+compiling rubysdl_video.c
+compiling rubysdl_mixer.c
+rubysdl_mixer.c:23:23: fatal error: SDL_mixer.h: No such file or directory
+compilation terminated.
+make: *** [rubysdl_mixer.o] Error 1

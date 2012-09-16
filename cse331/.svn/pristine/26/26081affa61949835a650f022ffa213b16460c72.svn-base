@@ -1,0 +1,18 @@
+#This is a slightly larger test, and will test having multiple graphs, test finding path
+#from two close characters and two farther characters with shortest path.
+#Also tests path to self
+
+LoadGraph small smallTest.tsv
+LoadGraph med medTest.tsv
+
+FindPath med Rio Ocean
+
+FindPath med Nawgui Kou
+
+FindPath med Gucci Gucci
+
+FindPath med Thunders Rio
+
+FindPath med Rio Little_Box
+
+FindPath med Thunders Little_Box

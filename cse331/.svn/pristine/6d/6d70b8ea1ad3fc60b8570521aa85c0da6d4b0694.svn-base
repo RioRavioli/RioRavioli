@@ -1,0 +1,137 @@
+package hw8;
+import hw7.*;
+
+import java.util.*;
+import java.io.*;
+import javax.swing.*;
+import javax.imageio.*;
+import java.awt.*;
+import java.awt.image.*;
+import java.awt.event.*;
+
+public class CampusPathsMain {
+	JFrame frame;
+	CampusMapManager manager;
+
+	public static void main(String[] args) {
+		CampusPathsMain main = new CampusPathsMain();
+	}
+
+	public CampusPathsMain() {
+		frame = new JFrame("Campus Paths");
+		manager = new CampusMapManager();
+
+		frame.setSize(1024, 768);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLayout(new FlowLayout());
+		setComponents(frame);
+		frame.setVisible(true);
+	}
+
+	private void setComponents(JFrame frame) {
+		//create an array of building names
+		java.util.List<Building> buildings = manager.getBuildings();
+		String[] buildingList = new String[buildings.size()];
+		for (int i = 0; i < buildings.size(); i++) {
+		//	String shortName = buildings.get(i).getShortName();
+			String longName = buildings.get(i).getLongName(); 
+		//	buildingList[i] = shortName + ": " + longName;
+			buildingList[i] = longName;
+		}
+
+		//create and add components to frame
+		JButton resetButton = new JButton("Reset");
+		Component startLabel = new JLabel("Start:");
+		JComboBox startList = new JComboBox(buildingList);
+		Component endLabel = new JLabel("Destination:");
+		JComboBox endList = new JComboBox(buildingList);
+
+		JButton searchButton = new JButton("Search");	
+		searchButton.addActionListener(new SearchListener(startList, endList, buildings));
+		MapCanvas campus = new MapCanvas();
+		frame.add(resetButton);
+		frame.add(startLabel);
+		frame.add(startList);
+		frame.add(endLabel);
+		frame.add(endList);
+		frame.add(searchButton);
+		frame.add(campus);
+
+		campus.updateImage();
+	}
+
+	private class SearchListener implements ActionListener {
+		JComboBox startList;
+		JComboBox endList;
+		java.util.List<Building> buildings;
+
+		public SearchListener(
+				JComboBox startList, JComboBox endList, java.util.List<Building> buildings) {
+			this.startList = startList;
+			this.endList = endList;
+			this.buildings = buildings;
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String start = (String) startList.getSelectedItem();
+			String end = (String) endList.getSelectedItem();
+
+			//get start and end buildings
+			Building startBuilding = null;
+			Building endBuilding = null;
+			for (Building building : buildings) {
+				if (start.equals(building.getLongName())) {
+					startBuilding = building;
+				}
+				if (end.equals(building.getLongName())) {
+					endBuilding = building;
+				}
+			}
+
+			//neither building should ever be null, because user selection comes from the same list
+			java.util.List<Path> route = manager.getShortestPath(startBuilding, endBuilding);
+			for (Path path : route) {
+				System.out.println("Go from " + path.getStart().getX() + " to " + path.getEnd().getX());
+			}
+		}
+	}
+
+	private class MapCanvas extends JComponent {
+		BufferedImage campusMap;
+
+		public MapCanvas() {
+			try {
+				campusMap = ImageIO.read(new File("hw7/data/campus_map.jpg"));
+			} catch (IOException e) {
+				//
+				//
+				//
+				//
+				//
+				//
+				//Fllllllllllllerr
+				//
+				//
+				//
+				//
+				//
+				e.printStackTrace();
+			}
+
+			this.setPreferredSize(new Dimension(campusMap.getWidth(), campusMap.getHeight()));
+		}
+
+		public void updateImage() {
+			this.repaint();
+			System.out.println("here");
+		}
+
+		@Override
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			g.drawLine(0, 0, 10, 10);
+			g.drawImage(campusMap, 0, 0, campusMap.getWidth(), campusMap.getHeight(), 0, 0, campusMap.getWidth(), campusMap.getHeight(), null);
+		}
+	}
+}

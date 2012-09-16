@@ -1,0 +1,14 @@
+Rio Bacon
+
+a. problem 1: about 5 hours
+	problem 2: about 3 hours
+	problem 3: about 6 hours
+
+b. I could have read the specification test details before starting, because I had to make many adjustments
+to make it compatible. 
+
+c. You could have made it more clear what is expected of the program, so we did not have to make many implmentation
+changes for the specification tests.
+
+d. I wish I knew how much checkRep() could potentially slow the program down, as I spent significant time looking
+through my algorithm for things that could cause slow down.

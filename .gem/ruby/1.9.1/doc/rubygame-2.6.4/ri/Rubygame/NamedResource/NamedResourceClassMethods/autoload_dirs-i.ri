@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"autoload_dirs:EFI"ERubygame::NamedResource::NamedResourceClassMethods#autoload_dirs;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I":An Array of paths to check for files. See #find_file.;T:
+@file0FI"#lib/rubygame/named_resource.rb;T

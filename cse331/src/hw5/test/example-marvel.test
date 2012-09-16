@@ -1,0 +1,7 @@
+# Load the Marvel dataset and search for a path.
+# To run this test, you will need to have downloaded the marvel dataset and
+# place it in hw5/test/marvel.tsv.
+
+LoadGraph marvel marvel.tsv
+
+FindPath marvel BEAST/HENRY_&HANK&_P WISDOM,_PETER

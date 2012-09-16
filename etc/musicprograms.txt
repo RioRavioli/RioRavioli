@@ -1,0 +1,47 @@
+Tracktion
+Digital Performer
+Studio One
+Logic (Logic Express, Logic Pro)
+
+Sample Libraries
+Strings: Project Sam
+	EWQLSO Strings 
+	VSL Opus 1 STrings 
+	VSL SSE Strings
+	VSL Appasstionata Strings
+	Garritan Solo Strad and Solo Gofriller
+	EWQLSO Strings
+	LA Scoring Strings
+Woodwinds: Westgate Studios Modular Series
+	Project SAM Spmphobia
+	EWQLSO Woodwinds	
+	Bela D Media's Anthology 1 and 2
+	VSL SSE
+Brass: SampleModeling's The Trumpet
+	Poject SAM Brass
+	VSL's Epic Horns
+	VSL SSE + Download intruments
+	Westgate Studios Modular Series Horns
+	EWQLSO Brass
+	Project SAM Symphobia
+	Wallander WIVI Brass
+Percussion: Prjcet SAM True Strike 1 and 2
+	Most of Tonehammer's stuff
+	EWQLSO Percussion
+	EW StormDrum
+	EW SD2
+	Cinesamples Drums of War
+	VSL SSE Percussion
+Pianos: Sampletekk's Seven Sea's Grand 
+	Garritan Authorized Steinway
+	Guitars: Pettinhouse ClassicalGuitar
+	MusicLabs RealGuitar2
+	MusicLabs RealStrat
+	Prominy Les Paul
+	Cinesamples Iron Guitars
+Choirs: EWQL Symphonic Choirs
+	VOTA
+	Peter Siedlaczech's Advanced Choir
+	Tonehammer Vocal Libraries
+
+	+and a bunch of others including most of EW's PLAY line.

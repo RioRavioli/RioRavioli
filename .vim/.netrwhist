@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/rio/.vimperator'
+let g:netrw_dirhist_2='/home/rio/downloads'
+let g:netrw_dirhist_3='/home/rio/.vim'
+let g:netrw_dirhist_4='/home/rio/programs/firefoxaddons/registration/data'
+let g:netrw_dirhist_5='/home/rio/downloads/SDL_mixer-1.2.12/build-scripts'
+let g:netrw_dirhist_6='/home/rio/programs/tacticrpg/rubyvers/visuals/text'
+let g:netrw_dirhist_7='/home/rio/cse331/src/hw7/test'

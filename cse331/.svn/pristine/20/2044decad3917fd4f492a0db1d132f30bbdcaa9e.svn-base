@@ -1,0 +1,240 @@
+package hw4;
+
+import java.util.*;
+
+/**
+ * Graph represents a mutable directed labeled multigraph.
+ * It contains nodes and the nodes contain edges to other nodes that this
+ * contains. The name of a node is a unique identifier of type N.
+ */
+
+public class Graph<N, E> {
+	/*
+	 * NOTE: checkRep() is commented out where performance gets hindered for large
+	 * graphs.
+	 *
+	 * Specification fields
+	 * 	@specfield nodes : list of nodes with edges //nodes that create the graph
+	 *
+	 * Abstraction Invariant
+	 * 	Set of nodes must not be null
+	 *
+	 * Abstraction Function
+	 * 	AF(r) = graph g, such that
+	 * 		g.nodes = r.nodes.values(); 
+	 *
+	 * Representation Invariant
+	 * 	nodes != null
+	 * 	key == nodes.get(key).getName() 
+	 */
+	private Map<N, Node<N, E>> nodes;
+
+	/**
+	 * Constructs a new Graph with an empty list of nodes.
+	 */
+	public Graph() {
+		nodes = new HashMap<N, Node<N, E>>();
+		checkRep();
+	}
+
+	/**
+	 * Creates a node with the given name, and adds it to the graph. If there
+	 * already is a node with the same name, nothing gets added.
+	 * @param name the unique identifier of the new node.
+	 * @throws IllegalArgumentException if name is null.
+	 * @return true if a new node is successfully created and added.
+	 * @modifies this
+	 * @effects adds a new node to this graph, if a node with the same name does
+	 * not exist.
+	 */
+	public boolean createNode(N name) {
+	//	checkRep();
+
+		checkNull(name, "name of node");
+		if (nodes.containsKey(name)) {
+	//		checkRep();
+			return false;
+		} else {
+			nodes.put(name, new Node<N, E>(name));
+	//		checkRep();
+			return true;
+		}
+
+	}
+
+	/**
+	 * Adds a new edge with destName as the destination and the given label
+	 * to the node with name, if nodes with name and destName are in this Graph.
+	 * @param name the node the edge points from.
+	 * @param destName the node the edge poinst to.
+	 * @param label the label put on the edge.
+	 * @throws IllegalArgumentException if name, destName, or label is null.
+	 * @return true if edge is successfully created.
+	 * @modifies this
+	 * @effects adds a new edge to the node with name.
+	 */
+	public boolean createEdge(N name, N destName, E label) {
+		//checkRep();
+
+		//check for exception throwing
+		checkNull(name, "name of node");
+		checkNull(destName, "name of destination node");
+		checkNull(label, "label for edge");
+
+		//possibly add edge
+		if (nodes.containsKey(name) && nodes.containsKey(destName)) {
+			Node node = nodes.get(name);
+			node.addEdge(destName, label);
+		//	checkRep();
+			return true;
+		} else {
+		//	checkRep();
+			return false;
+		}
+	}
+
+	/**
+	 * Removes edges with destName from the node with name, or nothing happens
+	 * if name or destName is not a node in this Graph.
+	 * @param name the node the edges point from.
+	 * @param destName the node the edges point to.
+	 * @throws IllegalArgumentException if name or destName is null.
+	 * @modifies this
+	 * @effects removes all edges with the given destination from the specified node.
+	 */
+	public void removeEdgesFromNode(N name, N destName) {
+		checkRep();
+		checkNull(name, "name of node");
+		checkNull(name, "name of destination node");
+
+		Node node = nodes.get(name);
+		node.removeEdges(destName);
+		checkRep();
+	}
+
+	/**
+	 * Removes the node with name, or nothing if name is not a node in this Graph.
+	 * @param name the node that will get removed.
+	 * @throws IllegalArguemntException if name is null.
+	 * @modifies this
+	 * @effects removes the specified node from graph.
+	 */
+	public void removeNode(N name) {
+		checkRep();
+		checkNull(name, "name of node");
+		
+		nodes.remove(name);
+		checkRep();
+	}
+
+	/**
+	 * Returns all labels on the edge from name to destName, or 
+	 * null if either name or destName is not contained in this Graph.
+	 * @param name the node that the edges point from.
+	 * @param destName the nod that the edges point to.
+	 * @throws IllegalArgumentException if name or destName is null.
+	 * @return list of labels from the edges that connect name and destName, or null
+	 * if neither name or destName is not in this Graph.
+	 */
+	public List<E> getEdgesLabels(N name, N destName) {
+		//checkRep();
+
+		checkNull(name, "name of node");
+		checkNull(name, "name of destination node");
+
+		Node node = nodes.get(name); 
+		if (!nodes.containsKey(destName)) {
+			//checks if there are remaining edges pointing to a previously deleted node
+			if (node.containsEdge(destName)) { 
+				node.removeEdges(destName);
+			}
+		//	checkRep();
+			return null;
+		} else {
+			List<E> edgeLabels = node.getEdgesLabels(destName);
+		//	checkRep();
+			return edgeLabels;
+		}	
+	}
+
+
+	/**
+	 * Returns all destinations of the edges of the node with name, 
+	 * or null if name is not contained in this Graph.
+	 * @param name the name of the node that the edges point from.
+	 * @throws IllegalArguemntException if name is null.
+	 * @return list of all names of destinations of the edges of the node with name, or
+	 * null if name is not a node in Graph.
+	 */
+	public List<N> getAllDests(N name) {
+		//checkRep();
+		checkNull(name, "name of node");
+
+		if (nodes.containsKey(name)) {
+			Node<N, E> node = nodes.get(name);
+			Set<N> allDests = node.getAllDests();
+			List<N> destinations = getList(allDests);
+		//	checkRep();
+			return destinations;
+		} else {
+		//	checkRep();
+			return null;
+		}
+	}
+
+	/**
+	 * Returns the number of nodes this graph contains.
+	 * @Return the number of nodes this graph contains.
+	 */
+	public int getNodeCount() {
+		checkRep();
+		return nodes.size();
+	}
+
+	/**
+	 * Returns a list of the node names.
+	 * @Return list of the names of the nodes in this Graph.
+	 */
+	public List<N> getNodeNames() {
+		checkRep();
+		List<N> nodeNames = getList(nodes.keySet());
+		checkRep();
+		return nodeNames;
+	}
+
+	/**
+	 * Returns whether this Graph contains the given node.
+	 * @Return true if node is in the list of nodes.
+	 */
+	public boolean containsNode(N node) {
+		return nodes.containsKey(node);
+	}
+
+	//returns a list of the contents of the given set
+	private List<N> getList(Set<N> set) {
+		List<N> list = new ArrayList<N>();
+		for (N element : set) {
+			list.add(element);
+		}
+		return list;
+	}
+
+	//checks for possible exceptions that need to be thrown
+	private void checkNull(Object check, String message) {
+		if (check == null) {
+			throw new IllegalArgumentException(message + " is null!");
+		}
+	}
+
+	//checks to ensure that representation invariant is held
+	private void checkRep() {
+		if (nodes == null) {
+			throw new RuntimeException("nodes should not be null");
+		}
+		for (N name : nodes.keySet()) {
+			if (name != nodes.get(name).getName()) {
+				throw new RuntimeException("all names in nodes should map to correct node");
+			}
+		}
+	}
+}

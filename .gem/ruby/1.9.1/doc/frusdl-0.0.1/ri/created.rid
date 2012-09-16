@@ -1,0 +1,16 @@
+Fri, 06 Apr 2012 16:11:34 -0700
+lib/frusdl.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/low/gfx.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/low/img.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/low/sdl.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/low/sge.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/low/ttf.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/low/mix.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/sdl/pixelformat.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/sdl/screen.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/sdl/surface.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/sdl/videoinfo.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/low.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/sdl.rb	Fri, 06 Apr 2012 16:11:33 -0700
+lib/frusdl/wrap.rb	Fri, 06 Apr 2012 16:11:33 -0700
+README	Fri, 06 Apr 2012 16:11:33 -0700

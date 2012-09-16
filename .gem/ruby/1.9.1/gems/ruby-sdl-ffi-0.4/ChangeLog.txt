@@ -1,0 +1,2432 @@
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Mar 6 15:39:55 2011 -0600
+
+    Ruby-SDL-FFI 0.4 released.
+
+M	NEWS.rdoc
+M	README.rdoc
+M	ruby-sdl-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Mar 6 15:37:01 2011 -0600
+
+    Added in-file credits for Bart Leusink's contributions.
+
+M	lib/ruby-sdl-ffi/sdl/mac.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: Bart Leusink <bartleusink@gmail.com>
+Date:   Mon Jan 31 23:05:01 2011 +0100
+
+    Added SDL::SaveBMP and SDL::LoadBMP
+    
+    Fixes https://github.com/rubygame/ruby-sdl-ffi/issues#issue/2
+
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: Bart Leusink <bartleusink@gmail.com>
+Date:   Sat Jan 22 14:10:10 2011 +0100
+
+    Fixed making the current process a front process on OSX
+
+M	lib/ruby-sdl-ffi/sdl/mac.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Aug 8 00:03:34 2010 -0500
+
+    Ruby-SDL-FFI 0.3 released.
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Aug 7 23:49:19 2010 -0500
+
+    Updated copyright on files modified in 2010.
+
+M	README.rdoc
+M	lib/ruby-sdl-ffi.rb
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Aug 7 23:19:44 2010 -0500
+
+    Fixed examples to use '#!/usr/bin/env ruby'.
+    
+    '#!/bin/env ruby' doesn't work on Mac.
+    
+    Also fixed a NameError in load_music.rb, due to FFI API changes.
+
+M	examples/load_image.rb
+M	examples/load_music.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Aug 7 23:13:40 2010 -0500
+
+    Updated NEWS.rdoc, README.rdoc, and ruby-sdl-ffi.gemspec for version 0.3.
+
+M	NEWS.rdoc
+M	README.rdoc
+M	ruby-sdl-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Aug 7 23:11:40 2010 -0500
+
+    Improved how RUBYSDLFFI_PATH and SDL_PATHS are processed.
+
+M	lib/ruby-sdl-ffi/sdl.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Aug 6 04:07:07 2010 -0500
+
+    Added SDL.set_app_name (and SDL::Mac.set_app_name).
+
+M	lib/ruby-sdl-ffi/sdl/mac.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Aug 6 01:35:14 2010 -0500
+
+    Removed unused Mac code and nibs.
+
+D	lib/ruby-sdl-ffi/sdl/EmptyMacMenu.nib/designable.nib
+D	lib/ruby-sdl-ffi/sdl/EmptyMacMenu.nib/keyedobjects.nib
+D	lib/ruby-sdl-ffi/sdl/MacMenu.nib/designable.nib
+D	lib/ruby-sdl-ffi/sdl/MacMenu.nib/keyedobjects.nib
+D	lib/ruby-sdl-ffi/sdl/SparseMacMenu.nib/designable.nib
+D	lib/ruby-sdl-ffi/sdl/SparseMacMenu.nib/keyedobjects.nib
+M	lib/ruby-sdl-ffi/sdl/mac.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Aug 3 22:53:14 2010 -0500
+
+    Extract paths from ENV["RUBYSDLFFI_PATH"] if present.
+    
+    RUBYSDLFFI_PATH should be a colon (on *nix/Mac) or semicolon
+    (Windows) separated list of paths to search for SDL libraries.
+    
+    (Alternative to setting the SDL_PATHS constant in Ruby.)
+
+M	lib/ruby-sdl-ffi/sdl.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jul 10 22:53:30 2010 -0500
+
+    More progress on Mac support.
+
+M	lib/ruby-sdl-ffi/sdl/mac.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 9 03:16:12 2010 -0500
+
+    More object-oriented style for Mac ObjC/Cocoa bindings.
+
+M	lib/ruby-sdl-ffi/sdl/mac.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jul 8 05:03:35 2010 -0500
+
+    WIP experimental mac menu support
+
+A	lib/ruby-sdl-ffi/sdl/EmptyMacMenu.nib/designable.nib
+A	lib/ruby-sdl-ffi/sdl/EmptyMacMenu.nib/keyedobjects.nib
+A	lib/ruby-sdl-ffi/sdl/MacMenu.nib/designable.nib
+A	lib/ruby-sdl-ffi/sdl/MacMenu.nib/keyedobjects.nib
+A	lib/ruby-sdl-ffi/sdl/SparseMacMenu.nib/designable.nib
+A	lib/ruby-sdl-ffi/sdl/SparseMacMenu.nib/keyedobjects.nib
+M	lib/ruby-sdl-ffi/sdl/mac.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 2 23:10:58 2010 -0500
+
+    Disable Mac magic if using rsdl or ENV["RUBYSDLFFI_NOCOCOA"] is true.
+
+M	lib/ruby-sdl-ffi/sdl/mac.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 30 18:39:16 2010 -0500
+
+    Improved integration with the Mac window manager.
+    
+    The app now gets an application menu and dock icon, and the
+    SDL window can gain focus and have a title.
+
+M	lib/ruby-sdl-ffi/sdl/mac.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 29 03:45:58 2010 -0500
+
+    Preliminary support for Mac without rsdl.
+    
+    This allows the normal ruby interpreter to create a window on
+    Mac OS X. No special interpreter (i.e. rsdl) is needed.
+    However, some SDL functions have memory leaks, so we should wrap
+    those functions in NS{Push,Pop}AutoreleasePool.
+    
+    Eternal thanks to erisdiscord for pointing the way!
+
+M	lib/ruby-sdl-ffi/sdl.rb
+A	lib/ruby-sdl-ffi/sdl/mac.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jun 4 18:17:54 2010 -0500
+
+    Fixed SDL.GL_GetAttribute returning FFI::Buffer instead of integer.
+
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Apr 11 05:13:04 2010 -0500
+
+    Made SDL::Palette enumerable, defined #each and #at.
+
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Dec 10 14:20:10 2009 -0600
+
+    Made a nice wrapper around SDL::GetKeyRepeat().
+
+M	lib/ruby-sdl-ffi/sdl/keyboard.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Dec 10 13:53:53 2009 -0600
+
+    Use Buffer instad of MemoryPointer in many places.
+    
+    There may be other places where Buffer should be used,
+    but these are the obvious ones.
+
+M	lib/ruby-sdl-ffi/gfx/rotozoom.rb
+M	lib/ruby-sdl-ffi/sdl/audio.rb
+M	lib/ruby-sdl-ffi/sdl/event.rb
+M	lib/ruby-sdl-ffi/sdl/keyboard.rb
+M	lib/ruby-sdl-ffi/sdl/mouse.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Dec 10 02:53:55 2009 -0600
+
+    Fixed a mistake in SDL::WaitEvent().
+
+M	lib/ruby-sdl-ffi/sdl/event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Oct 30 18:29:33 2009 -0500
+
+    Ruby-SDL-FFI 0.2 released.
+
+M	README.rdoc
+M	ruby-sdl-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Oct 30 18:28:17 2009 -0500
+
+    Updated ruby-sdl-ffi.gemspec.
+    
+    Include all rdoc files, lowered SDL_gfx required version.
+    Fixed rubyforge_project.
+
+M	ruby-sdl-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Oct 30 18:25:06 2009 -0500
+
+    Added NEWS.rdoc (release notes).
+
+A	NEWS.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Oct 29 16:39:26 2009 -0500
+
+    Updated README.rdoc.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Oct 29 16:26:17 2009 -0500
+
+    rotozoomSurfaceXY and rotozoomSurfaceSizeXY don't need to be optional.
+    
+    They both exist in SDL_gfx 2.0.13, the minimum supported version.
+
+M	lib/ruby-sdl-ffi/gfx/rotozoom.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Oct 29 16:10:54 2009 -0500
+
+    Reordered gfx/primitives.rb a bit.
+
+M	lib/ruby-sdl-ffi/gfx/primitives.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Oct 29 16:04:35 2009 -0500
+
+    SDL_gfx's arcRGBA should be optfunc like arcColor.
+
+M	lib/ruby-sdl-ffi/gfx/primitives.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Oct 29 16:00:23 2009 -0500
+
+    AUDIO_U16SYS/AUDIO_S16SYS vary depending on byte order.
+
+M	lib/ruby-sdl-ffi/sdl/audio.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Oct 24 15:57:13 2009 -0500
+
+    Ruby-SDL-FFI 0.1 released.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 21 23:27:56 2009 -0500
+
+    CD holds an array of CDTracks by value, not pointers.
+
+M	lib/ruby-sdl-ffi/sdl/cdrom.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 21 23:10:21 2009 -0500
+
+    Explicitly initialize events when unwrapping them.
+    
+    (Workaround for JRUBY-4139.)
+
+M	lib/ruby-sdl-ffi/sdl/event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 21 19:42:41 2009 -0500
+
+    Removed superfluous 'require "nice-ffi"' statements.
+
+M	lib/ruby-sdl-ffi/sdl/audio.rb
+M	lib/ruby-sdl-ffi/sdl/cdrom.rb
+M	lib/ruby-sdl-ffi/sdl/core.rb
+M	lib/ruby-sdl-ffi/sdl/event.rb
+M	lib/ruby-sdl-ffi/sdl/keyboard.rb
+M	lib/ruby-sdl-ffi/sdl/mouse.rb
+M	lib/ruby-sdl-ffi/sdl/rwops.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 21 19:37:59 2009 -0500
+
+    Made some SDL_gfx funcs optional.
+
+M	lib/ruby-sdl-ffi/gfx/blitfunc.rb
+M	lib/ruby-sdl-ffi/gfx/primitives.rb
+M	lib/ruby-sdl-ffi/gfx/rotozoom.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 21 19:37:14 2009 -0500
+
+    Disabled SDL::CD and SDL::Cursor when using JRuby.
+    
+    JRuby's FFI doesn't support arrays of pointers in structs yet.
+
+M	lib/ruby-sdl-ffi/sdl/cdrom.rb
+M	lib/ruby-sdl-ffi/sdl/mouse.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Oct 20 19:33:20 2009 -0500
+
+    Ruby-SDL-FFI 0.1 RC1 released.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Oct 20 19:30:12 2009 -0500
+
+    Fixed class name in struct array in cdrom.rb.
+
+M	lib/ruby-sdl-ffi/sdl/cdrom.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Oct 20 01:35:15 2009 -0500
+
+    mkchangelog.rb requires 'fileutils'.
+
+M	scripts/mkchangelog.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Oct 19 01:46:37 2009 -0500
+
+    Don't autorelease the video surface. Seriously.
+
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Oct 18 15:15:09 2009 -0500
+
+    Updated README.rdoc and ruby-sdl-ffi.gemspec.
+
+M	README.rdoc
+M	ruby-sdl-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Oct 18 15:05:57 2009 -0500
+
+    Revamped how files are required.
+
+M	lib/ruby-sdl-ffi.rb
+M	lib/ruby-sdl-ffi/gfx.rb
+M	lib/ruby-sdl-ffi/image.rb
+M	lib/ruby-sdl-ffi/mixer.rb
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Oct 18 13:06:25 2009 -0500
+
+    Removed sprig.rb for now.
+
+M	README.rdoc
+M	lib/ruby-sdl-ffi.rb
+D	lib/ruby-sdl-ffi/sprig.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Oct 14 15:35:10 2009 -0500
+
+    Updated sdl.rb to use NiceFFI::PathSet::DEFAULT.
+
+M	lib/ruby-sdl-ffi/sdl.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Sep 11 23:38:45 2009 -0500
+
+    Define fake SPriG::LinkedVersion if missing.
+
+M	lib/ruby-sdl-ffi/sprig.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Sep 11 23:32:40 2009 -0500
+
+    Comment was a bit out of date.
+
+M	lib/ruby-sdl-ffi/sdl.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Sep 11 23:21:28 2009 -0500
+
+    Check for and use SDL_PATHS constant if defined.
+    
+    Apps can defined SDL_PATHS before loading Ruby-SDL-FFI
+    to specify some paths to search for SDL libs. SDL_PATHS
+    are searched before the default paths.
+
+M	lib/ruby-sdl-ffi/gfx.rb
+M	lib/ruby-sdl-ffi/image.rb
+M	lib/ruby-sdl-ffi/mixer.rb
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sprig.rb
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Sep 11 22:55:32 2009 -0500
+
+    Improved the 'requires' in some files.
+
+M	lib/ruby-sdl-ffi/gfx.rb
+M	lib/ruby-sdl-ffi/image.rb
+M	lib/ruby-sdl-ffi/mixer.rb
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sprig.rb
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 14:44:38 2009 -0500
+
+    Added memory autorelease to TTF::Font.
+
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 14:44:10 2009 -0500
+
+    Added memory autorelease to Mixer::Chunk and Music.
+
+M	lib/ruby-sdl-ffi/mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 13:50:47 2009 -0500
+
+    Added memory autorelease to Overlay.
+
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 11:23:19 2009 -0500
+
+    Added memory autorelease to Surface.
+
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 03:39:40 2009 -0500
+
+    ruby-sdl-ffi.rb loads sprig.rb (with failsafe).
+
+M	lib/ruby-sdl-ffi.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 03:35:09 2009 -0500
+
+    Updated README.rdoc.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 02:29:06 2009 -0500
+
+    Added SPriG.FloodFill8.
+
+M	lib/ruby-sdl-ffi/sprig.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 02:20:41 2009 -0500
+
+    Replaced SPriG's PI constants with ruby-derived versions.
+
+M	lib/ruby-sdl-ffi/sprig.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 02:16:22 2009 -0500
+
+    Made color optional to SPriG's Rotate and RotateAA, like C++ version.
+
+M	lib/ruby-sdl-ffi/sprig.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 02:13:37 2009 -0500
+
+    Added ruby versions of most of SPriG's inline functions.
+
+M	lib/ruby-sdl-ffi/sprig.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 27 01:13:58 2009 -0500
+
+    Added sprig.rb (first draft binding to SPriG).
+
+A	lib/ruby-sdl-ffi/sprig.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 26 23:35:15 2009 -0500
+
+    Implemented nice wrapper for TTF.GlyphMetrics.
+
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 26 18:35:32 2009 -0500
+
+    Fixed TTF.SizeText, etc. returning pointers instead of numbers.
+
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jul 23 23:51:14 2009 -0500
+
+    SDL::TTF.Linked_Version uses SDL::Version typed pointer.
+
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jul 23 19:24:39 2009 -0500
+
+    Added SDL::Joystick struct (opaque).
+
+M	lib/ruby-sdl-ffi/sdl/joystick.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jul 23 18:46:23 2009 -0500
+
+    Added nice wrapper for SDL.GL_GetAttribute.
+
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jul 21 04:22:19 2009 -0500
+
+    Implemented SDL::Mixer.LoadWAV.
+
+M	lib/ruby-sdl-ffi/mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jul 21 00:22:10 2009 -0500
+
+    Implemented nice wrapper for SDL::AudioDriverName().
+
+M	lib/ruby-sdl-ffi/sdl/audio.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 20 23:45:38 2009 -0500
+
+    Defined SDL::Mixer::DEFAULT_FORMAT.
+
+M	lib/ruby-sdl-ffi/mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 20 18:26:56 2009 -0500
+
+    Implemented TTF wrappers to convert SDL::Color to uint32.
+
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 20 02:21:55 2009 -0500
+
+    Added nice wrappers for TTF.SizeText, SizeUTF8, and SizeUNICODE.
+
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 19 20:44:15 2009 -0500
+
+    SDL::Mixer::Music is a subclass of NiceFFI::OpaqueStruct now, too.
+
+M	lib/ruby-sdl-ffi/mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 19 20:43:32 2009 -0500
+
+    Added class SDL::TTF::Font < NiceFFI::OpaqueStruct.
+
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 19 20:11:07 2009 -0500
+
+    TTF methods use Surface.typed_pointer.
+
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 19 13:03:03 2009 -0500
+
+    Implemented class SDL::VideoInfo and SDL.GetVideoInfo().
+
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 19 00:52:04 2009 -0500
+
+    Implemented nice wrappers for rotozoom.rb "size" methods.
+
+M	lib/ruby-sdl-ffi/gfx/rotozoom.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 19 00:38:13 2009 -0500
+
+    Updated rotozoom.rb methods to use Surface typed pointer.
+
+M	lib/ruby-sdl-ffi/gfx/rotozoom.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jul 14 14:06:03 2009 -0500
+
+    Implemented a nice wrapper for SDL::UpdateRects.
+
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 13 01:34:10 2009 -0500
+
+    Added examples/load_music.rb.
+
+A	examples/load_music.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jul 13 00:41:38 2009 -0500
+
+    Improved readability using sdl_func, img_func, etc.
+
+M	lib/ruby-sdl-ffi/gfx.rb
+M	lib/ruby-sdl-ffi/gfx/framerate.rb
+M	lib/ruby-sdl-ffi/gfx/imagefilter.rb
+M	lib/ruby-sdl-ffi/image.rb
+M	lib/ruby-sdl-ffi/mixer.rb
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl/audio.rb
+M	lib/ruby-sdl-ffi/sdl/cdrom.rb
+M	lib/ruby-sdl-ffi/sdl/core.rb
+M	lib/ruby-sdl-ffi/sdl/event.rb
+M	lib/ruby-sdl-ffi/sdl/joystick.rb
+M	lib/ruby-sdl-ffi/sdl/keyboard.rb
+M	lib/ruby-sdl-ffi/sdl/mouse.rb
+M	lib/ruby-sdl-ffi/sdl/mutex.rb
+M	lib/ruby-sdl-ffi/sdl/rwops.rb
+M	lib/ruby-sdl-ffi/sdl/timer.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 23:40:26 2009 -0500
+
+    Updated to the new Struct.typed_pointer syntax in NiceFFI.
+
+M	lib/ruby-sdl-ffi/gfx/blitfunc.rb
+M	lib/ruby-sdl-ffi/image.rb
+M	lib/ruby-sdl-ffi/mixer.rb
+M	lib/ruby-sdl-ffi/sdl/core.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 23:27:39 2009 -0500
+
+    Copied Rakefile, gemspec, and changelog stuff from Nice-FFI.
+
+M	Rakefile
+M	ruby-sdl-ffi.gemspec
+A	scripts/mkchangelog.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 23:21:33 2009 -0500
+
+    Updated examples/load_image.rb to current API.
+
+M	examples/load_image.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 22:46:03 2009 -0500
+
+    Changed all "attach_function" to "func" (alias from Nice-FFI).
+
+M	lib/ruby-sdl-ffi/gfx/blitfunc.rb
+M	lib/ruby-sdl-ffi/gfx/framerate.rb
+M	lib/ruby-sdl-ffi/gfx/imagefilter.rb
+M	lib/ruby-sdl-ffi/gfx/primitives.rb
+M	lib/ruby-sdl-ffi/gfx/rotozoom.rb
+M	lib/ruby-sdl-ffi/image.rb
+M	lib/ruby-sdl-ffi/mixer.rb
+M	lib/ruby-sdl-ffi/sdl/audio.rb
+M	lib/ruby-sdl-ffi/sdl/cdrom.rb
+M	lib/ruby-sdl-ffi/sdl/core.rb
+M	lib/ruby-sdl-ffi/sdl/event.rb
+M	lib/ruby-sdl-ffi/sdl/joystick.rb
+M	lib/ruby-sdl-ffi/sdl/keyboard.rb
+M	lib/ruby-sdl-ffi/sdl/mouse.rb
+M	lib/ruby-sdl-ffi/sdl/mutex.rb
+M	lib/ruby-sdl-ffi/sdl/rwops.rb
+M	lib/ruby-sdl-ffi/sdl/timer.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 15:10:56 2009 -0500
+
+    Renamed all methods in SDL::Gfx to remove prefixes.
+    
+      SDL_gfx*  -->  *
+      SDL_*     -->  *
+
+M	lib/ruby-sdl-ffi/gfx/blitfunc.rb
+M	lib/ruby-sdl-ffi/gfx/framerate.rb
+M	lib/ruby-sdl-ffi/gfx/imagefilter.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 14:58:14 2009 -0500
+
+    Renamed all SDL::TTF methods to remove "TTF_" prefix.
+
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 14:48:48 2009 -0500
+
+    Renamed all SDL::Mixer methods to remove "Mix_" prefix.
+
+M	lib/ruby-sdl-ffi/mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 14:36:04 2009 -0500
+
+    Renamed all SDL::Image methods to remove "IMG_" prefix.
+
+M	lib/ruby-sdl-ffi/image.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 14:29:54 2009 -0500
+
+    Renamed all methods in module SDL to remove "SDL_" prefix.
+
+M	lib/ruby-sdl-ffi/sdl/audio.rb
+M	lib/ruby-sdl-ffi/sdl/cdrom.rb
+M	lib/ruby-sdl-ffi/sdl/core.rb
+M	lib/ruby-sdl-ffi/sdl/event.rb
+M	lib/ruby-sdl-ffi/sdl/joystick.rb
+M	lib/ruby-sdl-ffi/sdl/keyboard.rb
+M	lib/ruby-sdl-ffi/sdl/mouse.rb
+M	lib/ruby-sdl-ffi/sdl/mutex.rb
+M	lib/ruby-sdl-ffi/sdl/rwops.rb
+M	lib/ruby-sdl-ffi/sdl/timer.rb
+M	lib/ruby-sdl-ffi/sdl/video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 13:20:05 2009 -0500
+
+    Renamed module SDL::Mix  -->  SDL::Mixer
+
+M	lib/ruby-sdl-ffi/mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:59:14 2009 -0500
+
+    Updated ruby-sdl-ffi.rb to new layout.
+
+M	lib/ruby-sdl-ffi.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:57:00 2009 -0500
+
+    Updated sdl.rb to new layout.
+
+M	lib/ruby-sdl-ffi/sdl.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:54:59 2009 -0500
+
+    Moved most SDL (core) files to ruby-sdl-ffi/lib/sdl/.
+    
+      sdl_audio.rb    -->  sdl/audio.rb
+      sdl_cdrom.rb    -->  sdl/cdrom.rb
+      sdl_core.rb     -->  sdl/core.rb
+      sdl_event.rb    -->  sdl/event.rb
+      sdl_joystick.rb -->  sdl/joystick.rb
+      sdl_keyboard.rb -->  sdl/keyboard.rb
+      sdl_keysyms.rb  -->  sdl/keysyms.rb
+      sdl_mouse.rb    -->  sdl/mouse.rb
+      sdl_mutex.rb    -->  sdl/mutex.rb
+      sdl_rwops.rb    -->  sdl/rwops.rb
+      sdl_timer.rb    -->  sdl/timer.rb
+      sdl_video.rb    -->  sdl/video.rb
+
+A	lib/ruby-sdl-ffi/sdl/audio.rb
+A	lib/ruby-sdl-ffi/sdl/cdrom.rb
+A	lib/ruby-sdl-ffi/sdl/core.rb
+A	lib/ruby-sdl-ffi/sdl/event.rb
+A	lib/ruby-sdl-ffi/sdl/joystick.rb
+A	lib/ruby-sdl-ffi/sdl/keyboard.rb
+A	lib/ruby-sdl-ffi/sdl/keysyms.rb
+A	lib/ruby-sdl-ffi/sdl/mouse.rb
+A	lib/ruby-sdl-ffi/sdl/mutex.rb
+A	lib/ruby-sdl-ffi/sdl/rwops.rb
+A	lib/ruby-sdl-ffi/sdl/timer.rb
+A	lib/ruby-sdl-ffi/sdl/video.rb
+D	lib/ruby-sdl-ffi/sdl_audio.rb
+D	lib/ruby-sdl-ffi/sdl_cdrom.rb
+D	lib/ruby-sdl-ffi/sdl_core.rb
+D	lib/ruby-sdl-ffi/sdl_event.rb
+D	lib/ruby-sdl-ffi/sdl_joystick.rb
+D	lib/ruby-sdl-ffi/sdl_keyboard.rb
+D	lib/ruby-sdl-ffi/sdl_keysyms.rb
+D	lib/ruby-sdl-ffi/sdl_mouse.rb
+D	lib/ruby-sdl-ffi/sdl_mutex.rb
+D	lib/ruby-sdl-ffi/sdl_rwops.rb
+D	lib/ruby-sdl-ffi/sdl_timer.rb
+D	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:54:09 2009 -0500
+
+    Updated image.rb.
+
+M	lib/ruby-sdl-ffi/image.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:53:40 2009 -0500
+
+    Renamed sdl_image.rb  -->  image.rb
+
+A	lib/ruby-sdl-ffi/image.rb
+D	lib/ruby-sdl-ffi/sdl_image.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:53:03 2009 -0500
+
+    Updated ttf.rb.
+
+M	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:52:49 2009 -0500
+
+    Renamed sdl_ttf.rb  -->  ttf.rb
+
+D	lib/ruby-sdl-ffi/sdl_ttf.rb
+A	lib/ruby-sdl-ffi/ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:50:13 2009 -0500
+
+    Updated mixer.rb.
+
+M	lib/ruby-sdl-ffi/mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:48:49 2009 -0500
+
+    Renamed sdl_mixer.rb  -->  mixer.rb
+
+A	lib/ruby-sdl-ffi/mixer.rb
+D	lib/ruby-sdl-ffi/sdl_mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:47:58 2009 -0500
+
+    Updated gfx files to new layout.
+
+M	lib/ruby-sdl-ffi/gfx.rb
+M	lib/ruby-sdl-ffi/gfx/blitfunc.rb
+M	lib/ruby-sdl-ffi/gfx/framerate.rb
+M	lib/ruby-sdl-ffi/gfx/imagefilter.rb
+M	lib/ruby-sdl-ffi/gfx/rotozoom.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:37:54 2009 -0500
+
+    Renamed sdl_gfx.rb --> gfx.rb
+
+A	lib/ruby-sdl-ffi/gfx.rb
+D	lib/ruby-sdl-ffi/sdl_gfx.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jul 12 12:37:20 2009 -0500
+
+    Moved most SDL_gfx files to lib/ruby-sdl-ffi/gfx/
+    
+      sdl_framerate.rb      -->  gfx/framerate.rb
+      sdl_gfxblitfunc.rb    -->  gfx/blitfunc.rb
+      sdl_gfxprimitives.rb  -->  gfx/primitives.rb
+      sdl_imagefilter.rb    -->  gfx/imagefilter.rb
+      sdl_rotozoom.rb       -->  gfx/rotozoom.rb
+
+A	lib/ruby-sdl-ffi/gfx/blitfunc.rb
+A	lib/ruby-sdl-ffi/gfx/framerate.rb
+A	lib/ruby-sdl-ffi/gfx/imagefilter.rb
+A	lib/ruby-sdl-ffi/gfx/primitives.rb
+A	lib/ruby-sdl-ffi/gfx/rotozoom.rb
+D	lib/ruby-sdl-ffi/sdl_framerate.rb
+D	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+D	lib/ruby-sdl-ffi/sdl_gfxprimitives.rb
+D	lib/ruby-sdl-ffi/sdl_imagefilter.rb
+D	lib/ruby-sdl-ffi/sdl_rotozoom.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 04:43:15 2009 -0500
+
+    Updated to new NiceFFI::Library.load_library syntax.
+
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl_gfx.rb
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 03:27:49 2009 -0500
+
+    Updated to latest NiceFFI API.
+
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl_audio.rb
+M	lib/ruby-sdl-ffi/sdl_cdrom.rb
+M	lib/ruby-sdl-ffi/sdl_core.rb
+M	lib/ruby-sdl-ffi/sdl_event.rb
+M	lib/ruby-sdl-ffi/sdl_framerate.rb
+M	lib/ruby-sdl-ffi/sdl_gfx.rb
+M	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_keyboard.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+M	lib/ruby-sdl-ffi/sdl_rotozoom.rb
+M	lib/ruby-sdl-ffi/sdl_rwops.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 02:40:16 2009 -0500
+
+    Split off Nice-FFI to form its own, separate library.
+
+D	lib/ruby-sdl-ffi/nicelibrary.rb
+D	lib/ruby-sdl-ffi/nicestruct.rb
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl_audio.rb
+M	lib/ruby-sdl-ffi/sdl_cdrom.rb
+M	lib/ruby-sdl-ffi/sdl_core.rb
+M	lib/ruby-sdl-ffi/sdl_event.rb
+M	lib/ruby-sdl-ffi/sdl_framerate.rb
+M	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+M	lib/ruby-sdl-ffi/sdl_keyboard.rb
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+M	lib/ruby-sdl-ffi/sdl_rotozoom.rb
+M	lib/ruby-sdl-ffi/sdl_rwops.rb
+M	lib/ruby-sdl-ffi/sdl_video.rb
+D	lib/ruby-sdl-ffi/typedpointer.rb
+M	ruby-sdl-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jul 3 02:54:46 2009 -0500
+
+    Fixed dependencies syntax in ruby-sdl-ffi.gemspec.
+
+M	ruby-sdl-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jul 2 03:54:28 2009 -0500
+
+    Commented out VideoInfo and SDL_GetVideoInfo for now.
+    
+    VideoInfo uses bitfields, which I don't know how to implement.
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jul 2 03:09:45 2009 -0500
+
+    Improved SDL_PeepEvents to support ADDEVENTS action.
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jul 2 02:08:14 2009 -0500
+
+    Event#inspect lists event type (as integer).
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 20:49:36 2009 -0500
+
+    Implemented a nice wrapper for SDL_SetEventFilter().
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 19:54:32 2009 -0500
+
+    Implemented a nice wrapper for SDL_PeepEvents().
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 17:52:37 2009 -0500
+
+    Added SDL::Event.wrap().
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 17:09:41 2009 -0500
+
+    Moved SDL._extract_event to SDL::Event#unwrap.
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 16:17:07 2009 -0500
+
+    Implemented a nice wrapper for SDL_GetKeyState().
+
+M	lib/ruby-sdl-ffi/sdl_keyboard.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 15:35:05 2009 -0500
+
+    Minor cosmetic cleanup in sdl_mouse.rb.
+
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 15:31:32 2009 -0500
+
+    Implemented a nice wrapper for SDL_GetRelativeMouseState().
+
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 15:28:23 2009 -0500
+
+    Implemented a nice wrapper for SDL_GetMouseState().
+
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 03:43:00 2009 -0500
+
+    Implemented a nice wrapper for SDL_WM_GetCaption().
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 03:25:31 2009 -0500
+
+    Implemented a nice wrapper for SDL_GetClipRect().
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 03:20:27 2009 -0500
+
+    Implemented a nice wrapper for SDL_GetGammaRamp().
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 00:44:59 2009 -0500
+
+    Revert "Added SDL._wrap_event. (private, nodoc)"
+    
+    SDL._wrap_event isn't needed for SDL_PushEvent, but I want to
+    keep it in the revision history in case it's needed later.
+    
+    This reverts commit 019f2c6945db2a5b87bfc3f105814ff3ce5820f2.
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jul 1 00:36:41 2009 -0500
+
+    Added SDL._wrap_event. (private, nodoc)
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 18:59:59 2009 -0500
+
+    Implemented a nice wrapper for SDL_WaitEvent().
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 18:55:36 2009 -0500
+
+    Implemented a nice wrapper for SDL_PollEvent().
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 18:44:11 2009 -0500
+
+    Added SDL::_extract_event(). (private, nodoc)
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 18:35:33 2009 -0500
+
+    Fixed ordering of constants in sdl_event.rb.
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 09:37:28 2009 -0500
+
+    Commented out SDL_ListModes for now. Don't know to implement it reliably.
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 08:43:57 2009 -0500
+
+    Moved platforms.rb functionality into NiceLibrary.
+
+M	lib/ruby-sdl-ffi/nicelibrary.rb
+D	lib/ruby-sdl-ffi/platforms.rb
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl_gfx.rb
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 08:37:53 2009 -0500
+
+    Fixed NiceStruct#to_hash when members is empty.
+
+M	lib/ruby-sdl-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 08:07:19 2009 -0500
+
+    Improved NiceStruct#to_s when there are no visible members.
+
+M	lib/ruby-sdl-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 08:00:16 2009 -0500
+
+    Added SDL::Mix::Music struct class. It's unorthodox.
+    
+    Mix_Music struct (in C) has a hidden layout, which changes
+    depending on which sound format libraries were available
+    at compile time. Since we don't know the layout, we have to
+    jump through some hoops.
+
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 06:35:13 2009 -0500
+
+    Removed redundant "... or pointer.is_a? FFI::MemoryPointer".
+    
+    Turns out FFI::MemoryPointer is a descendent of FFI::Pointer...
+
+M	lib/ruby-sdl-ffi/typedpointer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 30 06:17:51 2009 -0500
+
+    TypedPointer is no longer picky about class being FFI::Struct.
+
+M	lib/ruby-sdl-ffi/typedpointer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jun 25 20:52:58 2009 -0500
+
+    Several Mix functions use TypedPointer returns now.
+
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jun 25 20:52:19 2009 -0500
+
+    Added a wrapper around SDL_GetRGB and SDL_GetRGBA.
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jun 25 06:03:28 2009 -0500
+
+    Updated load_image.rb to current API usage.
+
+M	examples/load_image.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 22 09:15:45 2009 -0500
+
+    Simplified require (need) statements in companion libs.
+
+M	lib/ruby-sdl-ffi/sdl_gfx.rb
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 22 09:12:04 2009 -0500
+
+    Updated some sdl_image.rb funcs to use TypedPointers.
+    
+    IMG_Linked_Version
+    IMG_LoadTyped_RW
+    IMG_Load_RW
+    IMG_LoadBMP_RW
+    IMG_LoadGIF_RW
+    IMG_LoadJPG_RW
+    IMG_LoadLBM_RW
+    IMG_LoadPCX_RW
+    IMG_LoadPNG_RW
+    IMG_LoadPNM_RW
+    IMG_LoadTGA_RW
+    IMG_LoadTIF_RW
+    IMG_LoadXCF_RW
+    IMG_LoadXPM_RW
+    IMG_LoadXV_RW
+    IMG_ReadXPMFromArray
+
+M	lib/ruby-sdl-ffi/sdl_image.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 22 08:16:22 2009 -0500
+
+    Removed SDL_UpperBlit and SDL_LowerBlit.
+    
+    Users are meant to use SDL_BlitSurface (which is the
+    same as SDL_UpperBlit).
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 22 08:14:18 2009 -0500
+
+    Removed SDL_SoftStretch, it is not part of the public SDL API.
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 22 08:13:34 2009 -0500
+
+    SDL_MapRGB and SDL_MapRGBA actually return uint32, not pointer.
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 22 08:11:55 2009 -0500
+
+    Updated some sdl_video.rb funcs to use TypedPointers.
+    
+    SDL_GetVideoSurface
+    SDL_GetVideoInfo
+    SDL_SetVideoMode
+    SDL_CreateRGBSurface
+    SDL_CreateRGBSurfaceFrom
+    SDL_LoadBMP_RW
+    SDL_ConvertSurface
+    SDL_DisplayFormat
+    SDL_DisplayFormatAlpha
+    SDL_CreateYUVOverlay
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 22 07:10:19 2009 -0500
+
+    Updated modules to use NiceLibrary instead of FFI::Library
+    
+    Updated: SDL, SDL::Image, SDL::Gfx, SDL::Mix, SDL::TTF
+
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl_gfx.rb
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 22 07:09:00 2009 -0500
+
+    Added class NiceLibrary (nicelibrary.rb).
+
+A	lib/ruby-sdl-ffi/nicelibrary.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jun 21 14:37:30 2009 -0500
+
+    Added Mac path: "/opt/local/lib/lib[LIB].dylib" (for Darwin Ports)
+
+M	lib/ruby-sdl-ffi/platforms.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jun 21 04:05:43 2009 -0500
+
+    Added examples/load_image.rb.
+
+A	examples/load_image.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jun 21 03:53:06 2009 -0500
+
+    Updated and expanded doc comments for NiceStruct.
+
+M	lib/ruby-sdl-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 21:46:57 2009 -0500
+
+    SDL_BlitSurface alias must be defined in class << self.
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 21:40:03 2009 -0500
+
+    Added my guess at proper LIBRARY_PATHS for win32.
+
+M	lib/ruby-sdl-ffi/platforms.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 21:38:59 2009 -0500
+
+    Updated LIBRARY_PATHS for Mac.
+    
+    Added:   /sw/lib/lib[LIB].dylib
+    Removed: /usr/local/lib/lib[LIB].so
+
+M	lib/ruby-sdl-ffi/platforms.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 20:22:44 2009 -0500
+
+    Added alias SDL::SDL_BlitSurface = SDL::SDL_UpperBlit.
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 20:16:08 2009 -0500
+
+    NiceStruct handles NullPointerErrors more gracefully.
+
+M	lib/ruby-sdl-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 20:04:53 2009 -0500
+
+    NiceStruct struct-typed members are cached now.
+    
+    This prevents a new object from being created every
+    time the member is read.
+
+M	lib/ruby-sdl-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 20:02:34 2009 -0500
+
+    NiceStruct rescues NameError when removing accessors.
+
+M	lib/ruby-sdl-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 19:47:13 2009 -0500
+
+    Used TypedPointer in some structs.
+
+M	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 18:39:01 2009 -0500
+
+    Added "need >= 1.1.0" to dependencies in README.rdoc.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 18:17:27 2009 -0500
+
+    Added support for TypedPointers in NiceStruct.
+    
+    NiceStruct#layout accepts TypedPointers as types and constructs
+    "smart" accessors for those members.
+
+M	lib/ruby-sdl-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 18:16:27 2009 -0500
+
+    Added class TypedPointer (typedpointer.rb).
+
+A	lib/ruby-sdl-ffi/typedpointer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 13:13:27 2009 -0500
+
+    Simplified 'require' code with 'need'.
+
+M	lib/ruby-sdl-ffi.rb
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl_audio.rb
+M	lib/ruby-sdl-ffi/sdl_cdrom.rb
+M	lib/ruby-sdl-ffi/sdl_core.rb
+M	lib/ruby-sdl-ffi/sdl_event.rb
+M	lib/ruby-sdl-ffi/sdl_framerate.rb
+M	lib/ruby-sdl-ffi/sdl_gfx.rb
+M	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+M	lib/ruby-sdl-ffi/sdl_gfxprimitives.rb
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_keyboard.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+M	lib/ruby-sdl-ffi/sdl_rotozoom.rb
+M	lib/ruby-sdl-ffi/sdl_rwops.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 12:36:33 2009 -0500
+
+    Added gem dependency: need >= 1.1.0.
+
+M	ruby-sdl-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:57:13 2009 -0500
+
+    Renamed module SDL::IMG --> SDL::Image.
+
+M	lib/ruby-sdl-ffi/sdl_image.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:55:44 2009 -0500
+
+    Cosmetic cleanup in sdl_gfxprimitives.rb.
+
+M	lib/ruby-sdl-ffi/sdl_gfxprimitives.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:45:59 2009 -0500
+
+    Cosmetic cleanup in sdl_gfxblitfunc.rb
+
+M	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:44:54 2009 -0500
+
+    Cosmetic cleanup in sdl_framerate.rb.
+
+M	lib/ruby-sdl-ffi/sdl_framerate.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:44:11 2009 -0500
+
+    Cosmetic cleanup in sdl_image.rb.
+
+M	lib/ruby-sdl-ffi/sdl_image.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:40:13 2009 -0500
+
+    Cosmetic cleanup in sdl_ttf.rb.
+
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:36:37 2009 -0500
+
+    Cosmetic cleanup in sdl_mixer.rb.
+
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:21:39 2009 -0500
+
+    Made various struct members hidden or read_only.
+    
+    hidden:
+    
+        SDL::CDtrack[ :unused ]
+        SDL::RWops[ :hidden ]
+        SDL::Color[ :unused ]
+        SDL::Surface[ :offset, :hwdata, :unused1,
+                    :locked, :map, :format_version ]
+        SDL::VideoInfo[ :UnusedBits1, :UnusedBits2, :UnusedBits3 ]
+        SDL::Overlay[ :hwfuncs, :hwdata, :UnusedBits ]
+    
+    read_only:
+    
+      SDL::Surface[ :flags, :format, :w, :h,
+                    :pitch, :clip_rect, :refcount ]
+      SDL::Overlay[ :format, :w, :h,
+                    :planes, :pitches, :hw_overlay ]
+
+M	lib/ruby-sdl-ffi/sdl_cdrom.rb
+M	lib/ruby-sdl-ffi/sdl_rwops.rb
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:00:03 2009 -0500
+
+    Added NiceStruct.read_only and NiceStruct.read_only?.
+
+M	lib/ruby-sdl-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 01:41:56 2009 -0500
+
+    Added NiceStruct.hidden and NiceStruct.hidden?.
+
+M	lib/ruby-sdl-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sat Jun 20 03:08:10 2009 -0500
+
+    NiceStruct#to_s uses read accessor instead of #[].
+
+M	lib/ruby-sdl-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jun 19 22:14:35 2009 -0500
+
+    Updated all struct classes to use NiceStruct.
+
+M	lib/ruby-sdl-ffi/sdl_audio.rb
+M	lib/ruby-sdl-ffi/sdl_cdrom.rb
+M	lib/ruby-sdl-ffi/sdl_core.rb
+M	lib/ruby-sdl-ffi/sdl_event.rb
+M	lib/ruby-sdl-ffi/sdl_framerate.rb
+M	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+M	lib/ruby-sdl-ffi/sdl_keyboard.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+M	lib/ruby-sdl-ffi/sdl_rotozoom.rb
+M	lib/ruby-sdl-ffi/sdl_rwops.rb
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jun 19 18:42:18 2009 -0500
+
+    Added class NiceStruct (nicestruct.rb).
+
+A	lib/ruby-sdl-ffi/nicestruct.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jun 19 18:35:56 2009 -0500
+
+    Reverted: Renamed raw "struct" classes to their original C names.
+    
+    Going in a new direction with this.
+    
+    This commit undoes a2b2b3c14d6f824a468beaf16e6b93d672634be5.
+
+M	lib/ruby-sdl-ffi/sdl_audio.rb
+M	lib/ruby-sdl-ffi/sdl_cdrom.rb
+M	lib/ruby-sdl-ffi/sdl_core.rb
+M	lib/ruby-sdl-ffi/sdl_event.rb
+M	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+M	lib/ruby-sdl-ffi/sdl_rwops.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jun 19 18:02:57 2009 -0500
+
+    Removed SDL::Raw module, contents moved up to SDL module.
+    
+    (Many indentation changes, you may want to --ignore-all-space)
+
+M	lib/ruby-sdl-ffi/platforms.rb
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl_audio.rb
+M	lib/ruby-sdl-ffi/sdl_cdrom.rb
+M	lib/ruby-sdl-ffi/sdl_core.rb
+M	lib/ruby-sdl-ffi/sdl_event.rb
+M	lib/ruby-sdl-ffi/sdl_framerate.rb
+M	lib/ruby-sdl-ffi/sdl_gfx.rb
+M	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+M	lib/ruby-sdl-ffi/sdl_gfxprimitives.rb
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_imagefilter.rb
+M	lib/ruby-sdl-ffi/sdl_joystick.rb
+M	lib/ruby-sdl-ffi/sdl_keyboard.rb
+M	lib/ruby-sdl-ffi/sdl_keysyms.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+M	lib/ruby-sdl-ffi/sdl_mutex.rb
+M	lib/ruby-sdl-ffi/sdl_rotozoom.rb
+M	lib/ruby-sdl-ffi/sdl_rwops.rb
+M	lib/ruby-sdl-ffi/sdl_timer.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Fri Jun 19 17:55:17 2009 -0500
+
+    Moved raw stuff back to main lib dir. New direction.
+
+A	lib/ruby-sdl-ffi/platforms.rb
+D	lib/ruby-sdl-ffi/raw/platforms.rb
+D	lib/ruby-sdl-ffi/raw/sdl.rb
+D	lib/ruby-sdl-ffi/raw/sdl_audio.rb
+D	lib/ruby-sdl-ffi/raw/sdl_cdrom.rb
+D	lib/ruby-sdl-ffi/raw/sdl_core.rb
+D	lib/ruby-sdl-ffi/raw/sdl_event.rb
+D	lib/ruby-sdl-ffi/raw/sdl_framerate.rb
+D	lib/ruby-sdl-ffi/raw/sdl_gfx.rb
+D	lib/ruby-sdl-ffi/raw/sdl_gfxblitfunc.rb
+D	lib/ruby-sdl-ffi/raw/sdl_gfxprimitives.rb
+D	lib/ruby-sdl-ffi/raw/sdl_image.rb
+D	lib/ruby-sdl-ffi/raw/sdl_imagefilter.rb
+D	lib/ruby-sdl-ffi/raw/sdl_joystick.rb
+D	lib/ruby-sdl-ffi/raw/sdl_keyboard.rb
+D	lib/ruby-sdl-ffi/raw/sdl_keysyms.rb
+D	lib/ruby-sdl-ffi/raw/sdl_mixer.rb
+D	lib/ruby-sdl-ffi/raw/sdl_mouse.rb
+D	lib/ruby-sdl-ffi/raw/sdl_mutex.rb
+D	lib/ruby-sdl-ffi/raw/sdl_rotozoom.rb
+D	lib/ruby-sdl-ffi/raw/sdl_rwops.rb
+D	lib/ruby-sdl-ffi/raw/sdl_timer.rb
+D	lib/ruby-sdl-ffi/raw/sdl_ttf.rb
+D	lib/ruby-sdl-ffi/raw/sdl_video.rb
+A	lib/ruby-sdl-ffi/sdl.rb
+A	lib/ruby-sdl-ffi/sdl_audio.rb
+A	lib/ruby-sdl-ffi/sdl_cdrom.rb
+A	lib/ruby-sdl-ffi/sdl_core.rb
+A	lib/ruby-sdl-ffi/sdl_event.rb
+A	lib/ruby-sdl-ffi/sdl_framerate.rb
+A	lib/ruby-sdl-ffi/sdl_gfx.rb
+A	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+A	lib/ruby-sdl-ffi/sdl_gfxprimitives.rb
+A	lib/ruby-sdl-ffi/sdl_image.rb
+A	lib/ruby-sdl-ffi/sdl_imagefilter.rb
+A	lib/ruby-sdl-ffi/sdl_joystick.rb
+A	lib/ruby-sdl-ffi/sdl_keyboard.rb
+A	lib/ruby-sdl-ffi/sdl_keysyms.rb
+A	lib/ruby-sdl-ffi/sdl_mixer.rb
+A	lib/ruby-sdl-ffi/sdl_mouse.rb
+A	lib/ruby-sdl-ffi/sdl_mutex.rb
+A	lib/ruby-sdl-ffi/sdl_rotozoom.rb
+A	lib/ruby-sdl-ffi/sdl_rwops.rb
+A	lib/ruby-sdl-ffi/sdl_timer.rb
+A	lib/ruby-sdl-ffi/sdl_ttf.rb
+A	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jun 18 20:42:32 2009 -0500
+
+    Commented out class SDL_AudioCVT for now.
+    
+    Not sure how to handle its :filters member, which
+    is an array of 10 callbacks.
+
+M	lib/ruby-sdl-ffi/raw/sdl_audio.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jun 18 15:56:34 2009 -0500
+
+    Renamed raw "struct" classes to their original C names.
+    
+      AudioSpec          ->  SDL_AudioSpec
+      AudioCVT           ->  SDL_AudioCVT
+      CDtrack            ->  SDL_CDtrack
+      CD                 ->  SDL_CD
+      Version            ->  SDL_Version
+      ActiveEvent        ->  SDL_ActiveEvent
+      KeyboardEvent      ->  SDL_KeyboardEvent
+      MouseMotionEvent   ->  SDL_MouseMotionEvent
+      MouseButtonEvent   ->  SDL_MouseButtonEvent
+      JoyAxisEvent       ->  SDL_JoyAxisEvent
+      JoyBallEvent       ->  SDL_JoyBallEvent
+      JoyHatEvent        ->  SDL_JoyHatEvent
+      JoyButtonEvent     ->  SDL_JoyButtonEvent
+      ResizeEvent        ->  SDL_ResizeEvent
+      ExposeEvent        ->  SDL_ExposeEvent
+      QuitEvent          ->  SDL_QuitEvent
+      UserEvent          ->  SDL_UserEvent
+      SysWMEvent         ->  SDL_SysWMEvent
+      Event              ->  SDL_Event
+      BlitInfo           ->  SDL_gfxBlitInfo
+      MixChunk           ->  Mix_Chunk
+      Cursor             ->  SDL_Cursor
+      RWopsHiddenStdio   ->  SDL_RWopsHiddenStdio
+      RWopsHiddenMem     ->  SDL_RWopsHiddenMem
+      RWopsHiddenUnknown ->  SDL_RWopsHiddenUnknown
+      RWopsHidden        ->  SDL_RWopsHidden
+      RWops              ->  SDL_RWops
+      Rect               ->  SDL_Rect
+      Color              ->  SDL_Color
+      Palette            ->  SDL_Palette
+      PixelFormat        ->  SDL_PixelFormat
+      Surface            ->  SDL_Surface
+      VideoInfo          ->  SDL_VideoInfo
+      Overlay            ->  SDL_Overlay
+
+M	lib/ruby-sdl-ffi/raw/sdl_audio.rb
+M	lib/ruby-sdl-ffi/raw/sdl_cdrom.rb
+M	lib/ruby-sdl-ffi/raw/sdl_core.rb
+M	lib/ruby-sdl-ffi/raw/sdl_event.rb
+M	lib/ruby-sdl-ffi/raw/sdl_gfxblitfunc.rb
+M	lib/ruby-sdl-ffi/raw/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/raw/sdl_mouse.rb
+M	lib/ruby-sdl-ffi/raw/sdl_rwops.rb
+M	lib/ruby-sdl-ffi/raw/sdl_ttf.rb
+M	lib/ruby-sdl-ffi/raw/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jun 18 14:29:21 2009 -0500
+
+    Cosmetic cleanup in raw/sdl_rotozoom.rb.
+
+M	lib/ruby-sdl-ffi/raw/sdl_rotozoom.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jun 18 14:00:56 2009 -0500
+
+    Moved the 'Raw' stuff to lib/ruby-sdl-ffi/raw/
+
+D	lib/ruby-sdl-ffi/platforms.rb
+A	lib/ruby-sdl-ffi/raw/platforms.rb
+A	lib/ruby-sdl-ffi/raw/sdl.rb
+A	lib/ruby-sdl-ffi/raw/sdl_audio.rb
+A	lib/ruby-sdl-ffi/raw/sdl_cdrom.rb
+A	lib/ruby-sdl-ffi/raw/sdl_core.rb
+A	lib/ruby-sdl-ffi/raw/sdl_event.rb
+A	lib/ruby-sdl-ffi/raw/sdl_framerate.rb
+A	lib/ruby-sdl-ffi/raw/sdl_gfx.rb
+A	lib/ruby-sdl-ffi/raw/sdl_gfxblitfunc.rb
+A	lib/ruby-sdl-ffi/raw/sdl_gfxprimitives.rb
+A	lib/ruby-sdl-ffi/raw/sdl_image.rb
+A	lib/ruby-sdl-ffi/raw/sdl_imagefilter.rb
+A	lib/ruby-sdl-ffi/raw/sdl_joystick.rb
+A	lib/ruby-sdl-ffi/raw/sdl_keyboard.rb
+A	lib/ruby-sdl-ffi/raw/sdl_keysyms.rb
+A	lib/ruby-sdl-ffi/raw/sdl_mixer.rb
+A	lib/ruby-sdl-ffi/raw/sdl_mouse.rb
+A	lib/ruby-sdl-ffi/raw/sdl_mutex.rb
+A	lib/ruby-sdl-ffi/raw/sdl_rotozoom.rb
+A	lib/ruby-sdl-ffi/raw/sdl_rwops.rb
+A	lib/ruby-sdl-ffi/raw/sdl_timer.rb
+A	lib/ruby-sdl-ffi/raw/sdl_ttf.rb
+A	lib/ruby-sdl-ffi/raw/sdl_video.rb
+D	lib/ruby-sdl-ffi/sdl.rb
+D	lib/ruby-sdl-ffi/sdl_audio.rb
+D	lib/ruby-sdl-ffi/sdl_cdrom.rb
+D	lib/ruby-sdl-ffi/sdl_core.rb
+D	lib/ruby-sdl-ffi/sdl_event.rb
+D	lib/ruby-sdl-ffi/sdl_framerate.rb
+D	lib/ruby-sdl-ffi/sdl_gfx.rb
+D	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+D	lib/ruby-sdl-ffi/sdl_gfxprimitives.rb
+D	lib/ruby-sdl-ffi/sdl_image.rb
+D	lib/ruby-sdl-ffi/sdl_imagefilter.rb
+D	lib/ruby-sdl-ffi/sdl_joystick.rb
+D	lib/ruby-sdl-ffi/sdl_keyboard.rb
+D	lib/ruby-sdl-ffi/sdl_keysyms.rb
+D	lib/ruby-sdl-ffi/sdl_mixer.rb
+D	lib/ruby-sdl-ffi/sdl_mouse.rb
+D	lib/ruby-sdl-ffi/sdl_mutex.rb
+D	lib/ruby-sdl-ffi/sdl_rotozoom.rb
+D	lib/ruby-sdl-ffi/sdl_rwops.rb
+D	lib/ruby-sdl-ffi/sdl_timer.rb
+D	lib/ruby-sdl-ffi/sdl_ttf.rb
+D	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jun 18 02:56:44 2009 -0500
+
+    sdl.rb is required, others are optional.
+
+M	lib/ruby-sdl-ffi.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jun 18 02:39:34 2009 -0500
+
+    Updated the library modules to use platforms.rb.
+
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl_gfx.rb
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Thu Jun 18 02:18:38 2009 -0500
+
+    Added platforms.rb.
+
+A	lib/ruby-sdl-ffi/platforms.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 02:27:06 2009 -0500
+
+    Cosmetic cleanup in sdl_video.rb.
+
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 02:51:53 2009 -0500
+
+    Cosmetic cleanup in sdl_timer.rb.
+
+M	lib/ruby-sdl-ffi/sdl_timer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 02:49:41 2009 -0500
+
+    Cosmetic cleanup in sdl_rwops.rb.
+
+M	lib/ruby-sdl-ffi/sdl_rwops.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 02:45:21 2009 -0500
+
+    Cosmetic cleanup in sdl_mutex.rb.
+
+M	lib/ruby-sdl-ffi/sdl_mutex.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 02:44:03 2009 -0500
+
+    Cosmetic cleanup in sdl_mouse.rb.
+
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 02:41:40 2009 -0500
+
+    Cosmetic cleanup in sdl_joystick.rb.
+
+M	lib/ruby-sdl-ffi/sdl_joystick.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 02:26:39 2009 -0500
+
+    Cosmetic cleanup in sdl_keyboard.rb.
+
+M	lib/ruby-sdl-ffi/sdl_keyboard.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 02:38:49 2009 -0500
+
+    Cosmetic cleanup in sdl_event.rb.
+
+M	lib/ruby-sdl-ffi/sdl_event.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 02:10:10 2009 -0500
+
+    Cosmetic cleanup in sdl_core.rb.
+
+M	lib/ruby-sdl-ffi/sdl_core.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 02:34:17 2009 -0500
+
+    Cosmetic cleanup in sdl_cdrom.rb.
+
+M	lib/ruby-sdl-ffi/sdl_cdrom.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 02:32:02 2009 -0500
+
+    Cosmetic cleanup in sdl_audio.rb.
+
+M	lib/ruby-sdl-ffi/sdl_audio.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 01:59:29 2009 -0500
+
+    Condensed some small files into sdl_core.rb.
+    
+    sdl_core.rb absorbed these files:
+    
+      sdl_active.rb
+      sdl_cpuinfo.rb
+      sdl_error.rb
+      sdl_loadso.rb
+      sdl_shared.rb
+      sdl_thread.rb
+
+M	lib/ruby-sdl-ffi/sdl.rb
+D	lib/ruby-sdl-ffi/sdl_active.rb
+M	lib/ruby-sdl-ffi/sdl_core.rb
+D	lib/ruby-sdl-ffi/sdl_cpuinfo.rb
+D	lib/ruby-sdl-ffi/sdl_error.rb
+D	lib/ruby-sdl-ffi/sdl_loadso.rb
+D	lib/ruby-sdl-ffi/sdl_shared.rb
+D	lib/ruby-sdl-ffi/sdl_thread.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 01:46:41 2009 -0500
+
+    Removed convenience wrappers for attach_function.
+
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_shared.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 01:40:49 2009 -0500
+
+    Not using convenience wrappers for attach_function anymore.
+    
+    Changed:
+    
+      attach_sdl_function :Foo  -->  attach_function :SDL_Foo
+      img_function :Foo         -->  attach_function :IMG_Foo
+      mix_function :Foo         -->  attach_function :Mix_Foo
+      ttf_function :Foo         -->  attach_function :TTF_Foo
+
+M	lib/ruby-sdl-ffi/sdl_active.rb
+M	lib/ruby-sdl-ffi/sdl_audio.rb
+M	lib/ruby-sdl-ffi/sdl_cdrom.rb
+M	lib/ruby-sdl-ffi/sdl_core.rb
+M	lib/ruby-sdl-ffi/sdl_cpuinfo.rb
+M	lib/ruby-sdl-ffi/sdl_error.rb
+M	lib/ruby-sdl-ffi/sdl_event.rb
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_joystick.rb
+M	lib/ruby-sdl-ffi/sdl_keyboard.rb
+M	lib/ruby-sdl-ffi/sdl_loadso.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+M	lib/ruby-sdl-ffi/sdl_mutex.rb
+M	lib/ruby-sdl-ffi/sdl_rwops.rb
+M	lib/ruby-sdl-ffi/sdl_thread.rb
+M	lib/ruby-sdl-ffi/sdl_timer.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Wed Jun 17 01:27:32 2009 -0500
+
+    Moved all the raw FFI to be in the SDL::Raw module.
+    
+    (Many indentation changes, you may want to --ignore-all-space)
+
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl_active.rb
+M	lib/ruby-sdl-ffi/sdl_audio.rb
+M	lib/ruby-sdl-ffi/sdl_cdrom.rb
+M	lib/ruby-sdl-ffi/sdl_core.rb
+M	lib/ruby-sdl-ffi/sdl_cpuinfo.rb
+M	lib/ruby-sdl-ffi/sdl_error.rb
+M	lib/ruby-sdl-ffi/sdl_event.rb
+M	lib/ruby-sdl-ffi/sdl_framerate.rb
+M	lib/ruby-sdl-ffi/sdl_gfx.rb
+M	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+M	lib/ruby-sdl-ffi/sdl_gfxprimitives.rb
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_imagefilter.rb
+M	lib/ruby-sdl-ffi/sdl_joystick.rb
+M	lib/ruby-sdl-ffi/sdl_keyboard.rb
+M	lib/ruby-sdl-ffi/sdl_keysyms.rb
+M	lib/ruby-sdl-ffi/sdl_loadso.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+M	lib/ruby-sdl-ffi/sdl_mutex.rb
+M	lib/ruby-sdl-ffi/sdl_rotozoom.rb
+M	lib/ruby-sdl-ffi/sdl_rwops.rb
+M	lib/ruby-sdl-ffi/sdl_shared.rb
+M	lib/ruby-sdl-ffi/sdl_thread.rb
+M	lib/ruby-sdl-ffi/sdl_timer.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+M	lib/ruby-sdl-ffi/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 20:17:11 2009 -0500
+
+    Fixed link for Gosu in README.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 19:17:48 2009 -0500
+
+    Project is now Ruby-SDL-FFI instead of FFI-SDL. Updated all files' contents.
+
+M	README.rdoc
+M	Rakefile
+M	lib/ruby-sdl-ffi.rb
+M	lib/ruby-sdl-ffi/sdl.rb
+M	lib/ruby-sdl-ffi/sdl_active.rb
+M	lib/ruby-sdl-ffi/sdl_audio.rb
+M	lib/ruby-sdl-ffi/sdl_cdrom.rb
+M	lib/ruby-sdl-ffi/sdl_core.rb
+M	lib/ruby-sdl-ffi/sdl_cpuinfo.rb
+M	lib/ruby-sdl-ffi/sdl_error.rb
+M	lib/ruby-sdl-ffi/sdl_event.rb
+M	lib/ruby-sdl-ffi/sdl_framerate.rb
+M	lib/ruby-sdl-ffi/sdl_gfx.rb
+M	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+M	lib/ruby-sdl-ffi/sdl_gfxprimitives.rb
+M	lib/ruby-sdl-ffi/sdl_image.rb
+M	lib/ruby-sdl-ffi/sdl_imagefilter.rb
+M	lib/ruby-sdl-ffi/sdl_joystick.rb
+M	lib/ruby-sdl-ffi/sdl_keyboard.rb
+M	lib/ruby-sdl-ffi/sdl_keysyms.rb
+M	lib/ruby-sdl-ffi/sdl_loadso.rb
+M	lib/ruby-sdl-ffi/sdl_mixer.rb
+M	lib/ruby-sdl-ffi/sdl_mouse.rb
+M	lib/ruby-sdl-ffi/sdl_mutex.rb
+M	lib/ruby-sdl-ffi/sdl_rotozoom.rb
+M	lib/ruby-sdl-ffi/sdl_rwops.rb
+M	lib/ruby-sdl-ffi/sdl_shared.rb
+M	lib/ruby-sdl-ffi/sdl_thread.rb
+M	lib/ruby-sdl-ffi/sdl_timer.rb
+M	lib/ruby-sdl-ffi/sdl_ttf.rb
+M	lib/ruby-sdl-ffi/sdl_video.rb
+M	ruby-sdl-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 19:17:07 2009 -0500
+
+    Project is now Ruby-SDL-FFI instead of FFI-SDL. Renamed files & dirs.
+
+D	ffi-sdl.gemspec
+D	lib/ffi-sdl.rb
+D	lib/ffi-sdl/sdl.rb
+D	lib/ffi-sdl/sdl_active.rb
+D	lib/ffi-sdl/sdl_audio.rb
+D	lib/ffi-sdl/sdl_cdrom.rb
+D	lib/ffi-sdl/sdl_core.rb
+D	lib/ffi-sdl/sdl_cpuinfo.rb
+D	lib/ffi-sdl/sdl_error.rb
+D	lib/ffi-sdl/sdl_event.rb
+D	lib/ffi-sdl/sdl_framerate.rb
+D	lib/ffi-sdl/sdl_gfx.rb
+D	lib/ffi-sdl/sdl_gfxblitfunc.rb
+D	lib/ffi-sdl/sdl_gfxprimitives.rb
+D	lib/ffi-sdl/sdl_image.rb
+D	lib/ffi-sdl/sdl_imagefilter.rb
+D	lib/ffi-sdl/sdl_joystick.rb
+D	lib/ffi-sdl/sdl_keyboard.rb
+D	lib/ffi-sdl/sdl_keysyms.rb
+D	lib/ffi-sdl/sdl_loadso.rb
+D	lib/ffi-sdl/sdl_mixer.rb
+D	lib/ffi-sdl/sdl_mouse.rb
+D	lib/ffi-sdl/sdl_mutex.rb
+D	lib/ffi-sdl/sdl_rotozoom.rb
+D	lib/ffi-sdl/sdl_rwops.rb
+D	lib/ffi-sdl/sdl_shared.rb
+D	lib/ffi-sdl/sdl_thread.rb
+D	lib/ffi-sdl/sdl_timer.rb
+D	lib/ffi-sdl/sdl_ttf.rb
+D	lib/ffi-sdl/sdl_video.rb
+A	lib/ruby-sdl-ffi.rb
+A	lib/ruby-sdl-ffi/sdl.rb
+A	lib/ruby-sdl-ffi/sdl_active.rb
+A	lib/ruby-sdl-ffi/sdl_audio.rb
+A	lib/ruby-sdl-ffi/sdl_cdrom.rb
+A	lib/ruby-sdl-ffi/sdl_core.rb
+A	lib/ruby-sdl-ffi/sdl_cpuinfo.rb
+A	lib/ruby-sdl-ffi/sdl_error.rb
+A	lib/ruby-sdl-ffi/sdl_event.rb
+A	lib/ruby-sdl-ffi/sdl_framerate.rb
+A	lib/ruby-sdl-ffi/sdl_gfx.rb
+A	lib/ruby-sdl-ffi/sdl_gfxblitfunc.rb
+A	lib/ruby-sdl-ffi/sdl_gfxprimitives.rb
+A	lib/ruby-sdl-ffi/sdl_image.rb
+A	lib/ruby-sdl-ffi/sdl_imagefilter.rb
+A	lib/ruby-sdl-ffi/sdl_joystick.rb
+A	lib/ruby-sdl-ffi/sdl_keyboard.rb
+A	lib/ruby-sdl-ffi/sdl_keysyms.rb
+A	lib/ruby-sdl-ffi/sdl_loadso.rb
+A	lib/ruby-sdl-ffi/sdl_mixer.rb
+A	lib/ruby-sdl-ffi/sdl_mouse.rb
+A	lib/ruby-sdl-ffi/sdl_mutex.rb
+A	lib/ruby-sdl-ffi/sdl_rotozoom.rb
+A	lib/ruby-sdl-ffi/sdl_rwops.rb
+A	lib/ruby-sdl-ffi/sdl_shared.rb
+A	lib/ruby-sdl-ffi/sdl_thread.rb
+A	lib/ruby-sdl-ffi/sdl_timer.rb
+A	lib/ruby-sdl-ffi/sdl_ttf.rb
+A	lib/ruby-sdl-ffi/sdl_video.rb
+A	ruby-sdl-ffi.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 19:00:04 2009 -0500
+
+    Updated Rakefile to mention other SDL-related libraries.
+
+M	ffi-sdl.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 18:55:27 2009 -0500
+
+    Updated README to mention other SDL-related libraries.
+
+M	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 18:30:38 2009 -0500
+
+    Added sdl_gfx.rb and related files.
+
+M	lib/ffi-sdl.rb
+A	lib/ffi-sdl/sdl_framerate.rb
+A	lib/ffi-sdl/sdl_gfx.rb
+A	lib/ffi-sdl/sdl_gfxblitfunc.rb
+A	lib/ffi-sdl/sdl_gfxprimitives.rb
+A	lib/ffi-sdl/sdl_imagefilter.rb
+A	lib/ffi-sdl/sdl_rotozoom.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 03:05:48 2009 -0500
+
+    Added sdl_mixer.rb.
+
+M	lib/ffi-sdl.rb
+A	lib/ffi-sdl/sdl_mixer.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 02:05:13 2009 -0500
+
+    Added sdl_ttf.rb.
+
+M	lib/ffi-sdl.rb
+A	lib/ffi-sdl/sdl_ttf.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 01:47:40 2009 -0500
+
+    Added sdl_image.rb.
+
+M	lib/ffi-sdl.rb
+A	lib/ffi-sdl/sdl_image.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 00:52:43 2009 -0500
+
+    Added Rakefile with gem task.
+
+A	Rakefile
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Tue Jun 16 00:26:52 2009 -0500
+
+    Added ffi-sdl.gemspec.
+
+A	ffi-sdl.gemspec
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 15 23:59:24 2009 -0500
+
+    Added all the .rb files!
+
+A	lib/ffi-sdl.rb
+A	lib/ffi-sdl/sdl.rb
+A	lib/ffi-sdl/sdl_active.rb
+A	lib/ffi-sdl/sdl_audio.rb
+A	lib/ffi-sdl/sdl_cdrom.rb
+A	lib/ffi-sdl/sdl_core.rb
+A	lib/ffi-sdl/sdl_cpuinfo.rb
+A	lib/ffi-sdl/sdl_error.rb
+A	lib/ffi-sdl/sdl_event.rb
+A	lib/ffi-sdl/sdl_joystick.rb
+A	lib/ffi-sdl/sdl_keyboard.rb
+A	lib/ffi-sdl/sdl_keysyms.rb
+A	lib/ffi-sdl/sdl_loadso.rb
+A	lib/ffi-sdl/sdl_mouse.rb
+A	lib/ffi-sdl/sdl_mutex.rb
+A	lib/ffi-sdl/sdl_rwops.rb
+A	lib/ffi-sdl/sdl_shared.rb
+A	lib/ffi-sdl/sdl_thread.rb
+A	lib/ffi-sdl/sdl_timer.rb
+A	lib/ffi-sdl/sdl_video.rb
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 15 23:01:36 2009 -0500
+
+    Added README.rdoc.
+
+A	README.rdoc
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Mon Jun 15 14:40:39 2009 -0500
+
+    Added .gitignore.
+    
+    *~
+    .\#*
+    \#*\#
+    pkg
+    html
+
+A	.gitignore
+
+------------------------------------------------------------
+Author: John Croisant <jacius@gmail.com>
+Date:   Sun Jun 14 19:30:29 2009 -0500
+
+    Initial commit.

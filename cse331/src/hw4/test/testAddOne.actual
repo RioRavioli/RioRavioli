@@ -1,0 +1,7 @@
+# Tests for empty graph.
+# Tests adding only one node.
+
+created graph graph
+graph contains:
+added node node to graph
+graph contains: node

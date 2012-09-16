@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Rubygame::TTF</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/rubygame/ttf_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/ttf.rb">lib/rubygame/ttf.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-quit">::quit</a></li>
+          
+          <li><a href="#method-c-setup">::setup</a></li>
+          
+          <li><a href="#method-i-_render">#_render</a></li>
+          
+          <li><a href="#method-i-ascent">#ascent</a></li>
+          
+          <li><a href="#method-i-bold">#bold</a></li>
+          
+          <li><a href="#method-i-bold-3D">#bold=</a></li>
+          
+          <li><a href="#method-i-bold-3F">#bold?</a></li>
+          
+          <li><a href="#method-i-descent">#descent</a></li>
+          
+          <li><a href="#method-i-height">#height</a></li>
+          
+          <li><a href="#method-i-italic">#italic</a></li>
+          
+          <li><a href="#method-i-italic-3D">#italic=</a></li>
+          
+          <li><a href="#method-i-italic-3F">#italic?</a></li>
+          
+          <li><a href="#method-i-line_skip">#line_skip</a></li>
+          
+          <li><a href="#method-i-render">#render</a></li>
+          
+          <li><a href="#method-i-render_unicode">#render_unicode</a></li>
+          
+          <li><a href="#method-i-render_utf8">#render_utf8</a></li>
+          
+          <li><a href="#method-i-size_text">#size_text</a></li>
+          
+          <li><a href="#method-i-size_unicode">#size_unicode</a></li>
+          
+          <li><a href="#method-i-size_utf8">#size_utf8</a></li>
+          
+          <li><a href="#method-i-underline">#underline</a></li>
+          
+          <li><a href="#method-i-underline-3D">#underline=</a></li>
+          
+          <li><a href="#method-i-underline-3F">#underline?</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../CREDITS.html">CREDITS</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../ROADMAP.html">ROADMAP</a></li>
+        
+          <li class="file"><a href="../doc/custom_sdl_load_paths_rdoc.html">custom_sdl_load_paths.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/getting_started_rdoc.html">getting_started.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/keyboard_symbols_rdoc.html">keyboard_symbols.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/macosx_install_rdoc.html">macosx_install.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/managing_framerate_rdoc.html">managing_framerate.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/surface_palettes_rdoc.html">surface_palettes.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/windows_install_rdoc.html">windows_install.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Rubygame.html">Rubygame</a></li>
+        
+          <li><a href="../Rubygame/ActiveEvent.html">Rubygame::ActiveEvent</a></li>
+        
+          <li><a href="../Rubygame/Clock.html">Rubygame::Clock</a></li>
+        
+          <li><a href="../Rubygame/Color.html">Rubygame::Color</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorBase.html">Rubygame::Color::ColorBase</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSL.html">Rubygame::Color::ColorHSL</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSV.html">Rubygame::Color::ColorHSV</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorRGB.html">Rubygame::Color::ColorRGB</a></li>
+        
+          <li><a href="../Rubygame/Color/Palette.html">Rubygame::Color::Palette</a></li>
+        
+          <li><a href="../Rubygame/Event.html">Rubygame::Event</a></li>
+        
+          <li><a href="../Rubygame/EventActions.html">Rubygame::EventActions</a></li>
+        
+          <li><a href="../Rubygame/EventActions/BlockAction.html">Rubygame::EventActions::BlockAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MethodAction.html">Rubygame::EventActions::MethodAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MultiAction.html">Rubygame::EventActions::MultiAction</a></li>
+        
+          <li><a href="../Rubygame/EventHandler.html">Rubygame::EventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHandler/HasEventHandler.html">Rubygame::EventHandler::HasEventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHook.html">Rubygame::EventHook</a></li>
+        
+          <li><a href="../Rubygame/EventQueue.html">Rubygame::EventQueue</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers.html">Rubygame::EventTriggers</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AndTrigger.html">Rubygame::EventTriggers::AndTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AttrTrigger.html">Rubygame::EventTriggers::AttrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/BlockTrigger.html">Rubygame::EventTriggers::BlockTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/InstanceOfTrigger.html">Rubygame::EventTriggers::InstanceOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyPressTrigger.html">Rubygame::EventTriggers::KeyPressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyReleaseTrigger.html">Rubygame::EventTriggers::KeyReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KindOfTrigger.html">Rubygame::EventTriggers::KindOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseMoveTrigger.html">Rubygame::EventTriggers::MouseMoveTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MousePressTrigger.html">Rubygame::EventTriggers::MousePressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseReleaseTrigger.html">Rubygame::EventTriggers::MouseReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/OrTrigger.html">Rubygame::EventTriggers::OrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/TickTrigger.html">Rubygame::EventTriggers::TickTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/YesTrigger.html">Rubygame::EventTriggers::YesTrigger</a></li>
+        
+          <li><a href="../Rubygame/Events.html">Rubygame::Events</a></li>
+        
+          <li><a href="../Rubygame/Events/ClockTicked.html">Rubygame::Events::ClockTicked</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusGained.html">Rubygame::Events::InputFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusLost.html">Rubygame::Events::InputFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickAxisMoved.html">Rubygame::Events::JoystickAxisMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickBallMoved.html">Rubygame::Events::JoystickBallMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonEvent.html">Rubygame::Events::JoystickButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonPressed.html">Rubygame::Events::JoystickButtonPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonReleased.html">Rubygame::Events::JoystickButtonReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickHatMoved.html">Rubygame::Events::JoystickHatMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyPressed.html">Rubygame::Events::KeyPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyReleased.html">Rubygame::Events::KeyReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyboardEvent.html">Rubygame::Events::KeyboardEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseButtonEvent.html">Rubygame::Events::MouseButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusGained.html">Rubygame::Events::MouseFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusLost.html">Rubygame::Events::MouseFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseMoved.html">Rubygame::Events::MouseMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/MousePressed.html">Rubygame::Events::MousePressed</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseReleased.html">Rubygame::Events::MouseReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/QuitRequested.html">Rubygame::Events::QuitRequested</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowExposed.html">Rubygame::Events::WindowExposed</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowMinimized.html">Rubygame::Events::WindowMinimized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowResized.html">Rubygame::Events::WindowResized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowUnminimized.html">Rubygame::Events::WindowUnminimized</a></li>
+        
+          <li><a href="../Rubygame/ExposeEvent.html">Rubygame::ExposeEvent</a></li>
+        
+          <li><a href="../Rubygame/Ftor.html">Rubygame::Ftor</a></li>
+        
+          <li><a href="../Rubygame/GL.html">Rubygame::GL</a></li>
+        
+          <li><a href="../Rubygame/Hotspot.html">Rubygame::Hotspot</a></li>
+        
+          <li><a href="../Rubygame/JoyAxisEvent.html">Rubygame::JoyAxisEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyBallEvent.html">Rubygame::JoyBallEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyDownEvent.html">Rubygame::JoyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyHatEvent.html">Rubygame::JoyHatEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyUpEvent.html">Rubygame::JoyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Joystick.html">Rubygame::Joystick</a></li>
+        
+          <li><a href="../Rubygame/Key.html">Rubygame::Key</a></li>
+        
+          <li><a href="../Rubygame/KeyDownEvent.html">Rubygame::KeyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/KeyUpEvent.html">Rubygame::KeyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/MailQueue.html">Rubygame::MailQueue</a></li>
+        
+          <li><a href="../Rubygame/MediaBag.html">Rubygame::MediaBag</a></li>
+        
+          <li><a href="../Rubygame/Mixer.html">Rubygame::Mixer</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Music.html">Rubygame::Mixer::Music</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Sample.html">Rubygame::Mixer::Sample</a></li>
+        
+          <li><a href="../Rubygame/Mouse.html">Rubygame::Mouse</a></li>
+        
+          <li><a href="../Rubygame/MouseDownEvent.html">Rubygame::MouseDownEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseMotionEvent.html">Rubygame::MouseMotionEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseUpEvent.html">Rubygame::MouseUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Music.html">Rubygame::Music</a></li>
+        
+          <li><a href="../Rubygame/NamedResource.html">Rubygame::NamedResource</a></li>
+        
+          <li><a href="../Rubygame/NamedResource/NamedResourceClassMethods.html">Rubygame::NamedResource::NamedResourceClassMethods</a></li>
+        
+          <li><a href="../Rubygame/QuitEvent.html">Rubygame::QuitEvent</a></li>
+        
+          <li><a href="../Rubygame/Rect.html">Rubygame::Rect</a></li>
+        
+          <li><a href="../Rubygame/ResizeEvent.html">Rubygame::ResizeEvent</a></li>
+        
+          <li><a href="../Rubygame/SDLError.html">Rubygame::SDLError</a></li>
+        
+          <li><a href="../Rubygame/SFont.html">Rubygame::SFont</a></li>
+        
+          <li><a href="../Rubygame/Screen.html">Rubygame::Screen</a></li>
+        
+          <li><a href="../Rubygame/Sound.html">Rubygame::Sound</a></li>
+        
+          <li><a href="../Rubygame/Sprites.html">Rubygame::Sprites</a></li>
+        
+          <li><a href="../Rubygame/Sprites/DepthSortGroup.html">Rubygame::Sprites::DepthSortGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Group.html">Rubygame::Sprites::Group</a></li>
+        
+          <li><a href="../Rubygame/Sprites/LimitGroup.html">Rubygame::Sprites::LimitGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Sprite.html">Rubygame::Sprites::Sprite</a></li>
+        
+          <li><a href="../Rubygame/Sprites/UpdateGroup.html">Rubygame::Sprites::UpdateGroup</a></li>
+        
+          <li><a href="../Rubygame/Surface.html">Rubygame::Surface</a></li>
+        
+          <li><a href="../Rubygame/TTF.html">Rubygame::TTF</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Rubygame::TTF</h1>
+
+    <div id="description" class="description">
+      
+<p><b>IMPORTANT</b>: this class only exists if SDL_ttf is available! Your code
+should check "defined?(<a href="TTF.html">Rubygame::TTF</a>) != nil" to see
+if you can use this class, or be prepared to rescue from NameError.</p>
+
+<p><a href="TTF.html">TTF</a> provides an interface to SDL_ttf, allowing
+TrueType Font files to be loaded and used to render text to Surfaces.</p>
+
+<p>The <a href="TTF.html">TTF</a> class <b>must</b> be initialized with the
+setup method before any <a href="TTF.html">TTF</a> objects can be created
+or used.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">( file, size )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="TTF.html">TTF</a> object, which can render text to a
+<a href="Surface.html">Surface</a> with a particular font style and size.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>file</p></td>
+<td>
+<p>filename of the TrueType font to use. Should be a <a
+href="TTF.html">TTF</a> or FON file.</p>
+</td></tr><tr><td class="rdoc-term"><p>size</p></td>
+<td>
+<p>point size (based on 72DPI). (That means the height in pixels from the
+bottom of the descent to the top of the ascent.)</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">file</span>, <span class="ruby-identifier">size</span> )
+  <span class="ruby-keyword">if</span>( <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">WasInit</span>() <span class="ruby-operator">==</span> <span class="ruby-value">0</span> )
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>,
+           <span class="ruby-string">&quot;You must call TTF.setup before opening a font.&quot;</span> )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@struct</span> = <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">OpenFont</span>( <span class="ruby-identifier">file</span>, <span class="ruby-identifier">size</span> )
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span> )
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-node">&quot;Could not open font: #{SDL.GetError()}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="quit-method" class="method-detail ">
+          <a name="method-c-quit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">quit</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Clean up and quit SDL_ttf, making the <a href="TTF.html">TTF</a> class
+unusable as a result (until it is setup again). This does not need to be
+called before <a href="../Rubygame.html">Rubygame</a> exits, as it will be
+done automatically.</p>
+            
+
+            
+            <div class="method-source-code" id="quit-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">quit</span>
+  <span class="ruby-keyword">if</span>( <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">WasInit</span>() <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> )
+    <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">Quit</span>()
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- quit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- quit-method -->
+
+      
+        <div id="setup-method" class="method-detail ">
+          <a name="method-c-setup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setup</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Attempt to setup the <a href="TTF.html">TTF</a> class for use by
+initializing SDL_ttf. This <b>must</b> be called before the <a
+href="TTF.html">TTF</a> class can be used. Raises <a
+href="SDLError.html">SDLError</a> if there is a problem initializing
+SDL_ttf.</p>
+            
+
+            
+            <div class="method-source-code" id="setup-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">setup</span>
+  <span class="ruby-keyword">if</span>( <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">WasInit</span>() <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">Init</span>() <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> )
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>,
+           <span class="ruby-node">&quot;Could not setup TTF class: #{SDL.GetError()}&quot;</span> )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setup-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="_render-method" class="method-detail ">
+          <a name="method-i-_render"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">_render</span><span
+              class="method-args">( text, smooth, color, back, shaded, blended, solid )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Does the heavy lifting for the render methods.</p>
+            
+
+            
+            <div class="method-source-code" id="_render-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">_render</span>( <span class="ruby-identifier">text</span>, <span class="ruby-identifier">smooth</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">back</span>, <span class="ruby-identifier">shaded</span>, <span class="ruby-identifier">blended</span>, <span class="ruby-identifier">solid</span> ) <span class="ruby-comment"># :nodoc;</span>
+
+  <span class="ruby-identifier">color</span> = <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">make_sdl_rgba</span>(<span class="ruby-identifier">color</span>) )
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">back</span>
+    <span class="ruby-identifier">back</span> = <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">make_sdl_rgba</span>(<span class="ruby-identifier">back</span>) )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">surf</span> =
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">smooth</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">back</span>
+        <span class="ruby-identifier">shaded</span>.<span class="ruby-identifier">call</span>( <span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">back</span> )
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">blended</span>.<span class="ruby-identifier">call</span>( <span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">color</span> )
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">back</span>
+        <span class="ruby-identifier">s</span> = <span class="ruby-identifier">solid</span>.<span class="ruby-identifier">call</span>( <span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">color</span> )
+        <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SetColors</span>( <span class="ruby-identifier">s</span>, <span class="ruby-identifier">back</span>.<span class="ruby-identifier">pointer</span>, <span class="ruby-value">0</span>, <span class="ruby-value">1</span> )
+        <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">SetColorKey</span>( <span class="ruby-identifier">s</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span> );
+        <span class="ruby-identifier">s</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">solid</span>.<span class="ruby-identifier">call</span>( <span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">color</span> )
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">surf</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-node">&quot;Could not render text: #{SDL.GetError()}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">Surface</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">surf</span> )
+
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- _render-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- _render-method -->
+
+      
+        <div id="ascent-method" class="method-detail ">
+          <a name="method-i-ascent"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ascent</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the biggest ascent (baseline to top; in pixels) of all glyphs in the
+font.</p>
+            
+
+            
+            <div class="method-source-code" id="ascent-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ascent</span>
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">FontAnscent</span>( <span class="ruby-ivar">@struct</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ascent-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ascent-method -->
+
+      
+        <div id="bold-method" class="method-detail method-alias">
+          <a name="method-i-bold"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bold</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="TTF.html#method-i-bold-3F">bold?</a>
+          </div>
+          
+        </div><!-- bold-method -->
+
+      
+        <div id="bold-3D-method" class="method-detail ">
+          <a name="method-i-bold-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bold=</span><span
+              class="method-args">( enabled )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Enable or disable bold mode for this font. Returns the old value.</p>
+            
+
+            
+            <div class="method-source-code" id="bold-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bold=</span>( <span class="ruby-identifier">enabled</span> )
+  <span class="ruby-identifier">_set_style</span>( <span class="ruby-identifier">enabled</span>, <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span><span class="ruby-operator">::</span><span class="ruby-constant">STYLE_BOLD</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- bold-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- bold-3D-method -->
+
+      
+        <div id="bold-3F-method" class="method-detail ">
+          <a name="method-i-bold-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bold?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if bold mode is enabled for this font.</p>
+            
+
+            
+            <div class="method-source-code" id="bold-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bold?</span>
+  <span class="ruby-identifier">_get_style</span>( <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span><span class="ruby-operator">::</span><span class="ruby-constant">STYLE_BOLD</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- bold-3F-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="TTF.html#method-i-bold">bold</a>
+          </div>
+          
+
+          
+        </div><!-- bold-3F-method -->
+
+      
+        <div id="descent-method" class="method-detail ">
+          <a name="method-i-descent"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">descent</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the biggest descent (baseline to bottom; in pixels) of all glyphs in
+the font.</p>
+            
+
+            
+            <div class="method-source-code" id="descent-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">descent</span>
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">FontDescent</span>( <span class="ruby-ivar">@struct</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- descent-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- descent-method -->
+
+      
+        <div id="height-method" class="method-detail ">
+          <a name="method-i-height"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">height</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the biggest height (bottom to top; in pixels) of all glyphs in the
+font.</p>
+            
+
+            
+            <div class="method-source-code" id="height-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">height</span>
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">FontHeight</span>( <span class="ruby-ivar">@struct</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- height-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- height-method -->
+
+      
+        <div id="italic-method" class="method-detail method-alias">
+          <a name="method-i-italic"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">italic</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="TTF.html#method-i-italic-3F">italic?</a>
+          </div>
+          
+        </div><!-- italic-method -->
+
+      
+        <div id="italic-3D-method" class="method-detail ">
+          <a name="method-i-italic-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">italic=</span><span
+              class="method-args">( enabled )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Enable or disable italic mode for this font. Returns the old value.</p>
+            
+
+            
+            <div class="method-source-code" id="italic-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">italic=</span>( <span class="ruby-identifier">enabled</span> )
+  <span class="ruby-identifier">_set_style</span>( <span class="ruby-identifier">enabled</span>, <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span><span class="ruby-operator">::</span><span class="ruby-constant">STYLE_ITALIC</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- italic-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- italic-3D-method -->
+
+      
+        <div id="italic-3F-method" class="method-detail ">
+          <a name="method-i-italic-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">italic?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if italic mode is enabled for this font.</p>
+            
+
+            
+            <div class="method-source-code" id="italic-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">italic?</span>
+  <span class="ruby-identifier">_get_style</span>( <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span><span class="ruby-operator">::</span><span class="ruby-constant">STYLE_ITALIC</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- italic-3F-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="TTF.html#method-i-italic">italic</a>
+          </div>
+          
+
+          
+        </div><!-- italic-3F-method -->
+
+      
+        <div id="line_skip-method" class="method-detail ">
+          <a name="method-i-line_skip"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">line_skip</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the recommended distance (in pixels) from a point on a line of text
+to the same point on the line of text below it.</p>
+            
+
+            
+            <div class="method-source-code" id="line_skip-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">line_skip</span>
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">FontLineSkip</span>( <span class="ruby-ivar">@struct</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- line_skip-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- line_skip-method -->
+
+      
+        <div id="render-method" class="method-detail ">
+          <a name="method-i-render"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">render</span><span
+              class="method-args">( text, smooth, color, back=nil )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Renders a string to a <a href="Surface.html">Surface</a> with the font’s
+style and the given color(s).</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>text</p></td>
+<td>
+<p>the text string to render</p>
+</td></tr><tr><td class="rdoc-term"><p>smooth</p></td>
+<td>
+<p>Use anti-aliasing if true. Enabling this makes the text look much nicer
+(smooth curves), but is much slower.</p>
+</td></tr><tr><td class="rdoc-term"><p>color</p></td>
+<td>
+<p>the color to render the text, in the form [r,g,b]</p>
+</td></tr><tr><td class="rdoc-term"><p>back</p></td>
+<td>
+<p>the color to use as a background for the text. This option can be omitted
+to have a transparent background.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="render-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 267</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render</span>( <span class="ruby-identifier">text</span>, <span class="ruby-identifier">smooth</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">back</span>=<span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_render</span>( <span class="ruby-identifier">text</span>, <span class="ruby-identifier">smooth</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">back</span>,
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:RenderText_Shaded</span>),
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:RenderText_Blended</span>),
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:RenderText_Solid</span>) )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- render-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- render-method -->
+
+      
+        <div id="render_unicode-method" class="method-detail ">
+          <a name="method-i-render_unicode"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">render_unicode</span><span
+              class="method-args">( text, smooth, color, back=nil )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Renders a Unicode string to a <a href="Surface.html">Surface</a> with the
+font’s style and the given color(s).</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>text</p></td>
+<td>
+<p>the text string to render</p>
+</td></tr><tr><td class="rdoc-term"><p>smooth</p></td>
+<td>
+<p>Use anti-aliasing if true. Enabling this makes the text look much nicer
+(smooth curves), but is much slower.</p>
+</td></tr><tr><td class="rdoc-term"><p>color</p></td>
+<td>
+<p>the color to render the text, in the form [r,g,b]</p>
+</td></tr><tr><td class="rdoc-term"><p>back</p></td>
+<td>
+<p>the color to use as a background for the text. This option can be omitted
+to have a transparent background.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="render_unicode-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 303</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_unicode</span>( <span class="ruby-identifier">text</span>, <span class="ruby-identifier">smooth</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">back</span>=<span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_render</span>( <span class="ruby-identifier">text</span>, <span class="ruby-identifier">smooth</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">back</span>,
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:RenderUNICODE_Shaded</span>),
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:RenderUNICODE_Blended</span>),
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:RenderUNICODE_Solid</span>) )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- render_unicode-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- render_unicode-method -->
+
+      
+        <div id="render_utf8-method" class="method-detail ">
+          <a name="method-i-render_utf8"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">render_utf8</span><span
+              class="method-args">( text, smooth, color, back=nil )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Renders a UTF-8 string to a <a href="Surface.html">Surface</a> with the
+font’s style and the given color(s).</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>text</p></td>
+<td>
+<p>the text string to render</p>
+</td></tr><tr><td class="rdoc-term"><p>smooth</p></td>
+<td>
+<p>Use anti-aliasing if true. Enabling this makes the text look much nicer
+(smooth curves), but is much slower.</p>
+</td></tr><tr><td class="rdoc-term"><p>color</p></td>
+<td>
+<p>the color to render the text, in the form [r,g,b]</p>
+</td></tr><tr><td class="rdoc-term"><p>back</p></td>
+<td>
+<p>the color to use as a background for the text. This option can be omitted
+to have a transparent background.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="render_utf8-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_utf8</span>( <span class="ruby-identifier">text</span>, <span class="ruby-identifier">smooth</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">back</span>=<span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_render</span>( <span class="ruby-identifier">text</span>, <span class="ruby-identifier">smooth</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">back</span>,
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:RenderUTF8_Shaded</span>),
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:RenderUTF8_Blended</span>),
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:RenderUTF8_Solid</span>) )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- render_utf8-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- render_utf8-method -->
+
+      
+        <div id="size_text-method" class="method-detail ">
+          <a name="method-i-size_text"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">size_text</span><span
+              class="method-args">( text )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The width and height the text would be if it were rendered, without the
+overhead of actually rendering it.</p>
+            
+
+            
+            <div class="method-source-code" id="size_text-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">size_text</span>( <span class="ruby-identifier">text</span> )
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">SizeText</span>(<span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">text</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- size_text-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size_text-method -->
+
+      
+        <div id="size_unicode-method" class="method-detail ">
+          <a name="method-i-size_unicode"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">size_unicode</span><span
+              class="method-args">( text )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The width and height the Unicode text would be if it were rendered, without
+the overhead of actually rendering it.</p>
+            
+
+            
+            <div class="method-source-code" id="size_unicode-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">size_unicode</span>( <span class="ruby-identifier">text</span> )
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">SizeUNICODE</span>(<span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">text</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- size_unicode-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size_unicode-method -->
+
+      
+        <div id="size_utf8-method" class="method-detail ">
+          <a name="method-i-size_utf8"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">size_utf8</span><span
+              class="method-args">( text )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The width and height the UTF-8 encoded text would be if it were rendered,
+without the overhead of actually rendering it.</p>
+            
+
+            
+            <div class="method-source-code" id="size_utf8-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">size_utf8</span>( <span class="ruby-identifier">text</span> )
+  <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span>.<span class="ruby-constant">SizeUTF8</span>(<span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">text</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- size_utf8-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size_utf8-method -->
+
+      
+        <div id="underline-method" class="method-detail method-alias">
+          <a name="method-i-underline"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">underline</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="TTF.html#method-i-underline-3F">underline?</a>
+          </div>
+          
+        </div><!-- underline-method -->
+
+      
+        <div id="underline-3D-method" class="method-detail ">
+          <a name="method-i-underline-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">underline=</span><span
+              class="method-args">( enabled )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Enable or disable underline mode for this font. Returns the old value.</p>
+            
+
+            
+            <div class="method-source-code" id="underline-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">underline=</span>( <span class="ruby-identifier">enabled</span> )
+  <span class="ruby-identifier">_set_style</span>( <span class="ruby-identifier">enabled</span>, <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span><span class="ruby-operator">::</span><span class="ruby-constant">STYLE_UNDERLINE</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- underline-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- underline-3D-method -->
+
+      
+        <div id="underline-3F-method" class="method-detail ">
+          <a name="method-i-underline-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">underline?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if underline mode is enabled for this font.</p>
+            
+
+            
+            <div class="method-source-code" id="underline-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/ttf.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">underline?</span>
+  <span class="ruby-identifier">_get_style</span>( <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">TTF</span><span class="ruby-operator">::</span><span class="ruby-constant">STYLE_UNDERLINE</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- underline-3F-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="TTF.html#method-i-underline">underline</a>
+          </div>
+          
+
+          
+        </div><!-- underline-3F-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

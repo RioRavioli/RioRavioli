@@ -1,0 +1,5 @@
+Rio Bacon
+
+There were several changes made. Changes were made in node, fixing a representation exposure in method getAllDests().
+The map field in Graph was also changed to private.
+checkRep() is commented out in both classes where it caused significant slowdown.

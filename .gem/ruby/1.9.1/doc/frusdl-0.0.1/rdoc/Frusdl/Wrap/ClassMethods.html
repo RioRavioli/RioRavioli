@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Frusdl::Wrap::ClassMethods</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/frusdl/wrap_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/frusdl/wrap.rb">lib/frusdl/wrap.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-make_struct_reader">#make_struct_reader</a></li>
+          
+          <li><a href="#method-i-make_struct_writer">#make_struct_writer</a></li>
+          
+          <li><a href="#method-i-struct_accessor">#struct_accessor</a></li>
+          
+          <li><a href="#method-i-struct_reader">#struct_reader</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Frusdl.html">Frusdl</a></li>
+        
+          <li><a href="../../Frusdl/Low.html">Frusdl::Low</a></li>
+        
+          <li><a href="../../Frusdl/Low/GFX.html">Frusdl::Low::GFX</a></li>
+        
+          <li><a href="../../Frusdl/Low/IMG.html">Frusdl::Low::IMG</a></li>
+        
+          <li><a href="../../Frusdl/Low/MIX.html">Frusdl::Low::MIX</a></li>
+        
+          <li><a href="../../Frusdl/Low/MIX/Mix_Chunk.html">Frusdl::Low::MIX::Mix_Chunk</a></li>
+        
+          <li><a href="../../Frusdl/Low/MIX/Mix_Music.html">Frusdl::Low::MIX::Mix_Music</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL.html">Frusdl::Low::SDL</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_ActiveEvent.html">Frusdl::Low::SDL::SDL_ActiveEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_AudioSpec.html">Frusdl::Low::SDL::SDL_AudioSpec</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Color.html">Frusdl::Low::SDL::SDL_Color</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Cursor.html">Frusdl::Low::SDL::SDL_Cursor</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Event.html">Frusdl::Low::SDL::SDL_Event</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_ExposeEvent.html">Frusdl::Low::SDL::SDL_ExposeEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_JoyAxisEvent.html">Frusdl::Low::SDL::SDL_JoyAxisEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_JoyBallEvent.html">Frusdl::Low::SDL::SDL_JoyBallEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_JoyButtonEvent.html">Frusdl::Low::SDL::SDL_JoyButtonEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_JoyHatEvent.html">Frusdl::Low::SDL::SDL_JoyHatEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Joystick.html">Frusdl::Low::SDL::SDL_Joystick</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_KeyboardEvent.html">Frusdl::Low::SDL::SDL_KeyboardEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_MouseButtonEvent.html">Frusdl::Low::SDL::SDL_MouseButtonEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_MouseMotionEvent.html">Frusdl::Low::SDL::SDL_MouseMotionEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Palette.html">Frusdl::Low::SDL::SDL_Palette</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_PixelFormat.html">Frusdl::Low::SDL::SDL_PixelFormat</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_QuitEvent.html">Frusdl::Low::SDL::SDL_QuitEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_RWops.html">Frusdl::Low::SDL::SDL_RWops</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Rect.html">Frusdl::Low::SDL::SDL_Rect</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_ResizeEvent.html">Frusdl::Low::SDL::SDL_ResizeEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_Surface.html">Frusdl::Low::SDL::SDL_Surface</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_UserEvent.html">Frusdl::Low::SDL::SDL_UserEvent</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_VideoInfo.html">Frusdl::Low::SDL::SDL_VideoInfo</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_keysym.html">Frusdl::Low::SDL::SDL_keysym</a></li>
+        
+          <li><a href="../../Frusdl/Low/SDL/SDL_version.html">Frusdl::Low::SDL::SDL_version</a></li>
+        
+          <li><a href="../../Frusdl/Low/SGE.html">Frusdl::Low::SGE</a></li>
+        
+          <li><a href="../../Frusdl/Low/SGE/Sge_cdata.html">Frusdl::Low::SGE::Sge_cdata</a></li>
+        
+          <li><a href="../../Frusdl/Low/TTF.html">Frusdl::Low::TTF</a></li>
+        
+          <li><a href="../../Frusdl/Low/TTF/TTF_Font.html">Frusdl::Low::TTF::TTF_Font</a></li>
+        
+          <li><a href="../../Frusdl/SDL.html">Frusdl::SDL</a></li>
+        
+          <li><a href="../../Frusdl/SDL/Error.html">Frusdl::SDL::Error</a></li>
+        
+          <li><a href="../../Frusdl/SDL/PixelFormat.html">Frusdl::SDL::PixelFormat</a></li>
+        
+          <li><a href="../../Frusdl/SDL/Screen.html">Frusdl::SDL::Screen</a></li>
+        
+          <li><a href="../../Frusdl/SDL/VideoInfo.html">Frusdl::SDL::VideoInfo</a></li>
+        
+          <li><a href="../../Frusdl/Wrap.html">Frusdl::Wrap</a></li>
+        
+          <li><a href="../../Frusdl/Wrap/ClassMethods.html">Frusdl::Wrap::ClassMethods</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Frusdl::Wrap::ClassMethods</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="make_struct_reader-method" class="method-detail ">
+          <a name="method-i-make_struct_reader"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_struct_reader</span><span
+              class="method-args">(name, sname = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="make_struct_reader-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/wrap.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_struct_reader</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">sname</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">method_name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_sym</span>
+  <span class="ruby-identifier">struct_name</span> = <span class="ruby-identifier">sname</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">sname</span>.<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">method_name</span> 
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">method_name</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@struct</span>[<span class="ruby-identifier">struct_name</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_struct_reader-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_struct_reader-method -->
+
+      
+        <div id="make_struct_writer-method" class="method-detail ">
+          <a name="method-i-make_struct_writer"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_struct_writer</span><span
+              class="method-args">(name, sname = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="make_struct_writer-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/wrap.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_struct_writer</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">sname</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">method_name</span> = <span class="ruby-node">&quot;#{name}=&quot;</span>.<span class="ruby-identifier">to_sym</span>
+  <span class="ruby-identifier">struct_name</span> = <span class="ruby-identifier">sname</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">sname</span>.<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_sym</span> 
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">method_name</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">|</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@struct</span>[<span class="ruby-identifier">struct_name</span>] = <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_struct_writer-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_struct_writer-method -->
+
+      
+        <div id="struct_accessor-method" class="method-detail ">
+          <a name="method-i-struct_accessor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">struct_accessor</span><span
+              class="method-args">(name, sname = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="struct_accessor-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/wrap.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">struct_accessor</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">sname</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">make_struct_reader</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">sname</span>
+  <span class="ruby-identifier">make_struct_writer</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">sname</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- struct_accessor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- struct_accessor-method -->
+
+      
+        <div id="struct_reader-method" class="method-detail ">
+          <a name="method-i-struct_reader"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">struct_reader</span><span
+              class="method-args">(name, sname = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="struct_reader-source">
+<pre>
+<span class="ruby-comment"># File lib/frusdl/wrap.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">struct_reader</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">sname</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">make_struct_reader</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">sname</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- struct_reader-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- struct_reader-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+# Test having a graph with one character
+CreateGraph small
+AddNode small Rio
+ListNodes small
+
+# Test finding path for one character
+FindPath small Rio Rio
+
+# Test adding a few more characters
+AddNode small Kou
+AddNode small Gucci
+ListNodes small
+
+# Test adding edges
+AddEdge small Rio Kou .1
+
+# Test very basic path finding
+FindPath small Rio Kou
+
+# Test finding correct path, even when not shortest
+AddEdge small Rio Gucci .8
+AddEdge small Kou Gucci .3
+FindPath small Rio Gucci
+
+# Test finding nonexisting path
+AddNode small MachDash
+FindPath small Gucci MachDash
+
+# Test finding path to self
+FindPath small Rio Rio
+
+# Test finding path for nonexistant first character
+FindPath small Souten Rio
+
+# Test finding path for nonexistant second character
+FindPath small Gucci Thunders
+
+# Test finding path for both nonexistant characters
+FindPath small Thunders Souten
+
+
+######Load graph tests######
+LoadGraph big myTest.tsv
+
+# Test finding a simple path
+FindPath big Rio Ocean
+
+# Test finding a longer path
+FindPath big lolStuff Souten

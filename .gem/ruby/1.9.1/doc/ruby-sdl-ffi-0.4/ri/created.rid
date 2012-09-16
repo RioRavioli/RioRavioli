@@ -1,0 +1,25 @@
+Fri, 06 Apr 2012 16:43:20 -0700
+lib/ruby-sdl-ffi/mixer.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/mutex.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/mouse.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/core.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/keyboard.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/cdrom.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/keysyms.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/joystick.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/audio.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/rwops.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/event.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/mac.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/timer.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl/video.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/gfx/rotozoom.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/gfx/primitives.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/gfx/imagefilter.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/gfx/framerate.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/gfx/blitfunc.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/image.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/gfx.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/sdl.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi/ttf.rb	Fri, 06 Apr 2012 16:43:19 -0700
+lib/ruby-sdl-ffi.rb	Fri, 06 Apr 2012 16:43:19 -0700

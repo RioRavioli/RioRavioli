@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"height:EFI"Rubygame::SFont#height;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"FReturn the height of the font, in pixels. This is the same as the;TI"@height of the image file (all glyphs are the same height). ;T:
+@file0FI"lib/rubygame/sfont.rb;T

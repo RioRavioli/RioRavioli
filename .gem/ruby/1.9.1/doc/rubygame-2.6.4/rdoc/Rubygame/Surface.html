@@ -1,0 +1,3249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Rubygame::Surface</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/rubygame/image_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/image.rb">lib/rubygame/image.rb</a></li>
+          
+            <li><a href="../lib/rubygame/gfx_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/gfx.rb">lib/rubygame/gfx.rb</a></li>
+          
+            <li><a href="../lib/rubygame/surface_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rubygame/surface.rb">lib/rubygame/surface.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-autoload">::autoload</a></li>
+          
+          <li><a href="#method-c-load">::load</a></li>
+          
+          <li><a href="#method-c-load_from_string">::load_from_string</a></li>
+          
+          <li><a href="#method-c-load_image">::load_image</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-rotozoom_size">::rotozoom_size</a></li>
+          
+          <li><a href="#method-c-zoom_size">::zoom_size</a></li>
+          
+          <li><a href="#method-i-alpha">#alpha</a></li>
+          
+          <li><a href="#method-i-alpha-3D">#alpha=</a></li>
+          
+          <li><a href="#method-i-blit">#blit</a></li>
+          
+          <li><a href="#method-i-clip">#clip</a></li>
+          
+          <li><a href="#method-i-clip-3D">#clip=</a></li>
+          
+          <li><a href="#method-i-colorkey">#colorkey</a></li>
+          
+          <li><a href="#method-i-colorkey-3D">#colorkey=</a></li>
+          
+          <li><a href="#method-i-convert">#convert</a></li>
+          
+          <li><a href="#method-i-depth">#depth</a></li>
+          
+          <li><a href="#method-i-draw_arc">#draw_arc</a></li>
+          
+          <li><a href="#method-i-draw_arc_s">#draw_arc_s</a></li>
+          
+          <li><a href="#method-i-draw_box">#draw_box</a></li>
+          
+          <li><a href="#method-i-draw_box_s">#draw_box_s</a></li>
+          
+          <li><a href="#method-i-draw_circle">#draw_circle</a></li>
+          
+          <li><a href="#method-i-draw_circle_a">#draw_circle_a</a></li>
+          
+          <li><a href="#method-i-draw_circle_s">#draw_circle_s</a></li>
+          
+          <li><a href="#method-i-draw_ellipse">#draw_ellipse</a></li>
+          
+          <li><a href="#method-i-draw_ellipse_a">#draw_ellipse_a</a></li>
+          
+          <li><a href="#method-i-draw_ellipse_s">#draw_ellipse_s</a></li>
+          
+          <li><a href="#method-i-draw_line">#draw_line</a></li>
+          
+          <li><a href="#method-i-draw_line_a">#draw_line_a</a></li>
+          
+          <li><a href="#method-i-draw_polygon">#draw_polygon</a></li>
+          
+          <li><a href="#method-i-draw_polygon_a">#draw_polygon_a</a></li>
+          
+          <li><a href="#method-i-draw_polygon_s">#draw_polygon_s</a></li>
+          
+          <li><a href="#method-i-fill">#fill</a></li>
+          
+          <li><a href="#method-i-flags">#flags</a></li>
+          
+          <li><a href="#method-i-flip">#flip</a></li>
+          
+          <li><a href="#method-i-get_at">#get_at</a></li>
+          
+          <li><a href="#method-i-h">#h</a></li>
+          
+          <li><a href="#method-i-height">#height</a></li>
+          
+          <li><a href="#method-i-inspect">#inspect</a></li>
+          
+          <li><a href="#method-i-make_rect">#make_rect</a></li>
+          
+          <li><a href="#method-i-masks">#masks</a></li>
+          
+          <li><a href="#method-i-pixels">#pixels</a></li>
+          
+          <li><a href="#method-i-rotozoom">#rotozoom</a></li>
+          
+          <li><a href="#method-i-savebmp">#savebmp</a></li>
+          
+          <li><a href="#method-i-set_alpha">#set_alpha</a></li>
+          
+          <li><a href="#method-i-set_at">#set_at</a></li>
+          
+          <li><a href="#method-i-set_colorkey">#set_colorkey</a></li>
+          
+          <li><a href="#method-i-size">#size</a></li>
+          
+          <li><a href="#method-i-to_display">#to_display</a></li>
+          
+          <li><a href="#method-i-to_display_alpha">#to_display_alpha</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+          <li><a href="#method-i-w">#w</a></li>
+          
+          <li><a href="#method-i-width">#width</a></li>
+          
+          <li><a href="#method-i-zoom">#zoom</a></li>
+          
+          <li><a href="#method-i-zoom_to">#zoom_to</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="NamedResource.html">Rubygame::NamedResource</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../CREDITS.html">CREDITS</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../ROADMAP.html">ROADMAP</a></li>
+        
+          <li class="file"><a href="../doc/custom_sdl_load_paths_rdoc.html">custom_sdl_load_paths.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/getting_started_rdoc.html">getting_started.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/keyboard_symbols_rdoc.html">keyboard_symbols.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/macosx_install_rdoc.html">macosx_install.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/managing_framerate_rdoc.html">managing_framerate.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/surface_palettes_rdoc.html">surface_palettes.rdoc</a></li>
+        
+          <li class="file"><a href="../doc/windows_install_rdoc.html">windows_install.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Rubygame.html">Rubygame</a></li>
+        
+          <li><a href="../Rubygame/ActiveEvent.html">Rubygame::ActiveEvent</a></li>
+        
+          <li><a href="../Rubygame/Clock.html">Rubygame::Clock</a></li>
+        
+          <li><a href="../Rubygame/Color.html">Rubygame::Color</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorBase.html">Rubygame::Color::ColorBase</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSL.html">Rubygame::Color::ColorHSL</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorHSV.html">Rubygame::Color::ColorHSV</a></li>
+        
+          <li><a href="../Rubygame/Color/ColorRGB.html">Rubygame::Color::ColorRGB</a></li>
+        
+          <li><a href="../Rubygame/Color/Palette.html">Rubygame::Color::Palette</a></li>
+        
+          <li><a href="../Rubygame/Event.html">Rubygame::Event</a></li>
+        
+          <li><a href="../Rubygame/EventActions.html">Rubygame::EventActions</a></li>
+        
+          <li><a href="../Rubygame/EventActions/BlockAction.html">Rubygame::EventActions::BlockAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MethodAction.html">Rubygame::EventActions::MethodAction</a></li>
+        
+          <li><a href="../Rubygame/EventActions/MultiAction.html">Rubygame::EventActions::MultiAction</a></li>
+        
+          <li><a href="../Rubygame/EventHandler.html">Rubygame::EventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHandler/HasEventHandler.html">Rubygame::EventHandler::HasEventHandler</a></li>
+        
+          <li><a href="../Rubygame/EventHook.html">Rubygame::EventHook</a></li>
+        
+          <li><a href="../Rubygame/EventQueue.html">Rubygame::EventQueue</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers.html">Rubygame::EventTriggers</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AndTrigger.html">Rubygame::EventTriggers::AndTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/AttrTrigger.html">Rubygame::EventTriggers::AttrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/BlockTrigger.html">Rubygame::EventTriggers::BlockTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/InstanceOfTrigger.html">Rubygame::EventTriggers::InstanceOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyPressTrigger.html">Rubygame::EventTriggers::KeyPressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KeyReleaseTrigger.html">Rubygame::EventTriggers::KeyReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/KindOfTrigger.html">Rubygame::EventTriggers::KindOfTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseMoveTrigger.html">Rubygame::EventTriggers::MouseMoveTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MousePressTrigger.html">Rubygame::EventTriggers::MousePressTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/MouseReleaseTrigger.html">Rubygame::EventTriggers::MouseReleaseTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/OrTrigger.html">Rubygame::EventTriggers::OrTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/TickTrigger.html">Rubygame::EventTriggers::TickTrigger</a></li>
+        
+          <li><a href="../Rubygame/EventTriggers/YesTrigger.html">Rubygame::EventTriggers::YesTrigger</a></li>
+        
+          <li><a href="../Rubygame/Events.html">Rubygame::Events</a></li>
+        
+          <li><a href="../Rubygame/Events/ClockTicked.html">Rubygame::Events::ClockTicked</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusGained.html">Rubygame::Events::InputFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/InputFocusLost.html">Rubygame::Events::InputFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickAxisMoved.html">Rubygame::Events::JoystickAxisMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickBallMoved.html">Rubygame::Events::JoystickBallMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonEvent.html">Rubygame::Events::JoystickButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonPressed.html">Rubygame::Events::JoystickButtonPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickButtonReleased.html">Rubygame::Events::JoystickButtonReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/JoystickHatMoved.html">Rubygame::Events::JoystickHatMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyPressed.html">Rubygame::Events::KeyPressed</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyReleased.html">Rubygame::Events::KeyReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/KeyboardEvent.html">Rubygame::Events::KeyboardEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseButtonEvent.html">Rubygame::Events::MouseButtonEvent</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusGained.html">Rubygame::Events::MouseFocusGained</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseFocusLost.html">Rubygame::Events::MouseFocusLost</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseMoved.html">Rubygame::Events::MouseMoved</a></li>
+        
+          <li><a href="../Rubygame/Events/MousePressed.html">Rubygame::Events::MousePressed</a></li>
+        
+          <li><a href="../Rubygame/Events/MouseReleased.html">Rubygame::Events::MouseReleased</a></li>
+        
+          <li><a href="../Rubygame/Events/QuitRequested.html">Rubygame::Events::QuitRequested</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowExposed.html">Rubygame::Events::WindowExposed</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowMinimized.html">Rubygame::Events::WindowMinimized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowResized.html">Rubygame::Events::WindowResized</a></li>
+        
+          <li><a href="../Rubygame/Events/WindowUnminimized.html">Rubygame::Events::WindowUnminimized</a></li>
+        
+          <li><a href="../Rubygame/ExposeEvent.html">Rubygame::ExposeEvent</a></li>
+        
+          <li><a href="../Rubygame/Ftor.html">Rubygame::Ftor</a></li>
+        
+          <li><a href="../Rubygame/GL.html">Rubygame::GL</a></li>
+        
+          <li><a href="../Rubygame/Hotspot.html">Rubygame::Hotspot</a></li>
+        
+          <li><a href="../Rubygame/JoyAxisEvent.html">Rubygame::JoyAxisEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyBallEvent.html">Rubygame::JoyBallEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyDownEvent.html">Rubygame::JoyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyHatEvent.html">Rubygame::JoyHatEvent</a></li>
+        
+          <li><a href="../Rubygame/JoyUpEvent.html">Rubygame::JoyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Joystick.html">Rubygame::Joystick</a></li>
+        
+          <li><a href="../Rubygame/Key.html">Rubygame::Key</a></li>
+        
+          <li><a href="../Rubygame/KeyDownEvent.html">Rubygame::KeyDownEvent</a></li>
+        
+          <li><a href="../Rubygame/KeyUpEvent.html">Rubygame::KeyUpEvent</a></li>
+        
+          <li><a href="../Rubygame/MailQueue.html">Rubygame::MailQueue</a></li>
+        
+          <li><a href="../Rubygame/MediaBag.html">Rubygame::MediaBag</a></li>
+        
+          <li><a href="../Rubygame/Mixer.html">Rubygame::Mixer</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Music.html">Rubygame::Mixer::Music</a></li>
+        
+          <li><a href="../Rubygame/Mixer/Sample.html">Rubygame::Mixer::Sample</a></li>
+        
+          <li><a href="../Rubygame/Mouse.html">Rubygame::Mouse</a></li>
+        
+          <li><a href="../Rubygame/MouseDownEvent.html">Rubygame::MouseDownEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseMotionEvent.html">Rubygame::MouseMotionEvent</a></li>
+        
+          <li><a href="../Rubygame/MouseUpEvent.html">Rubygame::MouseUpEvent</a></li>
+        
+          <li><a href="../Rubygame/Music.html">Rubygame::Music</a></li>
+        
+          <li><a href="../Rubygame/NamedResource.html">Rubygame::NamedResource</a></li>
+        
+          <li><a href="../Rubygame/NamedResource/NamedResourceClassMethods.html">Rubygame::NamedResource::NamedResourceClassMethods</a></li>
+        
+          <li><a href="../Rubygame/QuitEvent.html">Rubygame::QuitEvent</a></li>
+        
+          <li><a href="../Rubygame/Rect.html">Rubygame::Rect</a></li>
+        
+          <li><a href="../Rubygame/ResizeEvent.html">Rubygame::ResizeEvent</a></li>
+        
+          <li><a href="../Rubygame/SDLError.html">Rubygame::SDLError</a></li>
+        
+          <li><a href="../Rubygame/SFont.html">Rubygame::SFont</a></li>
+        
+          <li><a href="../Rubygame/Screen.html">Rubygame::Screen</a></li>
+        
+          <li><a href="../Rubygame/Sound.html">Rubygame::Sound</a></li>
+        
+          <li><a href="../Rubygame/Sprites.html">Rubygame::Sprites</a></li>
+        
+          <li><a href="../Rubygame/Sprites/DepthSortGroup.html">Rubygame::Sprites::DepthSortGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Group.html">Rubygame::Sprites::Group</a></li>
+        
+          <li><a href="../Rubygame/Sprites/LimitGroup.html">Rubygame::Sprites::LimitGroup</a></li>
+        
+          <li><a href="../Rubygame/Sprites/Sprite.html">Rubygame::Sprites::Sprite</a></li>
+        
+          <li><a href="../Rubygame/Sprites/UpdateGroup.html">Rubygame::Sprites::UpdateGroup</a></li>
+        
+          <li><a href="../Rubygame/Surface.html">Rubygame::Surface</a></li>
+        
+          <li><a href="../Rubygame/TTF.html">Rubygame::TTF</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Rubygame::Surface</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="Surface.html">Surface</a> represents an image, a block of colored
+pixels arranged in a 2D grid. You can load image files to a new <a
+href="Surface.html">Surface</a> with load, or create an empty one with <a
+href="Surface.html#method-c-new">Surface.new</a> and draw shapes on it with
+<a href="Surface.html#method-i-draw_line">draw_line</a>, <a
+href="Surface.html#method-i-draw_circle">draw_circle</a>, and all the rest.</p>
+
+<p>One of the most important <a href="Surface.html">Surface</a> concepts is <a
+href="Surface.html#method-i-blit">blit</a>, copying image data from one <a
+href="Surface.html">Surface</a> onto another. By blitting Surfaces onto the
+<a href="Screen.html">Screen</a> (which is a special type of <a
+href="Surface.html">Surface</a>) and then using <a
+href="Screen.html#method-i-update">Screen#update</a>, you can make images
+appear for the player to see.</p>
+
+<p>As of <a href="../Rubygame.html">Rubygame</a> 2.3.0, <a
+href="Surface.html">Surface</a> includes the <a
+href="NamedResource.html">Rubygame::NamedResource</a> mixin module, which
+can perform autoloading of images on demand, among other things.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="autoload-method" class="method-detail ">
+          <a name="method-c-autoload"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">autoload</span><span
+              class="method-args">( name )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Searches each directory in Surface.autoload_dirs for a file with the given
+filename. If it finds that file, loads it and returns a <a
+href="Surface.html">Surface</a> instance. If it doesn’t find the file,
+returns nil.</p>
+
+<p>See <a href="NamedResource.html">Rubygame::NamedResource</a> for more
+information about this functionality.</p>
+            
+
+            
+            <div class="method-source-code" id="autoload-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/image.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">autoload</span>( <span class="ruby-identifier">name</span> )
+  <span class="ruby-identifier">path</span> = <span class="ruby-identifier">find_file</span>( <span class="ruby-identifier">name</span> )
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">path</span> )
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">load</span>( <span class="ruby-identifier">path</span> )
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- autoload-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- autoload-method -->
+
+      
+        <div id="load-method" class="method-detail ">
+          <a name="method-c-load"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">load</span><span
+              class="method-args">( filename )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_image is available! Your
+code should check "defined?(<a
+href="Surface.html#method-c-load">Rubygame::Surface.load</a>) != nil" to
+see if you can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Load an image file from the disk to a <a href="Surface.html">Surface</a>.
+If the image has an alpha channel (e.g. PNG with transparency), the <a
+href="Surface.html">Surface</a> will as well. If the image cannot be loaded
+(for example if the image format is unsupported), will raise <a
+href="SDLError.html">SDLError</a>.</p>
+
+<p>This method takes this argument:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>filename</p></td>
+<td>
+<p>a string containing the relative or absolute path to the image file. The
+file must have the proper file extension, as it is used to determine image
+format.</p>
+</td></tr></table>
+
+<p>These formats may be supported, but some may not be available on a
+particular system.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>BMP</p></td>
+<td>
+<p>“Windows Bitmap” format.</p>
+</td></tr><tr><td class="rdoc-term"><p>GIF</p></td>
+<td>
+<p>“Graphics Interchange Format.”</p>
+</td></tr><tr><td class="rdoc-term"><p>JPG</p></td>
+<td>
+<p>“Independent JPEG Group” format.</p>
+</td></tr><tr><td class="rdoc-term"><p>LBM</p></td>
+<td>
+<p>“Linear Bitmap” format (?)</p>
+</td></tr><tr><td class="rdoc-term"><p>PCX</p></td>
+<td>
+<p>“PC Paintbrush” format</p>
+</td></tr><tr><td class="rdoc-term"><p>PNG</p></td>
+<td>
+<p>“Portable Network Graphics” format.</p>
+</td></tr><tr><td class="rdoc-term"><p>PNM</p></td>
+<td>
+<p>“Portable Any Map” format. (i.e., PPM, PGM, or PBM)</p>
+</td></tr><tr><td class="rdoc-term"><p>TGA</p></td>
+<td>
+<p>“Truevision TARGA” format.</p>
+</td></tr><tr><td class="rdoc-term"><p>TIF</p></td>
+<td>
+<p>“Tagged Image File Format”</p>
+</td></tr><tr><td class="rdoc-term"><p>XCF</p></td>
+<td>
+<p>“eXperimental Computing Facility” (GIMP native format).</p>
+</td></tr><tr><td class="rdoc-term"><p>XPM</p></td>
+<td>
+<p>“XPixMap” format.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="load-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/image.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load</span>( <span class="ruby-identifier">filename</span> )
+  <span class="ruby-identifier">surf</span> = <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-constant">Load</span>( <span class="ruby-identifier">filename</span> )
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">surf</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span> )
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-string">&quot;Couldn't load image \&quot;%s\&quot;: %s&quot;</span><span class="ruby-operator">%</span>                [<span class="ruby-identifier">filename</span>, <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetError</span>()] )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">surf</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- load-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- load-method -->
+
+      
+        <div id="load_from_string-method" class="method-detail ">
+          <a name="method-c-load_from_string"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">load_from_string</span><span
+              class="method-args">( data, type=nil )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_image is available! Your
+code should check "defined?(<a
+href="Surface.html#method-c-load_from_string">Rubygame::Surface.load_from_string</a>)
+!= nil" to see if you can use this method, or be prepared to rescue from
+NameError.</p>
+
+<p>Load an image file from memory (in the form of the given data) to a <a
+href="Surface.html">Surface</a>. If the image has an alpha channel (e.g.
+PNG with transparency), the <a href="Surface.html">Surface</a> will as
+well. If the image cannot be loaded (for example if the image format is
+unsupported), will raise <a href="SDLError.html">SDLError</a>.</p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>data</p></td>
+<td>
+<p>a string containing the data for the image, such as IO::read would return.</p>
+</td></tr><tr><td class="rdoc-term"><p>type</p></td>
+<td>
+<p>The type of file that the image is (i.e. ‘TGA’). Case is not important. If
+absent, the library will try to automatically detect the type.</p>
+</td></tr></table>
+
+<p>See <a href="Surface.html#method-c-load">Surface.load</a> for a list of
+possible supported file types.</p>
+            
+
+            
+            <div class="method-source-code" id="load_from_string-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/image.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_from_string</span>( <span class="ruby-identifier">data</span>, <span class="ruby-identifier">type</span>=<span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">raw</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Buffer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:char</span>, <span class="ruby-identifier">data</span>.<span class="ruby-identifier">length</span>)
+  <span class="ruby-identifier">raw</span>.<span class="ruby-identifier">put_bytes</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">data</span>)
+
+  <span class="ruby-identifier">rw</span> = <span class="ruby-constant">SDL</span>.<span class="ruby-constant">RWFromMem</span>( <span class="ruby-identifier">raw</span>, <span class="ruby-identifier">data</span>.<span class="ruby-identifier">length</span> )
+
+  <span class="ruby-identifier">surf</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span>
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-constant">LoadTyped_RW</span>(<span class="ruby-identifier">rw</span>, <span class="ruby-value">1</span>, <span class="ruby-identifier">type</span>)
+         <span class="ruby-keyword">else</span>
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-constant">Load_RW</span>(<span class="ruby-identifier">rw</span>, <span class="ruby-value">1</span>)
+         <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">surf</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span>
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>,
+           <span class="ruby-node">&quot;Couldn't load image from string: #{SDL.GetError()}&quot;</span> )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">new</span>(<span class="ruby-identifier">surf</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- load_from_string-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- load_from_string-method -->
+
+      
+        <div id="load_image-method" class="method-detail ">
+          <a name="method-c-load_image"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">load_image</span><span
+              class="method-args">( filename )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Deprecated. Use <a href="Surface.html#method-c-load">Surface.load</a>
+instead!</p>
+            
+
+            
+            <div class="method-source-code" id="load_image-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/image.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_image</span>( <span class="ruby-identifier">filename</span> )
+  <span class="ruby-constant">Rubygame</span>.<span class="ruby-identifier">deprecated</span>( <span class="ruby-string">&quot;Rubygame::Surface.load_image&quot;</span>, <span class="ruby-string">&quot;3.0&quot;</span> )
+  <span class="ruby-identifier">load</span>( <span class="ruby-identifier">filename</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- load_image-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- load_image-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">( size, depth=0, flags=[] )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create and initialize a new <a href="Surface.html">Surface</a> object.</p>
+
+<p>A <a href="Surface.html">Surface</a> is a grid of image data which you blit
+(i.e. copy) onto other Surfaces. Since the <a
+href="../Rubygame.html">Rubygame</a> display is also a <a
+href="Surface.html">Surface</a> (see the <a href="Screen.html">Screen</a>
+class), Surfaces can be blit to the screen; this is the most common way to
+display images on the screen.</p>
+
+<p>This method may raise <a href="SDLError.html">SDLError</a> if the SDL video
+subsystem could not be initialized for some reason.</p>
+
+<p>This function takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>size</p></td>
+<td>
+<p>requested surface size; an array of the form [width, height].</p>
+</td></tr><tr><td class="rdoc-term"><p>depth</p></td>
+<td>
+<p>requested color depth (in bits per pixel). If depth is 0 (default),
+automatically choose a color depth: either the depth of the <a
+href="Screen.html">Screen</a> mode (if one has been set), or the greatest
+color depth available on the system.</p>
+</td></tr><tr><td class="rdoc-term"><p>flags</p></td>
+<td>
+<p>an Array or Bitwise-OR’d list of zero or more of the following flags
+(located in the <a href="../Rubygame.html">Rubygame</a> module, e.g.
+Rubygame::SWSURFACE). This argument may be omitted, in which case the <a
+href="Surface.html">Surface</a> will be a normal software surface (this is
+not necessarily a bad thing).</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>SWSURFACE</p></td>
+<td>
+<p>(default) request a software surface.</p>
+</td></tr><tr><td class="rdoc-term"><p>HWSURFACE</p></td>
+<td>
+<p>request a hardware-accelerated surface (using a graphics card), if
+available. Creates a software surface if hardware surfaces are not
+available.</p>
+</td></tr><tr><td class="rdoc-term"><p>SRCCOLORKEY</p></td>
+<td>
+<p>request a colorkeyed surface. <a
+href="Surface.html#method-i-set_colorkey">set_colorkey</a> will also enable
+colorkey as needed. For a description of colorkeys, see <a
+href="Surface.html#method-i-set_colorkey">set_colorkey</a>.</p>
+</td></tr><tr><td class="rdoc-term"><p>SRCALPHA</p></td>
+<td>
+<p>request an alpha channel. <a
+href="Surface.html#method-i-set_alpha">set_alpha</a> will also enable
+alpha. as needed. For a description of alpha, see <a
+href="Surface.html#method-i-alpha">alpha</a>.</p>
+</td></tr></table>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">size</span>, <span class="ruby-identifier">depth</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">flags</span>=[] )
+
+  <span class="ruby-comment"># Cheating a bit. First arg can be a SDL::Surface to wrap it.</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">size</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Surface</span> )
+    <span class="ruby-identifier">surf</span> = <span class="ruby-identifier">size</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-identifier">surf</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span> )
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-string">&quot;Surface cannot wrap NULL Surface!&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@struct</span> = <span class="ruby-identifier">surf</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">size</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Array</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;Surface size is not an Array: #{size.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">size</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">size</span>.<span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Numeric</span> }
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Invalid Surface size: #{size.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+
+  <span class="ruby-identifier">pixformat</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-identifier">vs</span> = <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetVideoSurface</span>()
+
+  <span class="ruby-keyword">unless</span>( <span class="ruby-identifier">vs</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span> )
+    <span class="ruby-comment"># Pixel format is retrieved from the video surface.</span>
+    <span class="ruby-identifier">pixformat</span> = <span class="ruby-identifier">vs</span>.<span class="ruby-identifier">format</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># We can only get the system color depth when the</span>
+    <span class="ruby-comment"># video system has been initialized.</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-constant">Rubygame</span>.<span class="ruby-identifier">init_video_system</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> )
+      <span class="ruby-identifier">pixformat</span> = <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetVideoInfo</span>().<span class="ruby-identifier">vfmt</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span>(<span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>,
+            <span class="ruby-string">&quot;Could not initialize SDL video subsystem.&quot;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">rmask</span> = <span class="ruby-identifier">pixformat</span>.<span class="ruby-constant">Rmask</span>
+  <span class="ruby-identifier">gmask</span> = <span class="ruby-identifier">pixformat</span>.<span class="ruby-constant">Gmask</span>
+  <span class="ruby-identifier">bmask</span> = <span class="ruby-identifier">pixformat</span>.<span class="ruby-constant">Bmask</span>
+  <span class="ruby-identifier">amask</span> = <span class="ruby-identifier">pixformat</span>.<span class="ruby-constant">Amask</span>
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">depth</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span> )
+    <span class="ruby-identifier">depth</span> = <span class="ruby-identifier">pixformat</span>.<span class="ruby-constant">BitsPerPixel</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span> = <span class="ruby-identifier">size</span>
+
+  <span class="ruby-identifier">flags</span> = <span class="ruby-constant">Rubygame</span>.<span class="ruby-identifier">collapse_flags</span>(<span class="ruby-identifier">flags</span>)
+
+  <span class="ruby-ivar">@struct</span> = <span class="ruby-constant">SDL</span>.<span class="ruby-constant">CreateRGBSurface</span>(<span class="ruby-identifier">flags</span>, <span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>, <span class="ruby-identifier">depth</span>,
+                                 <span class="ruby-identifier">rmask</span>, <span class="ruby-identifier">gmask</span>, <span class="ruby-identifier">bmask</span>, <span class="ruby-identifier">amask</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="rotozoom_size-method" class="method-detail ">
+          <a name="method-c-rotozoom_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rotozoom_size</span><span
+              class="method-args">( size, angle, zoom )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-c-rotozoom_size">rotozoom_size</a>)" to see if
+you can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Return the dimensions of the surface that would be returned if <a
+href="Surface.html#method-i-rotozoom">rotozoom</a> were called on a <a
+href="Surface.html">Surface</a> of the given size, with the same angle and
+zoom factors.</p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>size</p></td>
+<td>
+<p>an Array with the hypothetical <a href="Surface.html">Surface</a> width and
+height (pixels)</p>
+</td></tr><tr><td class="rdoc-term"><p>angle</p></td>
+<td>
+<p>degrees to rotate counter-clockwise (negative for clockwise).</p>
+</td></tr><tr><td class="rdoc-term"><p>zoom</p></td>
+<td>
+<p>scaling factor(s). A number (to scale X and Y by the same factor) or an
+array of 2 numbers (to scale X and Y by  different factors). NOTE: Due to a
+quirk in SDL_gfx, if angle is not 0, the image is zoomed by the X factor on
+both X and Y, and the Y factor is only used for flipping (if it’s
+negative).</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="rotozoom_size-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 459</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rotozoom_size</span>( <span class="ruby-identifier">size</span>, <span class="ruby-identifier">angle</span>, <span class="ruby-identifier">zoom</span> )
+  <span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span> = <span class="ruby-identifier">size</span>
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">zoom</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+    <span class="ruby-identifier">zx</span>, <span class="ruby-identifier">zy</span> = <span class="ruby-identifier">zoom</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_f</span> }
+    <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Gfx</span>.<span class="ruby-identifier">rotozoomSurfaceSizeXY</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>, <span class="ruby-identifier">angle</span>, <span class="ruby-identifier">zx</span>, <span class="ruby-identifier">zy</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+    <span class="ruby-identifier">zoom</span> = <span class="ruby-identifier">zoom</span>.<span class="ruby-identifier">to_f</span>
+    <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Gfx</span>.<span class="ruby-identifier">rotozoomSurfaceSize</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>, <span class="ruby-identifier">angle</span>, <span class="ruby-identifier">zoom</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Invalid zoom factor: #{zoom.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rotozoom_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rotozoom_size-method -->
+
+      
+        <div id="zoom_size-method" class="method-detail ">
+          <a name="method-c-zoom_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">zoom_size</span><span
+              class="method-args">( size, zoom )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-c-zoom_size">zoom_size</a>)" to see if you can
+use this method, or be prepared to rescue from NameError.</p>
+
+<p>Return the dimensions of the surface that would be returned if <a
+href="Surface.html#method-i-zoom">zoom</a> were called on a <a
+href="Surface.html">Surface</a> of the given size, with the same zoom
+factors.</p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>size</p></td>
+<td>
+<p>an Array with the hypothetical <a href="Surface.html">Surface</a> width and
+height (pixels)</p>
+</td></tr><tr><td class="rdoc-term"><p>zoom</p></td>
+<td>
+<p>scaling factor(s). A number (to scale X and Y by the same factor) or an
+array of 2 numbers (to scale X and Y by  different factors).</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="zoom_size-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 525</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">zoom_size</span>( <span class="ruby-identifier">size</span>, <span class="ruby-identifier">zoom</span> )
+  <span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span> = <span class="ruby-identifier">size</span>
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">zoom</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+    <span class="ruby-identifier">zx</span>, <span class="ruby-identifier">zy</span> = <span class="ruby-identifier">zoom</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_f</span> }
+    <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Gfx</span>.<span class="ruby-identifier">zoomSurfaceSize</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>, <span class="ruby-identifier">zx</span>, <span class="ruby-identifier">zy</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+    <span class="ruby-identifier">zoom</span> = <span class="ruby-identifier">zoom</span>.<span class="ruby-identifier">to_f</span>
+    <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Gfx</span>.<span class="ruby-identifier">zoomSurfaceSize</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>, <span class="ruby-identifier">zoom</span>, <span class="ruby-identifier">zoom</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Invalid zoom factor: #{zoom.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- zoom_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- zoom_size-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="alpha-method" class="method-detail ">
+          <a name="method-i-alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">alpha</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the per-surface alpha (opacity; non-transparency) of the surface. It
+can range from 0 (full transparent) to 255 (full opaque).</p>
+            
+
+            
+            <div class="method-source-code" id="alpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">alpha</span>
+  <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">format</span>.<span class="ruby-identifier">alpha</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- alpha-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- alpha-method -->
+
+      
+        <div id="alpha-3D-method" class="method-detail method-alias">
+          <a name="method-i-alpha-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">alpha=</span><span
+              class="method-args">( alpha, flags=Rubygame::SRCALPHA )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-set_alpha">set_alpha</a>
+          </div>
+          
+        </div><!-- alpha-3D-method -->
+
+      
+        <div id="blit-method" class="method-detail ">
+          <a name="method-i-blit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">blit</span><span
+              class="method-args">( target, pos, src_rect=nil )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Blit (copy) all or part of the surface’s image to another surface, at a
+given position. Returns a <a href="Rect.html">Rect</a> representing the
+area of <tt>target</tt> which was affected by the blit.</p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>target</p></td>
+<td>
+<p>the target <a href="Surface.html">Surface</a> on which to paste the image.</p>
+</td></tr><tr><td class="rdoc-term"><p>pos</p></td>
+<td>
+<p>the coordinates of the top-left corner of the blit. Affects the area of
+<tt>target</tt> the image data is /pasted/ over. Can also be a <a
+href="Rect.html">Rect</a> or an Array larger than 2, but width and height
+will be ignored.</p>
+</td></tr><tr><td class="rdoc-term"><p>src_rect</p></td>
+<td>
+<p>a <a href="Rect.html">Rect</a> representing the area of the source surface
+to get data from. Affects where the image data is /copied/ from. Can also
+be an Array of no less than 4 values.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="blit-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">blit</span>( <span class="ruby-identifier">target</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">src_rect</span>=<span class="ruby-keyword">nil</span> )
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">Surface</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">&quot;blit target must be a Surface&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">src_x</span>, <span class="ruby-identifier">src_y</span>, <span class="ruby-identifier">src_w</span>, <span class="ruby-identifier">src_h</span> =
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">src_rect</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Rect</span>
+      [<span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">y</span>, <span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">w</span>, <span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">h</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+      <span class="ruby-identifier">src_rect</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-keyword">nil</span>
+      [<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] <span class="ruby-operator">+</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">src_rect</span>  = <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>([<span class="ruby-identifier">src_x</span>,  <span class="ruby-identifier">src_y</span>,  <span class="ruby-identifier">src_w</span>, <span class="ruby-identifier">src_h</span>])
+  <span class="ruby-identifier">blit_x</span>, <span class="ruby-identifier">blit_y</span> = <span class="ruby-identifier">pos</span>
+  <span class="ruby-identifier">blit_rect</span> = <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>([<span class="ruby-identifier">blit_x</span>, <span class="ruby-identifier">blit_y</span>, <span class="ruby-identifier">src_w</span>, <span class="ruby-identifier">src_h</span>])
+
+  <span class="ruby-constant">SDL</span>.<span class="ruby-constant">BlitSurface</span>( <span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">src_rect</span>, <span class="ruby-identifier">target</span>.<span class="ruby-identifier">struct</span>, <span class="ruby-identifier">blit_rect</span> )
+
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">blit_rect</span>.<span class="ruby-identifier">to_ary</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- blit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- blit-method -->
+
+      
+        <div id="clip-method" class="method-detail ">
+          <a name="method-i-clip"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clip</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the clipping area for this <a href="Surface.html">Surface</a>. See
+also <a href="Surface.html#method-i-clip-3D">clip=</a>.</p>
+
+<p>The clipping area of a <a href="Surface.html">Surface</a> is the only part
+which can be drawn upon by other Surface’s blits. By default, the clipping
+area is the entire area of the <a href="Surface.html">Surface</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="clip-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 471</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clip</span>
+  <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>( <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetClipRect</span>(<span class="ruby-ivar">@struct</span>).<span class="ruby-identifier">to_ary</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clip-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clip-method -->
+
+      
+        <div id="clip-3D-method" class="method-detail ">
+          <a name="method-i-clip-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clip=</span><span
+              class="method-args">( newclip )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the current clipping area of the <a href="Surface.html">Surface</a>.
+See also <a href="Surface.html#method-i-clip">clip</a>.</p>
+
+<p>The clipping area of a <a href="Surface.html">Surface</a> is the only part
+which can be drawn upon by other Surface’s blits. The clipping area will be
+clipped to the edges of the surface so that the clipping area for a <a
+href="Surface.html">Surface</a> can never fall outside the edges of the <a
+href="Surface.html">Surface</a>.</p>
+
+<p>By default, the clipping area is the entire area of the <a
+href="Surface.html">Surface</a>. You may set clip to <tt>nil</tt>, which
+will reset the clipping area to cover the entire <a
+href="Surface.html">Surface</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="clip-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 487</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clip=</span>( <span class="ruby-identifier">newclip</span> )
+  <span class="ruby-identifier">newclip</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">newclip</span>
+            <span class="ruby-keyword">when</span> <span class="ruby-keyword">nil</span>, <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Rect</span>
+              <span class="ruby-identifier">newclip</span>         <span class="ruby-comment"># no change</span>
+            <span class="ruby-keyword">when</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">Rect</span>
+              <span class="ruby-identifier">newclip</span>.<span class="ruby-identifier">to_sdl</span>
+            <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+              <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">newclip</span>).<span class="ruby-identifier">to_sdl</span>
+            <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">SDL</span>.<span class="ruby-constant">SetClipRect</span>(<span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">newclip</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clip-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clip-3D-method -->
+
+      
+        <div id="colorkey-method" class="method-detail ">
+          <a name="method-i-colorkey"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">colorkey  &rarr;  [r,g,b]  or  nil</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Return the colorkey of the surface in the form [r,g,b] (or <tt>nil</tt> if
+there is no key). The colorkey of a surface is the exact color which will
+be ignored when the surface is blitted, effectively turning that color
+transparent. This is often used to make a blue (for example) background on
+an image seem transparent.</p>
+            
+
+            
+            <div class="method-source-code" id="colorkey-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">colorkey</span>
+  <span class="ruby-keyword">if</span>( (<span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">flags</span> &amp; <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SRCCOLORKEY</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SRCCOLORKEY</span> )
+    <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">GetRGB</span>(<span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">format</span>.<span class="ruby-identifier">colorkey</span>, <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">format</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- colorkey-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- colorkey-method -->
+
+      
+        <div id="colorkey-3D-method" class="method-detail method-alias">
+          <a name="method-i-colorkey-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">colorkey=</span><span
+              class="method-args">( color, flags=Rubygame::SRCCOLORKEY )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-set_colorkey">set_colorkey</a>
+          </div>
+          
+        </div><!-- colorkey-3D-method -->
+
+      
+        <div id="convert-method" class="method-detail ">
+          <a name="method-i-convert"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">convert</span><span
+              class="method-args">( other=nil, flags=nil )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Copies the <a href="Surface.html">Surface</a> to a new <a
+href="Surface.html">Surface</a> with the pixel format of another <a
+href="Surface.html">Surface</a>, for fast blitting. May raise <a
+href="SDLError.html">SDLError</a> if a problem occurs.</p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>other</p></td>
+<td>
+<p>The <a href="Surface.html">Surface</a> to match pixel format against. If
+<tt>nil</tt>, the display surface (i.e. <a href="Screen.html">Screen</a>)
+is used, if available; if no display surface is available, raises <a
+href="SDLError.html">SDLError</a>.</p>
+</td></tr><tr><td class="rdoc-term"><p>flags</p></td>
+<td>
+<p>An array of flags to pass when the new <a href="Surface.html">Surface</a>
+is created. See Surface#new.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="convert-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 514</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert</span>( <span class="ruby-identifier">other</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">flags</span>=<span class="ruby-keyword">nil</span> )
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">other</span> = <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">Screen</span>.<span class="ruby-identifier">get_surface</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>
+      <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-string">&quot;Cannot convert Surface with no target &quot;</span> <span class="ruby-operator">+</span>
+             <span class="ruby-node">&quot;given and no Screen made: #{SDL.GetError()}&quot;</span> )
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">flags</span> = <span class="ruby-constant">Rubygame</span>.<span class="ruby-identifier">collapse_flags</span>(<span class="ruby-identifier">flags</span>)
+
+  <span class="ruby-identifier">newsurf</span> =
+    <span class="ruby-keyword">if</span>( <span class="ruby-constant">Rubygame</span>.<span class="ruby-identifier">init_video_system</span>() <span class="ruby-operator">==</span> <span class="ruby-value">0</span> )
+      <span class="ruby-constant">SDL</span>.<span class="ruby-constant">ConvertSurface</span>( <span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">other</span>.<span class="ruby-identifier">struct</span>.<span class="ruby-identifier">format</span>, <span class="ruby-identifier">flags</span> )
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">newsurf</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">newsurf</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span>)
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>,
+           <span class="ruby-node">&quot;Could not convert the Surface: #{SDL.GetError()}&quot;</span> )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Wrap it</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">newsurf</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- convert-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- convert-method -->
+
+      
+        <div id="depth-method" class="method-detail ">
+          <a name="method-i-depth"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">depth</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the color depth (in bits per pixel) of the surface.</p>
+            
+
+            
+            <div class="method-source-code" id="depth-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">depth</span>
+  <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">format</span>.<span class="ruby-constant">BitsPerPixel</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- depth-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- depth-method -->
+
+      
+        <div id="draw_arc-method" class="method-detail ">
+          <a name="method-i-draw_arc"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_arc</span><span
+              class="method-args">( center, radius, angles, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_arc">draw_arc</a>)" to see if you can use
+this method, or be prepared to rescue from NameError.</p>
+
+<p>Draw a non-solid arc (part of a circle), given the coordinates of its
+center, radius, and starting/ending angles. See also <a
+href="Surface.html#method-i-draw_arc_s">draw_arc_s</a></p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>center</p></td>
+<td>
+<p>the coordinates of circle’s center, [x,y].</p>
+</td></tr><tr><td class="rdoc-term"><p>radius</p></td>
+<td>
+<p>the radius (pixels) of the circle.</p>
+</td></tr><tr><td class="rdoc-term"><p>angles</p></td>
+<td>
+<p>the start and end angles (in degrees) of the arc, [start,end]. Angles are
+given <b>CLOCKWISE</b> from the positive x (remember that the positive Y
+direction is down, rather than up).</p>
+</td></tr><tr><td class="rdoc-term"><p>color</p></td>
+<td>
+<p>the color of the shape. [r,g,b] or [r,g,b,a] (0-255), color name, or <a
+href="Color.html">Rubygame::Color</a>.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="draw_arc-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 300</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_arc</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">angles</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_arc</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">angles</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_arc-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_arc-method -->
+
+      
+        <div id="draw_arc_s-method" class="method-detail ">
+          <a name="method-i-draw_arc_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_arc_s</span><span
+              class="method-args">( center, radius, angles, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_arc_s">draw_arc_s</a>)" to see if you can
+use this method, or be prepared to rescue from NameError.</p>
+
+<p>Like <a href="Surface.html#method-i-draw_arc">draw_arc</a>, but the shape
+is solid, instead of an outline.</p>
+            
+
+            
+            <div class="method-source-code" id="draw_arc_s-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 313</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_arc_s</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">angles</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_arc</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">angles</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_arc_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_arc_s-method -->
+
+      
+        <div id="draw_box-method" class="method-detail ">
+          <a name="method-i-draw_box"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_box</span><span
+              class="method-args">( point1, point2, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_box">draw_box</a>)" to see if you can use
+this method, or be prepared to rescue from NameError.</p>
+
+<p>Draw a non-solid box (rectangle) on the <a href="Surface.html">Surface</a>,
+given the coordinates of its top-left corner and bottom-right corner. See
+also <a href="Surface.html#method-i-draw_box_s">draw_box_s</a></p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>point1</p></td>
+<td>
+<p>the coordinates of top-left corner, [x1,y1].</p>
+</td></tr><tr><td class="rdoc-term"><p>point2</p></td>
+<td>
+<p>the coordinates of bottom-right corner, [x2,y2].</p>
+</td></tr><tr><td class="rdoc-term"><p>color</p></td>
+<td>
+<p>the color of the shape. [r,g,b] or [r,g,b,a] (0-255), color name, or <a
+href="Color.html">Rubygame::Color</a>.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="draw_box-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_box</span>( <span class="ruby-identifier">point1</span>, <span class="ruby-identifier">point2</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_box</span>( <span class="ruby-identifier">point1</span>, <span class="ruby-identifier">point2</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_box-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_box-method -->
+
+      
+        <div id="draw_box_s-method" class="method-detail ">
+          <a name="method-i-draw_box_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_box_s</span><span
+              class="method-args">( point1, point2, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_box_s">draw_box_s</a>)" to see if you can
+use this method, or be prepared to rescue from NameError.</p>
+
+<p>Like <a href="Surface.html#method-i-draw_box">draw_box</a>, but the shape
+is solid, instead of an outline. (You may find using <a
+href="Surface.html#method-i-fill">fill</a> to be more convenient and
+perhaps faster than this method.)</p>
+            
+
+            
+            <div class="method-source-code" id="draw_box_s-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_box_s</span>( <span class="ruby-identifier">point1</span>, <span class="ruby-identifier">point2</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_box</span>( <span class="ruby-identifier">point1</span>, <span class="ruby-identifier">point2</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_box_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_box_s-method -->
+
+      
+        <div id="draw_circle-method" class="method-detail ">
+          <a name="method-i-draw_circle"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_circle</span><span
+              class="method-args">( center, radius, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_circle">draw_circle</a>)" to see if you
+can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Draw a non-solid circle on the <a href="Surface.html">Surface</a>, given
+the coordinates of its center and its radius. See also <a
+href="Surface.html#method-i-draw_circle_a">draw_circle_a</a> and <a
+href="Surface.html#method-i-draw_circle_s">draw_circle_s</a></p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>center</p></td>
+<td>
+<p>the coordinates of circle’s center, [x,y].</p>
+</td></tr><tr><td class="rdoc-term"><p>radius</p></td>
+<td>
+<p>the radius (pixels) of the circle.</p>
+</td></tr><tr><td class="rdoc-term"><p>color</p></td>
+<td>
+<p>the color of the shape. [r,g,b] or [r,g,b,a] (0-255), color name, or <a
+href="Color.html">Rubygame::Color</a>.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="draw_circle-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_circle</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_circle</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">false</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_circle-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_circle-method -->
+
+      
+        <div id="draw_circle_a-method" class="method-detail ">
+          <a name="method-i-draw_circle_a"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_circle_a</span><span
+              class="method-args">( center, radius, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_circle_a">draw_circle_a</a>)" to see if
+you can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Like <a href="Surface.html#method-i-draw_circle">draw_circle</a>, but the
+outline is anti-aliased.</p>
+            
+
+            
+            <div class="method-source-code" id="draw_circle_a-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_circle_a</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_circle</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span>, <span class="ruby-keyword">false</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_circle_a-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_circle_a-method -->
+
+      
+        <div id="draw_circle_s-method" class="method-detail ">
+          <a name="method-i-draw_circle_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_circle_s</span><span
+              class="method-args">( center, radius, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_circle_s">draw_circle_s</a>)" to see if
+you can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Like <a href="Surface.html#method-i-draw_circle">draw_circle</a>, but the
+shape is solid, instead of an outline.</p>
+            
+
+            
+            <div class="method-source-code" id="draw_circle_s-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_circle_s</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_circle</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_circle_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_circle_s-method -->
+
+      
+        <div id="draw_ellipse-method" class="method-detail ">
+          <a name="method-i-draw_ellipse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_ellipse</span><span
+              class="method-args">( center, radii, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_ellipse">draw_ellipse</a>)" to see if you
+can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Draw a non-solid ellipse (oval) on the <a href="Surface.html">Surface</a>,
+given the  coordinates of its center and its horizontal and vertical radii.
+See also <a href="Surface.html#method-i-draw_ellipse_a">draw_ellipse_a</a>
+and <a href="Surface.html#method-i-draw_ellipse_s">draw_ellipse_s</a></p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>center</p></td>
+<td>
+<p>the coordinates of ellipse’s center, [x,y].</p>
+</td></tr><tr><td class="rdoc-term"><p>radii</p></td>
+<td>
+<p>the x and y radii (pixels), [rx,ry].</p>
+</td></tr><tr><td class="rdoc-term"><p>color</p></td>
+<td>
+<p>the color of the shape. [r,g,b] or [r,g,b,a] (0-255), color name, or <a
+href="Color.html">Rubygame::Color</a>.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="draw_ellipse-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 234</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_ellipse</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radii</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_ellipse</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radii</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">false</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_ellipse-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_ellipse-method -->
+
+      
+        <div id="draw_ellipse_a-method" class="method-detail ">
+          <a name="method-i-draw_ellipse_a"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_ellipse_a</span><span
+              class="method-args">( center, radii, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_ellipse_a">draw_ellipse_a</a>)" to see if
+you can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Like <a href="Surface.html#method-i-draw_ellipse">draw_ellipse</a>, but the
+ellipse border is anti-aliased.</p>
+            
+
+            
+            <div class="method-source-code" id="draw_ellipse_a-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 246</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_ellipse_a</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radii</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_ellipse</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radii</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span>, <span class="ruby-keyword">false</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_ellipse_a-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_ellipse_a-method -->
+
+      
+        <div id="draw_ellipse_s-method" class="method-detail ">
+          <a name="method-i-draw_ellipse_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_ellipse_s</span><span
+              class="method-args">( center, radii, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_ellipse_s">draw_ellipse_s</a>)" to see if
+you can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Like <a href="Surface.html#method-i-draw_ellipse">draw_ellipse</a>, but the
+shape is solid, instead of an outline.</p>
+            
+
+            
+            <div class="method-source-code" id="draw_ellipse_s-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_ellipse_s</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radii</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_ellipse</span>( <span class="ruby-identifier">center</span>, <span class="ruby-identifier">radii</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_ellipse_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_ellipse_s-method -->
+
+      
+        <div id="draw_line-method" class="method-detail ">
+          <a name="method-i-draw_line"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_line</span><span
+              class="method-args">( point1, point2, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_line">draw_line</a>)" to see if you can
+use this method, or be prepared to rescue from NameError.</p>
+
+<p>Draw a line segment between two points on the <a
+href="Surface.html">Surface</a>. See also <a
+href="Surface.html#method-i-draw_line_a">draw_line_a</a></p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>point1</p></td>
+<td>
+<p>the coordinates of one end of the line, [x1,y1].</p>
+</td></tr><tr><td class="rdoc-term"><p>point2</p></td>
+<td>
+<p>the coordinates of the other end of the line, [x2,y2].</p>
+</td></tr><tr><td class="rdoc-term"><p>color</p></td>
+<td>
+<p>the color of the shape. [r,g,b] or [r,g,b,a] (0-255), color name, or <a
+href="Color.html">Rubygame::Color</a>.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="draw_line-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_line</span>( <span class="ruby-identifier">point1</span>, <span class="ruby-identifier">point2</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_line</span>( <span class="ruby-identifier">point1</span>, <span class="ruby-identifier">point2</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_line-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_line-method -->
+
+      
+        <div id="draw_line_a-method" class="method-detail ">
+          <a name="method-i-draw_line_a"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_line_a</span><span
+              class="method-args">( point1, point2, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_line_a">draw_line_a</a>)" to see if you
+can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Like <a href="Surface.html#method-i-draw_line">draw_line</a>, but the line
+will be anti-aliased.</p>
+            
+
+            
+            <div class="method-source-code" id="draw_line_a-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_line_a</span>( <span class="ruby-identifier">point1</span>, <span class="ruby-identifier">point2</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_line</span>( <span class="ruby-identifier">point1</span>, <span class="ruby-identifier">point2</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_line_a-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_line_a-method -->
+
+      
+        <div id="draw_polygon-method" class="method-detail ">
+          <a name="method-i-draw_polygon"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_polygon</span><span
+              class="method-args">( points, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_polygon">draw_polygon</a>)" to see if you
+can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Draw a non-solid polygon, given the coordinates of its vertices, in the
+order that they are connected. This is essentially a series of connected
+dots. See also <a
+href="Surface.html#method-i-draw_polygon_a">draw_polygon_a</a> and <a
+href="Surface.html#method-i-draw_polygon_s">draw_polygon_s</a>.</p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>points</p></td>
+<td>
+<p>an Array containing the coordinate pairs for each vertex of the polygon, in
+the order that they are connected, e.g.</p>
+<dl class="rdoc-list"><dt> [x1,y1], [x2,y2], …, [xn,yn</dt>
+<dd>
+<p>].</p>
+</dd></dl>
+</td></tr><tr><td class="rdoc-term"><p>color</p></td>
+<td>
+<p>the color of the shape. [r,g,b] or [r,g,b,a] (0-255), color name, or <a
+href="Color.html">Rubygame::Color</a>.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="draw_polygon-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 361</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_polygon</span>( <span class="ruby-identifier">points</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_polygon</span>( <span class="ruby-identifier">points</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">false</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_polygon-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_polygon-method -->
+
+      
+        <div id="draw_polygon_a-method" class="method-detail ">
+          <a name="method-i-draw_polygon_a"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_polygon_a</span><span
+              class="method-args">( points, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_polygon_a">draw_polygon_a</a>)" to see if
+you can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Like <a href="Surface.html#method-i-draw_polygon">draw_polygon</a>, but the
+lines are anti-aliased.</p>
+            
+
+            
+            <div class="method-source-code" id="draw_polygon_a-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 374</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_polygon_a</span>( <span class="ruby-identifier">points</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_polygon</span>( <span class="ruby-identifier">points</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">true</span>, <span class="ruby-keyword">false</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_polygon_a-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_polygon_a-method -->
+
+      
+        <div id="draw_polygon_s-method" class="method-detail ">
+          <a name="method-i-draw_polygon_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw_polygon_s</span><span
+              class="method-args">( points, color )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-draw_polygon_s">draw_polygon_s</a>)" to see if
+you can use this method, or be prepared to rescue from NameError.</p>
+
+<p>Like <a href="Surface.html#method-i-draw_polygon">draw_polygon</a>, but the
+shape is solid, instead of an outline.</p>
+            
+
+            
+            <div class="method-source-code" id="draw_polygon_s-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 387</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw_polygon_s</span>( <span class="ruby-identifier">points</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">_draw_polygon</span>( <span class="ruby-identifier">points</span>, <span class="ruby-identifier">color</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw_polygon_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw_polygon_s-method -->
+
+      
+        <div id="fill-method" class="method-detail ">
+          <a name="method-i-fill"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fill</span><span
+              class="method-args">( color, rect=nil )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Fill all or part of a <a href="Surface.html">Surface</a> with a color.</p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>color</p></td>
+<td>
+<p>color to fill with, in the form +[r,g,b]+ or +[r,g,b,a]+ (for partially
+transparent fills).</p>
+</td></tr><tr><td class="rdoc-term"><p>rect</p></td>
+<td>
+<p>a <a href="Rect.html">Rubygame::Rect</a> representing the area of the
+surface to fill with color. Omit to fill the entire surface.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="fill-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill</span>( <span class="ruby-identifier">color</span>, <span class="ruby-identifier">rect</span>=<span class="ruby-keyword">nil</span> )
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Array</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;invalid fill Rect: #{rect.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">color</span> = <span class="ruby-identifier">_map_sdl_color</span>( <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">rect</span> = <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">to_ary</span> ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-constant">SDL</span>.<span class="ruby-constant">FillRect</span>( <span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">rect</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fill-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fill-method -->
+
+      
+        <div id="flags-method" class="method-detail ">
+          <a name="method-i-flags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">flags</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return any flags the surface was initialized with (as a bitwise OR’d
+integer).</p>
+            
+
+            
+            <div class="method-source-code" id="flags-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">flags</span>
+  <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">flags</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- flags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- flags-method -->
+
+      
+        <div id="flip-method" class="method-detail ">
+          <a name="method-i-flip"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">flip</span><span
+              class="method-args">( horz, vert )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:flip)" to see if you can use this
+method, or be prepared to rescue from NameError.</p>
+
+<p>Flips the source surface horizontally (if <tt>horz</tt> is true),
+vertically (if <tt>vert</tt> is true), or both (if both are true).</p>
+            
+
+            
+            <div class="method-source-code" id="flip-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 578</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">flip</span>( <span class="ruby-identifier">horz</span>, <span class="ruby-identifier">vert</span> )
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">zoom</span>( [ (<span class="ruby-identifier">horz</span> <span class="ruby-operator">?</span> <span class="ruby-value">-1.0</span> <span class="ruby-operator">:</span> <span class="ruby-value">1.0</span>), (<span class="ruby-identifier">vert</span> <span class="ruby-operator">?</span> <span class="ruby-value">-1.0</span> <span class="ruby-operator">:</span> <span class="ruby-value">1.0</span>)], <span class="ruby-keyword">false</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- flip-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- flip-method -->
+
+      
+        <div id="get_at-method" class="method-detail ">
+          <a name="method-i-get_at"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">get_at( [x,y] )</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">get_at( x,y )</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Return the color [r,g,b,a] (0-255) of the pixel at [x,y]. If the <a
+href="Surface.html">Surface</a> does not have a per-pixel alpha channel
+(i.e. not 32-bit), alpha will always be 255. The Surface’s overall alpha
+value (from <a href="Surface.html#method-i-set_alpha">set_alpha</a>) does
+not affect the returned alpha value.</p>
+
+<p>Raises IndexError if the coordinates are out of bounds.</p>
+            
+
+            
+            <div class="method-source-code" id="get_at-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 349</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_at</span>( *<span class="ruby-identifier">args</span> )
+  <span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">length</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>; <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_ary</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">round</span> }
+        <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>; [<span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">round</span>, <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">round</span>]
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">raise</span>( <span class="ruby-constant">ArgumentError</span>,
+                 <span class="ruby-node">&quot;wrong number of arguments (#{args.length} for 1)&quot;</span> )
+        <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">w</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">h</span>)
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">IndexError</span>, <span class="ruby-string">&quot;point [%d,%d] is out of bounds for %dx%d Surface&quot;</span><span class="ruby-operator">%</span>              [<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">w</span>, <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">h</span>] )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">SDL</span>.<span class="ruby-constant">LockSurface</span>(<span class="ruby-ivar">@struct</span>)
+
+  <span class="ruby-identifier">bpp</span> = <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">format</span>.<span class="ruby-constant">BytesPerPixel</span>
+  <span class="ruby-identifier">ptr</span> = <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">pixels</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">y</span> * <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">pitch</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span> * <span class="ruby-identifier">bpp</span>)
+
+  <span class="ruby-identifier">pixel</span> =
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">bpp</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">get_uint8</span>(<span class="ruby-value">0</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+      <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">get_uint16</span>(<span class="ruby-value">0</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-value">3</span>
+      <span class="ruby-keyword">if</span>( <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">BYTE_ORDER</span> <span class="ruby-operator">==</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">BIG_ENDIAN</span> )
+        (<span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">get_uint8</span>(<span class="ruby-value">0</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span>)<span class="ruby-operator">|</span>(<span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">get_uint8</span>(<span class="ruby-value">1</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">8</span>)<span class="ruby-operator">|</span><span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">get_uint8</span>(<span class="ruby-value">2</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">get_uint8</span>(<span class="ruby-value">0</span>)<span class="ruby-operator">|</span>(<span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">get_uint8</span>(<span class="ruby-value">1</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">8</span>)<span class="ruby-operator">|</span>(<span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">get_uint8</span>(<span class="ruby-value">2</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">4</span>
+      <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">get_uint32</span>(<span class="ruby-value">0</span>)
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">SDL</span>.<span class="ruby-constant">UnlockSurface</span>(<span class="ruby-ivar">@struct</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">GetRGBA</span>(<span class="ruby-identifier">pixel</span>, <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">format</span>) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_at-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_at-method -->
+
+      
+        <div id="h-method" class="method-detail ">
+          <a name="method-i-h"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">h</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the height (in pixels) of the surface.</p>
+            
+
+            
+            <div class="method-source-code" id="h-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">h</span>
+  <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">h</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- h-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-height">height</a>
+          </div>
+          
+
+          
+        </div><!-- h-method -->
+
+      
+        <div id="height-method" class="method-detail method-alias">
+          <a name="method-i-height"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">height</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-h">h</a>
+          </div>
+          
+        </div><!-- height-method -->
+
+      
+        <div id="inspect-method" class="method-detail method-alias">
+          <a name="method-i-inspect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inspect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-to_s">to_s</a>
+          </div>
+          
+        </div><!-- inspect-method -->
+
+      
+        <div id="make_rect-method" class="method-detail ">
+          <a name="method-i-make_rect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_rect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a <a href="Rect.html">Rect</a> with the same width and height as the
+<a href="Surface.html">Surface</a>, with topleft = [0,0].</p>
+            
+
+            
+            <div class="method-source-code" id="make_rect-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_rect</span>()
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">w</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">h</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_rect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_rect-method -->
+
+      
+        <div id="masks-method" class="method-detail ">
+          <a name="method-i-masks"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">masks  &rarr;  [r,g,b,a]</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Return the color masks [r,g,b,a] of the surface. Almost everyone can ignore
+this function. <a href="Color.html">Color</a> masks are used to separate an
+integer representation of a color into its seperate channels.</p>
+            
+
+            
+            <div class="method-source-code" id="masks-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">masks</span>
+  <span class="ruby-identifier">fmt</span> = <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">format</span>
+  [<span class="ruby-identifier">fmt</span>.<span class="ruby-constant">Rmask</span>, <span class="ruby-identifier">fmt</span>.<span class="ruby-constant">Gmask</span>, <span class="ruby-identifier">fmt</span>.<span class="ruby-constant">Bmask</span>, <span class="ruby-identifier">fmt</span>.<span class="ruby-constant">Amask</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- masks-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- masks-method -->
+
+      
+        <div id="pixels-method" class="method-detail ">
+          <a name="method-i-pixels"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pixels</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a string of pixel data for the <a href="Surface.html">Surface</a>.
+Most users will not need to use this method. If you want to convert a <a
+href="Surface.html">Surface</a> into an OpenGL texture, pass the returned
+string to the TexImage2D method of the ruby-opengl library. (See
+samples/demo_gl_tex.rb for an example.)</p>
+
+<p>(Please note that the dimensions of OpenGL textures must be powers of 2
+(e.g. 64x128, 512x512), so if you want to use a <a
+href="Surface.html">Surface</a> as an OpenGL texture, the Surface’s
+dimensions must also be powers of 2!)</p>
+            
+
+            
+            <div class="method-source-code" id="pixels-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 455</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pixels</span>
+  <span class="ruby-identifier">len</span> = <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">pitch</span> * <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">h</span>
+  <span class="ruby-constant">SDL</span>.<span class="ruby-constant">LockSurface</span>(<span class="ruby-ivar">@struct</span>)
+  <span class="ruby-identifier">pix</span> = <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">get_bytes</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">len</span>)
+  <span class="ruby-constant">SDL</span>.<span class="ruby-constant">UnlockSurface</span>(<span class="ruby-ivar">@struct</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">pix</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pixels-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pixels-method -->
+
+      
+        <div id="rotozoom-method" class="method-detail ">
+          <a name="method-i-rotozoom"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rotozoom</span><span
+              class="method-args">( angle, zoom, smooth=false )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:rotozoom)" to see if you can use
+this method, or be prepared to rescue from NameError.</p>
+
+<p>Return a rotated and/or zoomed version of the given surface. Note that
+rotating a <a href="Surface.html">Surface</a> anything other than a
+multiple of 90 degrees will cause the new surface to be larger than the
+original to accomodate the corners (which would otherwise extend beyond the
+surface).</p>
+
+<p>May raise <a href="SDLError.html">Rubygame::SDLError</a> if the rotozoom
+fails.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>angle</p></td>
+<td>
+<p>degrees to rotate counter-clockwise (negative for clockwise).</p>
+</td></tr><tr><td class="rdoc-term"><p>zoom</p></td>
+<td>
+<p>scaling factor(s). A number (to scale X and Y by the same factor) or an
+array of 2 numbers (to scale X and Y by  different factors). Negative
+numbers flip the image. NOTE: Due to a quirk in SDL_gfx, if angle is not 0,
+the image is zoomed by the X factor on both X and Y, and the Y factor is
+only used for flipping (if it’s negative).</p>
+</td></tr><tr><td class="rdoc-term"><p>smooth</p></td>
+<td>
+<p>whether to anti-alias the new surface. By the way, if true, the new surface
+will be 32bit RGBA.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="rotozoom-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 417</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rotozoom</span>( <span class="ruby-identifier">angle</span>, <span class="ruby-identifier">zoom</span>, <span class="ruby-identifier">smooth</span>=<span class="ruby-keyword">false</span> )
+  <span class="ruby-identifier">smooth</span> = <span class="ruby-identifier">smooth</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+
+  <span class="ruby-identifier">surf</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">zoom</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+           <span class="ruby-identifier">zx</span>, <span class="ruby-identifier">zy</span> = <span class="ruby-identifier">zoom</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_f</span> }
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Gfx</span>.<span class="ruby-identifier">rotozoomSurfaceXY</span>(<span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">angle</span>, <span class="ruby-identifier">zx</span>, <span class="ruby-identifier">zy</span>, <span class="ruby-identifier">smooth</span>)
+         <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+           <span class="ruby-identifier">zoom</span> = <span class="ruby-identifier">zoom</span>.<span class="ruby-identifier">to_f</span>
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Gfx</span>.<span class="ruby-identifier">rotozoomSurface</span>(<span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">angle</span>, <span class="ruby-identifier">zoom</span>, <span class="ruby-identifier">smooth</span>)
+         <span class="ruby-keyword">else</span>
+           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Invalid zoom factor: #{zoom.inspect}&quot;</span>
+         <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">surf</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span> )
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>,
+           <span class="ruby-string">&quot;Rotozoom failed: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetError</span>() )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">surf</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rotozoom-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rotozoom-method -->
+
+      
+        <div id="savebmp-method" class="method-detail ">
+          <a name="method-i-savebmp"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">savebmp</span><span
+              class="method-args">( filename )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Save the <a href="Surface.html">Surface</a> as a Windows Bitmap (BMP) file
+with the given filename. May raise <a href="SDLError.html">SDLError</a> if
+a problem occurs.</p>
+            
+
+            
+            <div class="method-source-code" id="savebmp-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 603</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">savebmp</span>( <span class="ruby-identifier">filename</span> )
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">SDL</span>.<span class="ruby-constant">SaveBMP</span>( <span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">filename</span> )
+  <span class="ruby-keyword">if</span>(<span class="ruby-identifier">result</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>)
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-string">&quot;Couldn't save surface to file %s: %s&quot;</span><span class="ruby-operator">%</span>              [<span class="ruby-identifier">filename</span>, <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetError</span>()] )
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- savebmp-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- savebmp-method -->
+
+      
+        <div id="set_alpha-method" class="method-detail ">
+          <a name="method-i-set_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_alpha</span><span
+              class="method-args">( alpha, flags=Rubygame::SRCALPHA )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the per-surface alpha (opacity; non-transparency) of the surface. You
+can do the same thing with <a
+href="Surface.html#method-i-alpha-3D">alpha=</a> if you don’t care about
+flags.</p>
+
+<p>This function takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>alpha</p></td>
+<td>
+<p>requested opacity of the surface. Alpha must be from 0 (fully transparent)
+to 255 (fully opaque).</p>
+</td></tr><tr><td class="rdoc-term"><p>flags</p></td>
+<td>
+<p>0 or Rubygame::SRCALPHA (default). Most people will want the default, in
+which case this argument can be omitted. For advanced users: this flag
+affects the surface as described in the docs for the SDL C function,
+SDL_SetAlpha.</p>
+</td></tr></table>
+
+<p>Returns self.</p>
+            
+
+            
+            <div class="method-source-code" id="set_alpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_alpha</span>( <span class="ruby-identifier">alpha</span>, <span class="ruby-identifier">flags</span>=<span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SRCALPHA</span> )
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">SDL</span>.<span class="ruby-constant">SetAlpha</span>(<span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">flags</span>, <span class="ruby-identifier">alpha</span>.<span class="ruby-identifier">to_i</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetError</span>() <span class="ruby-keyword">unless</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_alpha-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-alpha-3D">alpha=</a>
+          </div>
+          
+
+          
+        </div><!-- set_alpha-method -->
+
+      
+        <div id="set_at-method" class="method-detail ">
+          <a name="method-i-set_at"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">set_at( [x,y], color )</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Set the color of the pixel at [x,y]. If no alpha value is given, or if the
+<a href="Surface.html">Surface</a> does not have a per-pixel alpha channel
+(i.e. not 32-bit), the pixel will be set at full opacity.</p>
+
+<p>color can be one of:</p>
+<ul><li>
+<p>an Array, [r,g,b] or [r,g,b,a] with each component in 0-255.</p>
+</li><li>
+<p>an instance of Rubygame::ColorRGB, Rubygame::ColorHSV, etc.</p>
+</li><li>
+<p>the name of a color in <a href="Color.html">Rubygame::Color</a>, as a
+Symbol or String</p>
+</li></ul>
+
+<p>Raises IndexError if the coordinates are out of bounds.</p>
+            
+
+            
+            <div class="method-source-code" id="set_at-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 404</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_at</span>( <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">color</span> )
+  <span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span> = <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">to_ary</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">round</span> }
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">w</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">h</span>)
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">IndexError</span>, <span class="ruby-string">&quot;point [%d,%d] is out of bounds for %dx%d Surface&quot;</span><span class="ruby-operator">%</span>              [<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">w</span>, <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">h</span>] )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">color</span> = <span class="ruby-identifier">_map_sdl_color</span>( <span class="ruby-identifier">color</span> )
+
+  <span class="ruby-constant">SDL</span>.<span class="ruby-constant">LockSurface</span>(<span class="ruby-ivar">@struct</span>)
+
+  <span class="ruby-identifier">bpp</span> = <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">format</span>.<span class="ruby-constant">BytesPerPixel</span>
+  <span class="ruby-identifier">ptr</span> = <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">pixels</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">y</span> * <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">pitch</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span> * <span class="ruby-identifier">bpp</span>)
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">bpp</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">put_uint8</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+    <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">put_uint16</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">3</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">BYTE_ORDER</span> <span class="ruby-operator">==</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">BIG_ENDIAN</span> )
+      <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">put_uint8</span>(<span class="ruby-value">0</span>, (<span class="ruby-identifier">color</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">16</span>) &amp; <span class="ruby-value">0xff</span>)
+      <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">put_uint8</span>(<span class="ruby-value">1</span>, (<span class="ruby-identifier">color</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">8</span>)  &amp; <span class="ruby-value">0xff</span>)
+      <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">put_uint8</span>(<span class="ruby-value">2</span>, <span class="ruby-identifier">color</span> &amp; <span class="ruby-value">0xff</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">put_uint8</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">color</span> &amp; <span class="ruby-value">0xff</span>)
+      <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">put_uint8</span>(<span class="ruby-value">1</span>, (<span class="ruby-identifier">color</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">8</span>)  &amp; <span class="ruby-value">0xff</span>)
+      <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">put_uint8</span>(<span class="ruby-value">2</span>, (<span class="ruby-identifier">color</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">16</span>) &amp; <span class="ruby-value">0xff</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">4</span>
+    <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">put_uint32</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">SDL</span>.<span class="ruby-constant">UnlockSurface</span>(<span class="ruby-ivar">@struct</span>)
+
+  <span class="ruby-keyword">return</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_at-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_at-method -->
+
+      
+        <div id="set_colorkey-method" class="method-detail ">
+          <a name="method-i-set_colorkey"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_colorkey</span><span
+              class="method-args">( color, flags=Rubygame::SRCCOLORKEY )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set the colorkey of the surface. See <a
+href="Surface.html#method-i-colorkey">Surface#colorkey</a> for a
+description of colorkeys.</p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>color</p></td>
+<td>
+<p>color to use as the key, in the form [r,g,b]. Can be <tt>nil</tt> to un-set
+the colorkey.</p>
+</td></tr><tr><td class="rdoc-term"><p>flags</p></td>
+<td>
+<p>0 or Rubygame::SRCCOLORKEY (default) or
+Rubygame::SRCCOLORKEY|Rubygame::SDL_RLEACCEL. Most people will want the
+default, in which case this argument can be omitted. For advanced users:
+this flag affects the surface as described in the docs for the SDL C
+function, SDL_SetColorkey.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="set_colorkey-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 256</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_colorkey</span>( <span class="ruby-identifier">color</span>, <span class="ruby-identifier">flags</span>=<span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SRCCOLORKEY</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">color</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">color</span>, <span class="ruby-identifier">flags</span> = <span class="ruby-value">0</span>, <span class="ruby-value">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">color</span> = <span class="ruby-identifier">_map_sdl_color</span>( <span class="ruby-identifier">color</span> )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">SDL</span>.<span class="ruby-constant">SetColorKey</span>(<span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">flags</span>, <span class="ruby-identifier">color</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetError</span>() <span class="ruby-keyword">unless</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_colorkey-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-colorkey-3D">colorkey=</a>
+          </div>
+          
+
+          
+        </div><!-- set_colorkey-method -->
+
+      
+        <div id="size-method" class="method-detail ">
+          <a name="method-i-size"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">size  &rarr;  [w,h]</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Return the surface’s width and height (in pixels) in an Array.</p>
+            
+
+            
+            <div class="method-source-code" id="size-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">size</span>
+  [<span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">w</span>, <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">h</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size-method -->
+
+      
+        <div id="to_display-method" class="method-detail ">
+          <a name="method-i-to_display"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_display</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Copies the <a href="Surface.html">Surface</a> to a new <a
+href="Surface.html">Surface</a> with the pixel format of the display,
+suitable for fast blitting to the display surface (i.e. <a
+href="Screen.html">Screen</a>). May raise <a
+href="SDLError.html">SDLError</a> if a problem occurs.</p>
+
+<p>If you want to take advantage of hardware colorkey or alpha blit
+acceleration, you should set the colorkey and alpha value before calling
+this function.</p>
+            
+
+            
+            <div class="method-source-code" id="to_display-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 553</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_display</span>
+  <span class="ruby-identifier">newsurf</span> =
+    <span class="ruby-keyword">if</span>( <span class="ruby-constant">Rubygame</span>.<span class="ruby-identifier">init_video_system</span>() <span class="ruby-operator">==</span> <span class="ruby-value">0</span> )
+      <span class="ruby-constant">SDL</span>.<span class="ruby-constant">DisplayFormat</span>( <span class="ruby-ivar">@struct</span> )
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">newsurf</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">newsurf</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span>)
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>,
+           <span class="ruby-string">&quot;Could not convert the Surface to display format: %s&quot;</span><span class="ruby-operator">%</span>              <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetError</span>() )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Wrap it</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">newsurf</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_display-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_display-method -->
+
+      
+        <div id="to_display_alpha-method" class="method-detail ">
+          <a name="method-i-to_display_alpha"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_display_alpha</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Like <a href="Surface.html#method-i-to_display">to_display</a> except the
+<a href="Surface.html">Surface</a> has an extra channel for alpha (i.e.
+opacity). May raise <a href="SDLError.html">SDLError</a> if a problem
+occurs.</p>
+
+<p>This function can be used to convert a colorkey to an alpha channel, if the
+SRCCOLORKEY flag is set on the surface. The generated surface will then be
+transparent (alpha=0) where the pixels match the colorkey, and opaque
+(alpha=255) elsewhere.</p>
+            
+
+            
+            <div class="method-source-code" id="to_display_alpha-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 581</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_display_alpha</span>
+  <span class="ruby-identifier">newsurf</span> =
+    <span class="ruby-keyword">if</span>( <span class="ruby-constant">Rubygame</span>.<span class="ruby-identifier">init_video_system</span>() <span class="ruby-operator">==</span> <span class="ruby-value">0</span> )
+      <span class="ruby-constant">SDL</span>.<span class="ruby-constant">DisplayFormatAlpha</span>( <span class="ruby-ivar">@struct</span> )
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">newsurf</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">newsurf</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span>)
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>,
+           <span class="ruby-string">&quot;Could not convert the Surface to display format &quot;</span><span class="ruby-operator">+</span>
+           <span class="ruby-node">&quot;with alpha channel: #{SDL.GetError()}&quot;</span> )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Wrap it</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">newsurf</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_display_alpha-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_display_alpha-method -->
+
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 613</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-node">&quot;#&lt;%s:%#.x&gt;&quot;</span><span class="ruby-operator">%</span>[<span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">object_id</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-inspect">inspect</a>
+          </div>
+          
+
+          
+        </div><!-- to_s-method -->
+
+      
+        <div id="w-method" class="method-detail ">
+          <a name="method-i-w"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">w</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the width (in pixels) of the surface.</p>
+            
+
+            
+            <div class="method-source-code" id="w-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/surface.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">w</span>
+  <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">w</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- w-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Surface.html#method-i-width">width</a>
+          </div>
+          
+
+          
+        </div><!-- w-method -->
+
+      
+        <div id="width-method" class="method-detail method-alias">
+          <a name="method-i-width"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">width</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Surface.html#method-i-w">w</a>
+          </div>
+          
+        </div><!-- width-method -->
+
+      
+        <div id="zoom-method" class="method-detail ">
+          <a name="method-i-zoom"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">zoom</span><span
+              class="method-args">( zoom, smooth=false )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:zoom)" to see if you can use this
+method, or be prepared to rescue from NameError.</p>
+
+<p>Return a zoomed version of the <a href="Surface.html">Surface</a>.</p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>zoom</p></td>
+<td>
+<p>a Numeric factor to scale by in both x and y directions, or an Array with
+separate x and y scale factors.</p>
+</td></tr><tr><td class="rdoc-term"><p>smooth</p></td>
+<td>
+<p>whether to anti-alias the new surface. By the way, if true, the new surface
+will be 32bit RGBA.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="zoom-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 488</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">zoom</span>( <span class="ruby-identifier">zoom</span>, <span class="ruby-identifier">smooth</span>=<span class="ruby-keyword">false</span> )
+  <span class="ruby-identifier">smooth</span> = <span class="ruby-identifier">smooth</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+
+  <span class="ruby-identifier">surf</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">zoom</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+           <span class="ruby-identifier">zx</span>, <span class="ruby-identifier">zy</span> = <span class="ruby-identifier">zoom</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_f</span> }
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Gfx</span>.<span class="ruby-identifier">zoomSurface</span>(<span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">zx</span>, <span class="ruby-identifier">zy</span>, <span class="ruby-identifier">smooth</span>)
+         <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+           <span class="ruby-identifier">zoom</span> = <span class="ruby-identifier">zoom</span>.<span class="ruby-identifier">to_f</span>
+           <span class="ruby-constant">SDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Gfx</span>.<span class="ruby-identifier">zoomSurface</span>(<span class="ruby-ivar">@struct</span>, <span class="ruby-identifier">zoom</span>, <span class="ruby-identifier">zoom</span>, <span class="ruby-identifier">smooth</span>)
+         <span class="ruby-keyword">else</span>
+           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Invalid zoom factor: #{zoom.inspect}&quot;</span>
+         <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">surf</span>.<span class="ruby-identifier">pointer</span>.<span class="ruby-identifier">null?</span> )
+    <span class="ruby-identifier">raise</span>( <span class="ruby-constant">Rubygame</span><span class="ruby-operator">::</span><span class="ruby-constant">SDLError</span>, <span class="ruby-string">&quot;Zoom failed: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">SDL</span>.<span class="ruby-constant">GetError</span>() )
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">surf</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- zoom-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- zoom-method -->
+
+      
+        <div id="zoom_to-method" class="method-detail ">
+          <a name="method-i-zoom_to"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">zoom_to</span><span
+              class="method-args">( width, height, smooth=false )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><b>IMPORTANT</b>: this method only exists if SDL_gfx is available! Your
+code should check "surface.respond_to?(:<a
+href="Surface.html#method-i-zoom_to">zoom_to</a>)" to see if you can use
+this method, or be prepared to rescue from NameError.</p>
+
+<p>Return a version of the <a href="Surface.html">Surface</a> zoomed to a new
+size.</p>
+
+<p>This method takes these arguments:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>width</p></td>
+<td>
+<p>the desired width. If nil, the width will stay the same.</p>
+</td></tr><tr><td class="rdoc-term"><p>height</p></td>
+<td>
+<p>the desired height. If nil, the height will stay the same.</p>
+</td></tr><tr><td class="rdoc-term"><p>smooth</p></td>
+<td>
+<p>whether to anti-alias the new surface. This option can be omitted, in which
+case the surface will not be anti-aliased. If true, the new surface will be
+32bit RGBA.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="zoom_to-source">
+<pre>
+<span class="ruby-comment"># File lib/rubygame/gfx.rb, line 555</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">zoom_to</span>( <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">smooth</span>=<span class="ruby-keyword">false</span> )
+  <span class="ruby-identifier">zoomx</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">width</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-keyword">nil</span>;      <span class="ruby-value">1.0</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>;  <span class="ruby-identifier">width</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">w</span>
+          <span class="ruby-keyword">end</span>
+           
+  <span class="ruby-identifier">zoomy</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">height</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-keyword">nil</span>;      <span class="ruby-value">1.0</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>;  <span class="ruby-identifier">height</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@struct</span>.<span class="ruby-identifier">h</span>
+          <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">zoom</span>( [<span class="ruby-identifier">zoomx</span>, <span class="ruby-identifier">zoomy</span>], <span class="ruby-identifier">smooth</span> )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- zoom_to-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- zoom_to-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

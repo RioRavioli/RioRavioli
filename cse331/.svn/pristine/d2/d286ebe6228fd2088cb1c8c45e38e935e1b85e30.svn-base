@@ -1,0 +1,12 @@
+# Tests adding several nodes to the graph.
+# Tests adding several edges to the graph.
+
+CreateGraph graph 
+AddNode graph n1
+AddNode graph n2
+AddNode graph n3
+ListNodes graph
+AddEdge graph n2 n2 edge1
+AddEdge graph n2 n1 edge2
+AddEdge graph n1 n1 edge2
+ListChildren graph n2
